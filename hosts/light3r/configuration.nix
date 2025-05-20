@@ -16,7 +16,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "light3r"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -81,7 +81,7 @@
   # Configure console keymap
   console.keyMap = "it";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
+  # Define a user account.
   users.users.light3r = {
     isNormalUser = true;
     description = "Jacopo Soria";
@@ -110,6 +110,7 @@
      home-manager
      starship
      nix-prefetch
+     sops
   ];
 
   fonts.packages = with pkgs; [

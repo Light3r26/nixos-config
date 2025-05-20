@@ -6,6 +6,10 @@
   environment.sessionVariables = {
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "Hyprland";
+    # Prevent cursor from becoming invisible
+    WLR_NO_HARDWARE_CURSORS = "1";
+    # Hint electron apps to use Wayland
+    NIXOS_OZONE_WL = "1";
   };
 
   environment.systemPackages = with pkgs; [

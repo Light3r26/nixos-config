@@ -16,8 +16,13 @@
   # Enable GTK
   gtk.enable = true;
 
+  # Enable QT
+
   # Enable fonts installation
   fonts.fontconfig.enable = true;
+
+  # Enable Steam
+  # programs.steam.enable = true;
 
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = with pkgs; [
@@ -37,12 +42,16 @@
     zip
     unzip
     gcc
+    nwg-look # GTK3 settings editor
     python3
     starship
     mpv
     alsa-utils
     spotify
     wlogout
+    gimp
+    mindustry
+    qimgv
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
@@ -95,10 +104,4 @@
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-  # Git setup
-  programs.git = {
-    enable = true;
-    userName = "Light3r";
-    userEmail = "soria.jacopo@gmail.com";
-  };
 }
