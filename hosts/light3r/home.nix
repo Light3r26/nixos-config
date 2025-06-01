@@ -17,12 +17,10 @@
   gtk.enable = true;
 
   # Enable QT
+  qt.enable = true;
 
   # Enable fonts installation
   fonts.fontconfig.enable = true;
-
-  # Enable Steam
-  # programs.steam.enable = true;
 
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = with pkgs; [
@@ -42,16 +40,17 @@
     zip
     unzip
     gcc
-    nwg-look # GTK3 settings editor
+    nwg-look # GTK3 settings manager
     python3
     starship
-    mpv
+    mpv # Video utility
     alsa-utils
     spotify
     wlogout
     gimp
     mindustry
-    qimgv
+    qimgv # Image viewer
+    kdePackages.qt6ct #QT settings manager
 
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
