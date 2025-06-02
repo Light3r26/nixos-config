@@ -4,7 +4,13 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    # Bootloader theme
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+    # Neovim Nix Framework NVF
+    nvf = {
+      url = "github:notashelf/nvf";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -12,13 +18,14 @@
     };
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = { self, nixpkgs, nvf, ... }@inputs: {
     nixosConfigurations = {
       light3r = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           /Nixos/hosts/light3r/configuration.nix
           inputs.home-manager.nixosModules.default
+	  nvf.nixosModules.default
         ];
       };
     }; 

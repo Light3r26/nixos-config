@@ -5,7 +5,8 @@
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
       ../../modules/nixos/hyprland.nix
-      ../../modules/nixos/bootloader/grub.nix
+      ../../modules/nixos/grub.nix
+      ../../modules/nixos/neovim.nix
       inputs.home-manager.nixosModules.default 
     ];
 
@@ -28,9 +29,6 @@
 
   # Sets trusted users
   nix.settings.trusted-users = [ "root" "light3r"];
-
-  # Enable Hyprland
-  programs.hyprland.enable = true;
 
   # Enable SDDM
   #services.displayManager.sddm.enable = true;
@@ -102,11 +100,8 @@
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
   environment.systemPackages = with pkgs; [
      vim
-     neovim
      wget
      git
      home-manager
