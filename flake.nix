@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -19,11 +21,6 @@
           inputs.home-manager.nixosModules.default
         ];
       };
-
-      modules = [
-        /Nixos/hosts/install-iso/configuration.nix
-        inputs.home-manager.nixosModules.default
-      ];
     }; 
   };
 }
