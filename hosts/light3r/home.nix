@@ -43,6 +43,7 @@
     mindustry
     qimgv # Image viewer
     kdePackages.qt6ct #QT settings manager
+    pavucontrol
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
