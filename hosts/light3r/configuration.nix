@@ -10,7 +10,7 @@
       inputs.home-manager.nixosModules.default 
     ];
 
-    networking.hostName = "light3r"; # Define your hostname.
+  networking.hostName = "light3r"; # Define your hostname.
   networking.networkmanager.enable = true; # Enable networking
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -31,11 +31,11 @@
   nix.settings.trusted-users = [ "root" "light3r"];
 
   # Enable SDDM
-  #services.displayManager.sddm.enable = true;
-  #services.displayManager.sddm.wayland.enable = true;
+  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.wayland.enable = true;
 
   # Enable Ly
-  services.displayManager.ly.enable = true;
+  #services.displayManager.ly.enable = true;
 
   # Enable sound with pipewire
   security.rtkit.enable = true;

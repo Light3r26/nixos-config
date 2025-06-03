@@ -7,10 +7,19 @@
   home.stateVersion = "24.05"; # Do not change
 
   # Enable GTK
-  gtk.enable = true;
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.adw-gtk3;
+      name = "adw-gtk3";
+    };
+  };
 
   # Enable QT
-  qt.enable = true;
+  qt = {
+    enable = true;
+    platformTheme.name = "qtct";
+  };
 
   # Enable fonts installation
   fonts.fontconfig.enable = true;
@@ -45,6 +54,7 @@
     kdePackages.qt6ct #QT settings manager
     pavucontrol
     pulseaudio
+    wl-clipboard
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage

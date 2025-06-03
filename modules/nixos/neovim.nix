@@ -3,6 +3,7 @@
 {
   programs.nvf = {
     enable = true;
+
     settings = {
       vim = {
         # Theme
@@ -11,6 +12,9 @@
           name = "gruvbox";
           style = "dark";
 	};
+
+        options.autoindent = true;
+        clipboard.enable = true;
 
 	lsp.enable = true;
 

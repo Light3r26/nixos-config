@@ -3,7 +3,7 @@
 {
   programs.hyprland.enable = true;
 
-    # Useful for Steam, Proton, ecc.
+  # Useful for Steam, Proton, ecc.
   hardware.graphics.enable = true;
 
   environment.sessionVariables = {
