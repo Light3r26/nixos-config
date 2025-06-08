@@ -7,6 +7,7 @@
       ../../modules/nixos/hyprland.nix
       ../../modules/nixos/grub.nix
       ../../modules/nixos/neovim.nix
+      ../../modules/nixos/sddm.nix
       inputs.home-manager.nixosModules.default 
     ];
 
@@ -29,10 +30,6 @@
 
   # Sets trusted users
   nix.settings.trusted-users = [ "root" "light3r"];
-
-  # Enable SDDM
-  services.displayManager.sddm.enable = true;
-  services.displayManager.sddm.wayland.enable = true;
 
   # Enable Ly
   #services.displayManager.ly.enable = true;

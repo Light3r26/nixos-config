@@ -6,6 +6,7 @@
 
     # Bootloader theme
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
+
     # Neovim Nix Framework NVF
     nvf = {
       url = "github:notashelf/nvf";
@@ -23,7 +24,7 @@
       light3r = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          /Nixos/hosts/light3r/configuration.nix
+          ./hosts/light3r/configuration.nix
           inputs.home-manager.nixosModules.default
 	  nvf.nixosModules.default
         ];
