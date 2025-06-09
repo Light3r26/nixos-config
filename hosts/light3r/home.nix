@@ -56,6 +56,9 @@
     pulseaudio
     wl-clipboard
     thunderbird
+    libreoffice
+    bitwarden-desktop
+    bitwarden-cli
   ];
 
 
