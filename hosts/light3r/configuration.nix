@@ -4,11 +4,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nixos/hyprland.nix
       ../../modules/nixos/grub.nix
+      ../../modules/nixos/hyprland.nix
       ../../modules/nixos/neovim.nix
       ../../modules/nixos/sddm.nix
       inputs.home-manager.nixosModules.default 
+      ../../modules/nixos/home-manager.nix
     ];
 
   networking.hostName = "light3r"; # Define your hostname.
@@ -78,14 +79,6 @@
     packages = with pkgs; [];
   };
 
-  home-manager = {
-    extraSpecialArgs = { inherit inputs; }; # Passes inputs to home-manager modules
-    useGlobalPkgs = true; # NixOS and HM use the same global packages
-    users = {
-     "light3r" = import ./home.nix;
-    };
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -116,15 +109,7 @@
   # Enabled services
   services.openssh.enable = true;
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-    # This value determines the NixOS release from which the default
+  # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
