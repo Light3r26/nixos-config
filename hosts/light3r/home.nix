@@ -27,7 +27,6 @@
   # The home.packages option allows you to install Nix packages into your environment.
   home.packages = with pkgs; [
     wget
-    git
     fastfetch
     obsidian
     discord
@@ -96,6 +95,12 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  programs.git = {
+    enable = true;
+    userName = "Light3r26";
+    userEmail = "soria.jacopo@gmail.com";
   };
 
   # Let Home Manager install and manage itself.
