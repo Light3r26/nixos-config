@@ -97,10 +97,6 @@
     EDITOR = "nvim";
   };
 
-  programs.bash = {
-    enable = true;
-  };
-
   programs.git = {
     enable = true;
     userName = "Light3r26";
