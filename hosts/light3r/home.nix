@@ -58,6 +58,7 @@
     libreoffice
     bitwarden-desktop
     bitwarden-cli
+    google-chrome
   ];
 
 
