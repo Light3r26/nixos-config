@@ -7,6 +7,9 @@
     # Bootloader theme
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
 
+    # SDDM theme 
+    sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
+
     # Neovim Nix Framework NVF
     nvf = {
       url = "github:notashelf/nvf";
@@ -19,7 +22,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nvf, ... }@inputs: {
+  outputs = { self, nixpkgs, nvf, sddm-sugar-candy-nix, ... }@inputs: {
     nixosConfigurations = {
       light3r = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
@@ -27,6 +30,7 @@
           ./hosts/light3r/configuration.nix
           inputs.home-manager.nixosModules.default
 	  nvf.nixosModules.default
+          sddm-sugar-candy-nix.nixosModules.default
         ];
       };
     }; 
