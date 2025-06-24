@@ -46,7 +46,6 @@
     mpv # Video utility
     alsa-utils
     spotify
-    wlogout
     gimp
     mindustry
     qimgv # Image viewer
@@ -58,7 +57,7 @@
     libreoffice
     bitwarden-desktop
     bitwarden-cli
-    google-chrome
+    google-chrome #rimuovo non appena finisco FAD FIN
   ];
 
 
