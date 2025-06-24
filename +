@@ -1,0 +1,7 @@
+{
+    grub = import ./grub.nix;
+    hm = import ./home-manager.nix;
+    hyprland = import ./hyprland.nix;
+    neovim = import ./neovim.nix;
+    sddm = import ./sddm/sddm.nix;
+}
