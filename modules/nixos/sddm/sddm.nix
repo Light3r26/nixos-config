@@ -12,7 +12,7 @@
         ScreenHeight = 1080;
         FormPosition = "center";
         FullBlur = true;
-        BlurRadius = 50;
+        BlurRadius = 25;
         MainColor = "#999FAB";
         BackgroundColor = "#BBC1CD";#0A101C
         AccentColor = "#343A46";
