@@ -11,9 +11,9 @@
         ScreenWidth = 1920;
         ScreenHeight = 1080;
         FormPosition = "center";
-        PartialBlur = true;
-        BlurRadius = 50;
-        MainColor = "#3B414D";
+        FullBlur = true;
+        BlurRadius = 25;
+        MainColor = "#0A101C";
         BackgroundColor = "#8D939F";
         AccentColor = "#999FAB";
       };
