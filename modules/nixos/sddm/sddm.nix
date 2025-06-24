@@ -12,10 +12,13 @@
         ScreenHeight = 1080;
         FormPosition = "center";
         FullBlur = true;
-        BlurRadius = 25;
+        BlurRadius = 50;
         MainColor = "#343A46";
-        BackgroundColor = "#0A101C";
+        BackgroundColor = "#BBC1CD";#0A101C
         AccentColor = "#999FAB";
+        HourFormat = "long";
+        DateFormat = "dddd d MMMM";
+        HeaderText = "";
       };
     };
   };
