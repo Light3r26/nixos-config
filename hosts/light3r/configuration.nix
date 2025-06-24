@@ -7,7 +7,7 @@
       ../../modules/nixos/grub.nix
       ../../modules/nixos/hyprland.nix
       ../../modules/nixos/neovim.nix
-      ../../modules/nixos/sddm.nix
+      ../../modules/nixos/sddm/sddm.nix
       inputs.home-manager.nixosModules.default 
       ../../modules/nixos/home-manager.nix
     ];
