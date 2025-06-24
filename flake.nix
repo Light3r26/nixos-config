@@ -22,15 +22,15 @@
     };
   };
 
-  outputs = { self, nixpkgs, nvf, sddm-sugar-candy-nix, ... }@inputs: {
+  outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
       light3r = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/light3r/configuration.nix
           inputs.home-manager.nixosModules.default
-	  nvf.nixosModules.default
-          sddm-sugar-candy-nix.nixosModules.default
+	  inputs.nvf.nixosModules.default
+          inputs.sddm-sugar-candy-nix.nixosModules.default
         ];
       };
     }; 
