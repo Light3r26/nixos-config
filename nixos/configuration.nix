@@ -4,12 +4,12 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/nixos/grub.nix
-      ../../modules/nixos/hyprland.nix
-      ../../modules/nixos/neovim.nix
-      ../../modules/nixos/sddm/sddm.nix
+      ../modules/nixos/grub.nix
+      ../modules/nixos/hyprland.nix
+      ../modules/nixos/neovim.nix
+      ../modules/nixos/sddm/sddm.nix
       inputs.home-manager.nixosModules.default 
-      ../../modules/nixos/home-manager.nix
+      ../modules/nixos/home-manager.nix
     ];
 
   networking.hostName = "light3r"; # Define your hostname.

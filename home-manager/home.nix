@@ -19,6 +19,7 @@
   qt = {
     enable = true;
     platformTheme.name = "qt6ct";
+    style.package = pkgs.lightly-qt;
   };
 
   # Enable fonts installation
