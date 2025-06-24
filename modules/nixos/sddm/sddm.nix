@@ -14,7 +14,7 @@
         FullBlur = true;
         BlurRadius = 25;
         MainColor = "#0A101C";
-        BackgroundColor = "#8D939F";
+        BackgroundColor = "#222834";
         AccentColor = "#999FAB";
       };
     };
