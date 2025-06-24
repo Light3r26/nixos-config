@@ -13,12 +13,12 @@
         FormPosition = "center";
         FullBlur = true;
         BlurRadius = 50;
-        MainColor = "#343A46";
+        MainColor = "#999FAB";
         BackgroundColor = "#BBC1CD";#0A101C
-        AccentColor = "#999FAB";
-        HourFormat = "long";
+        AccentColor = "#343A46";
         DateFormat = "dddd d MMMM";
         HeaderText = "";
+        ForceHideCompletePassword = true;
       };
     };
   };
