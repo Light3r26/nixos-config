@@ -12,9 +12,9 @@
       FormPosition = "center";
       PartialBlur = true;
       BlurRadius = 50;
-      MainColor = "#999FAB";
+      MainColor = "#3B414D";#3B414D
       BackgroundColor = "#8D939F";
-      #AccentColor = "#999FAB";#3B414D
+      AccentColor = "#999FAB";
     };
   };
 }
