@@ -27,9 +27,6 @@
   # Sets trusted users
   nix.settings.trusted-users = [ "root" "light3r"];
 
-  # Enable Ly
-  #services.displayManager.ly.enable = true;
-
   # Enable sound with pipewire
   security.rtkit.enable = true;
   services.pipewire = {

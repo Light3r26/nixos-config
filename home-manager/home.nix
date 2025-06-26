@@ -48,7 +48,6 @@
     alsa-utils
     spotify
     gimp
-    mindustry
     qimgv # Image viewer
     kdePackages.qt6ct #QT settings manager
     pavucontrol
@@ -58,6 +57,7 @@
     libreoffice
     bitwarden-desktop
     bitwarden-cli
+    blueman
     google-chrome #rimuovo non appena finisco FAD FIN
   ];
 
