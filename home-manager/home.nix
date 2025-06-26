@@ -60,6 +60,7 @@
     blueman
     kdePackages.kdenlive # Editing software
     wl-screenrec # Minimal screen recorder 
+    ffmpeg
     google-chrome #rimuovo non appena finisco FAD FIN
   ];
 
