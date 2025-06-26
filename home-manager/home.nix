@@ -58,6 +58,8 @@
     bitwarden-desktop
     bitwarden-cli
     blueman
+    kdePackages.kdenlive # Editing software
+    wl-screenrec # Minimal screen recorder 
     google-chrome #rimuovo non appena finisco FAD FIN
   ];
 
