@@ -32,6 +32,7 @@
     obsidian
     discord
     firefox
+    floorp
     fastfetch
     iwd
     tree
