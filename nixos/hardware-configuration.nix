@@ -21,7 +21,7 @@
       options = [ "fmask=0077" "dmask=0077" ];
     };
 
-  fileSystems."/mnt/Data" =
+  fileSystems."/home/light3r/Data" =
     { device = "/dev/disk/by-uuid/F238-0E46";
       fsType = "exfat";
     };
