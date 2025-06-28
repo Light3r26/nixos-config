@@ -63,7 +63,6 @@
     wl-screenrec # Minimal screen recorder 
     ffmpeg
     obs-studio
-    google-chrome #rimuovo non appena finisco FAD FIN
   ];
 
 
