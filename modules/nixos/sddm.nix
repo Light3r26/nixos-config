@@ -7,7 +7,7 @@
     sugarCandyNix = {
       enable = true;
       settings = {
-        Background = lib.cleanSource ./bright-mountains.jpg;
+        Background = lib.cleanSource ../../wallpapers/bright-mountains.jpg;
         ScreenWidth = 1920;
         ScreenHeight = 1080;
         FormPosition = "center";
