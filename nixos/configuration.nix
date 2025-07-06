@@ -74,11 +74,6 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
         
-  stylix = {
-    enable = true;
-    image = ../wallpapers/bright-mountains.jpg;
-  };
-
   # Enable Steam
   programs.steam = {
     enable = true;

@@ -1,0 +1,400 @@
+[1mdiff --git a/flake.lock b/flake.lock[m
+[1mindex 0116d99..b1a1187 100644[m
+[1m--- a/flake.lock[m
+[1m+++ b/flake.lock[m
+[36m@@ -1,88 +1,5 @@[m
+ {[m
+   "nodes": {[m
+[31m-    "base16": {[m
+[31m-      "inputs": {[m
+[31m-        "fromYaml": "fromYaml"[m
+[31m-      },[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1746562888,[m
+[31m-        "narHash": "sha256-YgNJQyB5dQiwavdDFBMNKk1wyS77AtdgDk/VtU6wEaI=",[m
+[31m-        "owner": "SenchoPens",[m
+[31m-        "repo": "base16.nix",[m
+[31m-        "rev": "806a1777a5db2a1ef9d5d6f493ef2381047f2b89",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "SenchoPens",[m
+[31m-        "repo": "base16.nix",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "base16-fish": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1622559957,[m
+[31m-        "narHash": "sha256-PebymhVYbL8trDVVXxCvZgc0S5VxI7I1Hv4RMSquTpA=",[m
+[31m-        "owner": "tomyun",[m
+[31m-        "repo": "base16-fish",[m
+[31m-        "rev": "2f6dd973a9075dabccd26f1cded09508180bf5fe",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tomyun",[m
+[31m-        "repo": "base16-fish",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "base16-helix": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748408240,[m
+[31m-        "narHash": "sha256-9M2b1rMyMzJK0eusea0x3lyh3mu5nMeEDSc4RZkGm+g=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "base16-helix",[m
+[31m-        "rev": "6c711ab1a9db6f51e2f6887cc3345530b33e152e",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "base16-helix",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "base16-vim": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1732806396,[m
+[31m-        "narHash": "sha256-e0bpPySdJf0F68Ndanwm+KWHgQiZ0s7liLhvJSWDNsA=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "base16-vim",[m
+[31m-        "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "base16-vim",[m
+[31m-        "rev": "577fe8125d74ff456cf942c733a85d769afe58b7",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "firefox-gnome-theme": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748383148,[m
+[31m-        "narHash": "sha256-pGvD/RGuuPf/4oogsfeRaeMm6ipUIznI2QSILKjKzeA=",[m
+[31m-        "owner": "rafaelmardojai",[m
+[31m-        "repo": "firefox-gnome-theme",[m
+[31m-        "rev": "4eb2714fbed2b80e234312611a947d6cb7d70caf",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "rafaelmardojai",[m
+[31m-        "repo": "firefox-gnome-theme",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+     "flake-parts": {[m
+       "inputs": {[m
+         "nixpkgs-lib": "nixpkgs-lib"[m
+[36m@@ -101,27 +18,6 @@[m
+         "type": "github"[m
+       }[m
+     },[m
+[31m-    "flake-parts_2": {[m
+[31m-      "inputs": {[m
+[31m-        "nixpkgs-lib": [[m
+[31m-          "stylix",[m
+[31m-          "nixpkgs"[m
+[31m-        ][m
+[31m-      },[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1743550720,[m
+[31m-        "narHash": "sha256-hIshGgKZCgWh6AYJpJmRgFdR3WUbkY04o82X05xqQiY=",[m
+[31m-        "owner": "hercules-ci",[m
+[31m-        "repo": "flake-parts",[m
+[31m-        "rev": "c621e8422220273271f52058f618c94e405bb0f5",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "hercules-ci",[m
+[31m-        "repo": "flake-parts",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+     "flake-utils": {[m
+       "inputs": {[m
+         "systems": "systems"[m
+[36m@@ -140,39 +36,6 @@[m
+         "type": "github"[m
+       }[m
+     },[m
+[31m-    "fromYaml": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1731966426,[m
+[31m-        "narHash": "sha256-lq95WydhbUTWig/JpqiB7oViTcHFP8Lv41IGtayokA8=",[m
+[31m-        "owner": "SenchoPens",[m
+[31m-        "repo": "fromYaml",[m
+[31m-        "rev": "106af9e2f715e2d828df706c386a685698f3223b",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "SenchoPens",[m
+[31m-        "repo": "fromYaml",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "gnome-shell": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748186689,[m
+[31m-        "narHash": "sha256-UaD7Y9f8iuLBMGHXeJlRu6U1Ggw5B9JnkFs3enZlap0=",[m
+[31m-        "owner": "GNOME",[m
+[31m-        "repo": "gnome-shell",[m
+[31m-        "rev": "8c88f917db0f1f0d80fa55206c863d3746fa18d0",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "GNOME",[m
+[31m-        "ref": "48.2",[m
+[31m-        "repo": "gnome-shell",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+     "home-manager": {[m
+       "inputs": {[m
+         "nixpkgs": [[m
+[36m@@ -315,48 +178,6 @@[m
+         "type": "github"[m
+       }[m
+     },[m
+[31m-    "nixpkgs_4": {[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748460289,[m
+[31m-        "narHash": "sha256-7doLyJBzCllvqX4gszYtmZUToxKvMUrg45EUWaUYmBg=",[m
+[31m-        "owner": "NixOS",[m
+[31m-        "repo": "nixpkgs",[m
+[31m-        "rev": "96ec055edbe5ee227f28cdbc3f1ddf1df5965102",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "NixOS",[m
+[31m-        "ref": "nixos-unstable",[m
+[31m-        "repo": "nixpkgs",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "nur": {[m
+[31m-      "inputs": {[m
+[31m-        "flake-parts": [[m
+[31m-          "stylix",[m
+[31m-          "flake-parts"[m
+[31m-        ],[m
+[31m-        "nixpkgs": [[m
+[31m-          "stylix",[m
+[31m-          "nixpkgs"[m
+[31m-        ],[m
+[31m-        "treefmt-nix": "treefmt-nix"[m
+[31m-      },[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748730660,[m
+[31m-        "narHash": "sha256-5LKmRYKdPuhm8j5GFe3AfrJL8dd8o57BQ34AGjJl1R0=",[m
+[31m-        "owner": "nix-community",[m
+[31m-        "repo": "NUR",[m
+[31m-        "rev": "2c0bc52fe14681e9ef60e3553888c4f086e46ecb",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "nix-community",[m
+[31m-        "repo": "NUR",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+     "nvf": {[m
+       "inputs": {[m
+         "flake-parts": "flake-parts",[m
+[36m@@ -388,8 +209,7 @@[m
+         "nixos-grub-themes": "nixos-grub-themes",[m
+         "nixpkgs": "nixpkgs_2",[m
+         "nvf": "nvf",[m
+[31m-        "sddm-sugar-candy-nix": "sddm-sugar-candy-nix",[m
+[31m-        "stylix": "stylix"[m
+[32m+[m[32m        "sddm-sugar-candy-nix": "sddm-sugar-candy-nix"[m
+       }[m
+     },[m
+     "rust-overlay": {[m
+[36m@@ -432,38 +252,6 @@[m
+         "type": "gitlab"[m
+       }[m
+     },[m
+[31m-    "stylix": {[m
+[31m-      "inputs": {[m
+[31m-        "base16": "base16",[m
+[31m-        "base16-fish": "base16-fish",[m
+[31m-        "base16-helix": "base16-helix",[m
+[31m-        "base16-vim": "base16-vim",[m
+[31m-        "firefox-gnome-theme": "firefox-gnome-theme",[m
+[31m-        "flake-parts": "flake-parts_2",[m
+[31m-        "gnome-shell": "gnome-shell",[m
+[31m-        "nixpkgs": "nixpkgs_4",[m
+[31m-        "nur": "nur",[m
+[31m-        "systems": "systems_3",[m
+[31m-        "tinted-foot": "tinted-foot",[m
+[31m-        "tinted-kitty": "tinted-kitty",[m
+[31m-        "tinted-schemes": "tinted-schemes",[m
+[31m-        "tinted-tmux": "tinted-tmux",[m
+[31m-        "tinted-zed": "tinted-zed"[m
+[31m-      },[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1751839004,[m
+[31m-        "narHash": "sha256-3XNIy++zqzETopDDZfwo7G2rj59tcvDTufnWvIwh67k=",[m
+[31m-        "owner": "danth",[m
+[31m-        "repo": "stylix",[m
+[31m-        "rev": "a5c1532ab8bf9566331f83be91517e02132f3d99",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "danth",[m
+[31m-        "repo": "stylix",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+     "systems": {[m
+       "locked": {[m
+         "lastModified": 1681028828,[m
+[36m@@ -493,124 +281,6 @@[m
+         "repo": "default",[m
+         "type": "github"[m
+       }[m
+[31m-    },[m
+[31m-    "systems_3": {[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1681028828,[m
+[31m-        "narHash": "sha256-Vy1rq5AaRuLzOxct8nz4T6wlgyUR7zLU309k9mBC768=",[m
+[31m-        "owner": "nix-systems",[m
+[31m-        "repo": "default",[m
+[31m-        "rev": "da67096a3b9bf56a91d16901293e51ba5b49a27e",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "nix-systems",[m
+[31m-        "repo": "default",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "tinted-foot": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1726913040,[m
+[31m-        "narHash": "sha256-+eDZPkw7efMNUf3/Pv0EmsidqdwNJ1TaOum6k7lngDQ=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "tinted-foot",[m
+[31m-        "rev": "fd1b924b6c45c3e4465e8a849e67ea82933fcbe4",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "tinted-foot",[m
+[31m-        "rev": "fd1b924b6c45c3e4465e8a849e67ea82933fcbe4",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "tinted-kitty": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1735730497,[m
+[31m-        "narHash": "sha256-4KtB+FiUzIeK/4aHCKce3V9HwRvYaxX+F1edUrfgzb8=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "tinted-kitty",[m
+[31m-        "rev": "de6f888497f2c6b2279361bfc790f164bfd0f3fa",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "tinted-kitty",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "tinted-schemes": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748180480,[m
+[31m-        "narHash": "sha256-7n0XiZiEHl2zRhDwZd/g+p38xwEoWtT0/aESwTMXWG4=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "schemes",[m
+[31m-        "rev": "87d652edd26f5c0c99deda5ae13dfb8ece2ffe31",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "schemes",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "tinted-tmux": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1748740859,[m
+[31m-        "narHash": "sha256-OEM12bg7F4N5WjZOcV7FHJbqRI6jtCqL6u8FtPrlZz4=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "tinted-tmux",[m
+[31m-        "rev": "57d5f9683ff9a3b590643beeaf0364da819aedda",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "tinted-tmux",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "tinted-zed": {[m
+[31m-      "flake": false,[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1725758778,[m
+[31m-        "narHash": "sha256-8P1b6mJWyYcu36WRlSVbuj575QWIFZALZMTg5ID/sM4=",[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "base16-zed",[m
+[31m-        "rev": "122c9e5c0e6f27211361a04fae92df97940eccf9",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "tinted-theming",[m
+[31m-        "repo": "base16-zed",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+[31m-    },[m
+[31m-    "treefmt-nix": {[m
+[31m-      "inputs": {[m
+[31m-        "nixpkgs": [[m
+[31m-          "stylix",[m
+[31m-          "nur",[m
+[31m-          "nixpkgs"[m
+[31m-        ][m
+[31m-      },[m
+[31m-      "locked": {[m
+[31m-        "lastModified": 1733222881,[m
+[31m-        "narHash": "sha256-JIPcz1PrpXUCbaccEnrcUS8jjEb/1vJbZz5KkobyFdM=",[m
+[31m-        "owner": "numtide",[m
+[31m-        "repo": "treefmt-nix",[m
+[31m-        "rev": "49717b5af6f80172275d47a418c9719a31a78b53",[m
+[31m-        "type": "github"[m
+[31m-      },[m
+[31m-      "original": {[m
+[31m-        "owner": "numtide",[m
+[31m-        "repo": "treefmt-nix",[m
+[31m-        "type": "github"[m
+[31m-      }[m
+     }[m
+   },[m
+   "root": "root",[m
+[1mdiff --git a/nixos/configuration.nix b/nixos/configuration.nix[m
+[1mindex 64b505d..c13d2a8 100644[m
+[1m--- a/nixos/configuration.nix[m
+[1m+++ b/nixos/configuration.nix[m
+[36m@@ -74,11 +74,6 @@[m
+   # Allow unfree packages[m
+   nixpkgs.config.allowUnfree = true;[m
+         [m
+[31m-  stylix = {[m
+[31m-    enable = true;[m
+[31m-    image = ../wallpapers/bright-mountains.jpg;[m
+[31m-  };[m
+[31m-[m
+   # Enable Steam[m
+   programs.steam = {[m
+     enable = true;[m
