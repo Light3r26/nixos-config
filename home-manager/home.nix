@@ -55,6 +55,7 @@
     wl-screenrec # Minimal screen recorder 
     ffmpeg
     obs-studio
+    toilet # Terminal text formatter
   ];
 
 
