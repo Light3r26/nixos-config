@@ -11,7 +11,10 @@
     sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
 
     # Stylix: declarative customising tool
-    #stylix.url = "github:danth/stylix";
+    stylix = {
+      url = "github:danth/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Neovim Nix Framework NVF
     nvf = {
@@ -34,7 +37,7 @@
           inputs.home-manager.nixosModules.default
 	  inputs.nvf.nixosModules.default
           inputs.sddm-sugar-candy-nix.nixosModules.default
-          # inputs.stylix.nixosModules.stylix
+          inputs.stylix.nixosModules.stylix
         ];
       };
     }; 
