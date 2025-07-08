@@ -5,6 +5,5 @@
     ./hyprland.nix
     ./neovim.nix
     ./sddm.nix
-    ./stylix.nix
   ];
 }
