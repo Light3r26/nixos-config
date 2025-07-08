@@ -9,8 +9,8 @@
         # Theme
         theme = {
 	  enable = true;
-          #name = "gruvbox";
-          #style = "dark";
+          name = "gruvbox";
+          style = "dark";
 	};
 
         options.autoindent = true;

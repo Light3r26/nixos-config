@@ -4,6 +4,9 @@
   stylix = {
     enable = true;
     image = ../../wallpapers/bright-mountains.jpg;
-    targets.grub.enable = false;
+    targets = {
+      grub.enable = false;
+      nvf.enable = false;
+    };
   };
 }
