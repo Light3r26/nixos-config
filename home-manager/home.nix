@@ -7,13 +7,19 @@
   home.stateVersion = "24.05"; # Do not change
 
   # Enable GTK
-  #gtk = {
-    #enable = true;
-    #theme = {
-      #package = pkgs.adw-gtk3;
-      #name = "adw-gtk3-dark";
-    #};
-  #};
+  gtk = {
+    enable = true;
+    theme = {
+      package = pkgs.adw-gtk3;
+      name = "adw-gtk3-dark";
+    };
+  };
+
+  # Enable QT
+  qt = {
+    enable = true;
+    platformTheme.name = "qt6ct";
+  };
 
   # Enable fonts installation
   fonts.fontconfig.enable = true;
