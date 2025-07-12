@@ -18,7 +18,7 @@
   # Enable QT
   qt = {
     enable = true;
-    platformTheme.name = "qt6ct";
+    platformTheme.name = "gtk";
   };
 
   # Enable fonts installation
@@ -62,8 +62,8 @@
     ffmpeg
     obs-studio
     toilet # Terminal text formatter
+    yazi
   ];
-
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
