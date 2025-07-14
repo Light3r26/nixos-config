@@ -1,0 +1,34 @@
+{ config, pkgs, ... }:
+
+{
+  home.packages = with pkgs; [
+    tree
+    yazi
+    toilet # Terminal text formatter
+  ];
+
+  programs.bash = {
+    enable = true;
+    enableCompletion = true;
+    shellAliases = {
+      # NixOS & Sistema
+      mostra-generazioni-nixos = "nixos-rebuild list-generations"; 
+      size = "du -ah --max-depth=1 | sort -h";
+      # Bluetooth
+      auricolari-bt = "bluetoothctl connect B8:F8:BE:60:54:BE";
+      dualsense-ps5 = "bluetoothctl connect 4C:B9:9B:10:B8:F9";
+      disconnetti-bt = "bluetoothctl disconnect";
+      # Wifi
+      connessioni-disponibili = "nmcli device wifi list";
+      hotspot-telefono = "nmcli device wifi connect Light3r";
+    };
+    bashrcExtra = ''
+      eval "$(starship init bash)"
+      export XCURSOR_THEME=~/.icons/macOS
+      export XCURSOR_SIZE=24
+      export PATH="~/.scripts:$PATH"
+      export PATH="~/.scripts/nixos:$PATH"
+      export PATH="~/.scripts/hypr:$PATH"
+    '';
+  };
+}

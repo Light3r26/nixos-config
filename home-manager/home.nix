@@ -1,25 +1,13 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
+  imports = [
+    ../modules/home-manager/terminal.nix  
+  ];
   home.username = "light3r";
   home.homeDirectory = "/home/light3r";
 
   home.stateVersion = "24.05"; # Do not change
-
-  # Enable GTK
-  gtk = {
-    enable = true;
-    theme = {
-      package = pkgs.adw-gtk3;
-      name = "adw-gtk3-dark";
-    };
-  };
-
-  # Enable QT
-  qt = {
-    enable = true;
-    platformTheme.name = "gtk";
-  };
 
   # Enable fonts installation
   fonts.fontconfig.enable = true;
@@ -32,7 +20,6 @@
     discord
     firefox
     floorp
-    iwd
     tree
     htop # Process manager
     killall
@@ -40,7 +27,6 @@
     zip
     unzip
     gcc
-    nwg-look # GTK3 settings manager
     python3
     starship
     mpv # Video utility
@@ -48,7 +34,6 @@
     spotify
     gimp
     qimgv # Image viewer
-    kdePackages.qt6ct #QT settings manager
     pavucontrol
     pulseaudio
     wl-clipboard
@@ -61,8 +46,6 @@
     wl-screenrec # Minimal screen recorder 
     ffmpeg
     obs-studio
-    toilet # Terminal text formatter
-    yazi
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
