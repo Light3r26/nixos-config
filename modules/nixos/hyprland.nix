@@ -34,7 +34,6 @@
   environment.systemPackages = with pkgs; [
     wayland
     xwayland
-    kitty
     waybar
     rofi
     kdePackages.dolphin # File manager

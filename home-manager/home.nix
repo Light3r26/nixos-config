@@ -2,7 +2,7 @@
 
 {
   imports = [
-    ../modules/home-manager/terminal.nix  
+    ../modules/home-manager/
   ];
   home.username = "light3r";
   home.homeDirectory = "/home/light3r";

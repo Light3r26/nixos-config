@@ -2,8 +2,9 @@
 
 {
   home.packages = with pkgs; [
+    kitty # Terminal emulator
     tree
-    yazi
+    yazi # Terminal file manager
     toilet # Terminal text formatter
   ];
 
@@ -13,6 +14,7 @@
     shellAliases = {
       # NixOS & Sistema
       mostra-generazioni-nixos = "nixos-rebuild list-generations"; 
+      flake-check = "nix flake check";
       size = "du -ah --max-depth=1 | sort -h";
       # Bluetooth
       auricolari-bt = "bluetoothctl connect B8:F8:BE:60:54:BE";
