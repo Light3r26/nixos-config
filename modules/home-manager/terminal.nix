@@ -3,9 +3,21 @@
 {
   home.packages = with pkgs; [
     kitty # Terminal emulator
-    tree
+    starship # Customisable prompt
     yazi # Terminal file manager
-    toilet # Terminal text formatter
+    htop # Process manager
+    killall
+    # Compilers and interpreters
+    gcc
+    python3
+    # Other tools
+    tree
+    wget
+    fastfetch
+    toilet
+    zip
+    unzip
+    ffmpeg
   ];
 
   programs.bash = {
