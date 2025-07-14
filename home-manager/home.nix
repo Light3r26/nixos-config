@@ -2,8 +2,9 @@
 
 {
   imports = [
-    ../modules/home-manager/
+    ../modules/home-manager
   ];
+
   home.username = "light3r";
   home.homeDirectory = "/home/light3r";
 
