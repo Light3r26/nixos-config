@@ -43,6 +43,7 @@
     ffmpeg
     obs-studio
     godot
+    aseprite
   ];
 
   home.file = {
