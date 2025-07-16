@@ -5,15 +5,12 @@
     ../modules/home-manager
   ];
 
-  home.username = "light3r";
-  home.homeDirectory = "/home/light3r";
+  home = { 
+    username = "light3r";
+    homeDirectory = "/home/light3r";
+    stateVersion = "24.05"; # Do not change
+  };
 
-  home.stateVersion = "24.05"; # Do not change
-
-  # Enable fonts installation
-  fonts.fontconfig.enable = true;
-
-  # The home.packages option allows you to install Nix packages into your environment.
   home.packages = with pkgs; [
     obsidian
     discord
@@ -45,15 +42,12 @@
     wl-screenrec # Minimal screen recorder 
     ffmpeg
     obs-studio
+    godot
   ];
 
   home.file = {
 
   };
-
-  # Home Manager can also manage your environment variables through
-  # 'home.sessionVariables'. These will be explicitly sourced when using a
-  # shell provided by Home Manager. 
 
   home.sessionVariables = {
     EDITOR = "nvim";

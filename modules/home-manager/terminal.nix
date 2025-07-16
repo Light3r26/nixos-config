@@ -46,7 +46,7 @@
       export PATH="~/.scripts/hypr:$PATH"
     '';
     initExtra = ''
-      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
+      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 
     '';
   };
 }
