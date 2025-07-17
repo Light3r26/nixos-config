@@ -3,12 +3,12 @@
 {
   programs.nvf = {
     enable = true;
-
+   
     settings = {
       vim = {
         theme = {
-        name = "gruvbox";
-        style = "dark";
+          name = "tokyonight";
+          #style = "dark";
         };
 
         options = {
@@ -18,7 +18,6 @@
           softtabstop = 2;
           expandtab = true;
         };
-
         clipboard.enable = true;
 
         lsp.enable = true;
