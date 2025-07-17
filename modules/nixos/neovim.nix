@@ -41,7 +41,7 @@
         treesitter.enable = true;
 
         # Forces the theme
-        initCommands = ''
+        extraVimConfig = ''
           colorscheme tokyonight
         '';
       };
