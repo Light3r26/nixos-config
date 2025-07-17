@@ -41,7 +41,7 @@
         treesitter.enable = true;
 
         # Forces the theme
-        vim.startupLua = ''
+        startupLua = ''
           vim.cmd.colorscheme("tokyonight")
         '';
       };
