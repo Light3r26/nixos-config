@@ -6,7 +6,6 @@
 
     settings = {
       vim = {
-        enable = true;
         theme = {
         name = "gruvbox";
         style = "dark";
