@@ -17,7 +17,10 @@
           shiftwidth = 2;
           softtabstop = 2;
           expandtab = true;
+          termguicolors = true;
+          background = "dark";
         };
+
         clipboard.enable = true;
 
         lsp.enable = true;
