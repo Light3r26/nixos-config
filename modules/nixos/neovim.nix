@@ -8,7 +8,7 @@
       vim = {
         theme = {
           name = "tokyonight";
-          #style = "dark";
+          style = "night";
         };
 
         options = {
