@@ -37,7 +37,7 @@
   };
 
   # Set your time zone.
-  time.timeZone = "Europe/Rome";
+  time.timeZone = "Europe/Greenwich";
 
   # Select internationalisation properties.
   i18n.defaultLocale = "it_IT.UTF-8";
