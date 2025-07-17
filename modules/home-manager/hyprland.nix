@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.hyprland.enable = true;
+  # Hyprland enabled in configuration.nix to assure sistem-level-changes 
 
   # Useful for Steam, Proton, ecc.
   hardware.graphics.enable = true;
