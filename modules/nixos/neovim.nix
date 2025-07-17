@@ -6,31 +6,31 @@
 
     settings = {
       vim = {
-        # Theme
+        enable = true;
         theme = {
-	  enable = true;
-          name = "gruvbox";
-          style = "dark";
-	};
+        name = "gruvbox";
+        style = "dark";
+        };
 
         options = {
           autoindent = true;
           tabstop = 2;
+          shiftwidth = 2;
+          softtabstop = 2;
+          expandtab = true;
         };
 
         clipboard.enable = true;
 
-	lsp.enable = true;
+        lsp.enable = true;
 
         # Languages
         languages = {
-	  enableTreesitter = true;
-	  enableLSP = true;
-	  nix.enable = true;
-	  python.enable = true;
-	  clang.enable = true;
-	  markdown.enable = true;
-
+          enableTreesitter = true;
+          nix.enable = true;
+          python.enable = true;
+          clang.enable = true;
+          markdown.enable = true;
         };
 
         # Plugins
