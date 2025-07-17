@@ -17,8 +17,6 @@
           shiftwidth = 2;
           softtabstop = 2;
           expandtab = true;
-          termguicolors = true;
-          background = "dark";
         };
 
         clipboard.enable = true;
@@ -39,11 +37,6 @@
         telescope.enable = true;
         autocomplete.nvim-cmp.enable = true;
         treesitter.enable = true;
-
-        # Forces the theme
-        extraVimConfig = ''
-          colorscheme tokyonight
-        '';
       };
     };
   };
