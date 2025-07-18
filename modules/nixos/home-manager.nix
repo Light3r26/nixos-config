@@ -12,5 +12,6 @@
         ];
       };
     };
+    backupFileExtension = "backup";
   };
 }
