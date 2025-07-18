@@ -48,6 +48,7 @@
 
       ### AUTOSTART 
       exec-once = [ 
+        "waybar"
         "hyprpaper"
         "swaync"
         "hypridle"
