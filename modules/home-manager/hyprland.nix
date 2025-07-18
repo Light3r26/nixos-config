@@ -69,7 +69,7 @@
         col.inactive_border = "rgb(0e1420)";
         resize_on_border = false;
         allow_tearing = false;
-        layout = dwindle;
+        layout = "dwindle";
       };
 
       decoration = {
@@ -128,7 +128,7 @@
       };
 
       master = {
-        new_status = master;
+        new_status = "master";
       };
 
       misc = {
@@ -138,7 +138,7 @@
   
       ### INPUT
       input = {
-        kb_layout = it;
+        kb_layout = "it";
         kb_options = "";
         follow_mouse = 1;
         sensitivity = 0;
@@ -152,7 +152,7 @@
           };
 
       device = {
-        name = epic-mouse-v1;
+        name = "epic-mouse-v1";
         sensitivity = -0.5;
       };
 
