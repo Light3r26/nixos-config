@@ -1,6 +1,6 @@
 {
   imports = [
-    ./grub.nix
+    ./bootloader.nix
     ./home-manager.nix
     ./neovim.nix
     ./sddm.nix
