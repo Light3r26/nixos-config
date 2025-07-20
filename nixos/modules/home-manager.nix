@@ -7,7 +7,7 @@
     users = {
       "light3r" = { 
         imports = [
-          ../../home-manager/home.nix
+          ../../hosts/light3r/home.nix
           #inputs.self.outputs.homeManagerModules.default
         ];
       };
