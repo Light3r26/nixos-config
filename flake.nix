@@ -27,9 +27,9 @@
       light3r = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./nixos/configuration.nix
+          ./hosts/light3r/configuration.nix
           inputs.home-manager.nixosModules.default
-	  inputs.nvf.nixosModules.default
+	        inputs.nvf.nixosModules.default
           inputs.sddm-sugar-candy-nix.nixosModules.default
         ];
       };
