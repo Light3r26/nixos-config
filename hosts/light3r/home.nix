@@ -2,7 +2,11 @@
 
 {
   imports = [
+<<<<<<< HEAD:home-manager/home.nix
     ./modules
+=======
+    ../../modules/home-manager
+>>>>>>> 9716e55 (cambio struttura configurazione):hosts/light3r/home.nix
   ];
 
   home = { 

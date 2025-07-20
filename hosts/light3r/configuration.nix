@@ -3,7 +3,11 @@
 {
   imports = [ 
       ./hardware-configuration.nix
+<<<<<<< HEAD:nixos/configuration.nix
       ./modules
+=======
+      ../../modules/nixos
+>>>>>>> 9716e55 (cambio struttura configurazione):hosts/light3r/configuration.nix
       inputs.home-manager.nixosModules.default 
     ];
 
