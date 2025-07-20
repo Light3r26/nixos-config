@@ -123,5 +123,5 @@
       	background-image: image(url("icons/hibernate.png"));
       }
     '';
-  }
+  };
 }
