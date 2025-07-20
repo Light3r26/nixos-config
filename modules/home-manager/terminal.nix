@@ -26,7 +26,7 @@
     enableCompletion = true;
     shellAliases = {
       # NixOS & Sistema
-      show-nixos-generations = "nixos-rebuild list-generations"; 
+      lista-generazioni-nixos = "nixos-rebuild list-generations"; 
       flake-check = "nix flake check";
       size = "du -ah --max-depth=1 | sort -h";
       # Bluetooth
