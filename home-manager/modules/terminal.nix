@@ -65,6 +65,6 @@
       confirm_os_windows_close = false;
     };
     shellIntegration.enableBashIntegration = true;
-    themeFile = "Tomorrow_Night_Bright";
+    themeFile = "SpaceGray";
   };
 }
