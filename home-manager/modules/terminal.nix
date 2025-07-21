@@ -62,9 +62,9 @@
       bold_italic_font = "auto";
       background_opacity = 0.7;
       enable_audio_bell = false;
-      confirm_os_windows_close = 0;
+      confirm_os_windows_close = false;
     };
     shellIntegration.enableBashIntegration = true;
-    themeFile = "adwaita_dark";
+    themeFile = "Tomorrow_Night_Bright";
   };
 }
