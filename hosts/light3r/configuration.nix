@@ -17,6 +17,12 @@
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  # Automatize garbage collection
+  nix.gc = {
+    automatic = true;
+    dates = "3days";
+  };
   
   # Enable Hyprland at sistem-level
   programs.hyprland.enable = true;
