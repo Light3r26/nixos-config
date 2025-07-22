@@ -1,25 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  home.packages = with pkgs; [
-    starship # Customisable prompt
-    yazi # Terminal file manager
-    htop # Process manager
-    killall
-    # Compilers and interpreters
-    gcc
-    python3
-    # Other tools
-    gh # GitHub CLI
-    tree
-    wget
-    fastfetch
-    toilet
-    zip
-    unzip
-    ffmpeg
-  ];
-
   programs.bash = {
     enable = true;
     enableCompletion = true;
@@ -47,24 +28,5 @@
     initExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 
     '';
-  };
-
-  programs.kitty = {
-    enable = true;
-    font = {
-      package = pkgs.nerd-fonts.caskaydia-cove;
-      name = "CaskaydiaCove Nerd Font Mono";
-      size = 14;
-    };
-    settings = {
-      bold_font = "auto";
-      italic_font = "auto";
-      bold_italic_font = "auto";
-      background_opacity = 0.7;
-      enable_audio_bell = false;
-      confirm_os_windows_close = false;
-    };
-    shellIntegration.enableBashIntegration = true;
-    themeFile = "SpaceGray";
   };
 }
