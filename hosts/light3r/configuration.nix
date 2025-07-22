@@ -3,15 +3,8 @@
 {
   imports = [ 
       ./hardware-configuration.nix
-<<<<<<< HEAD:nixos/configuration.nix
-      ./modules
-=======
       ../../modules/nixos
-<<<<<<< HEAD
->>>>>>> 9716e55 (cambio struttura configurazione):hosts/light3r/configuration.nix
-=======
       ../../modules/nixos/system
->>>>>>> 7efe3cf (modularizzazione di alcune impostazioni di sistema)
       inputs.home-manager.nixosModules.default 
     ];
 
