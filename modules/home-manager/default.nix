@@ -1,8 +1,10 @@
 {
   imports = [
-    ./terminal.nix
+    ./bash.nix
     ./hyprland.nix
+    ./kitty.nix
     ./styling.nix
+    ./terminal-tools.nix
     ./wlogout.nix
   ];
 }
