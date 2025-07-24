@@ -19,7 +19,6 @@
     wl-clipboard # Wayland clipboard
     libnotify # Notification sender
     swaynotificationcenter # Notification daemon
-    hyprlock # Screen locker
     hypridle # Screen idling program
     wlogout # Wayland logout menu
     brightnessctl
