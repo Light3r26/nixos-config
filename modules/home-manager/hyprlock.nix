@@ -6,22 +6,20 @@
     enable = true;
     settings = {
       general = {
-          no_fade_in = false;
-          grace = 0;
-          disable_loading_bar = false;
+        no_fade_in = false;
+        grace = 0;
+        disable_loading_bar = false;
       };
 
-      background = [
-        {
-          monitor = "";
-          path = ../../wallpapers/dark-bright-mountains.jpg;
-          blur_passes = 0;
-          contrast = 0.8916;
-          brightness = 0.8916;
-          vibrancy = 0.8916;
-          vibrancy_darkness = 0.0;
-        }
-      ];
+      background = {
+        monitor = "";
+        path = ../../wallpapers/dark-bright-mountains.jpg;
+        blur_passes = 0;
+        contrast = 0.8916;
+        brightness = 0.8916;
+        vibrancy = 0.8916;
+        vibrancy_darkness = 0.0;
+      };
 
       label = [
         # Time
@@ -61,47 +59,40 @@
         }
       ];
       
-
-      ];
-      
       # USER-BOX
-      shape = [
-        {
-          monitor = "";
-          size = "320, 55";
-          color = "rgba(255, 255, 255, 0.1)";
-          rounding = -1;
-          border_size = 0;
-          border_color = "rgba(255, 255, 255, 1)";
-          rotate = 0;
-          xray = false;
-          position = "34, -190";
-          halign = "center";
-          valign = "center";
-        }
-      ];
+      shape = {
+        monitor = "";
+        size = "320, 55";
+        color = "rgba(255, 255, 255, 0.1)";
+        rounding = -1;
+        border_size = 0;
+        border_color = "rgba(255, 255, 255, 1)";
+        rotate = 0;
+        xray = false;
+        position = "34, -190";
+        halign = "center";
+        valign = "center";
+      };
       
       # INPUT FIELD
-      input-field = [
-        {
-          monitor = "";
-          size = "320, 55";
-          outline_thickness = 0;
-          dots_size = 0.2 ;
-          dots_spacing = 0.2 ;
-          dots_center = true;
-          outer_color = "rgba(255, 255, 255, 0)";
-          inner_color = "rgba(255, 255, 255, 0.1)";
-          font_color = "rgb(200, 200, 200)";
-          fade_on_empty = false;
-          font_family = "SF Pro Display Bold";
-          placeholder_text = ''<i><span foreground="##ffffff99"> Inserisci Password </span></i>'';
-          hide_input = false;
-          position = "34, -268";
-          halign = "center";
-          valign = "center";
-        }
-      ];
+      input-field = {
+        monitor = "";
+        size = "320, 55";
+        outline_thickness = 0;
+        dots_size = 0.2 ;
+        dots_spacing = 0.2 ;
+        dots_center = true;
+        outer_color = "rgba(255, 255, 255, 0)";
+        inner_color = "rgba(255, 255, 255, 0.1)";
+        font_color = "rgb(200, 200, 200)";
+        fade_on_empty = false;
+        font_family = "SF Pro Display Bold";
+        placeholder_text = ''<i><span foreground="##ffffff99"> Inserisci Password </span></i>'';
+        hide_input = false;
+        position = "34, -268";
+        halign = "center";
+        valign = "center";
+      };
     };
   };
 }
