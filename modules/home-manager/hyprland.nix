@@ -21,7 +21,6 @@
     swaynotificationcenter # Notification daemon
     hyprlock # Screen locker
     hypridle # Screen idling program
-    hyprpaper # Screen background
     wlogout # Wayland logout menu
     brightnessctl
   ];
