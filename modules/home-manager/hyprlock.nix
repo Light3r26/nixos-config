@@ -23,8 +23,8 @@
         }
       ];
 
-      # Time
       label = [
+        # Time
         {
           monitor = "";
           text = "cmd[update:1000] echo "<span>$(date +"%H:%M")</span>"";
@@ -32,11 +32,8 @@
           font_size = 60;
           font_family = "SF Pro Display Bold";
           valign = "center";
-        }
-      ];
-      
-      # Day-Month-Date
-      label = [
+        } 
+        # Day-Month-Date
         {
           monitor = "";
           text = "cmd[update:1000] echo -e "$(date +"%A, %B %d")"";
@@ -47,6 +44,24 @@
           halign = "center";
           valign = "center";
         }
+        # USER
+        {
+          monitor = "";
+          text = "    $USER";
+          color = "rgba(216, 222, 233, 0.80)";
+          outline_thickness = 0;
+          dots_size = 0.2 ;
+          dots_spacing = 0.2 ;
+          dots_center = true;
+          font_size = 16;
+          font_family = "SF Pro Display Bold";
+          position = "38, -190";
+          halign = "center";
+          valign = "center";
+        }
+      ];
+      
+
       ];
       
       # USER-BOX
@@ -61,24 +76,6 @@
           rotate = 0;
           xray = false;
           position = "34, -190";
-          halign = "center";
-          valign = "center";
-        }
-      ];
-      
-      # USER
-      label = [
-        {
-          monitor = "";
-          text = "    $USER";
-          color = "rgba(216, 222, 233, 0.80)";
-          outline_thickness = 0;
-          dots_size = 0.2 ;
-          dots_spacing = 0.2 ;
-          dots_center = true;
-          font_size = 16;
-          font_family = "SF Pro Display Bold";
-          position = "38, -190";
           halign = "center";
           valign = "center";
         }
