@@ -1,9 +1,8 @@
 { config, ... }:
 
 {
-  security.pam.services.hyprlock = true;
   programs.hyprlock = {
-    enable = true;
+    # Activated in configuration.nix
     settings = {
       general = {
         no_fade_in = false;
