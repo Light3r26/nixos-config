@@ -25,7 +25,7 @@
         # Time
         {
           monitor = "";
-          text = "cmd[update:1000] echo "<span>$(date +"%H:%M")</span>"";
+          text = ''cmd[update:1000] echo "<span>$(date +"%H:%M")</span>"'';
           color = "rgba(216, 222, 233, 0.80)";
           font_size = 60;
           font_family = "SF Pro Display Bold";
@@ -34,7 +34,7 @@
         # Day-Month-Date
         {
           monitor = "";
-          text = "cmd[update:1000] echo -e "$(date +"%A, %B %d")"";
+          text = ''cmd[update:1000] echo -e "$(date +"%A, %B %d")"'';
           color = "rgba(216, 222, 233, .80)";
           font_size = 19;
           font_family = "SF Pro Display Bold";
