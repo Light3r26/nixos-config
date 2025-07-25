@@ -4,8 +4,8 @@
   services.hyprpaper = {
     enable = true;
     settings = { 
-      preload = [ "../../wallpapapers/dark-bright-mountains.jpg" ];
-      wallpaper = [ ", ../../wallpapers/dark-bright-mountains.jpg" ];
+      preload = [ "/Nixos/wallpapers/dark-bright-mountains.jpg" ];
+      wallpaper = [ ", /Nixos/wallpapers/dark-bright-mountains.jpg" ];
     };
   };
 }
