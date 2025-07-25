@@ -1,8 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  # Hyprland enabled in configuration.nix to assure sistem-level-changes 
-
   home.packages = with pkgs; [
     wayland
     xwayland
@@ -23,7 +21,7 @@
     wlogout # Wayland logout menu
     brightnessctl
   ];
-
+  
   wayland.windowManager.hyprland = {
     enable = true;
     settings = {

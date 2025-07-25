@@ -17,11 +17,6 @@
     dates = "3days";
   };
   
-  # Enable Hyprland at sistem-level
-  programs.hyprland.enable = true;
-  # Enable Hyprlock at sistem-level with PAM configured
-  programs.hyprlock.enable = true;
-
   # Useful for Steam, Proton, ecc.
   hardware.graphics.enable = true;
   
