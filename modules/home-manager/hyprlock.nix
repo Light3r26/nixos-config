@@ -1,4 +1,4 @@
-{ config, ... }:
+{ lib, config, ... }:
 
 {
   programs.hyprlock = {
@@ -12,7 +12,7 @@
 
       background = {
         monitor = "";
-        path = /Nixos/wallpapers/dark-bright-mountains.jpg;
+        path = lib.cleanSource /Nixos/wallpapers/dark-bright-mountains.jpg;
         blur_passes = 0;
         contrast = 0.8916;
         brightness = 0.8916;
