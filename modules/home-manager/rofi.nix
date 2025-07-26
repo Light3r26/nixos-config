@@ -81,8 +81,8 @@
 
       element-text = {
     	  expand = true;
-    	  horizontal-align = 0.5;
-    	  vertical-align = 0.5;
+    	  horizontal-align = "0.5";
+    	  vertical-align = "0.5";
     	  margin = "0.5% 0.5% -0.5% 0.5%";
       };
 
