@@ -6,6 +6,7 @@
     ./hyprlock.nix
     ./hyprpaper.nix
     ./kitty.nix
+    ./rofi.nix
     ./styling.nix
     ./terminal-tools.nix
     ./waybar.nix
