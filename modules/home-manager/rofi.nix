@@ -90,7 +90,7 @@
       element-text = {
 	      background-color = "inherit";
 	      text-color = "inherit";
-      }
+      };
 
       element-icon = {
 	      background-color = "inherit";
