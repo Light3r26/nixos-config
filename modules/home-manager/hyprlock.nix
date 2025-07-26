@@ -28,7 +28,7 @@
           color = "rgba(216, 222, 233, 0.80)";
           font_size = 60;
           font_family = "SF Pro Display Bold";
-          position = "35, -80";
+          position = "35, -20";
           valign = "center";
           halign = "center";
         } 
@@ -39,7 +39,7 @@
           color = "rgba(216, 222, 233, .80)";
           font_size = 19;
           font_family = "SF Pro Display Bold";
-          position = "35, -60";
+          position = "35, -70";
           halign = "center";
           valign = "center";
         }
