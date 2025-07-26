@@ -16,13 +16,13 @@
 
     theme = {
       "*" = {
-        bg = "#232530";
-	      fg = "#e8e8d3";
+        #bg = "#232530";
+        #fg = "#e8e8d3";
+        #button = "#31344a";
 	      accent = "#687363";
-	      button = "#31344a";
 
-	      background-color = "@bg";
-	      text-color = "@fg";
+	      background-color = "#232530";
+	      text-color = "#e8e8d3";
       };
 
       window = {
@@ -32,7 +32,7 @@
       };
 
       prompt = {
-	      background-color = "@button";
+	      background-color = "#31344a";
 	      enabled =	true;
 	      padding =	"0.5% 32px 0% -0.5%";
 	      font = "HarmonyOS Sans SC bold 12";
@@ -40,15 +40,15 @@
 
       entry = {
     	  placeholder =	"Search";
-	      background-color = "@button";
-    	  placeholder-color = "@fg";
+	      background-color = "#31344a";
+    	  placeholder-color = "#e8e8d3";
     	  expand = true;
     	  padding = "0.15% 0% 0% 0%";
       };
 
       inputbar = {
 	      children = [ "prompt" "entry" ];
-    	  background-color = "@button";
+    	  background-color = "#31344a";
     	  expand = false;
     	  border-radius = "6px";
     	  margin = "0%";
@@ -91,7 +91,7 @@
       };
 
       "element selected" = {
-    	  background-color = "@button";
+    	  background-color = "#31344a";
     	  border-radius = "6px";
       };
     };
