@@ -2,7 +2,7 @@
 
 {
   programs.rofi = {
-    enable = true;
+    enable = false;
     # Configuration
     modes = [ "drun" ];
     font = "HarmonyOS Sans SC bold 12";
@@ -56,8 +56,8 @@
       };
 
       listview = {
-    	  columns = "4";
-    	  lines =	"3";
+    	  columns = 4;
+    	  lines =	3;
     	  cycle = false;
     	  dynamic = true;
     	  layout = "vertical";
