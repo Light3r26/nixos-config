@@ -73,7 +73,7 @@
       element = {
     	  orientation = "vertical";
     	  padding = "2% 0% 2% 0%";
-      }
+      };
 
       element-icon = {
     	  size = "48px";
