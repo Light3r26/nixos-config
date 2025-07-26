@@ -12,7 +12,6 @@
 	    display-drun = "";
 	    drun-display-format = "{name}";
 	    sidebar-mode = false;
-      "@theme" = "/dev/null";
     };
 
     theme = {
@@ -78,6 +77,8 @@
       element-icon = {
     	  size = "48px";
     	  horizontal-align = "0.5";
+        background-color = "inherit";
+	      text-color = "inherit";
       };
 
       element-text = {
@@ -85,15 +86,7 @@
     	  horizontal-align = "0.5";
     	  vertical-align = "0.5";
     	  margin = "0.5% 0.5% -0.5% 0.5%";
-      };
-
-      element-text = {
-	      background-color = "inherit";
-	      text-color = "inherit";
-      };
-
-      element-icon = {
-	      background-color = "inherit";
+        background-color = "inherit";
 	      text-color = "inherit";
       };
 
