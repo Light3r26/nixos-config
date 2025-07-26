@@ -15,7 +15,7 @@
         #path = "${../../wallpapers/dark-bright-mountains.jpg}";
         path = "screenshot";
         blur_passes = 1;
-        blur_size = 7;
+        blur_size = 8;
         contrast = 0.8916;
         brightness = 0.8916;
         vibrancy = 0.8916;
