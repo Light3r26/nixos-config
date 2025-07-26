@@ -12,8 +12,9 @@
 
       background = {
         monitor = "";
-        path = "${../../wallpapers/dark-bright-mountains.jpg}";
-        blur_passes = 0;
+        #path = "${../../wallpapers/dark-bright-mountains.jpg}";
+        blur_passes = 1;
+        blur_size = 7;
         contrast = 0.8916;
         brightness = 0.8916;
         vibrancy = 0.8916;
