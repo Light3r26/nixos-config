@@ -27,7 +27,7 @@
       };
 
       window = {
-	      border-radius = 5px;
+	      border-radius = "5px";
 	      width =	"50%";
 	      padding = "28px";
       };
