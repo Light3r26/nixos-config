@@ -16,7 +16,7 @@
 
     theme = {
       "*" = {
-        #bg = "#232530";
+        #bg = "#232530"; substituted with the actual colors in the settings
         #fg = "#e8e8d3";
         #button = "#31344a";
 	      accent = "#687363";
@@ -56,8 +56,8 @@
       };
 
       listview = {
-    	  columns = 4;
-    	  lines =	3;
+    	  columns = "4";
+    	  lines =	"3";
     	  cycle = false;
     	  dynamic = true;
     	  layout = "vertical";
