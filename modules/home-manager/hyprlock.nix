@@ -12,7 +12,8 @@
 
       background = {
         monitor = "";
-        path = "${../../wallpapers/dark-bright-mountains.jpg}";
+        #path = "${../../wallpapers/dark-bright-mountains.jpg}";
+        path = "screenshot";
         blur_passes = 1;
         blur_size = 7;
         contrast = 0.8916;
