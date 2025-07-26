@@ -18,7 +18,6 @@
     libnotify # Notification sender
     swaynotificationcenter # Notification daemon
     hypridle # Screen idling program
-    wlogout # Wayland logout menu
     brightnessctl
   ];
   
@@ -29,12 +28,10 @@
       ### MONITORS
       #monitor = <name>, <resolution@refresh_rate>, <position>
       monitor = [ 
-        "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # Schermo ASUS
         "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" #Monitor PC
+        "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # Schermo ASUS
+        #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6"; #TV Philips
       ];
-
-      #TV Philips
-      #monitor = "HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6";
 
       ### MY PROGRAMS
       "$terminal" = "kitty";

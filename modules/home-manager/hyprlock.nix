@@ -2,7 +2,7 @@
 
 {
   programs.hyprlock = {
-    # Activated in configuration.nix
+    enable = true;
     settings = {
       general = {
         no_fade_in = false;
