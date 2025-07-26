@@ -3,7 +3,6 @@
 {
   programs.rofi = {
     enable = true;
-    path = "$XDG_CONFIG_HOME/rofi/config.rasi";
     # Configuration
     modes = [ "drun" ];
     font = "HarmonyOS Sans SC bold 12";
