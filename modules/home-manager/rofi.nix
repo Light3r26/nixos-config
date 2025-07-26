@@ -12,6 +12,7 @@
 	    display-drun = "";
 	    drun-display-format = "{name}";
 	    sidebar-mode = false;
+      "@theme" = "/dev/null";
     };
 
     theme = {
