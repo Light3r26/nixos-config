@@ -12,7 +12,7 @@
 
       background = {
         monitor = "";
-        #path = "${../../wallpapers/dark-bright-mountains.jpg}";
+        path = "${../../wallpapers/dark-bright-mountains.jpg}";
         blur_passes = 1;
         blur_size = 7;
         contrast = 0.8916;
@@ -29,7 +29,7 @@
           color = "rgba(216, 222, 233, 0.80)";
           font_size = 60;
           font_family = "SF Pro Display Bold";
-          position = "35, -20";
+          position = "35, 80";
           valign = "center";
           halign = "center";
         } 
@@ -40,7 +40,7 @@
           color = "rgba(216, 222, 233, .80)";
           font_size = 19;
           font_family = "SF Pro Display Bold";
-          position = "35, -70";
+          position = "35, 30";
           halign = "center";
           valign = "center";
         }
@@ -55,7 +55,7 @@
           dots_center = true;
           font_size = 16;
           font_family = "SF Pro Display Bold";
-          position = "38, -190";
+          position = "38, -60";
           halign = "center";
           valign = "center";
         }
@@ -71,7 +71,7 @@
         border_color = "rgba(255, 255, 255, 1)";
         rotate = 0;
         xray = false;
-        position = "34, -190";
+        position = "34, -60";
         halign = "center";
         valign = "center";
       };
@@ -91,7 +91,7 @@
         font_family = "SF Pro Display Bold";
         placeholder_text = ''<i><span foreground="##ffffff99"> Inserisci Password </span></i>'';
         hide_input = false;
-        position = "34, -268";
+        position = "34, -130";
         halign = "center";
         valign = "center";
       };
