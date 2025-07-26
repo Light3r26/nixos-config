@@ -28,6 +28,7 @@
           color = "rgba(216, 222, 233, 0.80)";
           font_size = 60;
           font_family = "SF Pro Display Bold";
+          position = "35, -50";
           valign = "center";
           halign = "center";
         } 
