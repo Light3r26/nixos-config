@@ -16,6 +16,9 @@
     automatic = true;
     dates = "3days";
   };
+
+  # Should fix SDDM not starting any DE session
+  services.dbus.packages = with pkgs; [ dconf ];
   
   # Useful for Steam, Proton, ecc.
   hardware.graphics.enable = true;
