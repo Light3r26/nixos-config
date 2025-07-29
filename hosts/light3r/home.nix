@@ -44,6 +44,7 @@
     obs-studio
     godot
     aseprite
+    dconf #trying to fix home manager dbus failure
   ];
 
   home.file = {
