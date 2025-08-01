@@ -44,6 +44,7 @@
     obs-studio
     godot
     aseprite
+    #dconf
   ];
 
   home.file = {

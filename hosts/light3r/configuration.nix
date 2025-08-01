@@ -17,8 +17,11 @@
     dates = "3days";
   };
 
+  # Enables Hyprland at system-level to avoid troubles with SDDM
+  programs.hyprland.enable = true;
+
   # Should fix SDDM not starting any DE session
-  services.dbus.packages = with pkgs; [ dconf ];
+  #services.dbus.packages = with pkgs; [ dconf ];
   
   # Useful for Steam, Proton, ecc.
   hardware.graphics.enable = true;
