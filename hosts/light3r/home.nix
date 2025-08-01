@@ -45,11 +45,9 @@
     godot
     aseprite
     dconf
+    freecad
+
   ];
-
-  home.file = {
-
-  };
 
   home.sessionVariables = {
     EDITOR = "nvim";
