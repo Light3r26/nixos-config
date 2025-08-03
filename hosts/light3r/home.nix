@@ -46,7 +46,7 @@
     aseprite
     dconf
     freecad
-
+    ventoy-full
   ];
 
   home.sessionVariables = {
