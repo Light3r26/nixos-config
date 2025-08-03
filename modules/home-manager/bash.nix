@@ -6,9 +6,10 @@
     enableCompletion = true;
     shellAliases = {
       # NixOS & Sistema
-      lista-generazioni-nixos = "nixos-rebuild list-generations"; 
+      list-nixos-generations = "nixos-rebuild list-generations"; 
       flake-check = "nix flake check";
       size = "du -ah --max-depth=1 | sort -h";
+      ip-show = "curl ifconfig.me";
       # Bluetooth
       auricolari-bt = "bluetoothctl connect B8:F8:BE:60:54:BE";
       dualsense-ps5 = "bluetoothctl connect 4C:B9:9B:10:B8:F9";
