@@ -1,6 +1,8 @@
 {
   imports = [
     ./bash.nix
+    ./browsers/firefox.nix
+    ./browsers/librewolf.nix
     ./hypridle.nix
     ./hyprland.nix
     ./hyprlock.nix
