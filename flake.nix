@@ -4,6 +4,16 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
+    agenix = {
+      url = "github:ryantm/agenix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # Bootloader theme
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
 
@@ -13,11 +23,6 @@
     # Neovim Nix Framework NVF
     nvf = {
       url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
-    home-manager = {
-      url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -31,6 +36,7 @@
           inputs.home-manager.nixosModules.default
 	        inputs.nvf.nixosModules.default
           inputs.sddm-sugar-candy-nix.nixosModules.default
+          inputs.agenix.nixosModules.default
         ];
       };
     }; 
