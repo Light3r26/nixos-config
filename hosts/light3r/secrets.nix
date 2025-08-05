@@ -3,6 +3,7 @@
     secrets = {
       user-secrets = {
         file = ../../secrets/user-secrets.age;
+        owner = "light3r";
       };
     };
   };
