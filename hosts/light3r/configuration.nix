@@ -3,7 +3,6 @@
 {
   imports = [ 
       ./hardware-configuration.nix
-      ./secrets.nix
       ../../modules/nixos
       ../../modules/nixos/system
       inputs.home-manager.nixosModules.default 
