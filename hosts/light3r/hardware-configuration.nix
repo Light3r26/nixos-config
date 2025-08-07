@@ -10,21 +10,21 @@
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/eefc3d3b-4e2d-4939-beac-7ccca89bc495";
-      fsType = "ext4";
-    };
+  fileSystems."/" = { 
+    device = "/dev/disk/by-uuid/eefc3d3b-4e2d-4939-beac-7ccca89bc495";
+    fsType = "ext4";
+  };
 
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-uuid/CEEA-18B9";
-      fsType = "vfat";
-      options = [ "fmask=0077" "dmask=0077" ];
-    };
+  fileSystems."/boot" = { 
+    device = "/dev/disk/by-uuid/CEEA-18B9";
+    fsType = "vfat";
+    options = [ "fmask=0077" "dmask=0077" ];
+  };
 
-  fileSystems."/home/light3r/Data" =
-    { device = "/dev/disk/by-uuid/F238-0E46";
-      fsType = "exfat";
-    };
+  fileSystems."/home/light3r/Data" = { 
+    device = "/dev/disk/by-uuid/F238-0E46";
+    fsType = "exfat";
+  };
 
   #fileSystems."/media/Light3r_USB" =
     #{ device = "/dev/disk/by-uuid/E8F1-1BC1";
