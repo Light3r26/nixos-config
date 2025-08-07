@@ -8,10 +8,8 @@
       vim = {
         theme = {
           enable = true;
-          name = "tokyonight";
-          style = "night";
-          #name = "gruvbox";
-          #style = "dark";
+          name = "kanagawa";
+          style = "dragon";
         };
 
         options = {
