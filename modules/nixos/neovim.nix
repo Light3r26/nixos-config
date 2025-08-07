@@ -7,8 +7,10 @@
     settings = {
       vim = {
         theme = {
-          name = "tokyonight";
-          style = "night";
+          name = "gruvbox";
+          style = "dark";
+          #name = "tokyonight";
+          #style = "night";
         };
 
         options = {
@@ -19,7 +21,10 @@
           expandtab = true;
         };
 
-        clipboard.enable = true;
+        clipboard = {
+          enable = true;
+          providers.wl-copy.enable = true;
+        };
 
         lsp.enable = true;
 
