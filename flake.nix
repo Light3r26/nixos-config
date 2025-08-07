@@ -9,11 +9,6 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    agenix = {
-      url = "github:ryantm/agenix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # Bootloader theme
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
 
@@ -36,7 +31,6 @@
           inputs.home-manager.nixosModules.default
 	        inputs.nvf.nixosModules.default
           inputs.sddm-sugar-candy-nix.nixosModules.default
-          inputs.agenix.nixosModules.default
         ];
       };
     }; 
