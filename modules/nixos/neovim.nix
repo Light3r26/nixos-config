@@ -13,13 +13,13 @@
           #style = "night";
         };
 
-        options = {
-          autoindent = true;
-          tabstop = 2;
-          shiftwidth = 2;
-          softtabstop = 2;
-          expandtab = true;
-        };
+        #options = {
+        #autoindent = true;
+        #  tabstop = 2;
+        #  shiftwidth = 2;
+        #  softtabstop = 2;
+        #  expandtab = true;
+        #};
 
         clipboard = {
           enable = true;
