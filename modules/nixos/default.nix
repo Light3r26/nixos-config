@@ -4,5 +4,7 @@
     ./home-manager.nix
     ./neovim.nix
     ./sddm.nix
+    ./servers.nix
+    ./system
   ];
 }
