@@ -13,6 +13,10 @@
     };
   };
 
+  home.sessionVariables = {
+    QT_QPA_PLATFORMTHEME = "qtct";
+  };
+
   # Enable GTK
   #gtk = {
   #  enable = true;
