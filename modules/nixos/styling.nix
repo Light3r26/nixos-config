@@ -9,7 +9,7 @@
   # Enable QT
   qt = {
     enable = true;
-    platformTheme.name = "qt6ct";
+    platformTheme = "qt5ct";
     style = {
       package = pkgs.utterly-nord-plasma;
       name = "Utterly Nord Plasma";
