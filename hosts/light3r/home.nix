@@ -14,8 +14,6 @@
   home.packages = with pkgs; [
     obsidian
     discord
-    firefox
-    floorp
     tree
     htop # Process manager
     killall

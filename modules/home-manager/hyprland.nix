@@ -6,6 +6,7 @@
     xwayland
     waybar
     rofi
+    nemo
     kdePackages.dolphin # File manager
     kdePackages.kio-fuse # To mount remote filesystems via FUSE
     kdePackages.kio-extras # Extra protocols support (sftp, fish and more)
@@ -17,7 +18,6 @@
     wl-clipboard # Wayland clipboard
     libnotify # Notification sender
     swaynotificationcenter # Notification daemon
-    hypridle # Screen idling program
     brightnessctl
   ];
   
@@ -36,7 +36,7 @@
       ### MY PROGRAMS
       "$terminal" = "kitty";
       "$browser" = "firefox";
-      "$fileManager" = "dolphin";
+      "$fileManager" = "nemo";
       "$menu" = "rofi -show drun";
 
       ### AUTOSTART 
