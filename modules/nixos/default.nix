@@ -5,6 +5,7 @@
     ./neovim.nix
     ./sddm.nix
     ./servers.nix
+    ./styling.nix
     ./system
   ];
 }
