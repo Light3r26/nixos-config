@@ -4,7 +4,7 @@
   # Enable QT
   qt = {
     enable = true;
-    platformTheme = "qt5ct";
+    platformTheme.name = "qtct";
     style = {
       package = pkgs.kdePackages.breeze;
       name = "breeze";
