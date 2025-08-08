@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    libsForQt6.qtstyleplugin-kvantum
-    libsForQt6.qt6ct
-  ];
-
   # Enable QT
   qt = {
     enable = true;
