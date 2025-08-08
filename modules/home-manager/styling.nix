@@ -6,10 +6,10 @@
     enable = true;
     platformTheme.name = "kde6";
     style = {
-      package = pkgs.kdePackages.breeze;
-      name = "breeze";
-      #package = pkgs.utterly-nord-plasma;
-      #name = "Utterly Nord Plasma";
+      #package = pkgs.kdePackages.breeze;
+      #name = "breeze";
+      package = pkgs.utterly-nord-plasma;
+      name = "Utterly Nord Plasma";
     };
   };
 
