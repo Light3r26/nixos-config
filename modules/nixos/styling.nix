@@ -11,8 +11,10 @@
     enable = true;
     platformTheme = "qt5ct";
     style = {
-      package = pkgs.utterly-nord-plasma;
-      name = "Utterly Nord Plasma";
+      package = pkgs.kdePackages.breeze;
+      name = "breeze";
+      #package = pkgs.utterly-nord-plasma;
+      #name = "Utterly Nord Plasma";
     };
   };
 
