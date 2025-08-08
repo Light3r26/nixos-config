@@ -4,17 +4,13 @@
   # Enable QT
   qt = {
     enable = true;
-    platformTheme.name = "qtct";
+    platformTheme.name = "kde6";
     style = {
       package = pkgs.kdePackages.breeze;
       name = "breeze";
       #package = pkgs.utterly-nord-plasma;
       #name = "Utterly Nord Plasma";
     };
-  };
-
-  home.sessionVariables = {
-    QT_QPA_PLATFORMTHEME = "qtct";
   };
 
   # Enable GTK
