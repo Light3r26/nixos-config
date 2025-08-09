@@ -47,7 +47,9 @@
   ];
 
   home.sessionVariables = {
+    TERMINAL = "kitty";
     EDITOR = "nvim";
+    VISUAL = "nvim";
   };
 
   programs.git = {

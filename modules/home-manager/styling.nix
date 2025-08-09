@@ -5,8 +5,8 @@
   gtk = {
     enable = true;
     theme = {
-      package = pkgs.dracula-theme;
-      name = "Dracula";
+      package = pkgs.nordic;
+      name = "nordic";
     };
   };
 
@@ -15,8 +15,8 @@
     enable = true;
     platformTheme.name = "qtct";
     style = {
-      package = pkgs.utterly-nord-plasma;
-      name = "Utterly Nord Plasma";
+      package = pkgs.nordic;
+      name = "nordic";
     };
   };
 }
