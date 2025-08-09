@@ -8,10 +8,6 @@
     rofi
     nemo
     nautilus
-    kdePackages.dolphin # File manager
-    kdePackages.kio-fuse # To mount remote filesystems via FUSE
-    kdePackages.kio-extras # Extra protocols support (sftp, fish and more)
-    kdePackages.qtsvg # Support for svg icons
     hyprshot # Screenshot utility
     jq # JSON parser and manipulator
     grim # Screenshot tool

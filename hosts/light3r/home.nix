@@ -44,6 +44,7 @@
     aseprite
     dconf
     freecad
+    element-desktop
   ];
 
   home.sessionVariables = {

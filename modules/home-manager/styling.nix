@@ -6,7 +6,7 @@
     enable = true;
     theme = {
       package = pkgs.nordic;
-      name = "nordic";
+      name = "Nordic";
     };
   };
 
@@ -16,7 +16,7 @@
     platformTheme.name = "qtct";
     style = {
       package = pkgs.nordic;
-      name = "nordic";
+      name = "Nordic";
     };
   };
 }
