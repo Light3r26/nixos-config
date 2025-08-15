@@ -42,6 +42,7 @@
         style = "bg:nord0 fg:nord4";
 
         symbols = {
+          NixOS = "";
           Windows = "󰍲";
           Ubuntu = "󰕈";
           SUSE = "";
