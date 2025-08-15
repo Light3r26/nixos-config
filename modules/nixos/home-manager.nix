@@ -7,7 +7,7 @@
     users = {
       "light3r" = { 
         imports = [
-          ../../hosts/light3r/home.nix
+          ../../hosts/msi-laptop/home.nix
           #inputs.self.outputs.homeManagerModules.default
         ];
       };
