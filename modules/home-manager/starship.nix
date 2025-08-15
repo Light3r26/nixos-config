@@ -197,5 +197,6 @@
         success_symbol = "[](bold fg:nord14)";
         error_symbol = "[](bold fg:nord11)";
       };
+    };
   };
 }
