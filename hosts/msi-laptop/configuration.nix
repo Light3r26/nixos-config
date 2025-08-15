@@ -3,12 +3,27 @@
 {
   imports = [ 
       ./hardware-configuration.nix
+      ./system-modules
       ../../modules/nixos
       inputs.home-manager.nixosModules.default 
     ];
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; }; # Passes inputs to HM modules
+    useGlobalPkgs = true; # NixOS and HM use the same global packages
+    users = {
+      "light3r" = { 
+        imports = [
+          ../../hosts/msi-laptop/home.nix
+          #inputs.self.outputs.homeManagerModules.default
+        ];
+      };
+    };
+    backupFileExtension = "backup";
+  };
 
   # Automatize garbage collection
   nix.gc = {
@@ -19,7 +34,7 @@
   # Enables Hyprland at system-level to avoid troubles with SDDM
   programs.hyprland.enable = true;
 
-  # Should fix SDDM not starting any DE session
+  # Fix SDDM not starting any DE session
   services.dbus.packages = with pkgs; [ dconf ];
   
   # Useful for Steam, Proton, ecc. (Enables OpenGL)
