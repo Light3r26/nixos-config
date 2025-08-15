@@ -8,30 +8,7 @@
       
       #"$schema" = "https://starship.rs/config-schema.json";
       
-      format = "
-        [](nord0)\
-        $os\
-        $username\
-        [@](bg:nord0 fg:nord4)\
-        $hostname\
-        [](bg:nord1 fg:nord0)\
-        $directory\
-        [](fg:nord1 bg:nord2)\
-        $git_branch\
-        $git_status\
-        [](fg:nord2 bg:nord3)\
-        $c\
-        $rust\
-        $golang\
-        $nodejs\
-        $php\
-        $java\
-        $kotlin\
-        $haskell\
-        $python\
-        [ ](fg:nord3)\
-        $line_break$character
-        ";
+      format = "[](nord0)\$os\$username\[@](bg:nord0 fg:nord4)\$hostname\[](bg:nord1 fg:nord0)\$directory\[](fg:nord1 bg:nord2)\$git_branch\$git_status\[](fg:nord2 bg:nord3)\$c\$rust\$golang\$nodejs\$php\$java\$kotlin\$haskell\$python\[ ](fg:nord3)\$line_break$character";
         
         #[](fg:nord3 bg:nord10)\
         #$docker_context\
