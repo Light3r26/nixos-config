@@ -9,6 +9,7 @@
     ./hyprpaper.nix
     ./kitty.nix
     ./rofi.nix
+    ./starship.nix
     ./styling.nix
     ./terminal-tools.nix
     ./waybar.nix
