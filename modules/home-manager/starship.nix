@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, ... }:
 
 {
   programs.starship = {
@@ -6,9 +6,9 @@
     enableBashIntegration = true;
     settings = {
       
-      "$schema" = "https://starship.rs/config-schema.json";
+      #"$schema" = "https://starship.rs/config-schema.json";
       
-      format = """
+      format = "
         [](nord0)\
         $os\
         $username\
@@ -30,7 +30,8 @@
         $haskell\
         $python\
         [ ](fg:nord3)\
-        $line_break$character""";
+        $line_break$character
+        ";
         
         #[](fg:nord3 bg:nord10)\
         #$docker_context\
