@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  networking.hostName = "light3r"; # Define your hostname.
+  networking.hostName = "msi-laptop"; # Define your hostname.
   networking.networkmanager.enable = true; # Enable networking
 
   networking.firewall = {
