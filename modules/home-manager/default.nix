@@ -3,6 +3,7 @@
     ./bash.nix
     ./browsers/firefox.nix
     ./browsers/librewolf.nix
+    ./cli-tools.nix
     ./hypridle.nix
     ./hyprland.nix
     ./hyprlock.nix
@@ -11,7 +12,6 @@
     ./rofi.nix
     ./starship.nix
     ./styling.nix
-    ./terminal-tools.nix
     ./waybar.nix
     ./wlogout.nix
   ];

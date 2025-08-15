@@ -2,7 +2,6 @@
 
 {
   home.packages = with pkgs; [
-    starship # Customisable prompt
     yazi # Terminal file manager
     htop # Process manager
     killall
