@@ -27,7 +27,7 @@
       msi-laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
-          ./hosts/light3r/configuration.nix
+          ./hosts/msi-laptop/configuration.nix
           inputs.home-manager.nixosModules.default
 	        inputs.nvf.nixosModules.default
           inputs.sddm-sugar-candy-nix.nixosModules.default
