@@ -24,7 +24,7 @@
 
   outputs = { self, nixpkgs, ... }@inputs: {
     nixosConfigurations = {
-      light3r = nixpkgs.lib.nixosSystem {
+      light3r-msi = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/light3r/configuration.nix
