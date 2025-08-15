@@ -2,7 +2,7 @@
 
 {
   programs.starship = {
-    enable = false;
+    enable = true;
     enableBashIntegration = true;
     settings = {
       
@@ -39,10 +39,10 @@
       };
         
       os = {
-        style = "bg:nord0 fg:nord4";
+        style = "bg:nord0 fg:nord10";
 
         symbols = {
-          #NixOS = "";
+          NixOS = "";
           Windows = "󰍲";
           Ubuntu = "󰕈";
           SUSE = "";
