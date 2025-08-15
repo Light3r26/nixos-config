@@ -40,9 +40,10 @@
         
       os = {
         style = "bg:nord0 fg:nord10";
+        disabled = false;
 
         symbols = {
-          NixOS = "";
+          #NixOS = "";
           Windows = "󰍲";
           Ubuntu = "󰕈";
           SUSE = "";
