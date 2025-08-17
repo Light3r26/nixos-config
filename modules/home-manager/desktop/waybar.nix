@@ -17,7 +17,7 @@
     
         "custom/info" = {
           format = "     ";
-          on-click = "sh -c '${TERMINAL:-kitty} sh -c \"fastfetch; echo; read -p \\\"Premi invio per uscire...\\\"\"'";
+          on-click = "sh -c '\${TERMINAL:-kitty} sh -c \"fastfetch; echo; read -p \\\"Premi invio per uscire...\\\"\"'";
         };
      
         "hyprland/workspaces" = {
