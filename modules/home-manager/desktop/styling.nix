@@ -14,7 +14,7 @@
     };
     cursorTheme = {
       package = pkgs.whitesur-cursors;
-      name = "WhiteSur";
+      #name = "WhiteSurCursors";
     };
     
   };
