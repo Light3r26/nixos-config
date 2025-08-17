@@ -16,6 +16,5 @@
     zip
     unzip
     ffmpeg
-    fastfetch
   ];
 }
