@@ -10,7 +10,7 @@
     };
     iconTheme = {
       package = pkgs.windows10-icons;
-      name = "Windows10";
+      name = "windows10.icons";
     };
     cursorTheme = {
       package = pkgs.whitesur-cursors;
