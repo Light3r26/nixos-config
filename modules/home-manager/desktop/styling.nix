@@ -11,11 +11,9 @@
     iconTheme = {
       package = pkgs.whitesur-icon-theme;
       name = "WhiteSur";
-      #package = pkgs.nordzy-icon-theme;
-      #name = "Nordzy";
     };
     cursorTheme = {
-      package = pkgs.whitesur-cursor-theme;
+      package = pkgs.whitesur-cursors;
       name = "WhiteSur";
     };
     
