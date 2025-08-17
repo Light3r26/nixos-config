@@ -10,7 +10,7 @@
     };
     iconTheme = {
       package = pkgs.kora-icon-theme;
-      name = "kora";
+      name = "kora-pgrey";
     };
     cursorTheme = {
       package = pkgs.whitesur-cursors;
