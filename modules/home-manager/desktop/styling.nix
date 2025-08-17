@@ -10,7 +10,7 @@
     };
     iconTheme = {
       package = pkgs.whitesur-icon-theme;
-      name = "White Sur";
+      name = "WhiteSur";
       #package = pkgs.nordzy-icon-theme;
       #name = "Nordzy";
     };
