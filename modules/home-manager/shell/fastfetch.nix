@@ -1,6 +1,13 @@
 { config, pkgs, ... }:
 
-{
+let 
+  nord9 = "#81A1C1";
+  nord10 = "#5E81AC";
+  nord11 = "#BF616A";
+  nord13 = "#EBCB8B";
+  nord14 = "#A3BE8C";
+
+in {
   programs.fastfetch = {
     enable = true;
     package = pkgs.fastfetch;
@@ -26,43 +33,43 @@
         {
           type = "host";
           key = " PC";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "cpu";
           key = "│ ├";
           showPeCoreCount = true;
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "gpu";
           key = "│ ├󰍛";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         } 
         {
           type = "memory";
           key = "│ ├󰍛";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "swap";
           key = "│ ├󰓡";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "disk";
           key = "│ ├";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "display";
           key = "│ ├󰍹";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "sound";
           key = "└ └󰓃";
-          keyColor = "#A3BE8C"; #nord14
+          keyColor = nord14;
         }
         {
           type = "custom";
@@ -76,55 +83,55 @@
         {
           type = "os";
           key = " OS";
-          keyColor = "#EBCB8B"; #nord13
+          keyColor = nord13;
         }
         {
           type = "command";
           text = "echo \${USER}@\${HOSTNAME}";
           key = "│ ├";
-          keyColor = "#EBCB8B"; #nord13
+          keyColor = nord13;
         }
         {
           type = "kernel";
           key = "│ ├";
-          keyColor = "#EBCB8B"; #nord13
+          keyColor = nord13;
         }
         {
           type = "gpu";
           key = "│ ├󰍛";
           format = "{3}";
-          keyColor = "#EBCB8B"; #nord13
+          keyColor = nord13;
         }
         {
           type = "packages";
           key = "└ └󰏖";
-          keyColor = "#EBCB8B"; #nord13
+          keyColor = nord13;
         }  
         "break"
         {
           type = "de";
           key = " DE";
-          keyColor = "#81A1C1"; #nord9
+          keyColor = nord9;
         }
         {
           type = "wm";
           key = " WM";
-          keyColor = "#81A1C1"; #nord9
+          keyColor = nord9;
         }
         {
           type = "lm";
           key = "│ ├";
-          keyColor = "#81A1C1"; #nord9
+          keyColor = nord9;
         }  
         {
           type = "terminal";
           key = "│ ├";
-          keyColor = "#81A1C1"; #nord9
+          keyColor = nord9;
         }
         {
           type = "shell";
           key = "└ └";
-          keyColor = "#81A1C1"; #nord9
+          keyColor = nord9;
         } 
         {
           type = "custom";
@@ -139,32 +146,32 @@
         {
           type = "theme";
           key = "󰉼 Theme";
-          keyColor = "#5E81AC"; #nord10
+          keyColor = nord10;
         }
         {
           type = "wmtheme";
           key = "│ ├󰉼";
-          keyColor = "#5E81AC"; #nord10
+          keyColor = nord10;
         }
         {
           type = "icons";
           key = "│ ├";
-          keyColor = "#5E81AC"; #nord10
+          keyColor = nord10;
         }
         {
           type = "cursor";
           key = "│ ├󰆿";
-          keyColor = "#5E81AC"; #nord10
+          keyColor = nord10;
         }
         {
           type = "font";
           key = "│ ├";
-          keyColor = "#5E81AC"; #nord10
+          keyColor = nord10;
         }
         {
           type = "terminalfont";
           key = "└ └";
-          keyColor = "#5E81AC"; #nord10
+          keyColor = nord10;
         }
         {
           type = "custom";
@@ -178,13 +185,13 @@
         {
           type = "command";
           key = "  OS Age";
-          keyColor = "#BF616A"; #nord11
+          keyColor = nord11;
           text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
         }
         {
           type = "uptime";
           key = "  Uptime";
-          keyColor = "#BF616A"; #nord11
+          keyColor = nord11;
         }
         {
           type = "custom";
