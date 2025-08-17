@@ -16,7 +16,7 @@
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
-    ./browsers/firefox.nix
-    ./browsers/librewolf.nix
+    ./apps/firefox.nix
+    ./apps/librewolf.nix
   ];
 }
