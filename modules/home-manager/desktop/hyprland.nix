@@ -45,6 +45,8 @@
 
       ### ENVIRONMENT VARIABLES
       env = [ 
+        "XCURSOR_THEME, WhiteSur-cursors"
+        "XCURSOR_SIZE, 24"
         "WLR_NO_HARDWARE_CURSORS,1"
       ];
 
