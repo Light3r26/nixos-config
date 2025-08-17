@@ -15,7 +15,7 @@
       #name = "Nordzy";
     };
     cursorTheme = {
-      package = pkgs.nordzy;
+      package = pkgs.nordzy-cursor-theme;
       name = "Nordzy";
     };
     
