@@ -10,13 +10,13 @@
     };
     iconTheme = {
       package = pkgs.whitesur-icon-theme;
-      name = "WhiteSur-Alt";
+      name = "WhiteSur";
       #package = pkgs.nordzy-icon-theme;
       #name = "Nordzy";
     };
     cursorTheme = {
-      package = pkgs.nordzy-cursor-theme;
-      name = "Nordzy";
+      package = pkgs.whitesur-cursor-theme;
+      name = "WhiteSur";
     };
     
   };
