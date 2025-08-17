@@ -80,7 +80,7 @@
         }
         {
           type = "command";
-          text = "echo ${USER}@${HOSTNAME}";
+          text = "echo \${USER}@\${HOSTNAME}";
           key = "│ ├";
           keyColor = "#EBCB8B"; #nord13
         }
