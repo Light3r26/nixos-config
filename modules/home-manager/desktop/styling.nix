@@ -9,9 +9,16 @@
       name = "Nordic";
     };
     iconTheme = {
-      package = pkgs.nordzy-icon-theme;
+      package = pkgs.whitesur-icon-theme;
+      name = "White Sur";
+      #package = pkgs.nordzy-icon-theme;
+      #name = "Nordzy";
+    };
+    cursorTheme = {
+      package = pkgs.nordzy;
       name = "Nordzy";
     };
+    
   };
 
   # Enable QT
