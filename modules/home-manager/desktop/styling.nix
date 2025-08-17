@@ -9,8 +9,8 @@
       name = "Nordic";
     };
     iconTheme = {
-      package = pkgs.windows10-icons;
-      name = "windows10.icons";
+      package = pkgs.kora-icon-theme;
+      name = "Kora";
     };
     cursorTheme = {
       package = pkgs.whitesur-cursors;
