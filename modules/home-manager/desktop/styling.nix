@@ -19,7 +19,4 @@
       name = "Nordic";
     };
   };
-  home.sessionVariables = lib.mkForce {
-    QT_STYLE_OVERRIDE = "";
-  };
 }
