@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   # Enable GTK
@@ -19,7 +19,7 @@
       name = "Nordic";
     };
   };
-  home.sessionVariables = {
+  home.sessionVariables = lib.mkForce {
     QT_STYLE_OVERRIDE = "";
   };
 }
