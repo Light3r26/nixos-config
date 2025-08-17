@@ -45,8 +45,6 @@
 
       ### ENVIRONMENT VARIABLES
       env = [ 
-        "XCURSOR_THEME, ~/.icons/macOS"
-        "XCURSOR_SIZE, 24"
         "WLR_NO_HARDWARE_CURSORS,1"
       ];
 
