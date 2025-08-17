@@ -1,18 +1,22 @@
 {
   imports = [
-    ./bash.nix
+    # Shell 
+    ./shell/bash.nix
+    ./shell/cli-tools.nix
+    #./shell/fastfetch.nix
+    ./shell/kitty.nix
+    ./shell/starship.nix
+    # Desktop
+    ./desktop/hypridle.nix
+    ./desktop/hyprland.nix
+    ./desktop/hyprlock.nix
+    ./desktop/hyprpaper.nix
+    ./desktop/rofi.nix
+    ./desktop/styling.nix
+    ./desktop/waybar.nix
+    ./desktop/wlogout.nix
+    # Apps
     ./browsers/firefox.nix
     ./browsers/librewolf.nix
-    ./cli-tools.nix
-    ./hypridle.nix
-    ./hyprland.nix
-    ./hyprlock.nix
-    ./hyprpaper.nix
-    ./kitty.nix
-    ./rofi.nix
-    ./starship.nix
-    ./styling.nix
-    ./waybar.nix
-    ./wlogout.nix
   ];
 }

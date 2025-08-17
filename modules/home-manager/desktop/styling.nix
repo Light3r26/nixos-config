@@ -19,4 +19,7 @@
       name = "Nordic";
     };
   };
+  home.sessionVariables = {
+    QT_STYLE_OVERRIDE = "";
+  }
 }

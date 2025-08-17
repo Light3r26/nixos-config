@@ -12,7 +12,6 @@
     gh # GitHub CLI
     tree
     wget
-    fastfetch
     toilet
     zip
     unzip
