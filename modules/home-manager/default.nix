@@ -3,7 +3,7 @@
     # Shell 
     ./shell/bash.nix
     ./shell/cli-tools.nix
-    #./shell/fastfetch.nix
+    ./shell/fastfetch.nix
     ./shell/kitty.nix
     ./shell/starship.nix
     # Desktop
