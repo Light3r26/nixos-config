@@ -6,7 +6,6 @@
     xwayland
     waybar
     rofi
-    nemo # File manager
     hyprshot # Screenshot utility
     jq # JSON parser and manipulator
     grim # Screenshot tool

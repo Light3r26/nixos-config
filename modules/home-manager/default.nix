@@ -11,6 +11,7 @@
     ./desktop/hyprland.nix
     ./desktop/hyprlock.nix
     ./desktop/hyprpaper.nix
+    ./desktop/nemo.nix
     ./desktop/rofi.nix
     ./desktop/styling.nix
     ./desktop/waybar.nix
