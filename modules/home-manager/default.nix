@@ -4,6 +4,7 @@
     ./shell/bash.nix
     ./shell/cli-tools.nix
     ./shell/fastfetch.nix
+    ./shell/git.nix
     ./shell/kitty.nix
     ./shell/starship.nix
     # Desktop

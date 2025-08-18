@@ -52,12 +52,6 @@
     VISUAL = "nvim";
   };
 
-  programs.git = {
-    enable = true;
-    userName = "Light3r26";
-    userEmail = "soria.jacopo@gmail.com";
-  };
-
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
