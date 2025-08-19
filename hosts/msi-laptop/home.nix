@@ -12,38 +12,7 @@
   };
 
   home.packages = with pkgs; [
-    obsidian
-    discord
-    tree
-    htop # Process manager
-    killall
-    upower # Battery utility
-    zip
-    unzip
-    gcc
-    python3
-    starship
-    mpv # Video utility
-    alsa-utils
-    spotify
-    gimp
-    qimgv # Image viewer
-    pavucontrol
-    pulseaudio
-    wl-clipboard
-    thunderbird
-    libreoffice
-    bitwarden-desktop
-    bitwarden-cli
-    blueman
-    kdePackages.kdenlive # Editing software
-    wl-screenrec # Minimal screen recorder 
-    ffmpeg
-    obs-studio
-    godot
-    aseprite
     dconf
-    freecad
   ];
 
   home.sessionVariables = {

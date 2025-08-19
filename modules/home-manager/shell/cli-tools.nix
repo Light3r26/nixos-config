@@ -2,19 +2,20 @@
 
 {
   home.packages = with pkgs; [
+    tree
     yazi # Terminal file manager
     htop # Process manager
+    btop # Advanced process manager
     killall
-    # Compilers and interpreters
-    gcc
-    python3
     # Other tools
     gh # GitHub CLI
-    tree
     wget
     toilet
     zip
     unzip
     ffmpeg
+    bitwarden-cli
+    upower # Battery utility
+    wl-clipboard
   ];
 }

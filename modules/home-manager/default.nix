@@ -8,6 +8,7 @@
     ./shell/kitty.nix
     ./shell/starship.nix
     # Desktop
+    ./desktop/desktop-apps.nix
     ./desktop/hypridle.nix
     ./desktop/hyprland.nix
     ./desktop/hyprlock.nix
