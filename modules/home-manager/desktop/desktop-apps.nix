@@ -18,5 +18,5 @@
     godot
     aseprite
     freecad
-  ]
+  ];
 }
