@@ -4,7 +4,6 @@
   home.packages = with pkgs; [
     wayland
     xwayland
-    waybar
     rofi
     hyprshot # Screenshot utility
     jq # JSON parser and manipulator

@@ -36,6 +36,10 @@
           markdown.enable = true;
         };
 
+        filetree.nvimTree = {
+          enable = true;
+        };
+
         # Plugins
         statusline.lualine.enable = true;
         telescope.enable = true;
