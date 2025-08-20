@@ -1,4 +1,4 @@
-#  Light3r's NixOS configuration 
+#   Light3r's NixOS configuration 
 Hello everyone, this is my personal NixOS system configuration. I've switched from Windows 11 in February 2025, so I'm still new to the ecosystem.
 
 🔴 NOTE: DO NOT deploy this flake directly on your machine, it will not succeed. This flake contains my hardware configuration and other individual information 
@@ -9,7 +9,7 @@ If you're an experienced user, all suggestions are welcome.
 ![Desktop](.images/Desktop.png)
 ![System Fetch](.images/Fastfetch.png)
 ![Neovim](.images/Neovim.png)
-![File Manager](.images/File\ Manager.png)
+![File Manager](.images/File-Manager.png)
 
 ## What's included
 The configuration is packed in a flake which contains both NixOS system-level configuration along with user-level (mostly dotfiles) configuration managed through Home Manager
