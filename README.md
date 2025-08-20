@@ -9,7 +9,7 @@ If you're an experienced user, all suggestions are welcome.
 ![Desktop](.images/Desktop.png)
 ![System Fetch](.images/Fastfetch.png)
 ![Neovim](.images/Neovim.png)
-![File Manager](.images/'File Manager'.png)
+![File Manager](.images/File\ Manager.png)
 
 ## What's included
 The configuration is packed in a flake which contains both NixOS system-level configuration along with user-level (mostly dotfiles) configuration managed through Home Manager
