@@ -2,7 +2,7 @@
 
 {
   programs.rofi = {
-    enable = false;
+    enable = true;
     # Configuration
     modes = [ "drun" ];
     font = "HarmonyOS Sans SC bold 12";
