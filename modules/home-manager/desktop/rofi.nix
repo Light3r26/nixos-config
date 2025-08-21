@@ -2,6 +2,10 @@
 
 let
   inherit (config.lib.formats.rasi) mkLiteral;
+  nord0 = mkLiteral "#2E3440";
+  nord1 = mkLiteral "#3B4252";
+  nord6 = mkLiteral "#ECEFF4";
+
 in {
   programs.rofi = {
     enable = true;
@@ -18,8 +22,8 @@ in {
 
     theme = {
       "*" = {
-        background-color = mkLiteral "#2E3440"; # nord0
-        text-color       = mkLiteral "#ECEFF4"; # nord6
+        background-color = nord0;
+        text-color       = nord6;
       };
 
       window = {
@@ -29,31 +33,31 @@ in {
       };
 
       prompt = {
-        background-color = mkLiteral "#3B4252"; # nord1
+        background-color = nord1;
         enabled          = true;
-        padding          = mkLiteral "0.5% 32px 0% 0%"; # niente negativi
+        padding          = mkLiteral "0.5% 32px 0% 0%"; 
         font             = "HarmonyOS Sans SC bold 12";
       };
 
       entry = {
         placeholder       = "Search";
-        background-color  = mkLiteral "#3B4252";
-        placeholder-color = mkLiteral "#ECEFF4";
+        background-color  = nord1;
+        placeholder-color = nord6;
         expand            = true;
         padding           = mkLiteral "0.15% 0% 0% 0%";
       };
 
       inputbar = {
-        children         = map mkLiteral [ "prompt" "entry" ]; # identificatori non quotati
-        background-color = mkLiteral "#3B4252";
-        expand           = false;
-        border-radius    = mkLiteral "6px";
-        margin           = mkLiteral "0%";
-        padding          = mkLiteral "10px";
+        children = map mkLiteral [ "prompt" "entry" ]; # identificatori non quotati
+        background-color = nord1;
+        expand = false;
+        border-radius = mkLiteral "6px";
+        margin = mkLiteral "0%";
+        padding = mkLiteral "10px";
       };
 
       listview = {
-        columns = 4;  # interi OK
+        columns = 4;
         lines   = 3;
         cycle   = false;
         dynamic = true;
@@ -73,18 +77,18 @@ in {
 
       element-icon = {
         size             = mkLiteral "48px";
-        horizontal-align = mkLiteral "0.5";  # era float → ora literal
+        horizontal-align = mkLiteral "0.5";
       };
 
       element-text = {
         expand           = true;
         horizontal-align = mkLiteral "0.5";
         vertical-align   = mkLiteral "0.5";
-        margin           = mkLiteral "0.5% 0.5% 0% 0.5%"; # rimosso -0.5%
+        margin           = mkLiteral "0.5% 0.5% 0% 0.5%";
       };
 
       "element selected" = {
-        background-color = mkLiteral "#3B4252";
+        background-color = nord1;
         border-radius    = mkLiteral "6px";
       };
     };
