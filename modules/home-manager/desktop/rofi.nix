@@ -1,7 +1,7 @@
 { config, lib, ... }:
 
 let
-  inherit (config.lib.formats.rasi) mkLiteral;
+  inherit (lib.formats.rasi) mkLiteral;
 in {
   programs.rofi = {
     enable = true;
@@ -18,8 +18,8 @@ in {
 
     theme = {
       "*" = {
-        background-color = mkLiteral "#2E3440";
-        text-color       = mkLiteral "#ECEFF4";
+        background-color = mkLiteral "#2E3440"; # nord0
+        text-color       = mkLiteral "#ECEFF4"; # nord6
       };
 
       window = {
@@ -29,10 +29,10 @@ in {
       };
 
       prompt = {
-        background-color = mkLiteral "#3B4252";
-        enabled = true;
-        padding = mkLiteral "0.5% 32px 0% 0%";  # niente negativi
-        font = "HarmonyOS Sans SC bold 12";
+        background-color = mkLiteral "#3B4252"; # nord1
+        enabled          = true;
+        padding          = mkLiteral "0.5% 32px 0% 0%"; # niente negativi
+        font             = "HarmonyOS Sans SC bold 12";
       };
 
       entry = {
@@ -44,7 +44,7 @@ in {
       };
 
       inputbar = {
-        children         = map mkLiteral [ "prompt" "entry" ];
+        children         = map mkLiteral [ "prompt" "entry" ]; # identificatori non quotati
         background-color = mkLiteral "#3B4252";
         expand           = false;
         border-radius    = mkLiteral "6px";
@@ -53,7 +53,7 @@ in {
       };
 
       listview = {
-        columns = 4;
+        columns = 4;  # interi OK
         lines   = 3;
         cycle   = false;
         dynamic = true;
@@ -72,15 +72,15 @@ in {
       };
 
       element-icon = {
-        size              = mkLiteral "48px";
-        horizontal-align  = 0.5;
+        size             = mkLiteral "48px";
+        horizontal-align = mkLiteral "0.5";  # era float → ora literal
       };
 
       element-text = {
-        expand            = true;
-        horizontal-align  = 0.5;
-        vertical-align    = 0.5;
-        margin            = mkLiteral "0.5% 0.5% 0% 0.5%"; # niente negativi
+        expand           = true;
+        horizontal-align = mkLiteral "0.5";
+        vertical-align   = mkLiteral "0.5";
+        margin           = mkLiteral "0.5% 0.5% 0% 0.5%"; # rimosso -0.5%
       };
 
       "element selected" = {
