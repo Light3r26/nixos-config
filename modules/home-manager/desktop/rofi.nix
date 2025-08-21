@@ -23,28 +23,28 @@ in {
     theme = {
       "*" = {
         background-color = nord0;
-        text-color       = nord6;
+        text-color = nord6;
       };
 
       window = {
         border-radius = mkLiteral "5px";
-        width         = mkLiteral "50%";
-        padding       = mkLiteral "28px";
+        width = mkLiteral "50%";
+        padding = mkLiteral "28px";
       };
 
       prompt = {
         background-color = nord1;
-        enabled          = true;
-        padding          = mkLiteral "0.5% 32px 0% 0%"; 
-        font             = selected-font;
+        enabled = true;
+        padding = mkLiteral "0.5% 32px 0% 0%"; 
+        font = selected-font;
       };
 
       entry = {
-        placeholder       = "Search";
-        background-color  = nord1;
+        placeholder = "Search";
+        background-color = nord1;
         placeholder-color = nord6;
-        expand            = true;
-        padding           = mkLiteral "0.15% 0% 0% 0%";
+        expand = true;
+        padding = mkLiteral "0.15% 0% 0% 0%";
       };
 
       inputbar = {
@@ -58,38 +58,46 @@ in {
 
       listview = {
         columns = 4;
-        lines   = 3;
-        cycle   = false;
+        lines = 3;
+        cycle = false;
         dynamic = true;
-        layout  = mkLiteral "vertical";
+        layout = mkLiteral "vertical";
       };
 
       mainbox = {
         children = map mkLiteral [ "inputbar" "listview" ];
-        spacing  = mkLiteral "2%";
-        padding  = mkLiteral "2% 1% 2% 1%";
+        spacing = mkLiteral "2%";
+        padding = mkLiteral "2% 1% 2% 1%";
       };
 
       element = {
         orientation = mkLiteral "vertical";
-        padding     = mkLiteral "2% 0% 2% 0%";
+        padding = mkLiteral "2% 0% 2% 0%";
       };
 
       element-icon = {
-        size             = mkLiteral "48px";
+        #
+        background-color = nord0;
+        text-color = nord6;
+        #
+        size = mkLiteral "48px";
         horizontal-align = mkLiteral "0.5";
       };
 
       element-text = {
-        expand           = true;
+        #
+        background-color = nord0;
+        text-color = nord6;
+        #
+        expand = true;
         horizontal-align = mkLiteral "0.5";
-        vertical-align   = mkLiteral "0.5";
-        margin           = mkLiteral "0.5% 0.5% 0% 0.5%";
+        vertical-align = mkLiteral "0.5";
+        margin = mkLiteral "0.5% 0.5% 0% 0.5%";
       };
 
       "element selected" = {
         background-color = nord1;
-        border-radius    = mkLiteral "6px";
+        border-radius = mkLiteral "6px";
       };
     };
   };
