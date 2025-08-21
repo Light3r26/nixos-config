@@ -1,7 +1,7 @@
 { config, lib, ... }:
 
 let
-  inherit (lib.formats.rasi) mkLiteral;
+  inherit (config.lib.formats.rasi) mkLiteral;
 in {
   programs.rofi = {
     enable = true;
