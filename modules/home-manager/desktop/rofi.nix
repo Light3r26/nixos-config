@@ -1,9 +1,10 @@
-{ config, ... }:
+{ config, lib, ... }:
 
-{
+let
+  inherit (config.lib.formats.rasi) mkLiteral;
+in {
   programs.rofi = {
     enable = true;
-
     font = "HarmonyOS Sans SC bold 12";
     modes = [ "drun" ];
 
@@ -17,74 +18,74 @@
 
     theme = {
       "*" = {
-        background-color = "#2E3440"; # nord0
-        text-color = "#ECEFF4";       # nord6
+        background-color = mkLiteral "#2E3440";
+        text-color       = mkLiteral "#ECEFF4";
       };
 
       window = {
-        border-radius = "5px";
-        width = "50%";
-        padding = "28px";
+        border-radius = mkLiteral "5px";
+        width         = mkLiteral "50%";
+        padding       = mkLiteral "28px";
       };
 
       prompt = {
-        background-color = "#3B4252"; # nord1
+        background-color = mkLiteral "#3B4252";
         enabled = true;
-        padding = "0.5% 32px 0% 0%";  # rimosso -0.5%
+        padding = mkLiteral "0.5% 32px 0% 0%";  # niente negativi
         font = "HarmonyOS Sans SC bold 12";
       };
 
       entry = {
-        placeholder = "Search";
-        background-color = "#3B4252"; # nord1
-        placeholder-color = "#ECEFF4"; # nord6
-        expand = true;
-        padding = "0.15% 0% 0% 0%";
+        placeholder       = "Search";
+        background-color  = mkLiteral "#3B4252";
+        placeholder-color = mkLiteral "#ECEFF4";
+        expand            = true;
+        padding           = mkLiteral "0.15% 0% 0% 0%";
       };
 
       inputbar = {
-        children = [ "prompt" "entry" ];
-        background-color = "#3B4252"; # nord1
-        expand = false;
-        border-radius = "6px";
-        margin = "0%";
-        padding = "10px";
+        children         = map mkLiteral [ "prompt" "entry" ];
+        background-color = mkLiteral "#3B4252";
+        expand           = false;
+        border-radius    = mkLiteral "6px";
+        margin           = mkLiteral "0%";
+        padding          = mkLiteral "10px";
       };
 
       listview = {
         columns = 4;
-        lines = 3;
-        cycle = false;
+        lines   = 3;
+        cycle   = false;
         dynamic = true;
-        layout = "vertical";
+        layout  = mkLiteral "vertical";
       };
 
       mainbox = {
-        children = [ "inputbar" "listview" ];
-        spacing = "2%";
-        padding = "2% 1% 2% 1%";
+        children = map mkLiteral [ "inputbar" "listview" ];
+        spacing  = mkLiteral "2%";
+        padding  = mkLiteral "2% 1% 2% 1%";
       };
 
       element = {
-        orientation = "vertical";
-        padding = "2% 0% 2% 0%";
+        orientation = mkLiteral "vertical";
+        padding     = mkLiteral "2% 0% 2% 0%";
       };
 
       element-icon = {
-        size = "48px";
-        horizontal-align = "0.5";
+        size              = mkLiteral "48px";
+        horizontal-align  = 0.5;
       };
 
       element-text = {
-        expand = true;
-        horizontal-align = "0.5";
-        vertical-align = "0.5";
-        margin = "0.5% 0.5% 0% 0.5%"; # tolto -0.5%
+        expand            = true;
+        horizontal-align  = 0.5;
+        vertical-align    = 0.5;
+        margin            = mkLiteral "0.5% 0.5% 0% 0.5%"; # niente negativi
       };
 
       "element selected" = {
-        background-color = "#3B4252"; # nord1
-        border-radius = "6px";
+        background-color = mkLiteral "#3B4252";
+        border-radius    = mkLiteral "6px";
       };
     };
   };
