@@ -5,16 +5,16 @@ let
   nord0 = mkLiteral "#2E3440";
   nord1 = mkLiteral "#3B4252";
   nord6 = mkLiteral "#ECEFF4";
+  selected-font = "HarmonyOS Sans SC bold 12";
 
 in {
   programs.rofi = {
     enable = true;
-    font = "HarmonyOS Sans SC bold 12";
+    font = selected-font;
     modes = [ "drun" ];
 
     extraConfig = {
       show-icons = true;
-      icon-theme = "Reversal-dark";
       display-drun = "";
       drun-display-format = "{name}";
       sidebar-mode = false;
@@ -36,7 +36,7 @@ in {
         background-color = nord1;
         enabled          = true;
         padding          = mkLiteral "0.5% 32px 0% 0%"; 
-        font             = "HarmonyOS Sans SC bold 12";
+        font             = selected-font;
       };
 
       entry = {
@@ -48,7 +48,7 @@ in {
       };
 
       inputbar = {
-        children = map mkLiteral [ "prompt" "entry" ]; # identificatori non quotati
+        children = map mkLiteral [ "prompt" "entry" ];
         background-color = nord1;
         expand = false;
         border-radius = mkLiteral "6px";
