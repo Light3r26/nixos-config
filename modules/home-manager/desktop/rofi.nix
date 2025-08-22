@@ -76,23 +76,15 @@ in {
       };
 
       element-icon = {
-        #
-        #background-color = nord0;
-        #text-color = nord6;
         background-color = mkLiteral "inherit";
         text-color = mkLiteral "inherit";
-        #
         size = mkLiteral "48px";
         horizontal-align = mkLiteral "0.5";
       };
 
       element-text = {
-        #
-        #background-color = nord0;
-        #text-color = nord6;
         background-color = mkLiteral "inherit";
         text-color = mkLiteral "inherit";
-        #
         expand = true;
         horizontal-align = mkLiteral "0.5";
         vertical-align = mkLiteral "0.5";

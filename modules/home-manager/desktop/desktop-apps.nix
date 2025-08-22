@@ -18,5 +18,6 @@
     godot
     aseprite
     freecad
+    gapless
   ];
 }
