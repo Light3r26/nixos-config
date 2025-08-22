@@ -73,7 +73,6 @@ in {
       element = {
         orientation = mkLiteral "vertical";
         padding = mkLiteral "2% 0% 2% 0%";
-        background-color = 
       };
 
       element-icon = {
