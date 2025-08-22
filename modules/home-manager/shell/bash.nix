@@ -22,9 +22,9 @@
       eval "$(starship init bash)"
       export XCURSOR_THEME=~/.icons/macOS
       export XCURSOR_SIZE=24
-      export PATH="~/.scripts:$PATH"
-      export PATH="~/.scripts/nixos:$PATH"
-      export PATH="~/.scripts/hypr:$PATH"
+      export PATH="/Nixos/scripts:$PATH"
+      export PATH="/Nixos/scripts/nixos:$PATH"
+      export PATH="/Nixos/scripts/hypr:$PATH"
     '';
     initExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 

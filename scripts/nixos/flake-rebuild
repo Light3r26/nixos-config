@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+echo ""
+toilet -f smblock --filter metal 'NixOS  Flake  Rebuild'
+
+cd /Nixos
+
+echo ""
+git diff
+
+# Commit su Github
+git add .
+echo -ne "\033[4;32mInserisci messaggio del commit:\033[0m " # Testo con ANSI
+read commit_message
+git commit -m "$commit_message"
+
+if [ "$1" == "push" ]; then
+  git push
+fi
+
+# Rebuild sistema
+sudo nixos-rebuild switch --flake .#msi-laptop

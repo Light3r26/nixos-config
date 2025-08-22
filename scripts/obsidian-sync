@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+VAULT_DIR="$HOME/Documenti/light3r-vault"
+
+cd $VAULT_DIR || exit 1
+
+git add .
+git commit -m "$(date '+%Y-%m-%d %H:%M%S')" || exit 0
+
+# git pull --rebase origin master || exit 1
+# git push origin master
+
