@@ -10,7 +10,7 @@
     };    
 
     shellIntegration.enableBashIntegration = true;
-    themeFile = "nord-kitty";
+    themeFile = "SpaceGray";
 
     settings = {
       bold_font = "auto";
@@ -19,6 +19,7 @@
       background_opacity = 0.7;
       enable_audio_bell = false;
       confirm_os_windows_close = false;
+      copy_on_select = true;
     };
   };
 }
