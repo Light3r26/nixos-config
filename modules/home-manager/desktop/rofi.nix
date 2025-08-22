@@ -79,8 +79,8 @@ in {
         #
         #background-color = nord0;
         #text-color = nord6;
-        background-color = "inherit";
-        text-color = "inherit";
+        background-color = mkLiteral "inherit";
+        text-color = mkLiteral "inherit";
         #
         size = mkLiteral "48px";
         horizontal-align = mkLiteral "0.5";
@@ -90,8 +90,8 @@ in {
         #
         #background-color = nord0;
         #text-color = nord6;
-        background-color = "inherit";
-        text-color = "inherit";
+        background-color = mkLiteral "inherit";
+        text-color = mkLiteral "inherit";
         #
         expand = true;
         horizontal-align = mkLiteral "0.5";
