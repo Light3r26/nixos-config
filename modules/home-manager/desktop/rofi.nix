@@ -73,12 +73,15 @@ in {
       element = {
         orientation = mkLiteral "vertical";
         padding = mkLiteral "2% 0% 2% 0%";
+        background-color = 
       };
 
       element-icon = {
         #
-        background-color = nord0;
-        text-color = nord6;
+        #background-color = nord0;
+        #text-color = nord6;
+        background-color = "inherit";
+        text-color = "inherit";
         #
         size = mkLiteral "48px";
         horizontal-align = mkLiteral "0.5";
@@ -86,8 +89,10 @@ in {
 
       element-text = {
         #
-        background-color = nord0;
-        text-color = nord6;
+        #background-color = nord0;
+        #text-color = nord6;
+        background-color = "inherit";
+        text-color = "inherit";
         #
         expand = true;
         horizontal-align = mkLiteral "0.5";
