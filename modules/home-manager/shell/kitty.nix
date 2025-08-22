@@ -10,7 +10,7 @@
     };    
 
     shellIntegration.enableBashIntegration = true;
-    themeFile = "Source_Code_X";
+    themeFile = "SpaceGray";
 
     settings = {
       bold_font = "auto";
