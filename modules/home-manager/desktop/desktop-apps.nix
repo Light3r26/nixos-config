@@ -19,5 +19,6 @@
     aseprite
     freecad
     gapless
+    protonmail-desktop
   ];
 }

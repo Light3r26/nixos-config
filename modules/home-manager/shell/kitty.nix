@@ -20,6 +20,10 @@
       enable_audio_bell = false;
       confirm_os_windows_close = false;
       copy_on_select = true;
+      #extraConfig = ''
+      #  selection_background #F5E0DC
+      #  selection_foreground #ECEFF4
+      #'';
     };
   };
 }
