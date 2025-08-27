@@ -9,7 +9,6 @@
     gimp
     qimgv # Image viewer
     pavucontrol
-    thunderbird
     libreoffice
     bitwarden-desktop
     blueman
@@ -19,6 +18,5 @@
     aseprite
     freecad
     gapless
-    protonmail-desktop
   ];
 }
