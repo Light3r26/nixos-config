@@ -3,6 +3,10 @@
 {
   home.packages = with pkgs; [
     nemo-with-extensions
+    nemo-fileroller
+    nemo-preview
+    nemo-emblems
+    folder-color-switcher
   ];
   
   # Set Nemo as default file browser
@@ -23,6 +27,7 @@
       # Set Kitty as default Nemo terminal
       "org/cinnamon/desktop/application/terminal" = {
         exec = "kitty";
+        exec-arg = "--working-directory";
       };
       # Needed to change keyboard shortcuts 
       "org/cinnamon/desktop/interface" = {
