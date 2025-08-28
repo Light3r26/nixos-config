@@ -18,5 +18,6 @@
     aseprite
     freecad
     gapless
+    synology-drive-client
   ];
 }
