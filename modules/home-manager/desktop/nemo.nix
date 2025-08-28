@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    nemo
+    nemo-with-extensions
   ];
   
   # Set Nemo as default file browser
