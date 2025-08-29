@@ -9,10 +9,7 @@
     options = [ 
       "_netdev"
       "nofail"
-      "uid=1000" 
-      "gid=100" 
-      "fmask=133" 
-      "dmask=022"
+      "rw"
     ];
   };
 }
