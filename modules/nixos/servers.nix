@@ -7,10 +7,12 @@
     device = "192.168.1.42:/volume1";
     fsType = "nfs";
     options = [ 
-      #"x-systemd.automount" 
-      #"noauto" 
       "_netdev"
       "nofail"
+      "uid=1000" 
+      "gid=100" 
+      "fmask=133" 
+      "dmask=022"
     ];
   };
 }
