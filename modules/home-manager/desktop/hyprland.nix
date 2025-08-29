@@ -22,9 +22,24 @@
       ### MONITORS
       #monitor = <name>, <resolution@refresh_rate>, <position>
       monitor = [ 
-        "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" #Monitor PC
-        "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # Schermo ASUS
-        #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" #TV Philips
+        
+        "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
+        "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
+
+        #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
+      ];
+
+      workspace = [ 
+        "1, monitor:eDP-1"
+        "2, monitor:eDP-1"
+        "3, monitor:eDP-1"
+        "4, monitor:eDP-1"
+        "5, monitor:eDP-1"
+        "6, monitor:HDMI-A-1"
+        "7, monitor:HDMI-A-1"
+        "8, monitor:HDMI-A-1"
+        "9, monitor:HDMI-A-1"
+        "10, monitor:HDMI-A-1"
       ];
 
       ### MY PROGRAMS
