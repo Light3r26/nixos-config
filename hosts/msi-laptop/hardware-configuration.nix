@@ -24,7 +24,7 @@
   fileSystems."/home/light3r/Data" = { 
     device = "/dev/disk/by-uuid/F238-0E46";
     fsType = "exfat";
-    options = [ "uid=1000" "gid=100" "umask=0022" ];
+    options = [ "uid=1000" "gid=100" "fmask=133" "dmask=022" ];
   };
 
   #fileSystems."/media/Light3r_USB" =

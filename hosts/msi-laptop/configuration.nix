@@ -68,6 +68,7 @@
      starship
      nix-prefetch
      nix-prefetch-github
+     exfatprogs
   ];
 
   # Enabled services
