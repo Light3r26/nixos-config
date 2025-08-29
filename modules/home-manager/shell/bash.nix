@@ -7,7 +7,6 @@
     shellAliases = {
       # NixOS & Sistema
       list-nixos-generations = "nixos-rebuild list-generations"; 
-      flake-check = "nix flake check";
       size = "du -ah --max-depth=1 | sort -h";
       ip-show = "curl ifconfig.me";
       # Bluetooth
