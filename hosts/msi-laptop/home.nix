@@ -20,8 +20,14 @@
     EDITOR = "nvim";
     VISUAL = "nvim";
     HYPRSHOT_DIR = /home/light3r/Screenshots;
-
   };
+
+  home.sessionPath = [
+    "/Nixos/scripts"
+    "/Nixos/scripts/nixos"
+    "/Nixos/scripts/system"
+    "/Nixos/scripts/hypr"
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
