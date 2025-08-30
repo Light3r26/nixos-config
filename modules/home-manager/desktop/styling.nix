@@ -31,8 +31,8 @@
 
   home.packages = with pkgs; [
     # Kvantum and its tools
-    qt5.qtstyleplugin-kvantum
-    qt5ct
+    libsForQt5.qtstyleplugin-kvantum
+    libsForQt5.qt5ct
     # Nordic QT theme package
     nordic-kde-theme
   ];
