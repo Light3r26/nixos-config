@@ -34,7 +34,7 @@
     libsForQt5.qtstyleplugin-kvantum
     libsForQt5.qt5ct
     # Nordic QT theme package
-    nordic-kde-theme
+    nordic
   ];
 
   xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
