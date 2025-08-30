@@ -19,6 +19,5 @@
     freecad
     gapless
     synology-drive-client
-    protonmail-desktop
   ];
 }
