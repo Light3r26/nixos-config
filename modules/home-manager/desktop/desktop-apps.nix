@@ -19,5 +19,6 @@
     freecad
     gapless
     synology-drive-client
+    localsend
   ];
 }

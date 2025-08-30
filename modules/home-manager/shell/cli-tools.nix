@@ -3,6 +3,8 @@
 {
   home.packages = with pkgs; [
     tree
+    bat
+    lsd
     yazi # Terminal file manager
     htop # Process manager
     btop # Advanced process manager
