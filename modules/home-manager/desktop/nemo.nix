@@ -7,7 +7,7 @@
     nemo-preview
     nemo-emblems
     folder-color-switcher
-    cinnamon.common
+    cinnamon-common
   ];
   
   # Set Nemo as default file browser
