@@ -25,22 +25,15 @@
   dconf = {
     settings = {
       # Set Kitty as default Nemo terminal
-      "org/cinnamon/desktop/application/terminal" = {
+      "org/cinnamon/desktop/default-applications/terminal" = {
         exec = "kitty";
         exec-arg = "--working-directory";
       };
-      # Needed to change keyboard shortcuts 
-      "org/cinnamon/desktop/interface" = {
-        can-change-accels = true;
+
+      "org.cinnamon.desktop.keybindings" = {
+        open-terminal = [ "<Shift>d" ];
       };
     };
-  };
-
-  home.file = {
-    # Set keyboard shortcut to open terminal
-    ".gnome2/accels/nemo".text = ''
-    (gtk_accel_path "<Actions>/DirViewActions/OpenInTerminal" "<Shift>d")
-    '';
   };
 }
 
