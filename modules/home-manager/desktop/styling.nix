@@ -29,16 +29,16 @@
     };
   };
 
+  home.packages = with pkgs; [
+    # Required for the Kvantum style engine.
+    libsForQt5.qtstyleplugin-kvantum
+  ];
+
   xdg.configFile = {
     "Kvantum/kvantum.kvconfig".text = ''
       [General]
       theme=Nordic-Darker-Solid
     '';
-
-  home.packages = with pkgs; [
-    # Required for the Kvantum style engine.
-    libsForQt5.qtstyleplugin-kvantum
-  ];
 
     "Kvantum/Nordic".source = "${pkgs.nordic}/share/Kvantum/Nordic";
   };
