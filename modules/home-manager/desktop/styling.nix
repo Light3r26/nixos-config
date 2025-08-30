@@ -25,8 +25,20 @@
     enable = true;
     platformTheme.name = "qtct";
     style = {
-      package = pkgs.nordic;
-      name = "Nordic";
+      name = "kvantum";
     };
   };
+
+  home.packages = with pkgs; [
+    # Kvantum and its tools
+    qt5.qtstyleplugin-kvantum
+    qt5ct
+    # Nordic QT theme package
+    nordic-kde-theme
+  ];
+
+  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
+    [General]
+    theme=Nordic-Darker-Solid
+  '';
 }
