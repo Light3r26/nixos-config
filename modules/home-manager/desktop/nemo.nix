@@ -7,6 +7,7 @@
     nemo-preview
     nemo-emblems
     folder-color-switcher
+    cinnamon.common
   ];
   
   # Set Nemo as default file browser
@@ -14,6 +15,7 @@
     name = "Nemo";
     exec = "${pkgs.nemo-with-extensions}/bin/nemo";
   };
+
   xdg.mimeApps = {
     enable = true;
     defaultApplications = {
