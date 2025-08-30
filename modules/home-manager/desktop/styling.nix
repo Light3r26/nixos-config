@@ -29,16 +29,12 @@
     };
   };
 
-  home.packages = with pkgs; [
-    # Kvantum and its tools
-    libsForQt5.qtstyleplugin-kvantum
-    libsForQt5.qt5ct
-    # Nordic QT theme package
-    nordic
-  ];
+  xdg.configFile = {
+    "Kvantum/kvantum.kvconfig".text = ''
+      [General]
+      theme=Nordic-Darker-Solid
+    '';
 
-  xdg.configFile."Kvantum/kvantum.kvconfig".text = ''
-    [General]
-    theme=Nordic-Darker-Solid
-  '';
+    "Kvantum/Nordic".source = "${pkgs.nordic}/share/Kvantum/Nordic";
+  };
 }
