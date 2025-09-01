@@ -27,6 +27,8 @@
     textpieces # Text processing utility
     identity # Image and videos comparison tool
     stirling-pdf # PDF editor
+    gamemode # Gaming optimiser
+    piper # Mouse configuration app
   ];
 
 }
