@@ -19,5 +19,8 @@
     bitwarden-cli
     upower # Battery utility
     wl-clipboard
+    fanctl # Fan control
+    gamemode # Gaming optimiser
+    tlp # Advanced power manager
   ];
 }
