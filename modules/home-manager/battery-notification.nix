@@ -5,9 +5,8 @@
 # Script made by sanjivthapasvt on github in his Low-Battery-Notification-Script repo
 
 let
-
   batteryNotification = pkgs.writeScriptBin "battery-notification" ''
-    #!/usr/bin/env bash
+    #!/bin/bash
     notified=0
 
     while true; do
