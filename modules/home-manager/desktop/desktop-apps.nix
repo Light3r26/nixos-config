@@ -1,6 +1,8 @@
-{ config, pkgs, ... }:
+{ config, pkgs, flatpaks, ... }:
 
 {
+  imports = [ flatpaks.nixosModule ];
+
   home.packages = with pkgs; [
     obsidian
     discord
