@@ -22,7 +22,7 @@
     };
 
     # Declarative Flatpak
-    nix-flatpak.url = "github:gmodena/nix-flatpak";
+    nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
   };
 
   outputs = {
