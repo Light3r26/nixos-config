@@ -31,6 +31,8 @@
     dates = "3days";
   };
 
+  services.flatpak.enable = true;
+
   # Enables Hyprland at system-level to avoid troubles with SDDM
   programs.hyprland.enable = true;
 
