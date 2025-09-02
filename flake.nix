@@ -42,7 +42,7 @@
           home-manager.nixosModules.default
 	        nvf.nixosModules.default
           sddm-sugar-candy-nix.nixosModules.default
-            #flatpaks.nixosModules.default
+          flatpaks.nixosModules.flatpaks
         ];
       };
     }; 
