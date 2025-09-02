@@ -31,7 +31,14 @@
     dates = "3days";
   };
 
-  services.flatpak.enable = true;
+  services.flatpak = {
+    enable = true;
+    #update.auto = {
+      #enable = true;
+      #onCalendar = "weekly";
+    #};
+  };
+
 
   # Enables Hyprland at system-level to avoid troubles with SDDM
   programs.hyprland.enable = true;
