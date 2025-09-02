@@ -22,7 +22,7 @@
     };
 
     # Declarative Flatpak
-    flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
+    nix-flatpak.url = "github:gmodena/nix-flatpak";
   };
 
   outputs = {
@@ -31,7 +31,7 @@
     home-manager,
     nvf,
     sddm-sugar-candy-nix,
-    flatpaks,
+    nix-flatpak,
     ... 
   }@inputs: {
     nixosConfigurations = {
@@ -42,7 +42,7 @@
           home-manager.nixosModules.default
 	        nvf.nixosModules.default
           sddm-sugar-candy-nix.nixosModules.default
-          flatpaks.nixosModules.flatpaks
+          nix-flatpak.nixosModules.nix-flatpak
         ];
       };
     }; 

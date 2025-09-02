@@ -1,8 +1,6 @@
 { config, pkgs, flatpaks, ... }:
 
 {
-  imports = [ flatpaks.homeModule ];
-
   home.packages = with pkgs; [
     obsidian
     discord
