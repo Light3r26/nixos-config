@@ -20,17 +20,29 @@
       url = "github:notashelf/nvf";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    # Declarative Flatpak
+    flatpaks.url = "github:in-a-dil-emma/declarative-flatpak/stable-v3";
   };
 
-  outputs = { self, nixpkgs, ... }@inputs: {
+  outputs = {
+    self, 
+    nixpkgs,
+    home-manager,
+    nvf,
+    sddm-sugar-candy-nix,
+    flatpaks,
+    ... 
+  }@inputs: {
     nixosConfigurations = {
       msi-laptop = nixpkgs.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/msi-laptop/configuration.nix
-          inputs.home-manager.nixosModules.default
-	        inputs.nvf.nixosModules.default
-          inputs.sddm-sugar-candy-nix.nixosModules.default
+          home-manager.nixosModules.default
+	        nvf.nixosModules.default
+          sddm-sugar-candy-nix.nixosModules.default
+          flatpaks.nixosModules.default
         ];
       };
     }; 
