@@ -30,4 +30,8 @@
     piper # Mouse configuration app
   ];
 
+ services.flatpak.packages = [
+    { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
+  ];
+
 }
