@@ -1,6 +1,8 @@
-{ config, pkgs, flatpaks, ... }:
+{ config, pkgs, flatpaks, flake-inputs, ... }:
 
 {
+  imports = [ flake-inputs.flatpaks.homeManagerModules.nix-flatpak ];
+
   home.packages = with pkgs; [
     obsidian
     discord
