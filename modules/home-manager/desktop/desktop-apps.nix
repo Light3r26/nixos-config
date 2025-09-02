@@ -1,7 +1,7 @@
 { config, pkgs, flatpaks, ... }:
 
 {
-  imports = [ flatpaks.nixosModule ];
+  #imports = [ flatpaks.nixosModule ];
 
   home.packages = with pkgs; [
     obsidian
