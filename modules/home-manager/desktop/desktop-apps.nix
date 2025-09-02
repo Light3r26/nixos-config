@@ -1,7 +1,7 @@
-{ config, pkgs, flatpaks, flake-inputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
-  imports = [ flake-inputs.flatpaks.homeManagerModules.nix-flatpak ];
+  imports = [ inputs.flatpaks.homeManagerModules.nix-flatpak ];
 
   home.packages = with pkgs; [
     obsidian
