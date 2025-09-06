@@ -6,7 +6,6 @@
   home.packages = with pkgs; [
     obsidian
     discord
-    mpv # Video utility
     spotify
     gimp
     qimgv # Image viewer
