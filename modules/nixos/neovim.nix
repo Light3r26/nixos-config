@@ -25,26 +25,31 @@
           registers = "unnamedplus";
         };
 
-        lsp.enable = true;
-
-        # Languages
-        languages = {
-          enableTreesitter = true;
-          nix.enable = true;
-          python.enable = true;
-          clang.enable = true;
-          markdown.enable = true;
+        # Plugins
+        statusline.lualine.enable = true;
+        telescope = {
+          enable = true;
+          mappings.findFiles = "<leader>f"
         };
-
+        autocomplete.nvim-cmp.enable = true;
+        treesitter.enable = true;
         filetree.nvimTree = {
           enable = true;
         };
 
-        # Plugins
-        statusline.lualine.enable = true;
-        telescope.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-        treesitter.enable = true;
+        lsp.enable = true;
+        languages = {
+          enableFormat = true;
+          enableTreesitter = true;
+          # Languages
+          nix.enable = true;
+          python.enable = true;
+          clang.enable = true;
+          markdown.enable = true;
+          go.enable = true;
+          html.enable = true;
+          css.enable = true;
+        };
       };
     };
   };

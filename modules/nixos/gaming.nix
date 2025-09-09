@@ -7,8 +7,4 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
     localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
   };
-
-  # Enable ntsync - helps Windows games work properly on Linux by fixing
-  # communication issues between different parts of the game
-  boot.initrd.kernelModules = [ "ntsync" ];
 }
