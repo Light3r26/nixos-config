@@ -35,7 +35,7 @@
         treesitter.enable = true;
         filetree.nvimTree = {
           enable = true;
-          mappings = "<leader>h";
+          mappings.focus = "<leader>h";
         };
 
         lsp.enable = true;
