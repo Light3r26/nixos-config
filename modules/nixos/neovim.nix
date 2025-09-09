@@ -25,7 +25,7 @@
           registers = "unnamedplus";
         };
 
-        # Plugins
+        # Plugins (<leader> is the spacebar)
         statusline.lualine.enable = true;
         telescope = {
           enable = true;
@@ -35,6 +35,7 @@
         treesitter.enable = true;
         filetree.nvimTree = {
           enable = true;
+          mappings = "<leader>h";
         };
 
         lsp.enable = true;
