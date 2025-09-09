@@ -47,7 +47,7 @@
   # Fix SDDM not starting any DE session
   services.dbus.packages = with pkgs; [ dconf ];
   
-  # Useful for Steam, Proton, ecc. (Enables OpenGL)
+  # Video Acceleration and OpenGL
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -66,16 +66,8 @@
     NIXOS_OZONE_WL = "1";
     LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
   };
-  
-    # Enable Steam
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
-  };
 
-  # Allow unfree packages
+   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [
