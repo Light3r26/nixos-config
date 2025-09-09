@@ -29,7 +29,7 @@
         statusline.lualine.enable = true;
         telescope = {
           enable = true;
-          mappings.findFiles = "<leader>f"
+          mappings.findFiles = "<leader>f";
         };
         autocomplete.nvim-cmp.enable = true;
         treesitter.enable = true;
