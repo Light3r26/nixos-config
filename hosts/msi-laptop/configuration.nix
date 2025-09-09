@@ -11,6 +11,7 @@
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
+  # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; }; # Passes inputs to HM modules
     useGlobalPkgs = true; # NixOS and HM use the same global packages
@@ -47,8 +48,15 @@
   services.dbus.packages = with pkgs; [ dconf ];
   
   # Useful for Steam, Proton, ecc. (Enables OpenGL)
-  hardware.graphics.enable = true;
-  
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      intel-media-driver # LIBVA_DRIVER_NAME=iHD
+      intel-vaapi-driver # LIBVA_DRIVER_NAME=i965 (older but works better for Firefox/Chromium)
+      libvdpau-va-gl
+    ];
+  };
+
   environment.sessionVariables = {
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "Hyprland";
@@ -56,6 +64,7 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     # Hint electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
+    LIBVA_DRIVER_NAME = "iHD"; # Force intel-media-driver
   };
   
     # Enable Steam

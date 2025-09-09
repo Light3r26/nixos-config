@@ -18,8 +18,11 @@
     );
 
     config = {
-      profile = "high-quality";
+      profile = "gpu-hq";
       ytdl-format = "bestvideo+bestaudio";
+      hwdec = "auto-safe";
+      vo = "gpu";
+      gpu-context = "wayland";
     };
   };
 }
