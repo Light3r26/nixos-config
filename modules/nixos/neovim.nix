@@ -27,12 +27,12 @@
 
         # Plugins (<leader> is the spacebar)
         statusline.lualine.enable = true;
+        autocomplete.nvim-cmp.enable = true;
+        treesitter.enable = true;
         telescope = {
           enable = true;
           mappings.findFiles = "<leader>f";
         };
-        autocomplete.nvim-cmp.enable = true;
-        treesitter.enable = true;
         filetree.nvimTree = {
           enable = true;
           mappings.focus = "<leader>h";

@@ -5,5 +5,6 @@
     font-awesome
     nerd-fonts.caskaydia-cove
     nerd-fonts.jetbrains-mono
+    montserrat
   ]; 
 }
