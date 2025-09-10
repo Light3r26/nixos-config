@@ -23,6 +23,7 @@
       hwdec = "auto-safe";
       vo = "gpu";
       gpu-context = "wayland";
+      sub-visibility = false;
     };
   };
 }
