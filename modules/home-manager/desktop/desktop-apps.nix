@@ -27,7 +27,6 @@
     textpieces # Text processing utility
     identity # Image and videos comparison tool
     piper # Mouse configuration app
-    ventoy-full-gtk
   ];
 
   # Flatpak packages
