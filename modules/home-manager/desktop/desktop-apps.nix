@@ -27,9 +27,11 @@
     textpieces # Text processing utility
     identity # Image and videos comparison tool
     piper # Mouse configuration app
+    ventoy-full-gtk
   ];
 
- services.flatpak.packages = [
+  # Flatpak packages
+  services.flatpak.packages = [
     { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
   ];
 
