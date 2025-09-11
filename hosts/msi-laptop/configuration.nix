@@ -40,10 +40,6 @@
     };
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-full-gtk"
-  ];
-
   # Enables Hyprland at system-level to avoid troubles with SDDM
   programs.hyprland.enable = true;
 
