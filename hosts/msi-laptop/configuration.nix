@@ -14,7 +14,7 @@
   # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; }; # Passes inputs to HM modules
-    #useGlobalPkgs = true; # NixOS and HM use the same global packages
+    useGlobalPkgs = true; # NixOS and HM use the same global packages
     users = {
       "light3r" = { 
         imports = [
@@ -40,6 +40,9 @@
     };
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "ventoy-full-gtk"
+  ];
 
   # Enables Hyprland at system-level to avoid troubles with SDDM
   programs.hyprland.enable = true;

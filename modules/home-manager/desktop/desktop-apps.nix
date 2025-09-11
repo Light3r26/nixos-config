@@ -29,10 +29,6 @@
     piper # Mouse configuration app
   ];
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "ventoy-full-gtk"
-  ];
-
   # Flatpak packages
   services.flatpak.packages = [
     { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
