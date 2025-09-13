@@ -28,7 +28,6 @@
     identity # Image and videos comparison tool
     piper # Mouse configuration app
     protonmail-desktop
-    virtualbox
   ];
 
   # Flatpak packages
