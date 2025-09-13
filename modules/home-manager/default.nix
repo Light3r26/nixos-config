@@ -1,7 +1,6 @@
 {
   imports = [
     ./battery-notification.nix
-    ./virtualization.nix
     # Shell 
     ./shell/bash.nix
     ./shell/cli-tools.nix
