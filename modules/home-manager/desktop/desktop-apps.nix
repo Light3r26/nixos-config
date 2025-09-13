@@ -16,7 +16,7 @@
     kdePackages.kdenlive # Editing software
     obs-studio
     godot
-    aseprite
+    #aseprite
     freecad
     gapless # Music player
     synology-drive-client
@@ -27,6 +27,8 @@
     textpieces # Text processing utility
     identity # Image and videos comparison tool
     piper # Mouse configuration app
+    protonmail-desktop
+    virtualbox
   ];
 
   # Flatpak packages
