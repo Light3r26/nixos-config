@@ -15,6 +15,8 @@
         "x-scheme-handler/mailto" = ["protonmail-desktop.desktop"]; # Links
         "video/*" = ["mpv.desktop"]; # Any video files
         "image/*" = ["qimgv.desktop"]; # Images
+        "image/png" = ["qimgv.desktop"];
+        "image/jpeg" = ["qimgv.desktop"];
       };
     };
   };
