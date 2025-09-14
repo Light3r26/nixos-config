@@ -1,6 +1,7 @@
 {
   imports = [
     ./battery-notification.nix
+    ./mime-apps.nix
     # Shell 
     ./shell/bash.nix
     ./shell/cli-tools.nix
