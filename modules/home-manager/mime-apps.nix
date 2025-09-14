@@ -3,6 +3,7 @@
 {
   xdg = {
     mimeApps = {
+      enable = true;
       defaultApplications = {
         "inode/directory" = ["nemo.desktop"]; # Directories
         "application/x-gnome-saved-search" = [ "nemo.desktop" ];
