@@ -81,6 +81,8 @@
      exfatprogs
   ];
 
+  programs.nix-ld.enable = true;
+
   # Enabled services
   services.openssh.enable = true;
 
