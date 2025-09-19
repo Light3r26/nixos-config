@@ -165,7 +165,7 @@
 
       bind = [ 
         "$mainMod, D, exec, $terminal"
-        "$mainMod, S, exec, $browser "
+        "$mainMod, S, exec, $browser"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
@@ -186,6 +186,7 @@
         "$mainMod, 3, workspace, 3"
         "$mainMod, 4, workspace, 4"
         "$mainMod, 5, workspace, 5"
+
         "$mainMod, 6, workspace, 6"
         "$mainMod, 7, workspace, 7"
         "$mainMod, 8, workspace, 8"

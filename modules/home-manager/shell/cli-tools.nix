@@ -22,5 +22,6 @@
     fanctl # Fan control
     gamemode # Gaming optimiser
     tlp # Advanced power manager
+    uv
   ];
 }
