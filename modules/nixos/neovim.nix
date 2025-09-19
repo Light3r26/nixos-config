@@ -51,6 +51,11 @@
           html.enable = true;
           css.enable = true;
         };
+
+        diagnostics = {
+          enable = true;
+          config.virtual_text = true;
+        };
       };
     };
   };
