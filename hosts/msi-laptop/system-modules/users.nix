@@ -4,7 +4,7 @@
   # Define user accounts.
   users.users.light3r = {
     isNormalUser = true;
-    description = "Jacopo Soria";
+    description = "Jacopo";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
   };
