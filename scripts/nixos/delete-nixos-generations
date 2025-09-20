@@ -1,8 +1,31 @@
 #!/usr/bin/env bash
 
-for generation in $@
-do
-	sudo nix-env -p /nix/var/nix/profiles/system --delete-generations $generation
+while getopts ":hns" opt; do
+  case ${opt} in
+    s)
+      echo "Eliminating all generations from chosen interval..."
+      for n in {$1..$2};
+      do
+        echo $n
+      done
+    ;;
+    n)
+      echo "Eliminating chosen generations..."
+      for generation in $@
+      do
+	      sudo nix-env -p /nix/var/nix/profiles/system --delete-generations $generation
+      done
+    ;;
+    h)
+      echo "Delete Nixos Generation command help"
+      echo "--sequential, -s: eliminate all generations from a chosen interval"
+      echo "--number, -n: eliminate chosen generations"
+    ;;
+    ?)
+      echo "Usage: $(basename $0) [-n] [-s] [-h]"
+      exit 1 
+    ;;
+  esac
 done
 
 nix-collect-garbage
