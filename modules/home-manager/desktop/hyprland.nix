@@ -10,8 +10,6 @@
     grim # Screenshot tool
     slurp # Screenshot selector
     wl-clipboard # Wayland clipboard
-    libnotify # Notification sender
-    swaynotificationcenter # Notification daemon
     brightnessctl
   ];
   

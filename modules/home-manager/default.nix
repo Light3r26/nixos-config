@@ -19,6 +19,7 @@
     ./desktop/nemo.nix
     ./desktop/rofi.nix
     ./desktop/styling.nix
+    ./desktop/swaync.nix
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
