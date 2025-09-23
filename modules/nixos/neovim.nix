@@ -31,14 +31,20 @@
         treesitter.enable = true;
         telescope = {
           enable = true;
-          mappings.findFiles = "<leader>f";
+          mappings = {
+            findFiles = "<leader>f";
+            liveGrep = "<leader>g"; 
+          };
         };
         filetree.nvimTree = {
           enable = true;
           mappings.focus = "<leader>h";
         };
 
-        lsp.enable = true;
+        lsp = {
+          enable = true;
+          mappings.goToDefinition = "<leader>gd";
+        };
         languages = {
           enableFormat = true;
           enableTreesitter = true;
