@@ -5,7 +5,7 @@
     ./neovim.nix
     ./nvidia.nix
     ./sddm.nix
-    ./servers.nix
+    #./servers.nix
     ./virtualization.nix
   ];
 }

@@ -27,8 +27,9 @@
     textpieces # Text processing utility
     identity # Image and videos comparison tool
     piper # Mouse configuration app
-    protonmail-desktop
-    wasistlos
+    protonmail-desktop # Email client
+    wasistlos # Unofficial Whatsapp Web Client 
+    glow # Terminal Markdown Renderer
   ];
 
   # Flatpak packages
