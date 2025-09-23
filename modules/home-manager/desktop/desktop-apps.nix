@@ -28,6 +28,7 @@
     identity # Image and videos comparison tool
     piper # Mouse configuration app
     protonmail-desktop
+    wasistlos
   ];
 
   # Flatpak packages
