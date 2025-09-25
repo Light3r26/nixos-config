@@ -9,6 +9,7 @@
     guest = {
       enable = true;
       dragAndDrop = true;
+      seamless = true;
       clipboard = true;
     };
   };
