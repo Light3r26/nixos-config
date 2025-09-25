@@ -1,6 +1,8 @@
 { config, pkgs, ... }:
 
 {
+  boot.extraModulePackages = with config.boot.kernelPackages; [ virtualbox ];
+
   virtualisation.virtualbox = {
     host = {
       enable = true;
