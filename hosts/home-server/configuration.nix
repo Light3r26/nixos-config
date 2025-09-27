@@ -1,13 +1,29 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
-      ./hardware-configuration.nix
-      ../../modules/nixos/neovim.nix
+    ./hardware-configuration.nix
+    ../../modules/nixos/neovim.nix
+    inputs.home-manager.nixosModules.default 
   ];
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+  
+  # Home Manager
+  home-manager = {
+    extraSpecialArgs = { inherit inputs; }; # Passes inputs to HM modules
+    useGlobalPkgs = true; # NixOS and HM use the same global packages
+    users = {
+      "light3r" = { 
+        imports = [
+          ../../hosts/home-server/home.nix
+        ];
+      };
+    };
+    backupFileExtension = "backup";
+  };
+
 
   # Bootloader.
   boot.loader.grub = {

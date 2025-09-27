@@ -51,7 +51,8 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/home-server/configuration.nix
-	  #nvf.nixosModules.default
+          home-manager.nixosModules.default
+	        nvf.nixosModules.default
           #nix-flatpak.nixosModules.nix-flatpak
         ];
       };
