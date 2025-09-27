@@ -58,7 +58,10 @@
           html.enable = true;
           css.enable = true;
           bash.enable = true;
-          csharp.enable = true;
+          csharp = {
+            enable = true;
+            lsp.enable = true;
+          };
         };
 
         diagnostics = {
