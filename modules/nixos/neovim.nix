@@ -38,6 +38,7 @@
         };
         filetree.nvimTree = {
           enable = true;
+          openOnSetup = true;
           mappings.focus = "<leader>h";
         };
 
@@ -56,6 +57,8 @@
           go.enable = true;
           html.enable = true;
           css.enable = true;
+          bash.enable = true;
+          csharp.enable = true;
         };
 
         diagnostics = {
