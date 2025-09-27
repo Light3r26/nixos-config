@@ -15,7 +15,7 @@
     extraSpecialArgs = { inherit inputs; }; # Passes inputs to HM modules
     useGlobalPkgs = true; # NixOS and HM use the same global packages
     users = {
-      "light3r" = { 
+      "nixos" = { 
         imports = [
           ../../hosts/home-server/home.nix
         ];
