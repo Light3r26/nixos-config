@@ -61,6 +61,7 @@
           csharp = {
             enable = true;
             lsp.enable = true;
+            lsp.server = "omnisharp";
           };
         };
 
