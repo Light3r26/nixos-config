@@ -1,5 +1,5 @@
 {
-  description = "Light3r's NixOS system config flake";
+  description = "Light3r's NixOS systems config flake";
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
@@ -46,5 +46,15 @@
         ];
       };
     }; 
+    nixosConfigurations = {
+      home-server = nixpkgs.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/home-server/configuration.nix
+	  #nvf.nixosModules.default
+          #nix-flatpak.nixosModules.nix-flatpak
+        ];
+      };
+    };
   };
 }
