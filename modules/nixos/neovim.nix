@@ -26,6 +26,11 @@
         };
 
         # Plugins (<leader> is the spacebar)
+        dashboard.alpha = {
+          enable = true;
+          theme = "dashboard";
+
+        };
         statusline.lualine.enable = true;
         autocomplete.nvim-cmp.enable = true;
         treesitter.enable = true;
