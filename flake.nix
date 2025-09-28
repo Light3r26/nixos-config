@@ -2,44 +2,44 @@
   description = "Light3r's NixOS systems config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-
-    home-manager = {
+    # Unstable packages for laptop configuration
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
+    home-manager-unstable = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
-    # Bootloader theme
-    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes";
-
-    # SDDM theme 
-    sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix";
-
-    # Neovim Nix Framework NVF
-    nvf = {
-      url = "github:notashelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
+    # Stable packages for home-server configuration
+    nixpkgs-stable.url = "github:nixos/nixpkgs/25.05";
+    home-manager-stable = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs-stable";
     };
 
-    # Declarative Flatpak
-    nix-flatpak.url = "github:gmodena/nix-flatpak/latest";
+    # Other miscellaneous input
+    nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme
+    sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix"; # SDDM theme
+    nvf.url = "github:notashelf/nvf"; # Neovim Nix Framework NVF
+    nix-flatpak.url = "github:gmodena/nix-flatpak/latest"; # Declarative Flatpak
   };
 
   outputs = {
     self, 
-    nixpkgs,
-    home-manager,
+    nixpkgs-unstable,
+    home-manager-unstable,
+    nixpkgs-stable,
+    home-manager-stable,
     nvf,
     sddm-sugar-candy-nix,
     nix-flatpak,
     ... 
   }@inputs: {
     nixosConfigurations = {
-      msi-laptop = nixpkgs.lib.nixosSystem {
+      msi-laptop = nixpkgs-unstable.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/msi-laptop/configuration.nix
-          home-manager.nixosModules.default
+          home-manager-unstable.nixosModules.default
 	        nvf.nixosModules.default
           sddm-sugar-candy-nix.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
@@ -47,13 +47,12 @@
       };
     }; 
     nixosConfigurations = {
-      home-server = nixpkgs.lib.nixosSystem {
+      home-server = nixpkgs-stable.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/home-server/configuration.nix
-          home-manager.nixosModules.default
-	        nvf.nixosModules.default
-          #nix-flatpak.nixosModules.nix-flatpak
+          home-manager-stable.nixosModules.default
+          nvf.nixosModules.default
         ];
       };
     };

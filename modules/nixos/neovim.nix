@@ -60,8 +60,8 @@
           clang.enable = true;
           markdown.enable = true;
           go.enable = true;
-          html.enable = true;
-          css.enable = true;
+          #html.enable = true;
+          #css.enable = true;
           bash.enable = true;
           csharp = {
             enable = true;

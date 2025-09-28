@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/neovim.nix
-    inputs.home-manager.nixosModules.default 
+    inputs.home-manager-stable.nixosModules.default 
   ];
 
   # Enable flakes
@@ -23,7 +23,6 @@
     };
     backupFileExtension = "backup";
   };
-
 
   # Bootloader.
   boot.loader.grub = {
