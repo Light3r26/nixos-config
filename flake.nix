@@ -4,17 +4,13 @@
   inputs = {
     # Unstable packages for laptop configuration
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
-    home-manager-unstable = {
+    home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
 
     # Stable packages for home-server configuration
     nixpkgs-stable.url = "github:nixos/nixpkgs/25.05";
-    home-manager-stable = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs-stable";
-    };
 
     # Other miscellaneous input
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme
@@ -26,9 +22,8 @@
   outputs = {
     self, 
     nixpkgs-unstable,
-    home-manager-unstable,
+    home-manager,
     nixpkgs-stable,
-    home-manager-stable,
     nvf,
     sddm-sugar-candy-nix,
     nix-flatpak,
@@ -39,7 +34,7 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/msi-laptop/configuration.nix
-          home-manager-unstable.nixosModules.default
+          home-manager.nixosModules.default
 	        nvf.nixosModules.default
           sddm-sugar-candy-nix.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
@@ -51,7 +46,6 @@
         specialArgs = {inherit inputs;};
         modules = [
           ./hosts/home-server/configuration.nix
-          home-manager-stable.nixosModules.default
           nvf.nixosModules.default
         ];
       };
