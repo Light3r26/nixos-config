@@ -33,4 +33,4 @@ while getopts ":hns" opt; do
   esac
 done
 
-nix-collect-garbage
+nix-collect-garbage -d
