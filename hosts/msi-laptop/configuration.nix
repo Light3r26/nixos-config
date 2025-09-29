@@ -5,7 +5,7 @@
       ./hardware-configuration.nix
       ./system-modules
       ../../modules/nixos
-      inputs.home-manager-stable.nixosModules.default 
+      inputs.home-manager.nixosModules.default 
     ];
 
   # Enable Flakes
