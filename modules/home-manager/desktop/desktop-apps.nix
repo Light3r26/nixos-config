@@ -7,7 +7,7 @@
     obsidian
     discord
     spotify
-    gimp
+    gimp # FOSS image processing software
     qimgv # Image viewer
     pavucontrol
     libreoffice
@@ -16,10 +16,7 @@
     kdePackages.kdenlive # Editing software
     obs-studio
     godot
-    #aseprite
-    freecad
     gapless # Music player
-    synology-drive-client
     localsend # Cross-platform FOSS alternative to Airdrop
     easyeffects # Audio effects for PipeWire applications
     czkawka-full # App to remove duplicates and unnecessary files
@@ -30,6 +27,9 @@
     protonmail-desktop # Email client
     wasistlos # Unofficial Whatsapp Web Client 
     glow # Terminal Markdown Renderer
+    #aseprite
+    #freecad
+    #synology-drive-client
   ];
 
   # Flatpak packages
