@@ -2,7 +2,7 @@
 
 {
   services.displayManager.sddm = {
-    enable = true;
+    enable = false;
     wayland.enable = true;
     extraPackages = with pkgs; [ qt5.qtgraphicaleffects ];
     sugarCandyNix = {
