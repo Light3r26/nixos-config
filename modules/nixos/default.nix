@@ -6,6 +6,6 @@
     ./nvidia.nix
     ./sddm.nix
     ./servers.nix
-    #./virtualization.nix
+    ./virtualization.nix
   ];
 }
