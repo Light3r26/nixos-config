@@ -4,8 +4,7 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    package = [ pkgs.plasma5Packages.sddm ];
-    extraPackages = [ pkgs.qt5.qtgraphicaleffects ];
+    #extraPackages = [ pkgs.qt5.qtgraphicaleffects ];
     sugarCandyNix = {
       enable = true;
       settings = {
