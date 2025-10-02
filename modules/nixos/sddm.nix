@@ -4,10 +4,6 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    extraPackages = [ 
-      pkgs.kdePackages.qtdeclarative
-      pkgs.kdePackages.qtsvg
-    ];
     sugarCandyNix = {
       enable = true;
       settings = {
