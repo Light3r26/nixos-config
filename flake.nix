@@ -17,7 +17,6 @@
     sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix"; # SDDM theme
     nvf.url = "github:notashelf/nvf"; # Neovim Nix Framework NVF
     nix-flatpak.url = "github:gmodena/nix-flatpak/latest"; # Declarative Flatpak
-    disko.url = "github:nix-community/disko"; # Declarative disk partitioning
     agenix.url = "github:ryantm/agenix";
   };
 
@@ -29,7 +28,6 @@
     nvf,
     sddm-sugar-candy-nix,
     nix-flatpak,
-    disko,
     agenix,
     ... 
   }@inputs: {
@@ -51,7 +49,6 @@
         modules = [
           ./hosts/home-server/configuration.nix
           nvf.nixosModules.default
-          disko.nixosModules.default
           agenix.nixosModules.default
         ];
       };
