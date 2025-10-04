@@ -4,19 +4,31 @@
 { config, lib, pkgs, modulesPath, ... }:
 
 {
-  imports =
-    [ (modulesPath + "/installer/scan/not-detected.nix")
-    ];
+  imports = [
+    (modulesPath + "/installer/scan/not-detected.nix")
+  ];
 
   boot.initrd.availableKernelModules = [ "uhci_hcd" "ehci_pci" "ata_piix" "usbhid" "usb_storage" "sd_mod" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
 
-  fileSystems."/" =
-    { device = "/dev/disk/by-uuid/b884512e-14ba-4787-b1c2-f63de9caa7f8";
-      fsType = "ext4";
-    };
+  fileSystems."/" = {
+    device = "/dev/disk/by-uuid/b884512e-14ba-4787-b1c2-f63de9caa7f8";
+    fsType = "ext4";
+  };
+
+  fileSystems."/mnt/home-pool" = {
+    device = "home-pool";
+    fsType = "zfs";
+  };
+
+  fileSystems."/mnt/home-pool/photos" =
+  {
+    device = "home-pool/photos";
+    fsType = "zfs";
+  };
+
 
   swapDevices = [ ];
 
