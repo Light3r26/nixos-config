@@ -2,8 +2,9 @@
 
 echo ""
 toilet -f smblock --filter metal 'NixOS  Flake  Rebuild'
-
 echo ""
+
+cd /Nixos
 git diff
 
 # Commit su Github
@@ -18,4 +19,4 @@ if [ "$1" == "-push" ]; then
 fi
 
 # Rebuild sistema
-sudo nixos-rebuild switch --flake /Nixos/#"$1"
+sudo nixos-rebuild switch --flake .#"$1"

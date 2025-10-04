@@ -4,6 +4,8 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/neovim.nix
+    ./disko.nix
+    ./zfs.nix
   ];
 
   # Enable flakes
