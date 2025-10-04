@@ -1,8 +1,9 @@
 let
-  home-server = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFUTg4rYEw6wB76rZ61mjVzseaiFVQdbictkdaI/VK3+";
+  local = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEXrWi2ElewP54zP0nmLcVoml/65avJ8hHqGcZ1UJtp/";
+  remote = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRwZUMyc1pxcntOJXC+qShO6nSbvBEYwRQJCnk+S993";
+  systems = [ local remote ];
 
 in
 {
-  "hostname-id.age".publicKeys = [ home-server ];
-  #"zfs-key.age".publicKeys = [ home-server ];
+  "zfs_key.age".publicKeys = systems;
 }

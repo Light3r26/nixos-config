@@ -13,8 +13,8 @@
   # Bootloader.
   boot.loader.grub = {
     enable = true;
-    device = "/dev/sda";
-    #device = "/dev/disk/by-uuid/b884512e-14ba-4787-b1c2-f63de9caa7f8";
+    device = "/dev/disk/by-id/ata-Lexar_SSD_NS100_256GB_QFJ505R0159490S340";
+    #device = "/dev/sda";
     useOSProber = false;
   };
   
@@ -72,9 +72,10 @@
     wget
     git
     gh
+    inputs.agenix.packages."x86_64-linux".default
   ];
 
-  environment.shellAliases = {
+  programs.bash.shellAliases = {
     list-nixos-generations = "nixos-rebuild list-generations"; 
     ip-show = "curl ifconfig.me";
     vim = "nvim";
@@ -97,8 +98,7 @@
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+  # networking.firewall.enable = true;
 
   system.stateVersion = "25.05"; # Do not change
 }
