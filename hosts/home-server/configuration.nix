@@ -95,7 +95,7 @@
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
 
-  age.identityPaths = [ "/home/nixos/.ssh/ssh_host_ed25519_key" ];
+  age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
