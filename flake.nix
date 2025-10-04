@@ -49,7 +49,7 @@
         modules = [
           ./hosts/home-server/configuration.nix
           nvf.nixosModules.default
-          agenix.nixosModules.default
+            #agenix.nixosModules.default
         ];
       };
     };

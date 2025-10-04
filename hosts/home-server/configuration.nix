@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ../../modules/nixos/neovim.nix
-    #./zfs.nix
+    ./zfs.nix
   ];
 
   # Enable flakes
@@ -13,10 +13,10 @@
   # Bootloader.
   boot.loader.grub = {
     enable = true;
-    device = "/dev/sdb";
+    device = "/dev/sda";
+    #device = "/dev/disk/by-uuid/b884512e-14ba-4787-b1c2-f63de9caa7f8";
     useOSProber = false;
   };
-
   
   # Configure network proxy if necessary
   # networking.proxy.default = "http://user:password@proxy:port/";
@@ -25,7 +25,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.hostName = "home-server"; # Define your hostname.
-  #networking.hostId = "";
+  networking.hostId = "007f0200";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
 
