@@ -3,32 +3,32 @@
 {
   disko.devices = {
     disk = {
-      disk1 = {
-        device = "/dev/sdb";
-        type = "disk";
-        content = {
-          type = "gpt";
-          partitions = {
-            ESP = {
-              type = "EF00";
-              size = "500M";
-              content = {
-                type = "filesystem";
-                format = "vfat";
-                mountpoint = "/boot";
-              };
-            };
-            root = {
-              size = "100%";
-              content = {
-                type = "filesystem";
-                format = "ext4";
-                mountpoint = "/";
-              };
-            };
-          };
-        };
-      };
+      #disk1 = {
+      #device = "/dev/sdb";
+      #type = "disk";
+      #content = {
+      #type = "gpt";
+      #partitions = {
+      #ESP = {
+      #type = "EF00";
+      #size = "500M";
+      #content = {
+      #type = "filesystem";
+      #format = "vfat";
+      #mountpoint = "/boot";
+      #};
+      #};
+      #root = {
+      #size = "100%";
+      #content = {
+      #type = "filesystem";
+      #format = "ext4";
+      #mountpoint = "/";
+      #};
+      #};
+      #};
+      #};
+      #};
 
       disk2 = {
         type = "disk";
@@ -63,9 +63,9 @@
             type = "zfs_fs";
             options.mountpoint = "none";
           };
-          "root/zfs_fs" = {
+          "root/zfs_pool" = {
             type = "zfs_fs";
-            mountpoint = "/zfs_fs";
+            mountpoint = "/zfs_pool";
             options."com.sun:auto-snapshot" = "true";
           };
         };
