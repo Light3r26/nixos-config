@@ -3,20 +3,19 @@
 echo ""
 toilet -f smblock --filter metal 'NixOS  Flake  Rebuild'
 
-cd /Nixos
-
 echo ""
 git diff
 
 # Commit su Github
 git add .
 echo -ne "\033[4;32mInserisci messaggio del commit:\033[0m " # Testo con ANSI
-read commit_message
+read -r commit_message
 git commit -m "$commit_message"
 
-if [ "$1" == "push" ]; then
+if [ "$1" == "-push" ]; then
   git push
+  shift 1
 fi
 
 # Rebuild sistema
-sudo nixos-rebuild switch --flake .#msi-laptop
+sudo nixos-rebuild switch --flake /Nixos/#"$1"
