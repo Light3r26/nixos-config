@@ -3,32 +3,14 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ../../modules/nixos/neovim.nix
-    ./zfs.nix
+    ./system-modules
+    ../../modules/nixos/server-modules/zfs.nix
+    #../../modules/nixos/server-modules/nfs.nix
   ];
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
   
-  # Bootloader.
-  boot.loader.grub = {
-    enable = true;
-    device = "/dev/disk/by-id/ata-Lexar_SSD_NS100_256GB_QFJ505R0159490S340";
-    #device = "/dev/sda";
-    useOSProber = false;
-  };
-
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
-
-  # Enable networking
-  networking.networkmanager.enable = true;
-  networking.hostName = "home-server"; # Define your hostname.
-  networking.hostId = "007f0200";
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
-
-
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
@@ -56,14 +38,6 @@
   # Configure console keymap
   console.keyMap = "it";
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.nixos = {
-    isNormalUser = true;
-    description = "NixOS Server";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [];
-  };
-
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -75,32 +49,10 @@
     inputs.agenix.packages."x86_64-linux".default
   ];
 
-  programs.bash.shellAliases = {
-    list-nixos-generations = "nixos-rebuild list-generations"; 
-    ip-show = "curl ifconfig.me";
-    vim = "nvim";
-    vi = "nvim";
-  };
-
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
-
-  # List services that you want to enable:
+  age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
-
-  age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
-
-  # Open ports in the firewall.
-  networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 2049 4000 4001 4002 ];
-  networking.firewall.allowedUDPPorts = [ 2049 4000 4001 4002 ];
 
   system.stateVersion = "25.05"; # Do not change
 }
