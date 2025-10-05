@@ -98,9 +98,9 @@
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
   # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # networking.firewall.enable = true;
+  networking.firewall.enable = true;
+  networking.firewall.allowedTCPPorts = [ 2049 4000 4001 4002 ];
+  networking.firewall.allowedUDPPorts = [ 2049 4000 4001 4002 ];
 
   system.stateVersion = "25.05"; # Do not change
 }
