@@ -1,7 +1,15 @@
 { config , ... }:
 
 {
-  # Going to add the NixOS server up here
+  fileSystems."/home/light3r/Home-Server" = {
+    device = "192.168.1.56:/export";
+    fsType = "nfs";
+    options = [ 
+      "_netdev"
+      "nofail"
+      "rw"
+    ];
+  };
 
   fileSystems."/home/light3r/NAS-115J" = {
     device = "192.168.1.42:/volume1";
