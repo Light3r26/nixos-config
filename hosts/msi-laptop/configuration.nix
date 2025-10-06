@@ -4,7 +4,7 @@
   imports = [ 
       ./hardware-configuration.nix
       ./system-modules
-      ../../modules/nixos
+      ../../modules/nixos/msi-laptop
       inputs.home-manager.nixosModules.default 
     ];
 

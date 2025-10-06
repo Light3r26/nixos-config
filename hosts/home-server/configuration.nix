@@ -4,7 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./system-modules
-    ../../modules/nixos/server-modules/zfs.nix
+    ../../modules/nixos/home-server/zfs.nix
     #../../modules/nixos/server-modules/nfs.nix
   ];
 
