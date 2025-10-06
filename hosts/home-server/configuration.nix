@@ -4,8 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./system-modules
-    ../../modules/nixos/home-server/zfs.nix
-    #../../modules/nixos/server-modules/nfs.nix
+    ../../modules/nixos/home-server
   ];
 
   # Enable flakes
