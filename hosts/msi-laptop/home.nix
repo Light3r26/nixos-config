@@ -23,10 +23,10 @@
   };
 
   home.sessionPath = [
-    "/Nixos/scripts"
-    "/Nixos/scripts/nixos"
-    "/Nixos/scripts/system"
-    "/Nixos/scripts/hypr"
+    #"/Nixos/scripts"
+    #"/Nixos/scripts/nixos"
+    #"/Nixos/scripts/system"
+    #"/Nixos/scripts/hypr"
   ];
 
   # Let Home Manager install and manage itself.

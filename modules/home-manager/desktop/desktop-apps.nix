@@ -27,7 +27,7 @@
     protonmail-desktop # Email client
     wasistlos # Unofficial Whatsapp Web Client 
     glow # Terminal Markdown Renderer
-    #aseprite
+    aseprite
     #freecad
     #synology-drive-client
   ];
