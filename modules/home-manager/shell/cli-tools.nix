@@ -23,5 +23,6 @@
     gamemode # Gaming optimiser
     tlp # Advanced power manager
     uv
+    go # Temporary
   ];
 }
