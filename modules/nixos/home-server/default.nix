@@ -1,6 +1,6 @@
 {
   imports = [
-    ./immich.nix
+    #./immich.nix
     ./nfs.nix
     ./zfs.nix
   ];

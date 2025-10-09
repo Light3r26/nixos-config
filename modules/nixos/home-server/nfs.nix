@@ -1,8 +1,8 @@
 { config, ... }:
 
 {
-  fileSystems."/export/photos" = {
-    device = "/mnt/home-pool/photos";
+  fileSystems."/export/home-pool" = {
+    device = "/mnt/home-pool/";
     options = [ "bind" ];
   };
 
