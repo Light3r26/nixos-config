@@ -2,7 +2,7 @@
 
 {
   fileSystems."/export/home-pool" = {
-    device = "/mnt/home-pool/";
+    device = "/mnt/home-pool";
     options = [ "bind" ];
   };
 
@@ -12,6 +12,7 @@
     mountdPort = 4002;
     statdPort = 4000;
     exports = ''
+      /export 192.168.1.33(rw,fsid=0,no_subtree_check)
       /export/home-pool 192.168.1.33(rw,fsid=0,no_subtree_check)
     '';
   };
