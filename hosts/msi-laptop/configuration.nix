@@ -5,7 +5,6 @@
       ./hardware-configuration.nix
       ./system-modules
       ../../modules/nixos/msi-laptop
-      ../../scripts
       inputs.home-manager.nixosModules.default 
     ];
 
