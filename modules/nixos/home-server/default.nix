@@ -1,7 +1,7 @@
 {
   imports = [
     ./immich.nix
-    #./nfs.nix
+    ./nfs.nix
     ./zfs.nix
   ];
 }
