@@ -305,17 +305,17 @@
         "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1759164597,
-        "narHash": "sha256-M2brX7xS87DdjxFnTgDU5urIJh89UWHL5FCnTk8/ORA=",
-        "owner": "Zhaith-Izaliel",
+        "lastModified": 1760214138,
+        "narHash": "sha256-jXEK980G4wZpAiVtVbgpIom3eP0A3YKGt6ZZvHYuLwI=",
+        "owner": "Light3r26",
         "repo": "sddm-sugar-candy-nix",
-        "rev": "271fd2e8186f9c5d5571adaf61978342c40dd8c4",
-        "type": "gitlab"
+        "rev": "70b3fd92f48cea5f8c877159eb897724fbd18a66",
+        "type": "github"
       },
       "original": {
-        "owner": "Zhaith-Izaliel",
+        "owner": "Light3r26",
         "repo": "sddm-sugar-candy-nix",
-        "type": "gitlab"
+        "type": "github"
       }
     },
     "systems": {
