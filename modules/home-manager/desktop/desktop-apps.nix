@@ -7,7 +7,7 @@
     obsidian
     discord
     spotify
-    gimp # FOSS image processing software
+    gimp3 # FOSS image processing software
     qimgv # Image viewer
     pavucontrol
     libreoffice
@@ -27,7 +27,7 @@
     protonmail-desktop # Email client
     wasistlos # Unofficial Whatsapp Web Client 
     glow # Terminal Markdown Renderer
-    aseprite
+    #aseprite
     #freecad
     #synology-drive-client
   ];
