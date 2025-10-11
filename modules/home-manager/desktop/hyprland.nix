@@ -11,6 +11,7 @@
     slurp # Screenshot selector
     wl-clipboard # Wayland clipboard
     brightnessctl
+    hyprpicker
   ];
   
   wayland.windowManager.hyprland = {
