@@ -2,7 +2,7 @@
 
 {
   services.hypridle = {
-    enable = false;
+    enable = true;
     settings = {
       general = {
         lock_cmd = "pidof hyprlock || hyprlock";       # avoid starting multiple hyprlock instances.
