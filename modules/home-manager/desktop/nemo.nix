@@ -7,7 +7,7 @@
     nemo-preview
     nemo-emblems
     folder-color-switcher
-    cinnamon-common
+    bulky # Cinnamon bulk renaming app
   ];
   
   # Set Nemo as default file browser

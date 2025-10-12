@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+msgId="991050"
+
+# $1 argument needs to work as an argument to "brightnessctl s", such as "10%-" or "+5%"
+DELTA=$1
+
+brightnessctl s $DELTA
+
+CUR="$(brightnessctl g)"
+MAX="$(brightnessctl m)"
+CUR=$((CUR * 100 /MAX))
+
+
+dunstify -a "changeBrightness" \
+         -u low \
+         -r "$msgId" \
+         -h int:value:"$CUR" \
+         "Brightness: ${CUR}%"
+
+# Script: github/jostmorgenstern/sway-nord-rice

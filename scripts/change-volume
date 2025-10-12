@@ -1,0 +1,25 @@
+#!/usr/bin/env bash
+
+SINK=$1
+DELTA=$2
+
+msgId="991049"
+
+CUR="$(pactl get-sink-volume $SINK | awk '{print $5}' | grep -oe '[0-9]*')"
+NEW="$(echo $CUR$DELTA | bc)"
+NEW=$((NEW>100 ? 100 : NEW))
+NEW=$((NEW<0 ? 0 : NEW))
+
+echo "sink: $SINK"
+echo "vol: $NEW"
+
+pactl set-sink-volume $SINK $NEW%
+
+dunstify -a "changeVolume" \
+         -u low \
+         -i audio-volume-high \
+         -r "$msgId" \
+         -h int:value:"$NEW" \
+         "Volume: ${NEW}%"
+
+# Script: github/jostmorgenstern/sway-nord-rice
