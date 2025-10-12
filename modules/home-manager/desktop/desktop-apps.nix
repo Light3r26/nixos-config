@@ -1,12 +1,7 @@
 { config, pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
-
-  programs.localsend = {
-    enable = true; # Cross-platform FOSS alternative to Airdrop
-    openFirewall = true; # Open port 53317 to receive files
-  };
+  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
 
   home.packages = with pkgs; [
     obsidian
