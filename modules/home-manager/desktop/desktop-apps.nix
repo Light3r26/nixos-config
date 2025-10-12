@@ -3,6 +3,11 @@
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ];
 
+  programs.localsend = {
+    enable = true; # Cross-platform FOSS alternative to Airdrop
+    openFirewall = true; # Open port 53317 to receive files
+  };
+
   home.packages = with pkgs; [
     obsidian
     discord
@@ -17,7 +22,6 @@
     obs-studio
     godot
     gapless # Music player
-    localsend # Cross-platform FOSS alternative to Airdrop
     easyeffects # Audio effects for PipeWire applications
     czkawka-full # App to remove duplicates and unnecessary files
     losslesscut-bin # Lossless video/audio editing
