@@ -6,7 +6,7 @@
   networking.hostId = "007f0200";
 
   networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 2049 4000 4001 4002 ];
+  networking.firewall.allowedTCPPorts = [ 80 443 2049 4000 4001 4002 ];
   networking.firewall.allowedUDPPorts = [ 2049 4000 4001 4002 ];
 
   # networking.proxy.default = "http://user:password@proxy:port/";
