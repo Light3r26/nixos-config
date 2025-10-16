@@ -2,8 +2,8 @@
 
 {
   home.packages = with pkgs; [
-    nemo-with-extensions
-    nemo-fileroller
+    nemo-with-extensions # Nemo file manager
+    nemo-fileroller # Compress and extraction tool
     nemo-preview
     nemo-emblems
     folder-color-switcher
