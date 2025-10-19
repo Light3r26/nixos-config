@@ -9,6 +9,7 @@
       ingress = {
         "jacoposoria.qzz.io" = "http://localhost:80";
         "music.jacoposoria.qzz.io" = "http://localhost:80";
+        "photos.jacoposoria.qzz.io" = "http://localhost:80";
       };
     };
   };
