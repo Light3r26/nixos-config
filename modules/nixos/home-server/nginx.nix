@@ -26,7 +26,7 @@
         };
       };
       "photos.jacoposoria.qzz.io" = {
-        enableACME = true;
+        #enableACME = true;
         forceSSL = true;
         locations."/" = {
           proxyPass = "http://[::1]:${toString config.services.immich.port}";
