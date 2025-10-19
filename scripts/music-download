@@ -15,7 +15,6 @@ if ! [[ -e "$MUSIC_DIR" ]]; then
 fi
 
 # Download the audio in MP3 format
-nix-shell -p yt-dlp
 yt-dlp --rm-cache-dir -x --audio-format mp3 -o "$MUSIC_DIR/%(title)s.%(ext)s" "$1"
 
 echo "Download complete! Audio saved in $MUSIC_DIR"
