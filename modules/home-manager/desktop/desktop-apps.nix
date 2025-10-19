@@ -26,6 +26,7 @@
     protonmail-desktop # Email client
     wasistlos # Unofficial Whatsapp Web Client 
     glow # Terminal Markdown Renderer
+    kid3 # Audio tag editor
     #aseprite
     #freecad
     #synology-drive-client
