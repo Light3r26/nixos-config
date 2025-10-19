@@ -4,7 +4,7 @@
   services.immich = {
     enable = true;
     port = 2283;
-    accelerationDevices = null;
+    mediaLocation = "/mnt/home-pool/photos";
     openFirewall = true;
   };
 }
