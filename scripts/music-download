@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+# Check if a URL is provided
+if [ -z "$1" ]; then
+    echo "Usage: $0 <YouTube URL>"
+    exit 1
+fi
+
+# Define the Music directory
+MUSIC_DIR="$HOME/Music"
+
+# Make sure the Music directory exists
+if ! [[ -e "$MUSIC_DIR" ]]; then
+  mkdir -p "$MUSIC_DIR"
+fi
+
+# Download the audio in MP3 format
+nix-shell -p yt-dlp
+yt-dlp --rm-cache-dir -x --audio-format mp3 -o "$MUSIC_DIR/%(title)s.%(ext)s" "$1"
+
+echo "Download complete! Audio saved in $MUSIC_DIR"
