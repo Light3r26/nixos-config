@@ -5,5 +5,6 @@
     enable = true;
     port = 2283;
     accelerationDevices = null;
+    openFirewall = true;
   };
 }
