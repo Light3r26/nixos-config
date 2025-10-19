@@ -27,7 +27,9 @@
       };
       "photos.jacoposoria.qzz.io" = {
         #enableACME = true;
-        forceSSL = true;
+        #forceSSL = true;
+        serverName = "photos.jacoposoria.qzz.io";
+        listen = [ { addr = "127.0.0.1"; port = 80; } ];
         locations."/" = {
           proxyPass = "http://[::1]:${toString config.services.immich.port}";
           proxyWebsockets = true;
