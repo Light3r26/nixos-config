@@ -15,7 +15,8 @@
       ls = "lsd";
       open = "xdg-open";
       fopen = "nemo";
-
+      copy = "wl-copy";
+      paste = "wl-paste";
       # Bluetooth
       auricolari-bt = "bluetoothctl connect B8:F8:BE:60:54:BE";
       dualsense-ps5 = "bluetoothctl connect 4C:B9:9B:10:B8:F9";
