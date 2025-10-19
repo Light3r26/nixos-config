@@ -10,7 +10,7 @@
     enable = true;
     exports = ''
       /export 192.168.1.33(rw,fsid=0,no_subtree_check)
-      /export/home-pool 192.168.1.33(rw,fsid=0,no_subtree_check)
+      /export/home-pool 192.168.1.33(rw,nohide,insecure,no_subtree_check)
     '';
   };
 
