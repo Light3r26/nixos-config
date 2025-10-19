@@ -3,7 +3,7 @@
     ./cloudflare.nix
     ./navidrome.nix
     ./nginx.nix
-    #./immich.nix
+    ./immich.nix
     ./nfs.nix
     ./zfs.nix
   ];
