@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  programs.bash = {
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
     shellAliases = {
@@ -25,12 +25,10 @@
       mostra-connessioni = "nmcli device wifi list";
       hotspot-telefono = "nmcli device wifi connect Light3r";
     };
-    bashrcExtra = ''
+    shellInit = ''
       eval "$(starship init bash)"
       export XCURSOR_THEME=~/.icons/macOS
       export XCURSOR_SIZE=24
-      '';
-    initExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 
     '';
   };
