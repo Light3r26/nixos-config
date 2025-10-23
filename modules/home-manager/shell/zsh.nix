@@ -4,7 +4,9 @@
   programs.zsh = {
     enable = true;
     enableCompletion = true;
-    oh-my-zsh.enable = true;
+    autosuggestion.enable = true;
+    autocd = true;
+    defaultKeymap = "vicmd";
     shellAliases = {
       # NixOS & Sistema
       list-nixos-generations = "nixos-rebuild list-generations"; 
