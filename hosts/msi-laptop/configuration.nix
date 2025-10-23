@@ -80,6 +80,9 @@
      nix-prefetch-github
      exfatprogs
   ];
+  
+  # Needed to get zsh completion for system packages
+  environment.pathsToLink = [ "/share/zsh" ];
 
   programs.nix-ld.enable = true;
 
