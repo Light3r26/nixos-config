@@ -29,10 +29,10 @@
       hotspot-telefono = "nmcli device wifi connect Light3r";
     };
     initContent = ''
-      eval "$(starship init zsh)"
       export XCURSOR_THEME=~/.icons/macOS
       export XCURSOR_SIZE=24
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 
+      eval "$(starship init zsh)"
     '';
   };
 }
