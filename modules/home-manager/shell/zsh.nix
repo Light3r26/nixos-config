@@ -25,7 +25,7 @@
       mostra-connessioni = "nmcli device wifi list";
       hotspot-telefono = "nmcli device wifi connect Light3r";
     };
-    shellInit = ''
+    initContent = ''
       eval "$(starship init bash)"
       export XCURSOR_THEME=~/.icons/macOS
       export XCURSOR_SIZE=24
