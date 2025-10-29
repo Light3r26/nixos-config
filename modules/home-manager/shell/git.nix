@@ -9,6 +9,6 @@
 
   programs.diff-so-fancy = {
     enable = true;
-    enableZshintegration = true;
+    #enableShellintegration = true;
   };
 }
