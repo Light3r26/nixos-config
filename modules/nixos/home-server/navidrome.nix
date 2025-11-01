@@ -5,7 +5,7 @@
   systemd.services.navidrome.serviceConfig.ReadWritePaths = [ "/mnt/home-pool/music" ];
 
   services.navidrome = {
-    enable= true;
+    enable = true;
     settings = {
       MusicFolder = "/mnt/home-pool/music";
       Address = "127.0.0.1";
