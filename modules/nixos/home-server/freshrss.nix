@@ -5,8 +5,8 @@
     enable = true;
     baseUrl = "/";
     virtualHost = "rss.jacoposoria.qzz.io";
-    #database.port = 3306;
     language = "it";
+    defaultUser = "light3r";
     passwordFile = config.age.secrets."freshrss_key.age".path;
   };
 
