@@ -6,4 +6,5 @@ let
 in
 {
   "zfs_key.age".publicKeys = systems;
+  "freshrss_key.age".publicKeys = systems;
 }
