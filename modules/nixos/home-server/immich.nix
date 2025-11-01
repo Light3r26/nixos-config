@@ -6,7 +6,7 @@
     port = 2283;
     mediaLocation = "/mnt/home-pool/photos";
     openFirewall = true;
-    database.createLocally = true;
-    redis.createLocally = true;
+    database.createDB = true;
+    redis.enable = true;
   };
 }
