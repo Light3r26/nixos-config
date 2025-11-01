@@ -1,10 +1,11 @@
 {
   imports = [
     ./cloudflare.nix
-    ./navidrome.nix
-    ./nginx.nix
+    ./freshrss.nix
     ./immich.nix
+    ./navidrome.nix
     ./nfs.nix
+    ./nginx.nix
     ./zfs.nix
   ];
 }
