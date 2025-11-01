@@ -3,12 +3,12 @@
     ./battery-notification.nix
     ./mime-apps.nix
     # Shell 
-    ./shell/bash.nix
     ./shell/cli-tools.nix
     ./shell/fastfetch.nix
     ./shell/git.nix
     ./shell/kitty.nix
     ./shell/starship.nix
+    ./shell/zsh.nix
     # Desktop
     ./desktop/desktop-apps.nix
     ./desktop/hypridle.nix

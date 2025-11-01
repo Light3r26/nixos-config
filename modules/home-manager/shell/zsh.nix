@@ -1,9 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  programs.bash = {
+  programs.zsh = {
     enable = true;
     enableCompletion = true;
+    autosuggestion.enable = true;
+    autocd = true;
+    defaultKeymap = "vicmd";
     shellAliases = {
       # NixOS & Sistema
       list-nixos-generations = "nixos-rebuild list-generations"; 
@@ -25,13 +28,11 @@
       mostra-connessioni = "nmcli device wifi list";
       hotspot-telefono = "nmcli device wifi connect Light3r";
     };
-    bashrcExtra = ''
-      eval "$(starship init bash)"
+    initContent = ''
       export XCURSOR_THEME=~/.icons/macOS
       export XCURSOR_SIZE=24
-      '';
-    initExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 
+      eval "$(starship init zsh)"
     '';
   };
 }

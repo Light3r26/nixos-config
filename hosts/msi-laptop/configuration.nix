@@ -43,6 +43,9 @@
   # Enables Hyprland at system-level to avoid troubles with SDDM
   programs.hyprland.enable = true;
 
+  # Enables zsh at system-level
+  programs.zsh.enable = true;
+
   # Fix SDDM not starting any DE session
   services.dbus.packages = with pkgs; [ dconf ];
   
@@ -80,6 +83,9 @@
      nix-prefetch-github
      exfatprogs
   ];
+  
+  # Needed to get zsh completion for system packages
+  environment.pathsToLink = [ "/share/zsh" ];
 
   programs.nix-ld.enable = true;
 

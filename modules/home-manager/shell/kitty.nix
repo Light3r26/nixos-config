@@ -9,7 +9,7 @@
       size = 14;
     };    
 
-    shellIntegration.enableBashIntegration = true;
+    shellIntegration.enableZshIntegration = true;
     themeFile = "SpaceGray";
 
     settings = {
