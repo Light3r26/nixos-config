@@ -14,6 +14,6 @@
     file = "/Nixos/secrets/freshrss_key.age";
     owner = "freshrss";
     group = "freshrss";
-    mode = "0600";
+    mode = "0640";
   };
 }
