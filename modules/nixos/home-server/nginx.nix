@@ -51,7 +51,7 @@
         serverName = "rss.jacoposoria.qzz.io";
         listen = [ { addr = "127.0.0.1"; port = 80; } ];
         locations."/" = {
-      	  proxyPass = "http://127.0.0.1";
+          #proxyPass = "http://127.0.0.1:port?";
       	  proxyWebsockets = true;
     	    extraConfig = ''
   	        proxy_redirect off;
