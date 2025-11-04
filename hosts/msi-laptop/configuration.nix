@@ -84,8 +84,6 @@
      exfatprogs
   ];
 
-  nixpkgs.config.allowBroken = true;
-  
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 
