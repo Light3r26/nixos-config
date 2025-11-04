@@ -26,7 +26,7 @@
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
-    cinny-unwrapped # Matrix client
+    cinny-desktop # Matrix client
     #aseprite
     #freecad
     #synology-drive-client
