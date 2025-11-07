@@ -1,9 +1,9 @@
-{ config, pkgs, ... }:
+{ config, nixpkgs-unstable, ... }:
 
 {
   services.immich = {
     enable = true;
-    package = pkgs.immich;
+    package = nixpkgs-unstable.immich;
     port = 2283;
     mediaLocation = "/mnt/home-pool/photos";
     openFirewall = true;
