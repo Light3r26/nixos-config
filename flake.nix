@@ -37,7 +37,7 @@
         modules = [
           ./hosts/msi-laptop/configuration.nix
           home-manager.nixosModules.default
-	        nvf.nixosModules.default
+          nvf.nixosModules.default
           sddm-sugar-candy-nix.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
         ];
@@ -45,7 +45,15 @@
     }; 
     nixosConfigurations = {
       home-server = nixpkgs-stable.lib.nixosSystem {
-        specialArgs = {inherit inputs;};
+        specialArgs = let
+          system = "x86_64-linux";
+        in {
+            inherit inputs;
+            pkgs-unstable = import nixpkgs-unstable {
+              inherit system;
+              config.allowUnfree = true;
+            };
+        };
         modules = [
           ./hosts/home-server/configuration.nix
           nvf.nixosModules.default
