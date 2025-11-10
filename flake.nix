@@ -16,6 +16,7 @@
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme
     sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix"; # SDDM theme
     nvf.url = "github:notashelf/nvf"; # Neovim Nix Framework NVF
+    nvf.inputs.nixpkgs.follows = "nixpkgs-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak/latest"; # Declarative Flatpak
     agenix.url = "github:ryantm/agenix";
   };
