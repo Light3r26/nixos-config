@@ -5,17 +5,17 @@ while getopts ":hns" opt; do
     s)
       echo "Eliminating all generations from chosen interval..."
       shift 1
-      for generation in $(seq $1 $2) 
+      for generation in $(seq "$1" "$2") 
       do
-	      sudo nix-env -p /nix/var/nix/profiles/system --delete-generations $generation
+	      sudo nix-env -p /nix/var/nix/profiles/system --delete-generations "$generation"
       done
     ;;
     n)
       echo "Eliminating chosen generations..."
       shift 1
-      for generation in $@
+      for generation in "$@"
       do
-	      sudo nix-env -p /nix/var/nix/profiles/system --delete-generations $generation
+	      sudo nix-env -p /nix/var/nix/profiles/system --delete-generations "$generation"
       done
     ;;
     h)
@@ -26,8 +26,8 @@ while getopts ":hns" opt; do
       exit 1 
     ;;
     ?)
-      echo "Usage: $(basename $0) [-n] <gen1> <gen2> ... <genx>"
-      echo "Usage: $(basename $0) [-s] <start> <stop>"
+      echo "Usage: $(basename "$0") [-n] <gen1> <gen2> ... <genx>"
+      echo "Usage: $(basename "$0") [-s] <start> <stop>"
       exit 1 
     ;;
   esac
