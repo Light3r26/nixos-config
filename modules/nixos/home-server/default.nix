@@ -6,6 +6,7 @@
     ./navidrome.nix
     ./nfs.nix
     ./nginx.nix
+    ./remote-builder.nix
     ./zfs.nix
   ];
 }
