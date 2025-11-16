@@ -19,6 +19,7 @@
     TERMINAL = "kitty";
     EDITOR = "nvim";
     VISUAL = "nvim";
+    HYPRSHOT_DIR = "/home/light3r/Screenshots";
   };
 
   home.sessionPath = [
