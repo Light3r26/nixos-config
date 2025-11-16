@@ -26,6 +26,10 @@
     backupFileExtension = "backup";
   };
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-36.9.5" # temporary, else rebuild doesn't work
+  ];
+
   # Automatize garbage collection
   nix.gc = {
     automatic = true;
@@ -83,7 +87,7 @@
      nix-prefetch-github
      exfatprogs
   ];
-  
+
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 

@@ -60,6 +60,7 @@
       env = [ 
         "XCURSOR_THEME, WhiteSur-cursors"
         "XCURSOR_SIZE, 24"
+        "HYPRSHOT_DIR, /home/light3r/Screenshots"
       ];
 
       ### LOOK AND FEEL
