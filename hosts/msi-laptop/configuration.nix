@@ -26,9 +26,9 @@
     backupFileExtension = "backup";
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-36.9.5" # temporary, else rebuild doesn't work
-  ];
+  #nixpkgs.config.permittedInsecurePackages = [
+  #  "electron-36.9.5" # temporary, else rebuild doesn't work
+  #];
 
   # Automatize garbage collection
   nix.gc = {
