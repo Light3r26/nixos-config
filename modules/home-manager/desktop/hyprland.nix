@@ -22,7 +22,8 @@
       #monitor = <name>, <resolution@refresh_rate>, <position>,<scale>
       monitor = [ 
         "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
-        "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
+        "HDMI-A-1, 1920x1080@60.00Hz, 0x0, 1" # ASUS monitor
+        #"HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
         #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
       ];
 
