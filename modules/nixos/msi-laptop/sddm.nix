@@ -4,13 +4,8 @@
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    package = pkgs.kdePackages.sddm; 
-    extraPackages = with pkgs.kdePackages; [
-      qtdeclarative
-      qtsvg
-    ];
     sugarCandyNix = {
-      enable = true;
+      enable = false;
       settings = {
         Background = lib.cleanSource ../../../wallpapers/dark-bright-mountains.jpg;
         ScreenWidth = 1920;
