@@ -14,7 +14,6 @@
 
     # Other miscellaneous input
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme
-    sddm-sugar-candy-nix.url = "gitlab:Zhaith-Izaliel/sddm-sugar-candy-nix"; # SDDM theme
     nvf.url = "github:notashelf/nvf"; # Neovim Nix Framework NVF
     nvf.inputs.nixpkgs.follows = "nixpkgs-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak/latest"; # Declarative Flatpak
@@ -27,7 +26,6 @@
     home-manager,
     nixpkgs-stable,
     nvf,
-    sddm-sugar-candy-nix,
     nix-flatpak,
     agenix,
     ... 
@@ -39,7 +37,6 @@
           ./hosts/msi-laptop/configuration.nix
           home-manager.nixosModules.default
           nvf.nixosModules.default
-          sddm-sugar-candy-nix.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
         ];
       };
