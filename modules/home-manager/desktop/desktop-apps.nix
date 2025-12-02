@@ -26,6 +26,7 @@
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
+    cinny-unwrapped
     #aseprite
     #freecad
     #synology-drive-client
