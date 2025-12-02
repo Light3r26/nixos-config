@@ -1,14 +1,14 @@
 { lib, config, pkgs, ... }:
 
 {
+  environment.systemPackages = [
+      pkgs.sddm-astronaut
+  ];
+
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-    environment.systemPackages = [
-      pkgs.sddm-astronaut
-    ];
-    #sugarCandyNix = {
-      #settings = {
+
         #Background = lib.cleanSource ../../../wallpapers/dark-bright-mountains.jpg;
         #ScreenWidth = 1920;
         #ScreenHeight = 1080;
