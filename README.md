@@ -26,7 +26,7 @@ __Components__
 |Theme                   |Nordic          |
 |System resource monitor |Btop            |
 |File Manager            |Nemo + Yazi     |
-|Shell                   |Bash + Starship |
+|Shell                   |Zsh + Starship |
 |Text Editor             |Neovim          |
 |Media Player            |Mpv             |
 |Image Viewer            |Qimgv           |
