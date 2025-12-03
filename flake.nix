@@ -10,7 +10,7 @@
     };
 
     # Stable packages for home-server configuration
-    nixpkgs-stable.url = "github:nixos/nixpkgs/25.05";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/25.11";
 
     # Other miscellaneous input
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme
