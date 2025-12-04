@@ -56,8 +56,8 @@
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
       DontCheckDefaultBrowser = true;
-      DisplayBookmarksToolbar = "never"; # alternatives: "always" or "newtab"
-      DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
+      DisplayBookmarksToolbar = "always"; # alternatives: "never" or "newtab"
+      DisplayMenuBar = "always"; # alternatives: "default-off", "never" or "default-on"
       SearchBar = "unified"; # alternative: "separate"
     };
   };
