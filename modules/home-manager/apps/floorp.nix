@@ -2,7 +2,6 @@
   programs.floorp = {
     enable = true;
     languagePacks = [ "it" "en-GB" ];
-  };
 
     /* ---- POLICIES ---- */
     # Check about:policies#documentation for options.
@@ -26,4 +25,5 @@
       DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
       SearchBar = "unified"; # alternative: "separate"
     };
+  };
 }
