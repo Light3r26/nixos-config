@@ -23,7 +23,6 @@
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
-    ./apps/firefox.nix
     ./apps/floorp.nix
   ];
 }
