@@ -3,6 +3,10 @@
     enable = true;
     languagePacks = [ "it" "en-GB" ];
 
+    profiles.Light3r = {
+      name = "Light3r";
+    };
+
     /* ---- POLICIES ---- */
     # Check about:policies#documentation for options.
     policies = {
