@@ -24,6 +24,6 @@
     ./desktop/wlogout.nix
     # Apps
     ./apps/firefox.nix
-    ./apps/librewolf.nix
+    ./apps/floorp.nix
   ];
 }
