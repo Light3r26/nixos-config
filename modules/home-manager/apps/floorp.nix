@@ -1,3 +1,5 @@
+{ inputs, pkgs, config, ...}:
+
 let
   lock-false = {
     Value = false;
@@ -56,27 +58,33 @@ in
       # "force_installed" and "normal_installed".
       extensions = {
         force = true;
-        settings = {
+        packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+          # Themes
+          nord-theme
+          darkreader
+          # Extensions
+          adnauseam
+          sponsorblock
+        ];
           # Nord Theme:
-          "26e789e7-acf2-4346-9381-ad473c245e43".settings = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/nord-theme/latest.xpi";
-            installation_mode = "force_installed";
-          };
+          #"26e789e7-acf2-4346-9381-ad473c245e43".settings = {
+          #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/nord-theme/latest.xpi";
+          #installation_mode = "force_installed";
+          #};
           # Dark Reader:
-          "addon@darkreader.org".settings = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
-            installation_mode = "force_installed";
-          };
+          #"addon@darkreader.org".settings = {
+          #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
+          #  installation_mode = "force_installed";
+          #};
           # AdNauseam:
-          "adnauseam@rednoise.org".settings = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/adnauseam/latest.xpi";
-            installation_mode = "force_installed";
-          };
+          #"adnauseam@rednoise.org".settings = {
+          #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/adnauseam/latest.xpi";
+          #  installation_mode = "force_installed";
+          #};
           # Sponsor Block:
-          "sponsorBlocker@ajay.app".settings = {
-            install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
-            installation_mode = "force_installed";
-          };
+          #"sponsorBlocker@ajay.app".settings = {
+          #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
+          #  installation_mode = "force_installed";
         };
       };
 
@@ -84,7 +92,7 @@ in
       # Check about:config for options.
       settings = {
         "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
-        "extensions.pocket.enabled" = lock-false;
+        "extensions.pocket.enabled" = lock-true;
         "extensions.screenshots.disabled" = lock-true;
         "browser.topsites.contile.enabled" = lock-false;
         "browser.formfill.enable" = lock-false;

@@ -18,6 +18,7 @@
     nvf.inputs.nixpkgs.follows = "nixpkgs-unstable";
     nix-flatpak.url = "github:gmodena/nix-flatpak/latest"; # Declarative Flatpak
     agenix.url = "github:ryantm/agenix";
+    firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
   };
 
   outputs = {
@@ -28,6 +29,7 @@
     nvf,
     nix-flatpak,
     agenix,
+    firefox-addons,
     ... 
   }@inputs: {
     nixosConfigurations = {
