@@ -69,23 +69,12 @@ in
           # Nord Theme:
           #"26e789e7-acf2-4346-9381-ad473c245e43".settings = {
           #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/nord-theme/latest.xpi";
-          #installation_mode = "force_installed";
-          #};
-          # Dark Reader:
           #"addon@darkreader.org".settings = {
           #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/darkreader/latest.xpi";
-          #  installation_mode = "force_installed";
-          #};
-          # AdNauseam:
           #"adnauseam@rednoise.org".settings = {
           #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/adnauseam/latest.xpi";
-          #  installation_mode = "force_installed";
-          #};
-          # Sponsor Block:
           #"sponsorBlocker@ajay.app".settings = {
           #  install_url = "https://addons.mozilla.org/firefox/downloads/latest/sponsorblock/latest.xpi";
-          #  installation_mode = "force_installed";
-        };
       };
 
       /* ---- SETTINGS ---- */
