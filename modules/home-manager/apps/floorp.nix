@@ -23,16 +23,19 @@ in
 
       search = {
         force = true;
+        default = "qwant";
         engines = {
           "Qwant" = {
             urls = [{
-              template = "https://search.nixos.org/packages";
+              template = "https://www.qwant.com/?q={searchTerms}";
+              #https://www.qwant.com/?q=esempio&t=web
+              #https://www.qwant.com/?q=altro&t=web
               params = [
-                #{ name = "type"; value = "packages"; }
+                #{ name = "type"; value = "%s"; }
                 { name = "query"; value = "{searchTerms}"; }
               ];
             }];
-            #icon = "${pkgs.nixos-icons}/share/icons/hicolor/scalable/apps/nix-snowflake.svg";
+            icon = "https://www.qwant.com/favicon.ico";
             definedAliases = [ "@qw" ];
           };
           "Nix Packages" = {
@@ -134,6 +137,8 @@ in
       DisableFirefoxAccounts = true;
       DisableAccounts = true;
       DisableFirefoxScreenshots = true;
+      DisableProfileImport = true;
+      GenerativeAI = false;
       OverrideFirstRunPage = "";
       OverridePostUpdatePage = "";
       DontCheckDefaultBrowser = true;
