@@ -25,7 +25,7 @@ in
         force = true;
         default = "qwant";
         engines = {
-          "Qwant" = {
+          "qwant" = {
             urls = [{
               template = "https://www.qwant.com/?q={searchTerms}";
               #https://www.qwant.com/?q=esempio&t=web
