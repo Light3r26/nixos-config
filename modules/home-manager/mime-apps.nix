@@ -5,18 +5,25 @@
     mimeApps = {
       enable = true;
       defaultApplications = {
-        "inode/directory" = ["nemo.desktop"]; # Directories
+        # Directories
+        "inode/directory" = ["nemo.desktop"]; 
         "application/x-gnome-saved-search" = [ "nemo.desktop" ];
-        "text/*" = ["neovim.desktop"]; # Any text files
-        "text/plain" = ["neovim.desktop"]; # Plain text
-        "application/pdf" = ["firefox.desktop"]; # .pdf
-        "x-scheme-handler/https" = ["firefox.desktop"]; # Links
-        "x-scheme-handler/http" = ["firefox.desktop"]; # Links
-        "x-scheme-handler/mailto" = ["protonmail-desktop.desktop"]; # Links
-        "video/*" = ["mpv.desktop"]; # Any video files
-        "image/*" = ["qimgv.desktop"]; # Images
+        # Text files
+        "text/*" = ["neovim.desktop"]; 
+        "text/plain" = ["neovim.desktop"];
+        # PDFs
+        "application/pdf" = ["okular.desktop"];
+        # Links
+        "x-scheme-handler/https" = ["firefox.desktop"]; 
+        "x-scheme-handler/http" = ["firefox.desktop"];
+        "x-scheme-handler/mailto" = ["protonmail-desktop.desktop"];
+        # Video files
+        "video/*" = ["mpv.desktop"]; 
+        # Images
+        "image/*" = ["qimgv.desktop"]; 
         "image/png" = ["qimgv.desktop"];
         "image/jpeg" = ["qimgv.desktop"];
+        "image/heic" = ["qimgv.desktop"];
       };
     };
   };

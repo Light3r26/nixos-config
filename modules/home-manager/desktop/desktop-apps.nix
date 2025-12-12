@@ -6,7 +6,7 @@
   home.packages = with pkgs; [
     obsidian
     discord
-    gimp3 # FOSS image processing software
+    gimp3 # Image processing software
     qimgv # Image viewer
     pavucontrol
     libreoffice
@@ -26,7 +26,7 @@
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
-    #aseprite
+    kdePackages.okular # PDF editor
     #freecad
     #synology-drive-client
   ];
