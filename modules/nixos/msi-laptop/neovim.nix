@@ -68,6 +68,10 @@
             lsp.enable = true;
             lsp.server = "omnisharp";
           };
+          typst = {
+            enable = true;
+            extensions.typst-preview.nvim.enable = true;
+          };
         };
 
         diagnostics = {
