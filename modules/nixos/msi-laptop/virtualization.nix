@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  boot.extraModulePackages = with config.boot.kernelPackages; [ virtualbox ];
+  #boot.extraModulePackages = with config.boot.kernelPackages; [ virtualbox ];
 
   virtualisation.virtualbox = {
     host = {
