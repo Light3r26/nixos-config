@@ -8,8 +8,8 @@
       vim = {
         theme = {
           enable = true;
-          name = "everforest";
-          style = "hard";
+          name = "nord";
+          #style = "hard";
         };
 
         options = {
