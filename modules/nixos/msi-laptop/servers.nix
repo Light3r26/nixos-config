@@ -1,5 +1,3 @@
-{ config , ... }:
-
 {
   fileSystems."/home/light3r/Home-Server" = {
    device = "192.168.1.56:/home-pool";

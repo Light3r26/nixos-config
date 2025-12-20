@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 {
   virtualisation.virtualbox = {
     host = {

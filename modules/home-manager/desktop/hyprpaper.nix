@@ -1,5 +1,3 @@
-{ lib, config, ... }:
-
 {
   services.hyprpaper = {
     enable = true;

@@ -1,5 +1,3 @@
-{ pkgs, lib, ... }:
-
 {
   programs.nvf = {
     enable = true;
@@ -9,7 +7,6 @@
         theme = {
           enable = true;
           name = "nord";
-          #style = "hard";
         };
 
         options = {
@@ -29,7 +26,6 @@
         dashboard.alpha = {
           enable = true;
           theme = "dashboard";
-
         };
         statusline.lualine.enable = true;
         autocomplete.nvim-cmp.enable = true;

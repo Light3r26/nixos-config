@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
   programs.localsend = {
     enable = true; # Cross-platform FOSS alternative to Airdrop
