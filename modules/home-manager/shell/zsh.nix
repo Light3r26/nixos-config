@@ -5,6 +5,7 @@
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
+    syntaxHighlighting. enable = true;
     autocd = true;
     defaultKeymap = "vicmd";
     shellAliases = {
@@ -20,6 +21,7 @@
       fopen = "nemo";
       copy = "wl-copy";
       paste = "wl-paste";
+      dup = "kitty &>/dev/null&";
       # Bluetooth
       auricolari-bt = "bluetoothctl connect B8:F8:BE:60:54:BE";
       dualsense-ps5 = "bluetoothctl connect 4C:B9:9B:10:B8:F9";
