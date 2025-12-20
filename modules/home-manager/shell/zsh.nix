@@ -1,13 +1,14 @@
-{ config, pkgs, ... }:
-
 {
   programs.zsh = {
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
-    syntaxHighlighting. enable = true;
     autocd = true;
-    defaultKeymap = "vicmd";
+    #defaultKeymap = "vicmd";
+    prezto = {
+      enable = true;
+      editor.keymap = "vi";
+    };
     shellAliases = {
       # NixOS & Sistema
       list-nixos-generations = "nixos-rebuild list-generations"; 
