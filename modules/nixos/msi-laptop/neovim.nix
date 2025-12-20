@@ -62,7 +62,7 @@
           csharp = {
             enable = true;
             #lsp.enable = true;
-            #lsp.server = "omnisharp";
+            lsp.servers = [ "roslyn_ls" ];
           };
           typst = {
             enable = true;
