@@ -43,14 +43,23 @@
                 "                               ░                       "
                 "                                                       "
               ]; 
+              opts = {
+                hl = "Type";
+                position = "center";
+              };
             }
-            { type = "button"; val = "  New file"; opts = { shortcut = "SPACE + e"; }; } 
-            { type = "button"; val = "󰈞  Find file"; opts = { shortcut = "SPACE + f"; }; }
-            { type = "button"; val = "󰊄  Recently opened files"; opts = { shortcut = "SPACE + f + h"; }; }
-            { type = "button"; val = "  Frecency/MRU"; opts = { shortcut = "SPACE + f + r"; }; }
-            { type = "button"; val = "󰈬  Find word"; opts = { shortcut = "SPACE + g"; }; }
-            { type = "button"; val = "  Jump to bookmarks"; opts = { shortcut = "SPACE + f + m"; }; }
-            { type = "button"; val = "  Open last session"; opts = { shortcut = "SPACE + s + l"; }; }
+            { 
+              type = "group"; 
+              val = [
+                { type = "button"; val = "  New file"; opts = { shortcut = "SPACE + e"; }; } 
+                { type = "button"; val = "󰈞  Find file"; opts = { shortcut = "SPACE + f"; }; }
+                { type = "button"; val = "󰊄  Recently opened files"; opts = { shortcut = "SPACE + f + h"; }; }
+                { type = "button"; val = "  Frecency/MRU"; opts = { shortcut = "SPACE + f + r"; }; }
+                { type = "button"; val = "󰈬  Find word"; opts = { shortcut = "SPACE + g"; }; }
+                { type = "button"; val = "  Jump to bookmarks"; opts = { shortcut = "SPACE + f + m"; }; }
+                { type = "button"; val = "  Open last session"; opts = { shortcut = "SPACE + s + l"; }; }
+              ];
+            }
           ];
           opts = {
             dashboard.section = {
