@@ -25,7 +25,7 @@
         # Plugins (<leader> is the spacebar)
         dashboard.alpha = {
           enable = true;
-          theme = "null";
+          theme = null;
           opts = {
             dashboard.section.header.val = [
               "                                                      "
