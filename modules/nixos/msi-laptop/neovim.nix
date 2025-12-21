@@ -25,7 +25,7 @@
         # Plugins (<leader> is the spacebar)
         dashboard.alpha = {
           enable = true;
-          #theme = "dashboard";
+          theme = "null";
           opts = {
             dashboard.section.header.val = [
               "                                                      "
@@ -77,7 +77,6 @@
           bash.enable = true;
           csharp = {
             enable = true;
-            #lsp.enable = true;
             lsp.servers = [ "roslyn_ls" ];
           };
           typst = {
