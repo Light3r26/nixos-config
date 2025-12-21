@@ -27,7 +27,9 @@
           enable = true;
           theme = null;
           layout = [
-
+            { type = "button"; val = "  Find File"; on_press = "telescope find_files"; opts = { shortcut = "f"; }; }
+            { type = "button"; val = "  New File"; on_press = "ene <BAR> startinsert"; opts = { shortcut = "n"; }; }
+            { type = "button"; val = "  Quit"; on_press = "qa"; opts = { shortcut = "q"; }; }
           ];
           opts = {
             dashboard.section = {
@@ -45,13 +47,6 @@
                 "                              ░                       "
                 "                                                      "
               ];
-              buttons = {
-                val = [
-                  { type = "button"; val = "  Find File"; on_press = "telescope find_files"; opts = { shortcut = "f"; }; }
-                  { type = "button"; val = "  New File"; on_press = "ene <BAR> startinsert"; opts = { shortcut = "n"; }; }
-                  { type = "button"; val = "  Quit"; on_press = "qa"; opts = { shortcut = "q"; }; }
-                ];
-              };
             };
           };
         };
