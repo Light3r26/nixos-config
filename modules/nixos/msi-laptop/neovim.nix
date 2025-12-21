@@ -27,9 +27,30 @@
           enable = true;
           theme = null;
           layout = [
-            { type = "button"; val = "  Find File"; on_press = "telescope find_files"; opts = { shortcut = "f"; }; }
-            { type = "button"; val = "  New File"; on_press = "ene <BAR> startinsert"; opts = { shortcut = "n"; }; }
-            { type = "button"; val = "  Quit"; on_press = "qa"; opts = { shortcut = "q"; }; }
+            { 
+              type = "text"; 
+              val = """
+                                                                      
+                  ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓   
+                  ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒  
+                 ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░  
+                 ▓██▒  ▐▌██▒▒▓█  ▄ ▒██   ██░  ▒██ █░░░██░▒██    ▒██   
+                 ▒██░   ▓██░░▒████▒░ ████▓▒░   ▒▀█░  ░██░▒██▒   ░██▒  
+                 ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░▒░▒░    ░ ▐░  ░▓  ░ ▒░   ░  ░  
+                 ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░  
+                 ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░        
+                       ░    ░  ░    ░ ░        ░   ░         ░        
+                                              ░                       
+                                                                      
+              """; 
+            }
+            { type = "button"; val = "  New file"; opts = { shortcut = "SPACE + e"; }; } 
+            { type = "button"; val = "󰈞  Find file"; opts = { shortcut = "SPACE + f"; }; }
+            { type = "button"; val = "󰊄  Recently opened files"; opts = { shortcut = "SPACE + f + h"; }; }
+            { type = "button"; val = "  Frecency/MRU"; opts = { shortcut = "SPACE + f + r"; }; }
+            { type = "button"; val = "󰈬  Find word"; opts = { shortcut = "SPACE + g"; }; }
+            { type = "button"; val = "  Jump to bookmarks"; opts = { shortcut = "SPACE + f + m"; }; }
+            { type = "button"; val = "  Open last session"; opts = { shortcut = "SPACE + s + l"; }; }
           ];
           opts = {
             dashboard.section = {
