@@ -27,7 +27,7 @@
           enable = true;
           theme = "dashboard";
           opts = {
-            dashboard.section.header.val = [
+            "dashboard.section.header.val" = [
               "                                                      "
               "  ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓  "
               "  ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒  "
