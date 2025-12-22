@@ -7,4 +7,6 @@ in
 {
   "zfs_key.age".publicKeys = systems;
   "freshrss_key.age".publicKeys = systems;
+  "cloudflare-cert.age".publicKeys = systems;
+  "tunnel-credentials.age".publicKeys = systems;
 }
