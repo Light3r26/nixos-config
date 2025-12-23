@@ -15,8 +15,6 @@
       size = "du -ah --max-depth=1 | sort -h";
       ip-show = "curl ifconfig.me";
       pmount = "sudo mount -o uid=1000,gid=100";
-      vim = "nvim";
-      vi = "nvim";
       ls = "lsd";
       open = "xdg-open";
       fopen = "nemo";

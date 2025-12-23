@@ -2,130 +2,129 @@
   programs.nvf = {
     enable = true;
    
-    settings = {
-      vim = {
-        theme = {
-          enable = true;
-          name = "nord";
-        };
+    settings.vim = {
+      viAlias = true;
+      vimAlias = true;
 
-        options = {
-          autoindent = true;
-          tabstop = 2;
-          shiftwidth = 2;
-          softtabstop = 2;
-          expandtab = true;
-        };
+      theme = {
+        enable = true;
+        name = "nord";
+      };
 
-        clipboard = {
-          enable = true;
-          registers = "unnamedplus";
-        };
+      options = {
+        autoindent = true;
+        tabstop = 2;
+        shiftwidth = 2;
+        softtabstop = 2;
+        expandtab = true;
+      };
 
-        # Plugins (<leader> is the spacebar)
-        dashboard.alpha = {
-          enable = true;
-          theme = null;
-          layout = [
-            { 
-              type = "text"; 
-              val = [
-                "                                                       "
-                "   ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓  "
-                "   ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒  "
-                "  ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░  "
-                "  ▓██▒  ▐▌██▒▒▓█  ▄ ▒██   ██░  ▒██ █░░░██░▒██    ▒██   "
-                "  ▒██░   ▓██░░▒████▒░ ████▓▒░   ▒▀█░  ░██░▒██▒   ░██▒  "
-                "  ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░▒░▒░    ░ ▐░  ░▓  ░ ▒░   ░  ░  "
-                "  ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░  "
-                "  ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░        "
-                "        ░    ░  ░    ░ ░        ░   ░         ░        "
-                "                               ░                       "
-                "                                                       "
-              ]; 
-              opts = {
-                hl = "Type";
-                position = "center";
-              };
-            }
-            { 
-              type = "group"; 
-              val = [
-                { type = "button"; val = "  New file"; opts = { shortcut = "SPACE + e"; }; } 
-                { type = "button"; val = "󰈞  Find file"; opts = { shortcut = "SPACE + f"; }; }
-                { type = "button"; val = "󰊄  Recently opened files"; opts = { shortcut = "SPACE + f + h"; }; }
-                { type = "button"; val = "  Frecency/MRU"; opts = { shortcut = "SPACE + f + r"; }; }
-                { type = "button"; val = "󰈬  Find word"; opts = { shortcut = "SPACE + g"; }; }
-                { type = "button"; val = "  Jump to bookmarks"; opts = { shortcut = "SPACE + f + m"; }; }
-                { type = "button"; val = "  Open last session"; opts = { shortcut = "SPACE + s + l"; }; }
-              ];
-            }
-          ];
-          opts = {
-            dashboard.section = {
-              header.val = [
-                "                                                      "
-                "  ███▄    █ ▓█████  ▒█████   ██▒   █▓ ██▓ ███▄ ▄███▓  " 
-                "  ██ ▀█   █ ▓█   ▀ ▒██▒  ██▒▓██░   █▒▓██▒▓██▒▀█▀ ██▒  "
-                " ▓██  ▀█ ██▒▒███   ▒██░  ██▒ ▓██  █▒░▒██▒▓██    ▓██░  "
-                " ▓██▒  ▐▌██▒▒▓█  ▄ ▒██   ██░  ▒██ █░░░██░▒██    ▒██   "
-                " ▒██░   ▓██░░▒████▒░ ████▓▒░   ▒▀█░  ░██░▒██▒   ░██▒  "
-                " ░ ▒░   ▒ ▒ ░░ ▒░ ░░ ▒░▒░▒░    ░ ▐░  ░▓  ░ ▒░   ░  ░  "
-                " ░ ░░   ░ ▒░ ░ ░  ░  ░ ▒ ▒░    ░ ░░   ▒ ░░  ░      ░  "
-                " ░   ░ ░    ░   ░ ░ ░ ▒       ░░   ▒ ░░      ░        "
-                "       ░    ░  ░    ░ ░        ░   ░         ░        "
-                "                              ░                       "
-                "                                                      "
-              ];
-            };
-          };
-        };
-        statusline.lualine.enable = true;
-        autocomplete.nvim-cmp.enable = true;
-        treesitter.enable = true;
-        telescope = {
-          enable = true;
-          mappings = {
-            findFiles = "<leader>f";
-            liveGrep = "<leader>g"; 
-          };
-        };
-        filetree.nvimTree = {
-          enable = true;
-          openOnSetup = true;
-          mappings.focus = "<leader>h";
-        };
+      clipboard = {
+        enable = true;
+        registers = "unnamedplus";
+      };
+      
+      lsp = {
+        enable = true;
+        formatOnSave = true;
+        lspkind.enable = true; #VS-Code-style icons
+        lspsaga.enable = true; 
+        trouble.enable = true;
+        lspSignature.enable = true;
+        otter-nvim.enable = true;
+        mappings.goToDefinition = "<leader>gd";
+      };
 
-        lsp = {
+      languages = {
+        enableFormat = true;
+        enableTreesitter = true;
+        enableExtraDiagnostics = true;
+        # Languages
+        nix.enable = true;
+        python.enable = true;
+        clang.enable = true;
+        markdown.enable = true;
+        go.enable = true;
+        #html.enable = true;
+        #css.enable = true;
+        bash.enable = true;
+        csharp = {
           enable = true;
-          mappings.goToDefinition = "<leader>gd";
+          lsp.servers = [ "roslyn_ls" ];
         };
-        languages = {
-          enableFormat = true;
-          enableTreesitter = true;
-          # Languages
-          nix.enable = true;
-          python.enable = true;
-          clang.enable = true;
-          markdown.enable = true;
-          go.enable = true;
-          #html.enable = true;
-          #css.enable = true;
-          bash.enable = true;
-          csharp = {
-            enable = true;
-            lsp.servers = [ "roslyn_ls" ];
-          };
-          typst = {
-            enable = true;
-            extensions.typst-preview-nvim.enable = true;
-          };
+        typst = {
+          enable = true;
+          extensions.typst-preview-nvim.enable = true;
         };
+      };
 
-        diagnostics = {
-          enable = true;
-          config.virtual_text = true;
+      # Plugins (<leader> is the spacebar)
+      dashboard.alpha = {
+        enable = true;
+        theme = "dashboard";
+      };
+
+      statusline.lualine.enable = true;
+
+      autocomplete.nvim-cmp.enable = true;
+
+      snippets.luasnip.enable = true;
+
+      treesitter = {
+        enable = true;
+        context.enable = true;
+      };
+
+      telescope = {
+        enable = true;
+        mappings = {
+          findFiles = "<leader>f";
+          liveGrep = "<leader>g"; 
         };
+      };
+
+      filetree.nvimTree = {
+        enable = true;
+        #openOnSetup = true;
+        mappings.focus = "<leader>h";
+      };
+
+      git = {
+        enable = true;
+        gitsigns.enable = true;
+      };
+
+      autopairs.nvim-autopairs.enable = true;
+
+      binds = {
+        whichKey.enable = true;
+        cheatsheet.enable = true;
+      };
+
+      nvim-notify.enable = true;
+      
+      utility = {
+        diffview-nvim.enable = true;
+        yanky-nvim.enable = true;
+        surround.enable = true;
+        smart-splits.enable = true;
+        nvim-biscuits.enable = true; # Closing bracket context
+      };
+
+      motion = {
+        leap.enable = true;
+        precognition.enable = true; # Helps buffer navigation
+      };
+
+      ui = {
+        noice.enable = true; # Alternative command line 
+        colorizer.enable = true; # Color highlighter
+        modes-nvim.enable = true; # Vim modes colors
+      };
+
+      diagnostics = {
+        enable = true;
+        config.virtual_text = true;
       };
     };
   };
