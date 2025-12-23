@@ -101,11 +101,10 @@
         cheatsheet.enable = true;
       };
 
-      nvim-notify.enable = true;
+      notify.nvim-notify.enable = true;
       
       utility = {
         diffview-nvim.enable = true;
-        yanky-nvim.enable = true;
         surround.enable = true;
         smart-splits.enable = true;
         nvim-biscuits.enable = true; # Closing bracket context
