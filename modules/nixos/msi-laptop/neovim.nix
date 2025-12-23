@@ -109,12 +109,12 @@
         surround.enable = true;
         smart-splits.enable = true;
         nvim-biscuits.enable = true; # Closing bracket context
+        motion = {
+          leap.enable = true;
+          precognition.enable = true; # Helps buffer navigation
+        };
       };
 
-      motion = {
-        leap.enable = true;
-        precognition.enable = true; # Helps buffer navigation
-      };
 
       ui = {
         noice.enable = true; # Alternative command line 
