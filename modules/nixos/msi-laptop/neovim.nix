@@ -1,7 +1,7 @@
 {
   programs.nvf = {
     enable = true;
-   
+
     settings.vim = {
       viAlias = true;
       vimAlias = true;
@@ -23,12 +23,12 @@
         enable = true;
         registers = "unnamedplus";
       };
-      
+
       lsp = {
         enable = true;
         formatOnSave = true;
         lspkind.enable = true; #VS-Code-style icons
-        lspsaga.enable = true; 
+        lspsaga.enable = true;
         trouble.enable = true;
         lspSignature.enable = true;
         otter-nvim.enable = true;
@@ -50,7 +50,7 @@
         bash.enable = true;
         csharp = {
           enable = true;
-          lsp.servers = [ "roslyn_ls" ];
+          lsp.servers = ["roslyn_ls"];
         };
         typst = {
           enable = true;
@@ -75,13 +75,7 @@
         context.enable = true;
       };
 
-      telescope = {
-        enable = true;
-        mappings = {
-          findFiles = "<leader>f";
-          liveGrep = "<leader>g"; 
-        };
-      };
+      telescope.enable = true;
 
       filetree.nvimTree = {
         enable = true;
@@ -94,15 +88,13 @@
         gitsigns.enable = true;
       };
 
-      autopairs.nvim-autopairs.enable = true;
-
       binds = {
         whichKey.enable = true;
         cheatsheet.enable = true;
       };
 
       notify.nvim-notify.enable = true;
-      
+
       utility = {
         diffview-nvim.enable = true;
         surround.enable = true;
@@ -114,9 +106,8 @@
         };
       };
 
-
       ui = {
-        noice.enable = true; # Alternative command line 
+        noice.enable = true; # Alternative command line
         colorizer.enable = true; # Color highlighter
         modes-nvim.enable = true; # Vim modes colors
       };
