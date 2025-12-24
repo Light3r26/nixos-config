@@ -4,14 +4,13 @@
     enableCompletion = true;
     autosuggestion.enable = true;
     autocd = true;
-    #defaultKeymap = "vicmd";
     prezto = {
       enable = true;
       editor.keymap = "vi";
     };
     shellAliases = {
       # NixOS & Sistema
-      list-nixos-generations = "nixos-rebuild list-generations"; 
+      list-nixos-generations = "nixos-rebuild list-generations";
       size = "du -ah --max-depth=1 | sort -h";
       ip-show = "curl ifconfig.me";
       pmount = "sudo mount -o uid=1000,gid=100";
@@ -32,7 +31,7 @@
     initContent = ''
       export XCURSOR_THEME=~/.icons/macOS
       export XCURSOR_SIZE=24
-      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh" 
+      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
       eval "$(starship init zsh)"
     '';
   };

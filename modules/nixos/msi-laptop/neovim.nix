@@ -28,9 +28,8 @@
         enable = true;
         formatOnSave = true;
         lspkind.enable = true; #VS-Code-style icons
-        lspsaga.enable = true;
         trouble.enable = true;
-        lspSignature.enable = true;
+        lspSignature.enable = true; # Function signatures hints
         otter-nvim.enable = true;
         mappings.goToDefinition = "<leader>gd";
       };
@@ -88,10 +87,7 @@
         gitsigns.enable = true;
       };
 
-      binds = {
-        whichKey.enable = true;
-        cheatsheet.enable = true;
-      };
+      binds.whichKey.enable = true;
 
       notify.nvim-notify.enable = true;
 
@@ -99,14 +95,18 @@
         diffview-nvim.enable = true;
         surround.enable = true;
         smart-splits.enable = true;
-        nvim-biscuits.enable = true; # Closing bracket context
         motion.leap.enable = true;
       };
 
       ui = {
         noice.enable = true; # Alternative command line
         colorizer.enable = true; # Color highlighter
-        modes-nvim.enable = true; # Vim modes colors
+      };
+
+      visuals = {
+        nvim-web-devicons.enable = true;
+        highlight-undo.enable = true;
+        indent-blankline.enable = true;
       };
 
       diagnostics = {
