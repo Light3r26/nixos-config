@@ -64,15 +64,7 @@
 
       statusline.lualine.enable = true;
 
-      autocomplete.nvim-cmp = {
-        enable = true;
-        sources = {
-          luasnip = null;
-          nvim-cmp = null;
-          buffer = "[Buffer]";
-          path = "[Path]";
-        };
-      };
+      autocomplete.nvim-cmp.enable = true;
 
       snippets.luasnip.enable = true;
 
