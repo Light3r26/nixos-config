@@ -69,7 +69,7 @@
         sources = {
           luasnip = null;
           nvim-cmp = null;
-          buffer = "[Buffer";
+          buffer = "[Buffer]";
           path = "[Path]";
         };
       };
