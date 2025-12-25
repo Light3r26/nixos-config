@@ -26,7 +26,6 @@
 
       lsp = {
         enable = true;
-        formatOnSave = true;
         lspkind.enable = true; #VS-Code-style icons
         trouble.enable = true;
         lspSignature.enable = true; # Function signatures hints
