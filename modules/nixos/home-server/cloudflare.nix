@@ -1,5 +1,3 @@
-{ pkgs, ...}:
-
 {
   services.cloudflared = {
     enable = true;
@@ -15,7 +13,8 @@
     };
   };
 
-  environment.systemPackages = [
-    pkgs.cloudflared 
-  ];
+  age.secrets = {
+    "cloudflared-cert.age".file = "/Nixos/secrets/cloudflare-cert.age";
+    "tunnel-credentials.age".file = "/Nixos/secrets/tunnel-credentials.age";
+  };
 }
