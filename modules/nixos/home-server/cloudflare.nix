@@ -14,4 +14,8 @@
       };
     };
   };
+
+  environment.systemPackages = [
+    pkgs.cloudflared 
+  ];
 }
