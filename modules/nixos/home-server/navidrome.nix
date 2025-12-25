@@ -1,4 +1,4 @@
-{ config, lib, ... }:
+{ lib, ... }:
 
 {
   systemd.services.navidrome.serviceConfig.ProtectHome = lib.mkForce "read-only";

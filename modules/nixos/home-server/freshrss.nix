@@ -1,4 +1,6 @@
-{config, ...}: {
+{config, ...}:
+
+{
   services.freshrss = {
     enable = true;
     baseUrl = "/";

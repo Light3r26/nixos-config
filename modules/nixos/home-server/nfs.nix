@@ -1,5 +1,3 @@
-{ config, ... }:
-
 {
   fileSystems."/export/home-pool" = {
     device = "/mnt/home-pool";

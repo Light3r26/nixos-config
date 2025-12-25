@@ -1,4 +1,6 @@
-{config, ...}: {
+{config, ...}:
+
+{
   services.cloudflared = {
     enable = true;
     tunnels."4ba317d9-4916-4b68-bdca-8721e25ada07" = {

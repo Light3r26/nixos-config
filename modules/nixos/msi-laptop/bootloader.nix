@@ -1,8 +1,6 @@
+{ inputs, pkgs, ... }:
+
 {
-  inputs,
-  pkgs,
-  ...
-}: {
   boot.loader = {
     systemd-boot.enable = false;
     grub.useOSProber = true;
