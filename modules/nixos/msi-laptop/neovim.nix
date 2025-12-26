@@ -42,7 +42,10 @@
         python.enable = true;
         clang.enable = true;
         markdown.enable = true;
-        go.enable = true;
+        go = {
+          enable = true;
+          lsp.servers = ["gopls"];
+        };
         #html.enable = true;
         #css.enable = true;
         bash.enable = true;
