@@ -12,7 +12,6 @@
     # Other tools
     gh # GitHub CLI
     wget
-    toilet
     zip
     unzip
     ffmpeg

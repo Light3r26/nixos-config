@@ -1,0 +1,38 @@
+{ pkgs }:
+
+pkgs.writeShellScriptBin "delete-generations" ''
+  while getopts ":hns" opt; do
+    case ${opt} in
+      s)
+        echo "Eliminating all generations from chosen interval..."
+        shift 1
+        for generation in $(seq "$1" "$2") 
+        do
+          sudo nix-env -p /nix/var/nix/profiles/system --delete-generations "$generation"
+        done
+      ;;
+      n)
+        echo "Eliminating chosen generations..."
+        shift 1
+        for generation in "$@"
+        do
+          sudo nix-env -p /nix/var/nix/profiles/system --delete-generations "$generation"
+        done
+      ;;
+      h)
+        echo "Delete Nixos Generation command help"
+        echo "-s (sequential): eliminate all generations from a chosen interval"
+        echo "-n (number): eliminate chosen generations"
+        echo "-h (help): call the command help"
+        exit 1 
+      ;;
+      ?)
+        echo "Usage: $(basename "$0") [-n] <gen1> <gen2> ... <genx>"
+        echo "Usage: $(basename "$0") [-s] <start> <stop>"
+        exit 1 
+      ;;
+    esac
+  done
+
+  nix-collect-garbage -d
+''
