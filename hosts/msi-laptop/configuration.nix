@@ -1,10 +1,11 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   imports = [ 
       ./hardware-configuration.nix
       ./system-modules
       ../../modules/nixos/msi-laptop
+      ../../modules/scripts
       inputs.home-manager.nixosModules.default 
     ];
 
