@@ -10,7 +10,7 @@
     };
     shellAliases = {
       # NixOS & Sistema
-      list-nixos-generations = "nixos-rebuild list-generations";
+      list-generations = "nixos-rebuild list-generations";
       size = "du -ah --max-depth=1 | sort -h";
       ip-show = "curl ifconfig.me";
       pmount = "sudo mount -o uid=1000,gid=100";
