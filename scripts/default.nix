@@ -1,4 +1,4 @@
-{ pkgs }:
+{ pkgs, ... }:
 
 let
   flake-rebuild = import ./flake-rebuild.nix { inherit pkgs; };
