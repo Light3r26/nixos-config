@@ -2,7 +2,7 @@
 
 pkgs.writeShellScriptBin "delete-generations" ''
   while getopts ":hns" opt; do
-    case ${opt} in
+    case $opt in
       s)
         echo "Eliminating all generations from chosen interval..."
         shift 1
