@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   imports = [
@@ -24,7 +24,6 @@
 
   home.sessionPath = [
     "/Nixos/scripts"
-    "/Nixos/scripts/nixos"
     "/Nixos/scripts/system"
     "/Nixos/scripts/hypr"
   ];

@@ -1,12 +1,9 @@
 {
-  programs.git = {
-    enable = true;
-    #userName = "";
-    #userEmail = "";
-  };
-
-  programs.diff-so-fancy = {
-    enable = true;
-    #enableShellintegration = true;
+  programs = {
+    git.enable = true;
+    diff-so-fancy = {
+      enable = true;
+      enableGitIntegration = true;
+    };
   };
 }
