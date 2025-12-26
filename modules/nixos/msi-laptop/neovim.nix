@@ -44,14 +44,20 @@
         markdown.enable = true;
         go = {
           enable = true;
-          lsp.servers = ["gopls"];
+          lsp = {
+            enable = true;
+            servers = ["gopls"];
+          };
         };
         #html.enable = true;
         #css.enable = true;
         bash.enable = true;
         csharp = {
           enable = true;
-          lsp.servers = ["roslyn_ls"];
+          lsp = {
+            enable = true;
+            servers = ["roslyn_ls"];
+          };
         };
         typst = {
           enable = true;
