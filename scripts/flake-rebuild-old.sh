@@ -1,8 +1,7 @@
 #!/usr/bin/env bash
 
 echo ""
-#toilet -f smblock --filter metal 'NixOS  Flake  Rebuild'
-figlet -f slant "Flake Rebuild"
+toilet -f smblock --filter metal 'NixOS  Flake  Rebuild'
 echo ""
 
 cd /Nixos
