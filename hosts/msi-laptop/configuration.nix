@@ -7,7 +7,7 @@
       ../../modules/nixos/msi-laptop
       ../../scripts
       inputs.home-manager.nixosModules.default 
-    ];
+  ];
 
   # Enable Flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
@@ -26,10 +26,6 @@
     };
     backupFileExtension = "backup";
   };
-
-  #nixpkgs.config.permittedInsecurePackages = [
-  #  "electron-36.9.5" # temporary, else rebuild doesn't work
-  #];
 
   # Automatize garbage collection
   nix.gc = {

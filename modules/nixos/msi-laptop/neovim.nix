@@ -49,9 +49,6 @@
             servers = ["gopls"];
           };
         };
-        #html.enable = true;
-        #css.enable = true;
-        bash.enable = true;
         csharp = {
           enable = true;
           lsp = {
@@ -62,6 +59,21 @@
         typst = {
           enable = true;
           extensions.typst-preview-nvim.enable = true;
+        };
+        bash.enable = true;
+        # Web Development
+        html.enable = true;
+        css.enable = true;
+        tailwind= {
+          enable = true;
+          lsp.enable = true;
+        };
+        ts = {
+          enable = true;
+          lsp.enable = true;
+          extraDiagnostics.enable = true;
+          format.enable = true;
+          treesitter.enable = true;
         };
       };
 
