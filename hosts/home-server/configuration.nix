@@ -5,7 +5,6 @@
     ./hardware-configuration.nix
     ./system-modules
     ../../modules/nixos/home-server
-    ../../modules/nixos/msi-laptop/neovim.nix
   ];
 
   # Enable flakes
