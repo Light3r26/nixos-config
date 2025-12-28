@@ -1,3 +1,5 @@
+{ inputs, ... }:
+
 {
   programs.nvf = {
     enable = true;

@@ -38,7 +38,7 @@
         modules = [
           ./hosts/msi-laptop/configuration.nix
           home-manager.nixosModules.default
-          nvf.nixosModules.default
+          nvf.homeManagerModules.default
           nix-flatpak.nixosModules.nix-flatpak
         ];
       };
@@ -56,7 +56,6 @@
         };
         modules = [
           ./hosts/home-server/configuration.nix
-          nvf.nixosModules.default
           agenix.nixosModules.default
         ];
       };
