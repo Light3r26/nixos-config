@@ -21,7 +21,6 @@
         imports = [
           ../../hosts/msi-laptop/home.nix
           inputs.nvf.homeManagerModules.default
-          #inputs.self.outputs.homeManagerModules.default
         ];
       };
     };

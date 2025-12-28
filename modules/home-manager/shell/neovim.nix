@@ -1,12 +1,13 @@
-{ inputs, ... }:
-
 {
   programs.nvf = {
     enable = true;
+    defaultEditor = true;
 
     settings.vim = {
       viAlias = true;
       vimAlias = true;
+      hideSearchHighlight = true;
+      searchCase = "smart";
 
       theme = {
         enable = true;
@@ -23,7 +24,7 @@
 
       clipboard = {
         enable = true;
-        registers = "unnamedplus";
+        registers = "unnamedplus"; # System clipboard
       };
 
       lsp = {
