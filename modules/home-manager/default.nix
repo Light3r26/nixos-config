@@ -7,6 +7,7 @@
     ./shell/fastfetch.nix
     ./shell/git.nix
     ./shell/kitty.nix
+    ./shell/neovim.nix
     ./shell/starship.nix
     ./shell/zsh.nix
     # Desktop
