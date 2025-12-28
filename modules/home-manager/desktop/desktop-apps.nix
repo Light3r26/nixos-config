@@ -5,6 +5,7 @@
 
   home.packages = with pkgs; [
     obsidian
+    logseq
     discord
     gimp3 # Image processing software
     qimgv # Image viewer
@@ -26,7 +27,6 @@
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
-    kdePackages.okular # PDF editor
     #freecad
     #synology-drive-client
   ];
