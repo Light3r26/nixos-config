@@ -41,10 +41,6 @@
     };
   };
 
-  programs.hyprland.enable = true;
-  programs.zsh.enable = true;
-  services.udisks2.enable = true;
-
   # Fix SDDM not starting any DE session
   services.dbus.packages = with pkgs; [ dconf ];
   
@@ -82,6 +78,12 @@
      nix-prefetch-github
      exfatprogs
   ];
+
+  programs = {
+    hyprland.enable = true;
+    zsh.enable = true;
+    kdeconnect.enable = true;
+  };
 
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];

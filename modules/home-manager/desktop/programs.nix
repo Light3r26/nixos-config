@@ -3,8 +3,6 @@
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
 
-  services.kdeconnect.enable = true;
-
   home.packages = with pkgs; [
     obsidian
     logseq
