@@ -23,8 +23,18 @@ in
 
       search = {
         force = true;
-        default = "qwant";
+        default = "searx";
         engines = {
+          "searx" = {
+            urls = [{
+              template = "https://search.jacoposoria.qzz.io/?q={searchTerms}";
+              params = [
+                { name = "query"; value = "{searchTerms}"; }
+              ];
+            }];
+            icon = "https://docs.searxng.org/_static/searxng-wordmark.svg";
+            definedAliases = [ "@sx" ];
+          };
           "qwant" = {
             urls = [{
               template = "https://www.qwant.com/?q={searchTerms}";
