@@ -9,11 +9,6 @@
       };
     };
     commonHttpConfig = ''
-      client_max_body_size 50000M;
-      proxy_read_timeout   600s;
-      proxy_send_timeout   600s;
-      send_timeout         600s;
-
       proxy_redirect off;
       proxy_set_header Host $host:$server_port;
       proxy_set_header X-Real-IP $remote_addr;
