@@ -1,3 +1,5 @@
+{ config, ... }:
+
 {
   services.searx = {
     enable = true;
