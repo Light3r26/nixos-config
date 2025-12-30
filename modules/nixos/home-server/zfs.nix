@@ -2,7 +2,7 @@
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false; 
 
-  age.secrets."zfs_key.age".file = "/Nixos/secrets/zfs_key.age";
+  age.secrets."zfs-key.age".file = "/Nixos/secrets/zfs-key.age";
 
   services.zfs.autoScrub = {
     enable = true;
