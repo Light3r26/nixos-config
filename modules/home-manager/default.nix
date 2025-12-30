@@ -1,5 +1,6 @@
 {
   imports = [
+    ./auto-mount.nix
     ./battery-notification.nix
     ./mime-apps.nix
     # Shell 

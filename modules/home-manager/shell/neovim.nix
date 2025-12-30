@@ -7,7 +7,7 @@
       viAlias = true;
       vimAlias = true;
       hideSearchHighlight = true;
-      searchCase = "smart";
+      searchCase = "ignore";
 
       theme = {
         enable = true;
@@ -44,7 +44,10 @@
         nix.enable = true;
         python.enable = true;
         clang.enable = true;
-        markdown.enable = true;
+        markdown = {
+          enable = true;
+          extensions.markview-nvim.enable = true;
+        };
         go = {
           enable = true;
           lsp = {
