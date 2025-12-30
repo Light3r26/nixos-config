@@ -5,6 +5,7 @@
     ./hardware-configuration.nix
     ./system-modules
     ../../modules/nixos/home-server
+    ../../scripts
   ];
 
   # Enable flakes
