@@ -27,6 +27,7 @@
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
+    kdePackages.dolphin
     #freecad
     #synology-drive-client
   ];
