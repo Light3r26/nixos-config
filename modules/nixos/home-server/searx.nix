@@ -13,7 +13,7 @@
   age.secrets."searx-key.age".file = "/Nixos/secrets/searx-key.age";
   systemd.services.searx = {
     serviceConfig.LoadCredential = [
-      "searx_key:${config.age.secrets.searx-key.path}"
+      "searx-key:${config.age.secrets."searx-key.age".path}"
     ];
   };
 
