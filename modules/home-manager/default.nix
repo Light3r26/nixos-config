@@ -1,6 +1,5 @@
 {
   imports = [
-    ./auto-mount.nix
     ./battery-notification.nix
     ./mime-apps.nix
     # Shell 
@@ -12,13 +11,13 @@
     ./shell/starship.nix
     ./shell/zsh.nix
     # Desktop
-    ./desktop/desktop-apps.nix
     ./desktop/hypridle.nix
     ./desktop/hyprland.nix
     ./desktop/hyprlock.nix
     ./desktop/hyprpaper.nix
     ./desktop/mpv.nix
     ./desktop/nemo.nix
+    ./desktop/programs.nix
     ./desktop/rofi.nix
     ./desktop/styling.nix
     ./desktop/swaync.nix

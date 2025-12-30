@@ -3,6 +3,8 @@
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
 
+  programs.kdeconnect.enable = true;
+
   home.packages = with pkgs; [
     obsidian
     logseq
@@ -27,7 +29,6 @@
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
-    kdePackages.kdeconnect-kde
     #freecad
     #synology-drive-client
   ];
