@@ -3,7 +3,7 @@
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
 
-  programs.kdeconnect.enable = true;
+  services.kdeconnect.enable = true;
 
   home.packages = with pkgs; [
     obsidian
