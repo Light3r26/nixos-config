@@ -1,6 +1,7 @@
 {
   imports = [
     ./cloudflare.nix
+    ./filebrowser.nix
     ./freshrss.nix
     ./immich.nix
     ./navidrome.nix
