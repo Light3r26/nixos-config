@@ -1,21 +1,24 @@
 { config, ... }:
 
+let
+  searx-key = "$(cat ${config.age.secrets."searx-key.age".path})";
+
+in
 {
   services.searx = {
     enable = true;
     settings.server = {
       bind_address = "127.0.0.1";
       port = 5313;
-      secret_key = "%d/searx-key";
+      #secret_key = builtins.getEnv "SEARX-KEY";
+      secret_key = searx-key;
     };
   };
 
   age.secrets."searx-key.age".file = "/Nixos/secrets/searx-key.age";
-  systemd.services.searx = {
-    serviceConfig.LoadCredential = [
-      "searx-key:${config.age.secrets."searx-key.age".path}"
-    ];
-  };
+  #programs.bash.sessionVariables = {
+    #SEARX-KEY = "$(cat ${config.age.secrets."searx-key.age".path})";
+  #};
 
   services.nginx.virtualHosts."search.jacoposoria.qzz.io" = {
     serverName = "search.jacoposoria.qzz.io";

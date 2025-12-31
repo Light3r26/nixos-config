@@ -13,6 +13,7 @@
         "photos.jacoposoria.qzz.io" = "http://localhost:80";
         "rss.jacoposoria.qzz.io" = "http://localhost:80";
         "search.jacoposoria.qzz.io" = "http://localhost:80";
+        "drive.jacoposoria.qzz.io" = "http://localhost:80";
       };
     };
   };
