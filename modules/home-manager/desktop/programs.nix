@@ -28,6 +28,8 @@
     kid3 # Audio tag editor
     feishin # Music player
     dino # XMPP client
+    gajim # XMPP client
+
     #freecad
     #synology-drive-client
   ];
