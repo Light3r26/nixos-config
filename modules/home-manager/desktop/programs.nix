@@ -15,7 +15,6 @@
     blueman
     kdePackages.kdenlive # Editing software
     obs-studio
-    godot
     easyeffects # Audio effects for PipeWire applications
     czkawka-full # App to remove duplicates and unnecessary files
     losslesscut-bin # Lossless video/audio editing
@@ -28,9 +27,8 @@
     kid3 # Audio tag editor
     feishin # Music player
     dino # XMPP client
-    kaidan # XMPP client
-
-    #freecad
+    pika-backup 
+    freecad
     #synology-drive-client
   ];
 
