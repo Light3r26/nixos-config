@@ -100,7 +100,7 @@ in
       # "force_installed" and "normal_installed".
       extensions = {
         force = true;
-        packages = with inputs.firefox-addons.packages.${pkgs.system}; [
+        packages = with inputs.firefox-addons.packages.${pkgs.hostPlatform.system}; [
           darkreader
           adnauseam
           sponsorblock
