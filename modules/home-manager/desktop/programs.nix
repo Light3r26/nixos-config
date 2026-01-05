@@ -29,6 +29,7 @@
     dino # XMPP client
     pika-backup 
     freecad
+    prismlauncher # FOSS Minecraft Launcher
     #synology-drive-client
   ];
 
