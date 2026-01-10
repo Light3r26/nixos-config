@@ -42,7 +42,7 @@
 
       ### MY PROGRAMS
       "$terminal" = "kitty";
-      "$browser" = "waterfox";
+      "$browser" = "librewolf";
       "$fileManager" = "nemo";
       "$menu" = "rofi -show drun";
 
@@ -159,15 +159,15 @@
 
       bind = [ 
         "$mainMod, D, exec, $terminal"
-        "$mainMod, S, exec, $browser"
+        "$mainMod, B, exec, $browser"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, $fileManager"
+        "$mainMod, F, exec, $fileManager"
         "$mainMod, V, togglefloating,"
         "$mainMod, space, exec, $menu"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, N, togglesplit, # dwindle"
-        "$mainMod, F, fullscreen, "
+        "$SUPER_SHIFT, F, fullscreen, "
         ", PRINT, exec, hyprshot -m window # Window screenshot"
         "shift, PRINT, exec, hyprshot -m region # Region screenshot"
         "$SUPER_SHIFT, l, exec, hyprlock # Lock screen with Hyprlock"
