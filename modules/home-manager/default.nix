@@ -24,6 +24,6 @@
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
-    ./apps/floorp.nix
+    ./apps/librewolf.nix
   ];
 }

@@ -1,19 +1,7 @@
-{ inputs, pkgs, config, ...}:
+{ inputs, pkgs, ...}:
 
-let
-  lock-false = {
-    Value = false;
-    Status = "locked";
-  };
-
-  lock-true = {
-    Value = true;
-    Status = "locked";
-  };
-
-in
 {
-  programs.floorp = {
+  programs.librewolf = {
     enable = true;
     languagePacks = [ "it" "en-GB" ];
 
@@ -38,10 +26,7 @@ in
           "qwant" = {
             urls = [{
               template = "https://www.qwant.com/?q={searchTerms}";
-              #https://www.qwant.com/?q=esempio&t=web
-              #https://www.qwant.com/?q=altro&t=web
               params = [
-                #{ name = "type"; value = "%s"; }
                 { name = "query"; value = "{searchTerms}"; }
               ];
             }];
@@ -102,59 +87,11 @@ in
         force = true;
         packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           darkreader
-          adnauseam
+          #ublock-origin # Already included in librewolf
           sponsorblock
           youtube-shorts-block
         ];
       };
-
-      /* ---- SETTINGS ---- */
-      # Check about:config for options.
-      settings = {
-        "browser.contentblocking.category" = { Value = "strict"; Status = "locked"; };
-        "extensions.pocket.enabled" = lock-true;
-        "extensions.screenshots.disabled" = lock-true;
-        "browser.topsites.contile.enabled" = lock-false;
-        "browser.formfill.enable" = lock-false;
-        "browser.search.suggest.enabled" = lock-false;
-        "browser.search.suggest.enabled.private" = lock-false;
-        "browser.urlbar.suggest.searches" = lock-false;
-        "browser.urlbar.showSearchSuggestionsFirst" = lock-false;
-        "browser.newtabpage.activity-stream.feeds.section.topstories" = lock-false;
-        "browser.newtabpage.activity-stream.feeds.snippets" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includePocket" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includeBookmarks" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includeDownloads" = lock-false;
-        "browser.newtabpage.activity-stream.section.highlights.includeVisited" = lock-false;
-        "browser.newtabpage.activity-stream.showSponsored" = lock-false;
-        "browser.newtabpage.activity-stream.system.showSponsored" = lock-false;
-        "browser.newtabpage.activity-stream.showSponsoredTopSites" = lock-false;
-      };
-    };
-
-    /* ---- POLICIES ---- */
-    # Check about:policies#documentation for options.
-    policies = {
-      DisableTelemetry = true;
-      DisableFirefoxStudies = true;
-      EnableTrackingProtection = {
-        Value = true;
-        Locked = true;
-        Cryptomining = true;
-        Fingerprinting = true;
-      };
-      DisablePocket = true;
-      DisableFirefoxAccounts = true;
-      DisableAccounts = true;
-      DisableFirefoxScreenshots = true;
-      DisableProfileImport = true;
-      GenerativeAI = false;
-      OverrideFirstRunPage = "";
-      OverridePostUpdatePage = "";
-      DontCheckDefaultBrowser = true;
-      DisplayBookmarksToolbar = "newtab"; # alternatives: "never" or "always"
-      DisplayMenuBar = "default-off"; # alternatives: "always", "never" or "default-on"
-      SearchBar = "unified"; # alternative: "separate"
     };
   };
 }

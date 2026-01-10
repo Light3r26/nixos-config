@@ -42,7 +42,7 @@
 
       ### MY PROGRAMS
       "$terminal" = "kitty";
-      "$browser" = "firefox";
+      "$browser" = "waterfox";
       "$fileManager" = "nemo";
       "$menu" = "rofi -show drun";
 
