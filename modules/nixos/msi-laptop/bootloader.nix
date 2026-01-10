@@ -14,7 +14,7 @@
       enable = true;
       efiSupport = true;
       device = "nodev";
-      theme = inputs.nixos-grub-themes.packages.${pkgs.system}.hyperfluent;
+      theme = inputs.nixos-grub-themes.packages.${pkgs.stdenv.hostPlatform.system}.hyperfluent;
     };
   };
 }
