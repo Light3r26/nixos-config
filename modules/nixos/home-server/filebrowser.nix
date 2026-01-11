@@ -4,7 +4,7 @@
     settings = {
     	port = 4026;
 	root = "/mnt/home-pool/drive";
-	database = "/var/lib/filebrowser/filebrowser.db"
+	database = "/var/lib/filebrowser/filebrowser.db";
     };
     openFirewall = true;
   };
