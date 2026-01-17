@@ -31,7 +31,7 @@
     freecad
     prismlauncher # FOSS Minecraft Launcher
     #synology-drive-client
-    thunar
+    xfce.thunar
   ];
 
   # Flatpak packages
