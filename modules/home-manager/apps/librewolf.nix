@@ -11,7 +11,7 @@
 
       search = {
         force = true;
-        default = "searx";
+        default = "qwant";
         engines = {
           "searx" = {
             urls = [{
