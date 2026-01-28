@@ -14,6 +14,7 @@
     ./desktop/hypridle.nix
     ./desktop/hyprland.nix
     ./desktop/hyprlock.nix
+    ./desktop/hyprpanel.nix
     ./desktop/hyprpaper.nix
     ./desktop/mpv.nix
     ./desktop/nemo.nix
