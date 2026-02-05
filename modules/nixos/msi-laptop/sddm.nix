@@ -1,8 +1,8 @@
 { pkgs, ... }:
 
-let
-  base-eucalyptus-drop = pkgs.callPackage ../../../pkgs/sddm-themes.nix { };
-  wallpaper = ../../../wallpapers/dark-bright-mountains.jpg;
+#let
+  #base-eucalyptus-drop = pkgs.callPackage ../../../pkgs/sddm-themes.nix { };
+  #wallpaper = ../../../wallpapers/dark-bright-mountains.jpg;
   
 # custom-eucalyptus-drop = pkgs.stdenv.mkDerivation {
 #   name = "eucalyptus-drop-customized";
@@ -30,23 +30,18 @@ let
 #   '';
 # };
 
-in
+#in
 {
-  #environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
-  #themes.sddm-eucalyptus-drop 
-  #];
-  environment.systemPackages = [ base-eucalyptus-drop ];
+  environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
+    themes.sddm-eucalyptus-drop 
+  ];
+  #environment.systemPackages = [ base-eucalyptus-drop ];
 
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
     extraPackages = [
       pkgs.kdePackages.qt5compat
-      pkgs.kdePackages.qtdeclarative
-      pkgs.kdePackages.qtimageformats
-      pkgs.kdePackages.qtsvg
-      pkgs.kdePackages.qtmultimedia
-      pkgs.kdePackages.qtvirtualkeyboard
     ];
     theme = "eucalyptus-drop";
     #settings = {
