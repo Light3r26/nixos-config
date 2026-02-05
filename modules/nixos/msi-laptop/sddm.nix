@@ -5,11 +5,12 @@
     enable = true;
     wayland.enable = true;
     theme = "eucalyptus-drop";
-
+    extraPackages = [
+      pkgs.kdePackages.qt5compat
+    ];
   };
 
   environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
-    pkgs.kdePackages.qt5compat
     themes.sddm-eucalyptus-drop 
   ];
 }
