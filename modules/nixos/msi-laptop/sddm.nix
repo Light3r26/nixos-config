@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, ... }:
 
 {
   services.displayManager.sddm = {
@@ -9,18 +9,30 @@
     ];
     theme = "eucalyptus-drop";
     settings = {
-      Background = lib.cleanSource ../../../wallpapers/dark-bright-mountains.jpg;
-      ScreenWidth = 1920;
-      ScreenHeight = 1080;
-      FormPosition = "center";
-      FullBlur = true;
-      BlurRadius = 25;
-      MainColour = "#999FAB";
-      BackgroundColour = "#BBC1CD";#0A101C
-      AccentColour = "#343A46";
-      DateFormat = "dddd d MMMM";
-      HeaderText = "";
-      ForceHideCompletePassword = true;
+      General = {
+        Background = "/Nixos/wallpapers/dark-bright-mountains.jpg";
+        ScreenWidth = 1920;
+        ScreenHeight = 1080;
+      };
+      BlurSettings = {
+        FullBlur = true;
+        BlurRadius = 25;
+      };
+      DesignCustomisation = {
+        FormPosition = "center";
+        MainColour = "#999FAB";
+        AccentColour = "#343A46";
+        BackgroundColour = "#BBC1CD";
+      };
+      InterfaceBehaviour = {
+        ForceHideCompletePassword = true;
+      };
+      LocaleSettings = {
+        DateFormat = "dddd d MMMM";
+      };
+      Translations = {
+        HeaderText = "";
+      };
     };
   };
 
