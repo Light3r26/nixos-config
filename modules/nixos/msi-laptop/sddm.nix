@@ -9,6 +9,7 @@
   };
 
   environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
+    pkgs.libsForQt5.qt5.qtgraphicaleffects
     themes.sddm-eucalyptus-drop 
   ];
 }
