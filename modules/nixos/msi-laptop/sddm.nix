@@ -15,9 +15,9 @@
       FormPosition = "center";
       FullBlur = true;
       BlurRadius = 25;
-      MainColor = "#999FAB";
-      BackgroundColor = "#BBC1CD";#0A101C
-      AccentColor = "#343A46";
+      MainColour = "#999FAB";
+      BackgroundColour = "#BBC1CD";#0A101C
+      AccentColour = "#343A46";
       DateFormat = "dddd d MMMM";
       HeaderText = "";
       ForceHideCompletePassword = true;
