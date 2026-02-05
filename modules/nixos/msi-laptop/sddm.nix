@@ -13,12 +13,17 @@ let
       
       cat <<EOF > $out/share/sddm/themes/eucalyptus-drop/theme.conf
       Background="/Nixos/wallpapers/dark-bright-mountains.jpg"
+      ScreenWidth = 1920;
+      ScreenHeight = 1080;
+      FullBlur = true;
+      BlurRadius = 25;
+      FormPosition="center"
       MainColour="#999FAB"
       AccentColour="#343A46"
       BackgroundColour="#BBC1CD"
-      FormPosition="center"
-      FullBlur="true"
-      BlurRadius="25"
+      ForceHideCompletePassword = true;
+      DateFormat = "dddd d MMMM";
+      HeaderText = "";
       EOF
     '';
   };
