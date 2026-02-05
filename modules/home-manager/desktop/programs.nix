@@ -32,6 +32,7 @@
     prismlauncher # FOSS Minecraft Launcher
     #synology-drive-client
     xfce.thunar
+    jetbrains.rider
   ];
 
   # Flatpak packages
