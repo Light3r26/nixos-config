@@ -8,7 +8,7 @@
 
   };
 
-  environment.systemPackages = let themes = pkgs.callPackage ../nixpkgs/pkgs/sddm-themes.nix {}; in [ 
+  environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
     themes.sddm-eucalyptus-drop 
   ];
 }
