@@ -21,7 +21,6 @@
     ./desktop/rofi.nix
     ./desktop/styling.nix
     ./desktop/swaync.nix
-    ./desktop/thunar.nix
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
