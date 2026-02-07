@@ -8,6 +8,7 @@
     firewall = {
       enable = true;
       allowPing = true;
+      allowedTCPPorts = [ 1433 ];
     };
 
     hosts = {

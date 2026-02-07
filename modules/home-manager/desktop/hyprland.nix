@@ -43,7 +43,7 @@
       ### MY PROGRAMS
       "$terminal" = "kitty";
       "$browser" = "librewolf";
-      "$fileManager" = "nemo";
+      "$fileManager" = "thunar";
       "$menu" = "rofi -show drun";
 
       ### AUTOSTART 
