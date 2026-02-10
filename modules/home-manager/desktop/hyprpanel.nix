@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-  environment.systemPackages = [ pkgs.hyprpanel ];
+  home.packages = [ pkgs.hyprpanel ];
  #programs.hyprpanel = {
  #  enable = true;
  #  systemd.enable = true;
