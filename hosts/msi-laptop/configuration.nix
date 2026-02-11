@@ -68,7 +68,10 @@
    # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  services.usbmuxd.enable = true;
+  services = { 
+    usbmuxd.enable = true;
+    upower.enable = true;
+  };
 
   environment.systemPackages = with pkgs; [
      vim
