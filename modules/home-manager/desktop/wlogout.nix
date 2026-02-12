@@ -22,9 +22,9 @@
         "keybind" = "u";
       }
       {
-        "label" = "logout";
-        "action" = "hyprctl dispatch exit";
-        "text" = "Exit";
+        "label" = "lock";
+        "action" = "hyprlock";
+        "text" = "Lock";
         "keybind" = "e";
       }
       {
@@ -108,8 +108,8 @@
       	background-image: image(url("icons/suspend.png"));
       }
        
-      #logout {
-      	background-image: image(url("icons/logout.png"));
+      #lock {
+      	background-image: image(url("icons/lock.png"));
       }
       
       #hibernate {

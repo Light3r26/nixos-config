@@ -1,4 +1,9 @@
+{ pkgs, ... }:
+
 {
+  environment.systemPackages = [
+    pkgs.qemu
+  ];
   virtualisation.virtualbox = {
     host = {
       enable = true;
