@@ -3,8 +3,8 @@
     enable = true;
     systemd.enable = true;
     settings = {
-      layout = { 
-        bar.layouts = {
+      bar = {
+        layouts = {
           "*" = {
             "left" = [
               "dashboard"
@@ -28,11 +28,9 @@
             ];
           };
         };
-      };
 
-      bar.customModules.storage.paths = [ "/" ];
+        customModules.storage.paths = [ "/" ];
 
-      bar = {
         launcher = {
           autoDetectIcon = true;
         };
