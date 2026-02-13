@@ -19,7 +19,7 @@ __Components__
 |------------------------|----------------|
 |Window Manager          |Hyprland        |
 |Terminal Emulator       |Kitty           |
-|Status Bar              |Waybar          | 
+|Panel                   |Hyprpanel       | 
 |Application Launcher    |Rofi            |
 |Notification Daemon     |SwayNC          |
 |Display Manager         |SDDM            |
