@@ -14,9 +14,9 @@
     ./desktop/hypridle.nix
     ./desktop/hyprland.nix
     ./desktop/hyprlock.nix
+    ./desktop/hyprpanel.nix
     ./desktop/hyprpaper.nix
     ./desktop/mpv.nix
-    ./desktop/nemo.nix
     ./desktop/programs.nix
     ./desktop/rofi.nix
     ./desktop/styling.nix
@@ -24,6 +24,6 @@
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
-    ./apps/floorp.nix
+    ./apps/librewolf.nix
   ];
 }

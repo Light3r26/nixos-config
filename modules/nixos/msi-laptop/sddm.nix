@@ -1,27 +1,74 @@
 { pkgs, ... }:
 
+#let
+  #base-eucalyptus-drop = pkgs.callPackage ../../../pkgs/sddm-themes.nix { };
+  #wallpaper = ../../../wallpapers/dark-bright-mountains.jpg;
+  
+# custom-eucalyptus-drop = pkgs.stdenv.mkDerivation {
+#   name = "eucalyptus-drop-customized";
+#   src = base-eucalyptus-drop.sddm-eucalyptus-drop;
+#   installPhase = ''
+#     mkdir -p $out/share/sddm/themes/eucalyptus-drop
+#     cp -r $src/share/sddm/themes/eucalyptus-drop/* $out/share/sddm/themes/eucalyptus-drop/
+#     chmod +w $out/share/sddm/themes/eucalyptus-drop/theme.conf
+#     
+#     cat <<EOF > $out/share/sddm/themes/eucalyptus-drop/theme.conf
+#     [General]
+#     Background="${wallpaper}"
+#     ScreenWidth=1920;
+#     ScreenHeight=1080;
+#     FullBlur=true;
+#     BlurRadius=25;
+#     FormPosition="center"
+#     MainColour="#999FAB"
+#     AccentColour="#343A46"
+#     BackgroundColour="#BBC1CD"
+#     ForceHideCompletePassword = true;
+#     DateFormat="dddd d MMMM";
+#     HeaderText="";
+#     EOF
+#   '';
+# };
+
+#in
 {
-  environment.systemPackages = [
-      pkgs.sddm-astronaut
+  environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
+    themes.sddm-eucalyptus-drop 
   ];
+  #environment.systemPackages = [ base-eucalyptus-drop ];
 
   services.displayManager.sddm = {
     enable = true;
     wayland.enable = true;
-
-        #Background = lib.cleanSource ../../../wallpapers/dark-bright-mountains.jpg;
+    extraPackages = [
+      pkgs.kdePackages.qt5compat
+    ];
+    theme = "eucalyptus-drop";
+    #settings = {
+      #General = {
+        #Background = "/Nixos/wallpapers/dark-bright-mountains.jpg";
         #ScreenWidth = 1920;
         #ScreenHeight = 1080;
-        #FormPosition = "center";
-        #FullBlur = true;
-        #BlurRadius = 25;
-        #MainColor = "#999FAB";
-        #BackgroundColor = "#BBC1CD";#0A101C
-        #AccentColor = "#343A46";
-        #DateFormat = "dddd d MMMM";
-        #HeaderText = "";
-        #ForceHideCompletePassword = true;
       #};
+    # BlurSettings = {
+    #   FullBlur = true;
+    #   BlurRadius = 25;
+    # };
+    # DesignCustomisation = {
+    #   FormPosition = "center";
+    #   MainColour = "#999FAB";
+    #   AccentColour = "#343A46";
+    #   BackgroundColour = "#BBC1CD";
+    # };
+    # InterfaceBehaviour = {
+    #   ForceHideCompletePassword = true;
+    # };
+    # LocaleSettings = {
+    #   DateFormat = "dddd d MMMM";
+    # };
+    # Translations = {
+    #   HeaderText = "";
+    # };
     #};
   };
 }

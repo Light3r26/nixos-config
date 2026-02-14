@@ -22,7 +22,7 @@
       #monitor = <name>, <resolution@refresh_rate>, <position>,<scale>
       monitor = [ 
         "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
-        "HDMI-A-1, 1920x1080@60.00Hz, 0x0, 1" # ASUS monitor
+        "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
         #"HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
         #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
       ];
@@ -42,13 +42,14 @@
 
       ### MY PROGRAMS
       "$terminal" = "kitty";
-      "$browser" = "firefox";
-      "$fileManager" = "nemo";
+      "$browser" = "librewolf";
+      "$fileManager" = "thunar";
       "$menu" = "rofi -show drun";
 
       ### AUTOSTART 
       exec-once = [ 
-        "waybar"
+        #"waybar"
+        "hyprpanel"
         "hyprpaper"
         "swaync"
         "hypridle"
@@ -159,15 +160,15 @@
 
       bind = [ 
         "$mainMod, D, exec, $terminal"
-        "$mainMod, S, exec, $browser"
+        "$mainMod, B, exec, $browser"
         "$mainMod, C, killactive,"
         "$mainMod, M, exit,"
-        "$mainMod, E, exec, $fileManager"
+        "$mainMod, F, exec, $fileManager"
         "$mainMod, V, togglefloating,"
         "$mainMod, space, exec, $menu"
         "$mainMod, P, pseudo, # dwindle"
         "$mainMod, N, togglesplit, # dwindle"
-        "$mainMod, F, fullscreen, "
+        "$SUPER_SHIFT, F, fullscreen, "
         ", PRINT, exec, hyprshot -m window # Window screenshot"
         "shift, PRINT, exec, hyprshot -m region # Region screenshot"
         "$SUPER_SHIFT, l, exec, hyprlock # Lock screen with Hyprlock"

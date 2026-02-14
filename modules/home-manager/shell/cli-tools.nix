@@ -22,5 +22,11 @@
     gamemode # Gaming optimiser
     tlp # Advanced power manager
     uv
+    # Needed for Rider
+    dotnet-sdk
+    dotnet-ef
+    msbuild
+    # ----------------
+    icu # Unicode and globalization support library
   ];
 }
