@@ -21,14 +21,8 @@
   fileSystems."/mnt/home-pool" = {
     device = "home-pool";
     fsType = "zfs";
+    options = [ "nofail" ];
   };
-
-  fileSystems."/mnt/home-pool/photos" =
-  {
-    device = "home-pool/photos";
-    fsType = "zfs";
-  };
-
 
   swapDevices = [ ];
 
