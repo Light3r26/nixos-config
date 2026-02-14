@@ -18,11 +18,11 @@
     fsType = "ext4";
   };
 
-  fileSystems."/mnt/home-pool" = {
-    device = "home-pool";
-    fsType = "zfs";
-    options = [ "nofail" ];
-  };
+  #fileSystems."/mnt/home-pool" = {
+    #device = "home-pool";
+    #fsType = "zfs";
+    #options = [ "nofail" ];
+  #};
 
   swapDevices = [ ];
 
