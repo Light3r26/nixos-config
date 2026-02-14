@@ -12,7 +12,7 @@
     };
 
     hosts = {
-      "192.168.1.56" = ["home-server"];
+      "192.168.1.14" = ["home-server"];
     };
 
     # Configure network proxy if necessary
