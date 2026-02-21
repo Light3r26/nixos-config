@@ -25,5 +25,6 @@
     ./desktop/wlogout.nix
     # Apps
     ./apps/librewolf.nix
+    ./apps/zen-browser.nix
   ];
 }

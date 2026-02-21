@@ -1,7 +1,7 @@
 { inputs, pkgs, ...}:
 
 {
-  home.packages = [ inputs.zen-browser.packages."x86-64_linux".twilight ];
+  home.packages = [ inputs.zen-browser.packages."x86_64-linux".twilight ];
   #programs.zen-browser.enable = true;
   #programs.librewolf = {
     #enable = true;
