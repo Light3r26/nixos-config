@@ -1,8 +1,12 @@
 { inputs, pkgs, ...}:
 
 {
-  home.packages = [ inputs.zen-browser.packages."x86_64-linux".twilight ];
-  #programs.zen-browser.enable = true;
+  imports = [ inputs.zen-browser.homeModules.beta ];
+  
+  programs.zen-browser.enable = true;
+
+  #home.packages = [ inputs.zen-browser.packages."x86_64-linux".twilight ];
+
   #programs.librewolf = {
     #enable = true;
 #   languagePacks = [ "it" "en-GB" ];
