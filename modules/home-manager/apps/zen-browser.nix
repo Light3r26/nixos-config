@@ -93,6 +93,7 @@
           adnauseam
           sponsorblock
           youtube-shorts-block
+          bitwarden
         ];
       };
     };
