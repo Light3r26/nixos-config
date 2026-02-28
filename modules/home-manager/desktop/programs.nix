@@ -34,6 +34,7 @@
     xfce.thunar
     jetbrains.rider
     sql-studio
+    luminance
   ];
 
   # Flatpak packages
