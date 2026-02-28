@@ -34,7 +34,6 @@
     xfce.thunar
     jetbrains.rider
     sql-studio
-    luminance
     opencode
   ];
 
