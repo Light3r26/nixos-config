@@ -28,7 +28,7 @@
     feishin # Music player
     dino # XMPP client
     pika-backup 
-    freecad
+    #freecad
     prismlauncher # FOSS Minecraft Launcher
     #synology-drive-client
     xfce.thunar

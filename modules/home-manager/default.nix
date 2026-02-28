@@ -16,7 +16,7 @@
     ./desktop/hyprlock.nix
     ./desktop/hyprpanel.nix
     ./desktop/hyprpaper.nix
-    ./desktop/mpv.nix
+    #./desktop/mpv.nix
     ./desktop/programs.nix
     ./desktop/rofi.nix
     ./desktop/styling.nix
