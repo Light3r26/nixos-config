@@ -1,7 +1,7 @@
 { pkgs, inputs, ... }:
 
 {
-  imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
+  #imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
 
   home.packages = with pkgs; [
     obsidian
@@ -37,8 +37,8 @@
   ];
 
   # Flatpak packages
-  services.flatpak.packages = [
-    { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
-  ];
+  #services.flatpak.packages = [
+  #  { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
+  #];
 
 }

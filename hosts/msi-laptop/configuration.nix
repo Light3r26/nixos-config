@@ -7,6 +7,8 @@
       ../../modules/nixos/msi-laptop
       ../../scripts
       inputs.home-manager.nixosModules.default 
+
+      inputs.nix-flatpak.nixosModules.nix-flatpak
   ];
 
   # Enable Flakes
@@ -89,6 +91,11 @@
     zsh.enable = true;
     kdeconnect.enable = true;
   };
+
+  # Flatpak packages
+  services.flatpak.packages = [
+    #{ appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
+  ];
 
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
