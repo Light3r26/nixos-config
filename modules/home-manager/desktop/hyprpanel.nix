@@ -3,31 +3,29 @@
     enable = true;
     systemd.enable = true;
     settings = {
-      layout = {
-        bar = {
-          layouts = {
-            "*" = {
-              "left" = [
-                "dashboard"
-                "cpu"
-                "cputemp"
-                "ram"
-                "media"
-              ];
-              "middle" = [
-                "workspaces"
-              ];
-              "right" = [
-                "network"
-                "bluetooth"
-                "battery"
-                "volume"
-                "systray"
-                "clock"
-                "notifications"
-                "power"
-              ];
-            };
+      bar = {
+        layouts = {
+          "*" = {
+            "left" = [
+              "dashboard"
+              "cpu"
+              "cputemp"
+              "ram"
+              "media"
+            ];
+            "middle" = [
+              "workspaces"
+            ];
+            "right" = [
+              "network"
+              "bluetooth"
+              "battery"
+              "volume"
+              "systray"
+              "clock"
+              "notifications"
+              "power"
+            ];
           };
         };
       };
