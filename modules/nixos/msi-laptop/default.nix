@@ -5,7 +5,7 @@
     ./localsend.nix
     ./nvidia.nix
     ./sddm.nix
-    ./servers.nix
+    #./servers.nix
     ./thunar.nix
     ./virtualization.nix
   ];
