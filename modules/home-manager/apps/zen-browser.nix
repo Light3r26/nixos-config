@@ -14,7 +14,7 @@
 
       search = {
         force = true;
-        default = "startpage";
+        default = "qwant";
         engines = {
           "searx" = {
             urls = [{
@@ -26,16 +26,18 @@
             icon = "https://docs.searxng.org/_static/searxng-wordmark.svg";
             definedAliases = [ "@sx" ];
           };
-          "startpage" = {
+
+          "qwant" = {
             urls = [{
-              template = "https://www.startpage.com/?q={searchTerms}";
+              template = "https://www.qwant.com/?q={searchTerms}";
               params = [
                 { name = "query"; value = "{searchTerms}"; }
               ];
             }];
-            icon = "https://www.startpage.com/favicon.ico";
-            definedAliases = [ "@sp" ];
+            icon = "https://www.qwant.com/favicon.ico";
+            definedAliases = [ "@qw" ];
           };
+
           "Nix Packages" = {
             urls = [{
               template = "https://search.nixos.org/packages";
