@@ -35,6 +35,7 @@
     jetbrains.rider
     sql-studio
     luminance
+    opencode
   ];
 
   # Flatpak packages
