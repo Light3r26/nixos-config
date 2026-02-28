@@ -225,11 +225,10 @@
       ];
 
       ### WINDOWS AND WORKSPACES
-
-      windowrulev2 = [ 
-        "suppressevent maximize, class:.*"
-        "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0 "
-      ];
+      #windowrulev2 = [ #deprecated syntax
+        #"esuppressevent maximize, class:.*"
+        #"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0 "
+      #];
 
     };
   };
