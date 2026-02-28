@@ -169,6 +169,7 @@
       "theme.bar.menus.buttons.active" = "#81a1c1";
       "theme.bar.menus.label" = "#dcdef1";
       "theme.bar.menus.popover.text" = "#dcdef1";
+      "theme.bar.menus.tooltip.background" = "#323844";
       "theme.bar.menus.tooltip.text" = "#dcdef1";
       "theme.bar.menus.menu.dashboard.controls.volume.background" = "#4c566a";
       "theme.bar.menus.background" = "#2e3440";
