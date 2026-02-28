@@ -225,31 +225,6 @@
       ];
 
       ### WINDOWS AND WORKSPACES
-      #windowrulev2 = [ #deprecated syntax
-      #  "suppressevent maximize, class:.*"
-      #  "nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0 "
-      #];
-
-      # Ignore maximize requests from all apps
-#     windowrule = {
-#         name = "suppress-maximize-events";
-#         "match:class" = ".*";
-#         "suppress_event" = "maximize";
-#     };
-
-#     # Fix XWayland dragging/focus issues
-#     windowrule = {
-#         name = "fix-xwayland-issues";
-#         "match:class" = "^$";
-#         "match:title" = "^$";
-#         "match:xwayland" = true;
-#         "match:float" = true;
-#         "match:fullscreen" = false;
-#         "match:pin" = false;
-#         "no_focus" = true;
-#     };
-
-
       windowrule = [
         # Ignore maximize requests from all apps
         {
