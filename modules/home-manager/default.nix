@@ -1,6 +1,5 @@
 {
   imports = [
-    ./battery-notification.nix
     ./mime-apps.nix
     # Shell 
     ./shell/cli-tools.nix
@@ -16,7 +15,7 @@
     ./desktop/hyprlock.nix
     ./desktop/hyprpanel.nix
     ./desktop/hyprpaper.nix
-    #./desktop/mpv.nix
+    ./desktop/mpv.nix
     ./desktop/programs.nix
     ./desktop/rofi.nix
     ./desktop/styling.nix

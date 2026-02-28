@@ -4,18 +4,9 @@
   programs.mpv = {
     enable = true;
 
-    package = (
-      pkgs.mpv-unwrapped.wrapper {
-        scripts = with pkgs.mpvScripts; [
-          uosc
-          sponsorblock
-        ];
-
-        mpv = pkgs.mpv-unwrapped.override {
-          waylandSupport = true;
-        };
-      }
-    );
+    scripts = with pkgs.mpvScripts; [
+      modernz # Modern MPV OSC
+    ];
 
     config = {
       profile = "gpu-hq";
