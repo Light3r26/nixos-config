@@ -22,7 +22,6 @@
     identity # Image and videos comparison tool
     piper # Mouse configuration app
     protonmail-desktop # Email client
-    wasistlos # Unofficial Whatsapp Web Client 
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
