@@ -42,7 +42,7 @@
 
       ### MY PROGRAMS
       "$terminal" = "kitty";
-      "$browser" = "librewolf";
+      "$browser" = "zen-twilight";
       "$fileManager" = "thunar";
       "$menu" = "rofi -show drun";
 
