@@ -19,7 +19,7 @@
       pmount = "sudo mount -o uid=1000,gid=100";
       ls = "lsd";
       open = "xdg-open";
-      fopen = "nemo";
+      fopen = "thunar";
       copy = "wl-copy";
       paste = "wl-paste";
       dup = "kitty &>/dev/null&";
