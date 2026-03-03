@@ -1,20 +1,28 @@
-{ pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
-{
-  programs.mpv = {
-    enable = true;
+let cfg = config.mpv;
 
-    scripts = with pkgs.mpvScripts; [
-      modernz # Modern MPV OSC
-    ];
+in {
+  options = {
+    mpv.enable = lib.mkEnableOption "Enable MPV";
+  };
+    
+  config = lib.mkIf cfg.enable {
+    programs.mpv = {
+      enable = true;
 
-    config = {
-      profile = "gpu-hq";
-      ytdl-format = "bestvideo+bestaudio";
-      hwdec = "auto-safe";
-      vo = "gpu";
-      gpu-context = "wayland";
-      sub-visibility = false;
+      scripts = with pkgs.mpvScripts; [
+        modernz # Modern MPV OSC
+      ];
+
+      config = {
+        profile = "gpu-hq";
+        ytdl-format = "bestvideo+bestaudio";
+        hwdec = "auto-safe";
+        vo = "gpu";
+        gpu-context = "wayland";
+        sub-visibility = false;
+      };
     };
   };
 }
