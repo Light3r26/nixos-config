@@ -24,7 +24,7 @@
     # Programming
     python3
     uv
-    npm
+    nodejs_latest
     concurrently
     # Needed for Rider
     dotnet-sdk
