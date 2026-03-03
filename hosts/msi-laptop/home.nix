@@ -23,6 +23,7 @@
   };
 
   kitty.enable = true;
+  zsh.enable = true;
   mpv.enable = true;
 
   # Let Home Manager install and manage itself.
