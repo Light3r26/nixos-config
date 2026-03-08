@@ -1,6 +1,6 @@
 {
   fileSystems."/home/light3r/Home-Server" = {
-   device = "192.168.1.14:/home-pool";
+   device = "192.168.1.22:/home-pool";
    fsType = "nfs";
    options = [ 
      "_netdev"
