@@ -22,23 +22,23 @@
     identity # Image and videos comparison tool
     piper # Mouse configuration app
     protonmail-desktop # Email client
-    wasistlos # Unofficial Whatsapp Web Client 
     glow # Terminal Markdown Renderer
     kid3 # Audio tag editor
     feishin # Music player
     dino # XMPP client
     pika-backup 
-    freecad
+    #freecad
     prismlauncher # FOSS Minecraft Launcher
     #synology-drive-client
     xfce.thunar
     jetbrains.rider
     sql-studio
+    opencode
   ];
 
   # Flatpak packages
   services.flatpak.packages = [
-    { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
+  #  { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
+    { appId = "org.vinegarhq.Sober"; origin = "flathub";  }
   ];
-
 }

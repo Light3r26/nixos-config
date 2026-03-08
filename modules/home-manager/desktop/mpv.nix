@@ -1,29 +1,28 @@
-{ pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
-{
-  programs.mpv = {
-    enable = true;
+let cfg = config.mpv;
 
-    package = (
-      pkgs.mpv-unwrapped.wrapper {
-        scripts = with pkgs.mpvScripts; [
-          uosc
-          sponsorblock
-        ];
+in {
+  options = {
+    mpv.enable = lib.mkEnableOption "Enable MPV";
+  };
+    
+  config = lib.mkIf cfg.enable {
+    programs.mpv = {
+      enable = true;
 
-        mpv = pkgs.mpv-unwrapped.override {
-          waylandSupport = true;
-        };
-      }
-    );
+      scripts = with pkgs.mpvScripts; [
+        modernz # Modern MPV OSC
+      ];
 
-    config = {
-      profile = "gpu-hq";
-      ytdl-format = "bestvideo+bestaudio";
-      hwdec = "auto-safe";
-      vo = "gpu";
-      gpu-context = "wayland";
-      sub-visibility = false;
+      config = {
+        profile = "gpu-hq";
+        ytdl-format = "bestvideo+bestaudio";
+        hwdec = "auto-safe";
+        vo = "gpu";
+        gpu-context = "wayland";
+        sub-visibility = false;
+      };
     };
   };
 }

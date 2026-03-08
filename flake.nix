@@ -19,6 +19,10 @@
     nix-flatpak.url = "github:gmodena/nix-flatpak/latest"; # Declarative Flatpak
     agenix.url = "github:ryantm/agenix";
     firefox-addons.url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = {
@@ -29,7 +33,6 @@
     nvf,
     nix-flatpak,
     agenix,
-    firefox-addons,
     ... 
   }@inputs: {
     nixosConfigurations = {
@@ -47,7 +50,8 @@
       home-server = nixpkgs-stable.lib.nixosSystem {
         specialArgs = let
           system = "x86_64-linux";
-        in {
+        in 
+        {
             inherit inputs;
             pkgs-unstable = import nixpkgs-unstable {
               inherit system;

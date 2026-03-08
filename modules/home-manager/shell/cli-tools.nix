@@ -21,7 +21,11 @@
     fanctl # Fan control
     gamemode # Gaming optimiser
     tlp # Advanced power manager
+    # Programming
+    python3
     uv
+    nodejs_latest
+    concurrently
     # Needed for Rider
     dotnet-sdk
     dotnet-ef

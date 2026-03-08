@@ -25,7 +25,7 @@ __Components__
 |Display Manager         |SDDM            |
 |Theme                   |Nordic          |
 |System resource monitor |Btop            |
-|File Manager            |Nemo + Yazi     |
+|File Manager            |Thunar          |
 |Shell                   |Zsh + Starship |
 |Text Editor             |Neovim          |
 |Media Player            |Mpv             |

@@ -10,10 +10,10 @@
         "text/*" = ["neovim.desktop"]; 
         "text/plain" = ["neovim.desktop"];
         # PDFs
-        "application/pdf" = ["okular.desktop"];
+        "application/pdf" = ["zen-browser.desktop"];
         # Links
-        "x-scheme-handler/https" = ["firefox.desktop"]; 
-        "x-scheme-handler/http" = ["firefox.desktop"];
+        "x-scheme-handler/https" = ["zen-browser.desktop"]; 
+        "x-scheme-handler/http" = ["zen-browser.desktop"];
         "x-scheme-handler/mailto" = ["protonmail-desktop.desktop"];
         # Video files
         "video/*" = ["mpv.desktop"]; 

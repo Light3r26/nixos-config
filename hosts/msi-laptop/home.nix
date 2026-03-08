@@ -22,6 +22,10 @@
     HYPRSHOT_DIR = "/home/light3r/Screenshots";
   };
 
+  kitty.enable = true;
+  zsh.enable = true;
+  mpv.enable = true;
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

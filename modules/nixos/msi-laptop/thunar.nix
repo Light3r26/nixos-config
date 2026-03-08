@@ -3,7 +3,7 @@
 {
   programs.thunar = {
     enable = true;
-    plugins = with pkgs.xfce; [
+    plugins = with pkgs; [
       thunar-volman # Automatic removable drives management
       thunar-archive-plugin
     ];

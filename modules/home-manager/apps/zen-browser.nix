@@ -1,8 +1,11 @@
 { inputs, pkgs, ...}:
 
 {
-  programs.librewolf = {
+  imports = [ inputs.zen-browser.homeModules.twilight ];
+  
+  programs.zen-browser = {
     enable = true;
+    suppressXdgMigrationWarning = true;
     languagePacks = [ "it" "en-GB" ];
 
     /* ---- PROFILES ---- */
@@ -23,6 +26,7 @@
             icon = "https://docs.searxng.org/_static/searxng-wordmark.svg";
             definedAliases = [ "@sx" ];
           };
+
           "qwant" = {
             urls = [{
               template = "https://www.qwant.com/?q={searchTerms}";
@@ -33,6 +37,7 @@
             icon = "https://www.qwant.com/favicon.ico";
             definedAliases = [ "@qw" ];
           };
+
           "Nix Packages" = {
             urls = [{
               template = "https://search.nixos.org/packages";
@@ -87,9 +92,10 @@
         force = true;
         packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
           darkreader
-          #ublock-origin # Already included in librewolf
+          adnauseam
           sponsorblock
           youtube-shorts-block
+          bitwarden
         ];
       };
     };
