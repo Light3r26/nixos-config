@@ -5,7 +5,7 @@
     ./freshrss.nix
     #./immich.nix
     ./navidrome.nix
-    #./nfs.nix
+    ./nfs.nix
     ./nginx.nix
     #./remote-builder.nix
     ./searx.nix
