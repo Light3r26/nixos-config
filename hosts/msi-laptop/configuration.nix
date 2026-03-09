@@ -86,7 +86,6 @@
 
   # Custom modules
   nvidia.enable = true;
-  wlogout.enable = true;
 
   programs = {
     hyprland.enable = true;
