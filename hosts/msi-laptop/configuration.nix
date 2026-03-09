@@ -86,6 +86,7 @@
 
   # Custom modules
   nvidia.enable = true;
+  gaming.enable = true;
 
   programs = {
     hyprland.enable = true;
