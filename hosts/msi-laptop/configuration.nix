@@ -84,6 +84,9 @@
      exfatprogs
   ];
 
+  # Custom modules
+  nvidia.enable = true;
+
   programs = {
     hyprland.enable = true;
     zsh.enable = true;
