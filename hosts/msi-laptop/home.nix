@@ -22,6 +22,7 @@
     HYPRSHOT_DIR = "/home/light3r/Screenshots";
   };
 
+  hyprpanel.enable = true;
   kitty.enable = true;
   zsh.enable = true;
   mpv.enable = true;
