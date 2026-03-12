@@ -5,13 +5,13 @@ let
 
 in
 {
+  imports = [ inputs.zen-browser.homeModules.twilight ];
+
   options = {
     zen-browser.enable = lib.mkEnableOption "Enable zen browser";
   };
 
   config = lib.mkIf cfg.enable {
-    imports = [ inputs.zen-browser.homeModules.twilight ];
-    
     programs.zen-browser = {
       enable = true;
       languagePacks = [ "it" "en-GB" ];
