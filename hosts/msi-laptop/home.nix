@@ -30,6 +30,7 @@
 
   hyprpanel.enable = true;
   hyprpaper.enable = true;
+  hyprlock.enable = true;
   zen-browser.enable = true;
   mpv.enable = true;
   wlogout.enable = true;
