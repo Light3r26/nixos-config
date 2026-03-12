@@ -25,13 +25,14 @@
   kitty.enable = true;
   zsh.enable = true;
   starship.enable = true;
+  fastfetch.enable = true;
   neovim.enable = true;
 
-  zen-browser.enable = true;
   hyprpanel.enable = true;
+  hyprpaper.enable = true;
+  zen-browser.enable = true;
   mpv.enable = true;
   wlogout.enable = true;
-  fastfetch.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
