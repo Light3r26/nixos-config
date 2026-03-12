@@ -24,6 +24,7 @@
 
   kitty.enable = true;
   zsh.enable = true;
+  starship.enable = true;
   neovim.enable = true;
 
   zen-browser.enable = true;
