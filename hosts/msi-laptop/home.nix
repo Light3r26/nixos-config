@@ -26,6 +26,7 @@
   zsh.enable = true;
   neovim.enable = true;
 
+  zen-browser.enable = true;
   hyprpanel.enable = true;
   mpv.enable = true;
   wlogout.enable = true;
