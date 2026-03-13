@@ -1,13 +1,13 @@
 { lib, config, pkgs, inputs, ... }:
 
 let
-  cfg = config.common-home-programs;
+  cfg = config.common.home-programs;
 in 
 {
   imports = [ inputs.nix-flatpak.homeManagerModules.nix-flatpak ]; 
 
   options = {
-    common-home-programs.enable = lib.mkEnableOption "Enable common programs";
+    common.home-programs.enable = lib.mkEnableOption "Enable common programs";
   };
 
   config = lib.mkIf cfg.enable {
