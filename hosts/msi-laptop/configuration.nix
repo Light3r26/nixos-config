@@ -87,7 +87,10 @@
   # Custom modules
   nvidia.enable = true;
   gaming.enable = true;
+  servers.enable = true;
 
+
+  # NixOS options
   programs = {
     hyprland.enable = true;
     zsh.enable = true;
