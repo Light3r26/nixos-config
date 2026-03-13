@@ -1,6 +1,8 @@
-{ config, ... }:
+{ lib, config, ... }:
 
 let
+  cfg = config.rofi;  
+
   inherit (config.lib.formats.rasi) mkLiteral;
   nord0 = mkLiteral "#2E3440";
   nord1 = mkLiteral "#3B4252";
@@ -8,92 +10,98 @@ let
   selected-font = "HarmonyOS Sans SC bold 12";
 
 in {
-  programs.rofi = {
-    enable = true;
-    font = selected-font;
-    modes = [ "drun" ];
+  options = {
+    rofi.enable = lib.mkEnableOption "Enable rofi";
+  };
 
-    extraConfig = {
-      show-icons = true;
-      display-drun = "";
-      drun-display-format = "{name}";
-      sidebar-mode = false;
-    };
+  config = lib.mkIf cfg.enable {
+    programs.rofi = {
+      enable = true;
+      font = selected-font;
+      modes = [ "drun" ];
 
-    theme = {
-      "*" = {
-        background-color = nord0;
-        text-color = nord6;
+      extraConfig = {
+        show-icons = true;
+        display-drun = "";
+        drun-display-format = "{name}";
+        sidebar-mode = false;
       };
 
-      window = {
-        border-radius = mkLiteral "5px";
-        width = mkLiteral "50%";
-        padding = mkLiteral "28px";
-      };
+      theme = {
+        "*" = {
+          background-color = nord0;
+          text-color = nord6;
+        };
 
-      prompt = {
-        background-color = nord1;
-        enabled = true;
-        padding = mkLiteral "0.5% 32px 0% 0%"; 
-        font = selected-font;
-      };
+        window = {
+          border-radius = mkLiteral "5px";
+          width = mkLiteral "50%";
+          padding = mkLiteral "28px";
+        };
 
-      entry = {
-        placeholder = "Search";
-        background-color = nord1;
-        placeholder-color = nord6;
-        expand = true;
-        padding = mkLiteral "0.15% 0% 0% 0%";
-      };
+        prompt = {
+          background-color = nord1;
+          enabled = true;
+          padding = mkLiteral "0.5% 32px 0% 0%"; 
+          font = selected-font;
+        };
 
-      inputbar = {
-        children = map mkLiteral [ "prompt" "entry" ];
-        background-color = nord1;
-        expand = false;
-        border-radius = mkLiteral "6px";
-        margin = mkLiteral "0%";
-        padding = mkLiteral "10px";
-      };
+        entry = {
+          placeholder = "Search";
+          background-color = nord1;
+          placeholder-color = nord6;
+          expand = true;
+          padding = mkLiteral "0.15% 0% 0% 0%";
+        };
 
-      listview = {
-        columns = 4;
-        lines = 3;
-        cycle = false;
-        dynamic = true;
-        layout = mkLiteral "vertical";
-      };
+        inputbar = {
+          children = map mkLiteral [ "prompt" "entry" ];
+          background-color = nord1;
+          expand = false;
+          border-radius = mkLiteral "6px";
+          margin = mkLiteral "0%";
+          padding = mkLiteral "10px";
+        };
 
-      mainbox = {
-        children = map mkLiteral [ "inputbar" "listview" ];
-        spacing = mkLiteral "2%";
-        padding = mkLiteral "2% 1% 2% 1%";
-      };
+        listview = {
+          columns = 4;
+          lines = 3;
+          cycle = false;
+          dynamic = true;
+          layout = mkLiteral "vertical";
+        };
 
-      element = {
-        orientation = mkLiteral "vertical";
-        padding = mkLiteral "2% 0% 2% 0%";
-      };
+        mainbox = {
+          children = map mkLiteral [ "inputbar" "listview" ];
+          spacing = mkLiteral "2%";
+          padding = mkLiteral "2% 1% 2% 1%";
+        };
 
-      element-icon = {
-        background-color = mkLiteral "inherit";
-        text-color = mkLiteral "inherit";
-        size = mkLiteral "48px";
-        horizontal-align = mkLiteral "0.5";
-      };
+        element = {
+          orientation = mkLiteral "vertical";
+          padding = mkLiteral "2% 0% 2% 0%";
+        };
 
-      element-text = {
-        background-color = mkLiteral "inherit";
-        text-color = mkLiteral "inherit";
-        expand = true;
-        horizontal-align = mkLiteral "0.5";
-        vertical-align = mkLiteral "0.5";
-        margin = mkLiteral "0.5% 0.5% 0% 0.5%";
-      };
+        element-icon = {
+          background-color = mkLiteral "inherit";
+          text-color = mkLiteral "inherit";
+          size = mkLiteral "48px";
+          horizontal-align = mkLiteral "0.5";
+        };
 
-      "element selected" = {
-        background-color = nord1;
-        border-radius = mkLiteral "6px";
+        element-text = {
+          background-color = mkLiteral "inherit";
+          text-color = mkLiteral "inherit";
+          expand = true;
+          horizontal-align = mkLiteral "0.5";
+          vertical-align = mkLiteral "0.5";
+          margin = mkLiteral "0.5% 0.5% 0% 0.5%";
+        };
+
+        "element selected" = {
+          background-color = nord1;
+          border-radius = mkLiteral "6px";
+        };
       };
     };
   };
