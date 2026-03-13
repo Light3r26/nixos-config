@@ -36,6 +36,7 @@
   zen-browser.enable = true;
   mpv.enable = true;
   wlogout.enable = true;
+  mime-apps.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
