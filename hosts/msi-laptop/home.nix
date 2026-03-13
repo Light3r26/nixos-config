@@ -38,7 +38,7 @@
   mpv.enable = true;
   wlogout.enable = true;
   mime-apps.enable = true;
-  common-home-programs.enable
+  common-home-programs.enable = true;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
