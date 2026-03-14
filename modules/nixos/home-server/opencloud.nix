@@ -12,8 +12,8 @@ in
   config = lib.mkIf cfg.enable {
     services.opencloud = {
       enable = true;
-      url = "https://drive.jacoposoria.qzz.io";
-      address = 127.0.0.1;
+      #url = "https://cloud.jacoposoria.qzz.io";
+      address = "127.0.0.1";
       port = 9200;
       environment = {
 	PROXY_TLS = "false"; # Disables https when behind reverse proxy
