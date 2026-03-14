@@ -88,6 +88,7 @@
   nvidia.enable = true;
   gaming.enable = true;
   servers.enable = true;
+  sddm.enable = true;
 
 
   # NixOS options
