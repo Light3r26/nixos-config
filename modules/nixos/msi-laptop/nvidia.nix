@@ -1,24 +1,34 @@
-{ config, ... }:
+{ lib, config, ... }:
 
+let
+  cfg = config.nvidia;
+
+in
 {
-  # OpenGL enabled in configuration.nix
+  options = {
+    nvidia.enable = lib.mkEnableOption "Enable Nvidia module";
+  };
 
-  # Load nvidia driver for Xorg and Wayland
-  services.xserver.videoDrivers = ["nvidia"];
+  config = lib.mkIf cfg.enable {
+    # OpenGL enabled in configuration.nix
 
-  hardware.nvidia = {
-    modesetting.enable = true;
-    powerManagement.enable = false;
-    powerManagement.finegrained = false;
-    open = false;
-    # Enable the Nvidia settings menu,
-    nvidiaSettings = true;
-    # Nvidia technology to balance work between integrated and dedicated GPU
-    prime = {
-      intelBusId = "PCI:0:2:0";
-      nvidiaBusId = "PCI:1:0:0";
+    # Load nvidia driver for Xorg and Wayland
+    services.xserver.videoDrivers = ["nvidia"];
+
+    hardware.nvidia = {
+      modesetting.enable = true;
+      powerManagement.enable = false;
+      powerManagement.finegrained = false;
+      open = false;
+      # Enable the Nvidia settings menu,
+      nvidiaSettings = true;
+      # Nvidia technology to balance work between integrated and dedicated GPU
+      prime = {
+        intelBusId = "PCI:0:2:0";
+        nvidiaBusId = "PCI:1:0:0";
+      };
+      # Optionally, you may need to select the appropriate driver version for your specific GPU.
+      package = config.boot.kernelPackages.nvidiaPackages.stable;
     };
-    # Optionally, you may need to select the appropriate driver version for your specific GPU.
-    package = config.boot.kernelPackages.nvidiaPackages.stable;
   };
 }
