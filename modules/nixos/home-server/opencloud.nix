@@ -22,8 +22,6 @@ in
     };
 
     services.nginx.virtualHosts."drive.jacoposoria.qzz.io" = {
-      enableACME = true;
-      forceSSL = true;
       serverName = "cloud.jacoposoria.qzz.io";
       listen = [ { addr = "127.0.0.1"; port = 80; } ];
       locations."/" = {
