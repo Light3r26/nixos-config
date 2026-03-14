@@ -27,10 +27,11 @@
     backupFileExtension = "backup";
   };
 
-  # Automatize garbage collection
-  nix.gc = {
-    automatic = true;
-    dates = "3days";
+  programs.nh = {
+    enable = true;
+    clean.enable = true;
+    clean.extraArgs = "--keep-since 4d --keep 3";
+    flake = "/Nixos";
   };
 
   services.flatpak = {
