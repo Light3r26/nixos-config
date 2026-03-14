@@ -89,6 +89,10 @@
   gaming.enable = true;
   servers.enable = true;
   sddm.enable = true;
+  bootloader = {
+    enable = true;
+    multiBootSupport = true;
+  };
 
 
   # NixOS options
