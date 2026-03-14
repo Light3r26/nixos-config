@@ -50,6 +50,7 @@
   ];
 
   navidrome.enable = true;
+  opencloud.enable = true;
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
