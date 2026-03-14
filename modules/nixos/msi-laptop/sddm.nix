@@ -33,16 +33,16 @@ let
 
 in
 {
-  environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
-    themes.sddm-eucalyptus-drop 
-  ];
-  #environment.systemPackages = [ base-eucalyptus-drop ];
-
   options = {
     sddm.enable = lib.mkEnableOption "Enable sddm";
   };
 
   config = lib.mkIf cfg.enable {
+    environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
+      themes.sddm-eucalyptus-drop 
+    ];
+    #environment.systemPackages = [ base-eucalyptus-drop ];
+
     services.displayManager.sddm = {
       enable = true;
       wayland.enable = true;
