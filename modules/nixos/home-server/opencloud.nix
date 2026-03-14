@@ -13,7 +13,7 @@ in
     services.opencloud = {
       enable = true;
       url = "https://drive.jacoposoria.qzz.io";
-      address = 127.0.0.1
+      address = 127.0.0.1;
       port = 9200;
       environment = {
 	PROXY_TLS = "false"; # Disables https when behind reverse proxy
