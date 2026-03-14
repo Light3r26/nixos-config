@@ -95,13 +95,9 @@
     multiBootSupport = true;
   };
 
-
   # NixOS options
-  programs = {
-    hyprland.enable = true;
-    zsh.enable = true;
-    kdeconnect.enable = true;
-  };
+  programs.hyprland.enable = true;
+  programs.zsh.enable = true;
 
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];

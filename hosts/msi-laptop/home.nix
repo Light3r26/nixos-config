@@ -28,6 +28,7 @@
   fastfetch.enable = true;
   neovim.enable = true;
 
+  hyprland.enable = true;
   hyprpanel.enable = true;
   hyprpaper.enable = true;
   hyprlock.enable = true;
