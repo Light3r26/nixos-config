@@ -49,6 +49,8 @@
     inputs.agenix.packages."x86_64-linux".default
   ];
 
+  navidrome.enable = true;
+
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
   # Enable the OpenSSH daemon.
