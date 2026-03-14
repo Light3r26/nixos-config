@@ -6,7 +6,7 @@ let
 in
 {
   services.searx = {
-    enable = false;
+    enable = true;
     settings.server = {
       bind_address = "127.0.0.1";
       port = 5313;
