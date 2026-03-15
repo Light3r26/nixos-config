@@ -28,7 +28,10 @@
   fastfetch.enable = true;
   neovim.enable = true;
 
-  hyprland.enable = true;
+  hyprland = {
+    enable = true;
+    monitors = [ "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" ];
+  };
   hyprpanel.enable = true;
   hyprpaper.enable = true;
   hyprlock.enable = true;

@@ -5,8 +5,13 @@ let
 
 in
 {
-  options = {
-    hyprland.enable = lib.mkEnableOption "Enable hyprland";
+  options.hyprland = {
+    enable = lib.mkEnableOption "Enable hyprland";
+    monitors = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ ];
+      description = "List of monitors for hyprland configuration";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -29,12 +34,11 @@ in
 
         ### MONITORS
         #monitor = <name>, <resolution@refresh_rate>, <position>,<scale>
-        monitor = [ 
-          "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
-          "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
-          #"HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
-          #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
-        ];
+        monitor = cfg.monitors;
+        #"eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
+        #"HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
+        #"HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
+        #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
 
         workspace = [ 
           "1, monitor:HDMI-A-1"
