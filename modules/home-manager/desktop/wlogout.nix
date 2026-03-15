@@ -2,6 +2,7 @@
 
 let
   cfg = config.wlogout;
+  shutdown = "${../../../.assets/wlogout-icons/shutdown.png}";
 
 in
 {
@@ -105,7 +106,7 @@ in
 
         #shutdown {
           border-radius: 50px 0px 0px 50px;
-          background-image: image(url("icons/shutdown.png"));
+          background-image: image(url(${shutdown}));
         }
         #shutdown:hover {
           border-radius: 50px;
