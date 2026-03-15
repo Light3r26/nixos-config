@@ -31,6 +31,9 @@
   hyprland = {
     enable = true;
     monitors = [ "eDP-1, preferred, auto, 1.25" ];
+    gestures = [
+      "3, left, workspac3, left, workspace"
+    ];
   };
   hyprpanel = {
     enable = true;
