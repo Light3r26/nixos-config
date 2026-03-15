@@ -3,6 +3,10 @@
 let
   cfg = config.wlogout;
   shutdown = "${../../../.assets/wlogout-icons/shutdown.png}";
+  reboot = "${../../../.assets/wlogout-icons/reboot.png}";
+  suspend = "${../../../.assets/wlogout-icons/suspend.png}";
+  lock = "${../../../.assets/wlogout-icons/lock.png}";
+  hibernate = "${../../../.assets/wlogout-icons/hibernate.png}";
 
 in
 {
@@ -113,24 +117,24 @@ in
         }
 
         #reboot {
-          background-image: image(url("icons/reboot.png"));
+          background-image: image(url("${reboot}"));
         }
         
         #suspend {
-          background-image: image(url("icons/suspend.png"));
+          background-image: image(url("${suspend}"));
         }
          
         #lock {
-          background-image: image(url("icons/lock.png"));
+          background-image: image(url("${lock}"));
         }
         
         #hibernate {
           border-radius: 0px 50px 50px 0px;
-          background-image: image(url("icons/hibernate.png"));
+          background-image: image(url("${hibernate}"));
         }
         #hibernate:hover {
           border-radius: 50px;
-          background-image: image(url("icons/hibernate.png"));
+          background-image: image(url("${hibernate}"));
         }
       '';
     };
