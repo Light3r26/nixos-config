@@ -30,7 +30,7 @@
 
   hyprland.enable = true;
   hyprpanel.enable = true;
-  hyprpaper.enable = false;
+  hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;
   styling.enable = true;
