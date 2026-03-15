@@ -114,7 +114,7 @@ in
             size = "18px";
           };
         };
-        "theme.bar.transparent" = cfg.bar.transparency;
+        "theme.bar.transparent" = false;
         "theme.bar.floating" = false;
         "theme.bar.enableShadow" = false;
         "theme.bar.location" = "top";

@@ -34,7 +34,7 @@
   };
   hyprpanel = {
     enable = true;
-    bar.transparency = true;
+    bar.transparency = false;
   };
   hyprpaper.enable = true;
   hyprlock.enable = true;
