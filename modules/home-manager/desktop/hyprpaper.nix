@@ -13,8 +13,8 @@ in
     services.hyprpaper = {
       enable = true;
       settings = { 
-        preload = [ "${../../../wallpapers/dark-bright-mountains.jpg}" ];
-        wallpaper = [ ", ${../../../wallpapers/dark-bright-mountains.jpg}" ];
+        preload = [ "${../../../assets/wallpapers/dark-bright-mountains.jpg}" ];
+        wallpaper = [ ", ${../../../assets/wallpapers/dark-bright-mountains.jpg}" ];
       };
     };
   };

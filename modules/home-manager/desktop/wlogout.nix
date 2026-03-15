@@ -2,11 +2,11 @@
 
 let
   cfg = config.wlogout;
-  shutdown = "${../../../.assets/wlogout-icons/shutdown.png}";
-  reboot = "${../../../.assets/wlogout-icons/reboot.png}";
-  suspend = "${../../../.assets/wlogout-icons/suspend.png}";
-  lock = "${../../../.assets/wlogout-icons/lock.png}";
-  hibernate = "${../../../.assets/wlogout-icons/hibernate.png}";
+  shutdown = "${../../../assets/wlogout-icons/shutdown.png}";
+  reboot = "${../../../assets/wlogout-icons/reboot.png}";
+  suspend = "${../../../assets/wlogout-icons/suspend.png}";
+  lock = "${../../../assets/wlogout-icons/lock.png}";
+  hibernate = "${../../../assets/wlogout-icons/hibernate.png}";
 
 in
 {
