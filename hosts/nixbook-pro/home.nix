@@ -30,7 +30,7 @@
 
   hyprland = {
     enable = true;
-    monitors = [ "eDP-1, preferred, auto, 1.25" ];
+    monitors = [ "eDP-1, preferred, auto, 1.50" ];
     gestures = [
       "3, horizontal, workspace"
     ];
