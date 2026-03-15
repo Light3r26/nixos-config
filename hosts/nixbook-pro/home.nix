@@ -8,7 +8,7 @@
   home = { 
     username = "light3r";
     homeDirectory = "/home/light3r";
-    stateVersion = "24.05"; # Do not change
+    stateVersion = "25.11"; # Do not change
   };
 
   home.packages = with pkgs; [

@@ -106,5 +106,5 @@
   # Enabled services
   services.openssh.enable = true;
 
-  system.stateVersion = "24.11"; # Do not change
+  system.stateVersion = "25.11"; # Do not change
 }
