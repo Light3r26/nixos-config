@@ -33,6 +33,7 @@
     monitors = [ "eDP-1, preferred, auto, 1.25" ];
     gestures = [
       "3, left, workspace"
+      "3, right, workspace"
     ];
   };
   hyprpanel = {
