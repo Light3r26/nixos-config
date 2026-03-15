@@ -12,6 +12,11 @@ in
       default = [ ];
       description = "List of monitors for hyprland configuration";
     };
+    workspaces-rules = lib.mkOption {
+      type = lib.types.listOf lib.types.str;
+      default = [ ];
+      description = "List of workspaces rules";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -40,18 +45,7 @@ in
         #"HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
         #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
 
-        workspace = [ 
-          "1, monitor:HDMI-A-1"
-          "2, monitor:HDMI-A-1"
-          "3, monitor:HDMI-A-1"
-          "4, monitor:HDMI-A-1"
-          "5, monitor:HDMI-A-1"
-          "6, monitor:eDP-1"
-          "7, monitor:eDP-1"
-          "8, monitor:eDP-1"
-          "9, monitor:eDP-1"
-          "10, monitor:eDP-1"
-        ];
+        workspace = cfg.workspaces-rules;
 
         ### MY PROGRAMS
         "$terminal" = "kitty";
