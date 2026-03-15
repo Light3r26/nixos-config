@@ -5,8 +5,13 @@ let
 
 in
 {
-  options = {
-    hyprpanel.enable = lib.mkEnableOption "Enable hyprpanel";
+  options.hyprpanel = {
+    enable = lib.mkEnableOption "Enable hyprpanel";
+    bar.transparency = lib.mkOption {
+      type = lib.types.bool;
+      default = false;
+      description = "Enable transparency on hyprpanel";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -109,7 +114,7 @@ in
             size = "18px";
           };
         };
-        "theme.bar.transparent" = true;
+        "theme.bar.transparent" = cfg.bar.transparency;
         "theme.bar.floating" = false;
         "theme.bar.enableShadow" = false;
         "theme.bar.location" = "top";

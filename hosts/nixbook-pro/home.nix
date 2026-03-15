@@ -32,7 +32,10 @@
     enable = true;
     monitors = [ "eDP-1, preferred, auto, 1.25" ];
   };
-  hyprpanel.enable = true;
+  hyprpanel = {
+    enable = true;
+    bar.transparency = true;
+  };
   hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;
