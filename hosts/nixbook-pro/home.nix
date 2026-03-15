@@ -30,7 +30,7 @@
 
   hyprland = {
     enable = true;
-    monitors = [ "eDP-1, preferred, auto, 2" ];
+    monitors = [ "eDP-1, preferred, auto, 1" ];
   };
   hyprpanel.enable = true;
   hyprpaper.enable = true;
