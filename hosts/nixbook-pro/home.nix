@@ -30,7 +30,7 @@
 
   hyprland = {
     enable = true;
-    monitors = [ "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" ];
+    monitors = [ "eDP-1, 2304x1440@60Hz, 0x0, 2" ];
   };
   hyprpanel.enable = true;
   hyprpaper.enable = true;
