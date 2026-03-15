@@ -47,6 +47,17 @@
       };
     }; 
     nixosConfigurations = {
+      nixbook-pro = nixpkgs-unstable.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/nixbook-pro/configuration.nix
+          home-manager.nixosModules.default
+          nvf.nixosModules.default
+          nix-flatpak.nixosModules.nix-flatpak
+        ];
+      };
+    }; 
+    nixosConfigurations = {
       home-server = nixpkgs-stable.lib.nixosSystem {
         specialArgs = let
           system = "x86_64-linux";
