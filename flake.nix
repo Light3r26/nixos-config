@@ -23,6 +23,7 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
   outputs = {
@@ -33,6 +34,7 @@
     nvf,
     nix-flatpak,
     agenix,
+    nixos-hardware,
     ... 
   }@inputs: {
     nixosConfigurations = {
@@ -54,6 +56,7 @@
           home-manager.nixosModules.default
           nvf.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
+          nixos-hardware.nixosModules.apple-macbook-pro-12-1
         ];
       };
     }; 
