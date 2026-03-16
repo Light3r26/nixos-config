@@ -12,6 +12,11 @@ in
       default = false;
       description = "Enable transparency on hyprpanel";
     };
+    bar.background = lib.mkOption {
+      type = lib.types.string;
+      default = "";
+      description = "Bar background color";
+    };
   };
 
   config = lib.mkIf cfg.enable {
@@ -115,10 +120,10 @@ in
           };
         };
         "theme.bar.transparent" = false;
+        "theme.bar.background" = cfg.bar.background;
         "theme.bar.floating" = false;
         "theme.bar.enableShadow" = false;
         "theme.bar.location" = "top";
-
         "theme.bar.buttons.style" = "default";
         "theme.bar.buttons.volume.border" = "#b4beff";
 

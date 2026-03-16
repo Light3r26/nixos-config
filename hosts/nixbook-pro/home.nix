@@ -39,6 +39,7 @@
   hyprpanel = {
     enable = true;
     bar.transparency = false;
+    bar.background = "#323844";
   };
   # temporary because hyprpaper doesn't work 
   hyprpaper.enable = false;
