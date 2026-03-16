@@ -13,7 +13,7 @@ in
       description = "Enable transparency on hyprpanel";
     };
     bar.background = lib.mkOption {
-      type = lib.types.string;
+      type = lib.types.str;
       default = "";
       description = "Bar background color";
     };
