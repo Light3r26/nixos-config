@@ -15,8 +15,8 @@ in
       settings = { 
         preload = [ "${../../../.assets/wallpapers/dark-bright-mountains.jpg}" ];
         wallpaper = [ ", ${../../../.assets/wallpapers/dark-bright-mountains.jpg}" ];
-        #preload = [ "/Nixos/.assets/wallpapers/dark-bright-mountains.jpg" ];
-        #wallpaper = [ ", /Nixos/.assets/wallpapers/dark-bright-mountains.jpg" ];
+        #preload = [ "${./dark-bright-mountains.jpg}" ];
+        #wallpaper = [ ", ${./dark-bright-mountains.jpg}" ];
       };
     };
   };

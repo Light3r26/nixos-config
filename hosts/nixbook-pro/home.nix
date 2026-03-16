@@ -13,6 +13,7 @@
 
   home.packages = with pkgs; [
     dconf
+    hyprpaper #temporary
   ];
 
   home.sessionVariables = {
@@ -39,7 +40,9 @@
     enable = true;
     bar.transparency = false;
   };
-  hyprpaper.enable = true;
+  # temporary because hyprpaper doesn't work 
+  hyprpaper.enable = false;
+  # ---
   hyprlock.enable = true;
   hypridle.enable = true;
   styling.enable = true;
