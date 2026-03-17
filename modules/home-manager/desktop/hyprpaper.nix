@@ -13,10 +13,12 @@ in
     services.hyprpaper = {
       enable = true;
       settings = { 
-        preload = [ "${../../../.assets/wallpapers/dark-bright-mountains.jpg}" ];
-        wallpaper = [ ", ${../../../.assets/wallpapers/dark-bright-mountains.jpg}" ];
-        #preload = [ "${./dark-bright-mountains.jpg}" ];
-        #wallpaper = [ ", ${./dark-bright-mountains.jpg}" ];
+        wallpaper = {
+            monitor = "";
+            path = "${../../../.assets/wallpapers/dark-bright-mountains.jpg}";
+            fit_mode = "cover";
+        };
+        splash = false;
       };
     };
   };
