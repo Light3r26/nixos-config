@@ -54,7 +54,10 @@
     ];
   };
 
-  services.libinput.touchpad.tappingButtonMap = "lrm";
+  services.libinput.touchpad = {
+    tappingButtonMap = "lrm";
+    clickMethod = "buttonareas";
+  };
 
   environment.sessionVariables = {
     XDG_SESSION_TYPE = "wayland";
