@@ -22,7 +22,6 @@ in
         background = {
           monitor = "";
           path = "${../../../.assets/wallpapers/dark-bright-mountains.jpg}";
-          #path = "${lib.cleanSource ../../../../assets/wallpapers/dark-bright-mountains.jpg}";
           #path = "screenshot";
           blur_passes = 1;
           blur_size = 8;
