@@ -45,6 +45,7 @@ in
     
     wayland.windowManager.hyprland = {
       enable = true;
+      plugins = cfg.plugins;
       settings = {
 
         ### MONITORS

@@ -33,7 +33,6 @@
     monitors = [ "eDP-1, preferred, auto, 1.60" ];
     gestures = [
       "3, horizontal, workspace"
-      "3, vertical, overview:toggle"
     ];
     plugins = with pkgs.hyprlandPlugins; [ 
       hyprspace
