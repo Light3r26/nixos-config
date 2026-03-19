@@ -8,19 +8,24 @@ in
   options.hyprland = {
     enable = lib.mkEnableOption "Enable hyprland";
     monitors = lib.mkOption {
-      type = lib.types.listOf lib.types.str;
+      type = with lib.types; listOf str;
       default = [ ];
       description = "List of monitors for hyprland configuration";
     };
     workspaces-rules = lib.mkOption {
-      type = lib.types.listOf lib.types.str;
+      type = with lib.types; listOf str;
       default = [ ];
       description = "List of workspaces rules";
     };
     gestures = lib.mkOption {
-      type = lib.types.listOf lib.types.str;
+      type = with lib.types; listOf str;
       default = [ ];
       description = "List of gestures";
+    };
+    plugins = lib.mkOption {
+      type = with lib.types; listOf package;
+      default = [ ];
+      description = "List of plugins";
     };
   };
 
