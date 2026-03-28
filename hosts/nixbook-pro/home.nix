@@ -35,7 +35,7 @@
       "3, horizontal, workspace"
     ];
     plugins = with pkgs.hyprlandPlugins; [ 
-      hyprspace
+      #hyprspace
     ];
   };
   hyprpanel = {
