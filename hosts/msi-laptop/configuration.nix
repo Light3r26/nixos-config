@@ -90,7 +90,7 @@
   gaming.enable = true;
   servers.enable = true;
   sddm.enable = true;
-  virtualization.enable = true;
+  virtualization.enable = false;
   bootloader = {
     enable = true;
     multiBootSupport = true;
