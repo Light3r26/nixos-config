@@ -9,7 +9,6 @@
       inputs.home-manager.nixosModules.default 
   ];
 
-  # Enable Flakes
   nix.settings = {
     experimental-features = [ "nix-command" "flakes"];
     substituters = [
