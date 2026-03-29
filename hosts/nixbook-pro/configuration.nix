@@ -118,7 +118,7 @@
   programs.zsh.enable = true;
 
   powerManagement.powerUpCommands = ''
-    ${pkgs.systemd}/bin/systemctl restart wpa_supplicant.service
+    ${pkgs.systemd}/bin/systemctl restart NetworkManager.service
   '';
 
   # Needed to get zsh completion for system packages
