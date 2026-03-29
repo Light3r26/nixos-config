@@ -117,9 +117,16 @@
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
 
-  powerManagement.powerUpCommands = ''
-    ${pkgs.systemd}/bin/systemctl restart NetworkManager.service
-  '';
+  powerManagement = {
+    enable = true;
+    powertop.enable = true;
+
+
+    #powerUpCommands = ''
+    #  ${pkgs.systemd}/bin/systemctl restart wpa_supplicant.service
+    #  ${pkgs.systemd}/bin/systemctl restart NetworkManager.service
+    #'';
+  };
 
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];

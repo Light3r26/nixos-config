@@ -56,7 +56,7 @@
           home-manager.nixosModules.default
           nvf.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
-          nixos-hardware.nixosModules.apple-macbook-pro-12-1
+          #nixos-hardware.nixosModules.apple-macbook-pro-12-1
         ];
       };
     }; 
