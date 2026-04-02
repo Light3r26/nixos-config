@@ -126,10 +126,11 @@
     };
 
     thermald.enable = true;
-    powerManagement.enable = true;
     auto-cpufreq.enable = true;
     xserver.videoDrivers = [ "intel" ];
   };
+
+  powerManagement.enable = true;
 
   boot.kernelParams = [
     "apple_night_mode=1"
