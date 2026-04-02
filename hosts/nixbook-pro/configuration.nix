@@ -60,15 +60,6 @@
   # Fix SDDM not starting any DE session
   services.dbus.packages = with pkgs; [ dconf ];
   
-  # Video Acceleration and OpenGL
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      libvdpau-va-gl
-    ];
-  };
-
   services.libinput.touchpad = {
     tappingButtonMap = "lrm";
     clickMethod = "buttonareas";
@@ -144,9 +135,9 @@
     "apple_night_mode=1"
   ];
 
-  hardware.intel.graphics = {
+  hardware.graphics = {
     enable = true;
-    powerManagement = true;
+    enable32Bit = true;
   };
 
   system.stateVersion = "25.11"; # Do not change
