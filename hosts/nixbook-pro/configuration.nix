@@ -86,11 +86,6 @@
    # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  services = { 
-    usbmuxd.enable = true;
-    upower.enable = true;
-  };
-
   environment.systemPackages = with pkgs; [
      vim
      wget
@@ -103,11 +98,9 @@
   ];
 
   # Custom modules
-  nvidia.enable = false;
   gaming.enable = true;
   servers.enable = false;
   sddm.enable = true;
-  virtualization.enable = true;
   bootloader = {
     enable = true;
     multiBootSupport = false;
@@ -117,22 +110,44 @@
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
 
-  powerManagement = {
-    enable = true;
-    powertop.enable = true;
-
-
-    #powerUpCommands = ''
-    #  ${pkgs.systemd}/bin/systemctl restart wpa_supplicant.service
-    #  ${pkgs.systemd}/bin/systemctl restart NetworkManager.service
-    #'';
-  };
-
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 
   # Enabled services
-  services.openssh.enable = true;
+  services = { 
+    openssh.enable = true;
+    usbmuxd.enable = true;
+    upower.enable = true;
+  };
+
+  # Macbook-specific fixes
+  services = {
+    mbpfan = {
+      enable = true;
+      settings = {
+        general = {
+          low_temp = 50;      # Fan minimum speed temp
+          high_temp = 58;     # Fan starts speeding up
+          max_temp = 78;      # Fan max speed
+          min_fan_speed = 2000; # RPM
+        };
+      };
+    };
+
+    thermald.enable = true;
+    powerManagement.enable = true;
+    auto-cpufreq.enable = true;
+    xserver.videoDrivers = [ "intel" ];
+  };
+
+  boot.kernelParams = [
+    "apple_night_mode=1"
+  ];
+
+  hardware.intel.graphics = {
+    enable = true;
+    powerManagement = true;
+  };
 
   system.stateVersion = "25.11"; # Do not change
 }
