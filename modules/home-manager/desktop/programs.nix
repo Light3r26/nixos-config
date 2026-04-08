@@ -45,8 +45,8 @@ in
 
     # Flatpak packages
     services.flatpak.packages = [
-    #  { appId = "com.github.d4nj1.tlpui"; origin = "flathub";  }
       { appId = "org.vinegarhq.Sober"; origin = "flathub";  }
+      { appId = "app.fluxer.Fluxer"; origin = "flathub";  }
     ];
   };
 }
