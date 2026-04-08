@@ -34,7 +34,7 @@
     users = {
       "light3r" = { 
         imports = [
-          ../../hosts/msi-laptop/home.nix
+          ./home.nix
           inputs.nvf.homeManagerModules.default
         ];
       };
@@ -60,13 +60,9 @@
   # Fix SDDM not starting any DE session
   services.dbus.packages = with pkgs; [ dconf ];
   
-  # Video Acceleration and OpenGL
-  hardware.graphics = {
-    enable = true;
-    extraPackages = with pkgs; [
-      intel-media-driver
-      libvdpau-va-gl
-    ];
+  services.libinput.touchpad = {
+    tappingButtonMap = "lrm";
+    clickMethod = "buttonareas";
   };
 
   environment.sessionVariables = {
@@ -76,18 +72,10 @@
     WLR_NO_HARDWARE_CURSORS = "1";
     # Hint electron apps to use Wayland
     NIXOS_OZONE_WL = "1";
-    LIBVA_DRIVER_NAME = "nvidia";
-    GBM_BACKEND = "nvidia-drm";
-    __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
    # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
-
-  services = { 
-    usbmuxd.enable = true;
-    upower.enable = true;
-  };
 
   environment.systemPackages = with pkgs; [
      vim
@@ -101,14 +89,12 @@
   ];
 
   # Custom modules
-  nvidia.enable = true;
   gaming.enable = true;
-  servers.enable = true;
+  servers.enable = false;
   sddm.enable = true;
-  virtualization.enable = false;
   bootloader = {
     enable = true;
-    multiBootSupport = true;
+    multiBootSupport = false;
   };
 
   # NixOS options
@@ -119,7 +105,41 @@
   environment.pathsToLink = [ "/share/zsh" ];
 
   # Enabled services
-  services.openssh.enable = true;
+  services = { 
+    openssh.enable = true;
+    usbmuxd.enable = true;
+    upower.enable = true;
+  };
 
-  system.stateVersion = "24.11"; # Do not change
+  # Macbook-specific fixes
+  services = {
+    mbpfan = {
+      enable = true;
+      settings = {
+        general = {
+          low_temp = 50;      # Fan minimum speed temp
+          high_temp = 58;     # Fan starts speeding up
+          max_temp = 78;      # Fan max speed
+          min_fan_speed = 2000; # RPM
+        };
+      };
+    };
+
+    thermald.enable = true;
+    auto-cpufreq.enable = true;
+    xserver.videoDrivers = [ "intel" ];
+  };
+
+  powerManagement.enable = true;
+
+  boot.kernelParams = [
+    "apple_night_mode=1"
+  ];
+
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  system.stateVersion = "25.11"; # Do not change
 }

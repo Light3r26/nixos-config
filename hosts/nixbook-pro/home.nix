@@ -8,7 +8,7 @@
   home = { 
     username = "light3r";
     homeDirectory = "/home/light3r";
-    stateVersion = "24.05"; # Do not change
+    stateVersion = "25.11"; # Do not change
   };
 
   home.packages = with pkgs; [
@@ -30,25 +30,19 @@
 
   hyprland = {
     enable = true;
-    monitors = [
-      "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
-      "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor
+    monitors = [ "eDP-1, preferred, auto, 1.60" ];
+    gestures = [
+      "3, horizontal, workspace"
     ];
-    workspaces-rules = [ 
-      "1, monitor:HDMI-A-1"
-      "2, monitor:HDMI-A-1"
-      "3, monitor:HDMI-A-1"
-      "4, monitor:HDMI-A-1"
-      "5, monitor:HDMI-A-1"
-      "6, monitor:eDP-1"
-      "7, monitor:eDP-1"
-      "8, monitor:eDP-1"
-      "9, monitor:eDP-1"
-      "10, monitor:eDP-1"
+    plugins = with pkgs.hyprlandPlugins; [ 
+      #hyprspace
     ];
   };
-
-  hyprpanel.enable = true;
+  hyprpanel = {
+    enable = true;
+    bar.transparency = false;
+    bar.background = "#323844";
+  };
   hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;

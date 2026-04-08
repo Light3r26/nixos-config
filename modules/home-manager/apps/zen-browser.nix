@@ -22,7 +22,7 @@ in
 
         search = {
           force = true;
-          default = "qwant";
+          default = "searx";
           engines = {
             "searx" = {
               urls = [{
