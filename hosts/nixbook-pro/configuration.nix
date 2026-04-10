@@ -86,7 +86,6 @@
      nix-prefetch
      nix-prefetch-github
      exfatprogs
-     ventoy-full-gtk
   ];
 
   # Custom modules
