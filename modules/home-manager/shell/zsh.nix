@@ -38,7 +38,7 @@ in
         disconnetti-bt = "bluetoothctl disconnect";
         # Wifi
         mostra-connessioni = "nmcli device wifi list";
-        hotspot-telefono = "nmcli device wifi connect Light3r's FP6";
+        hotspot-telefono = "nmcli device wifi connect Light3rFP6";
       };
       initContent = ''
         export XCURSOR_THEME=~/.icons/macOS
