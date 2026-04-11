@@ -48,7 +48,8 @@
     ];
   };
 
-  hyprpanel.enable = true;
+  waybar.enable = true;
+  hyprpanel.enable = false;
   hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;
