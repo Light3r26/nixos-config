@@ -46,10 +46,16 @@
       "9, monitor:eDP-1"
       "10, monitor:eDP-1"
     ];
+    programs-autostart = [
+      "waybar"
+      "swaync"
+      "hyprpaper"
+      "hypridle"
+    ];
   };
 
   waybar.enable = true;
-  hyprpanel.enable = false;
+  hyprpanel.enable = true;
   hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;

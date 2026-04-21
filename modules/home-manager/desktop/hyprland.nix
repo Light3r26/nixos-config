@@ -12,6 +12,11 @@ in
       default = [ ];
       description = "List of monitors for hyprland configuration";
     };
+    programs-autostart = lib.mkOption {
+      type = with lib.types; listOf str;
+      default = [ ];
+      description = "List of programs that will start automatically after boot";
+    };
     workspaces-rules = lib.mkOption {
       type = with lib.types; listOf str;
       default = [ ];
@@ -64,13 +69,7 @@ in
         "$menu" = "rofi -show drun";
 
         ### AUTOSTART 
-        exec-once = [ 
-          #"waybar"
-          "hyprpanel"
-          "hyprpaper"
-          "swaync"
-          "hypridle"
-        ];
+        exec-once = cfg.programs-autostart;
 
         ### ENVIRONMENT VARIABLES
         env = [ 

@@ -34,9 +34,14 @@
     gestures = [
       "3, horizontal, workspace"
     ];
-    plugins = with pkgs.hyprlandPlugins; [ 
-      #hyprspace
+    programs-autostart = [
+      "hyprpanel"
+      "hyprpaper"
+      "hypridle"
     ];
+    #plugins = with pkgs.hyprlandPlugins; [ 
+      #hyprspace
+    #];
   };
   hyprpanel = {
     enable = true;
