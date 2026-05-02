@@ -50,6 +50,7 @@ in
     
     wayland.windowManager.hyprland = {
       enable = true;
+      package = null;
       plugins = cfg.plugins;
       settings = {
 
@@ -76,6 +77,15 @@ in
           "XCURSOR_THEME, WhiteSur-cursors"
           "XCURSOR_SIZE, 24"
           "HYPRSHOT_DIR, /home/light3r/Screenshots"
+          # Will add a custom option for this
+          "XDG_SESSION_TYPE, wayland"
+          "XDG_CURRENT_DESKTOP,Hyprland"
+          "XDG_SESSION_DESKTOP, Hyprland"
+          "LIBVA_DRIVER_NAME, nvidia"
+          "GBM_BACKEND, nvidia-drm"
+          "__GLX_VENDOR_LIBRARY_NAME, nvidia"
+          "NIXOS_OZONE_WL, 1"
+          "WLR_NO_HARDWARE_CURSORS, 1"
         ];
 
         ### LOOK AND FEEL

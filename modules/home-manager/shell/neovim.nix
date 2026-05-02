@@ -45,6 +45,9 @@ in
           lspSignature.enable = true; # Function signatures hints
           otter-nvim.enable = true;
           mappings.goToDefinition = "<leader>gd";
+          presets = {
+            tailwindcss-language-server.enable = true;
+          };
         };
 
         languages = {
@@ -70,7 +73,7 @@ in
             enable = true;
             lsp = {
               enable = true;
-              servers = ["roslyn_ls"];
+              servers = ["roslyn-ls"];
             };
           };
           typst = {
@@ -81,11 +84,7 @@ in
           # Web Development
           html.enable = true;
           css.enable = true;
-          tailwind= {
-            enable = true;
-            lsp.enable = true;
-          };
-          ts = {
+          typescript = {
             enable = true;
             lsp.enable = true;
             extraDiagnostics.enable = true;
