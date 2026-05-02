@@ -7,6 +7,11 @@ in
 {
   options.hyprland = {
     enable = lib.mkEnableOption "Enable hyprland";
+    environment-variables = lib.mkOption {
+      type = with lib.types; listOf str;
+      default = [];
+      description = "List of environment variables for hyprland configuration";
+    };
     monitors = lib.mkOption {
       type = with lib.types; listOf str;
       default = [ ];
@@ -73,20 +78,7 @@ in
         exec-once = cfg.programs-autostart;
 
         ### ENVIRONMENT VARIABLES
-        env = [ 
-          "XCURSOR_THEME, WhiteSur-cursors"
-          "XCURSOR_SIZE, 24"
-          "HYPRSHOT_DIR, /home/light3r/Screenshots"
-          # Will add a custom option for this
-          "XDG_SESSION_TYPE, wayland"
-          "XDG_CURRENT_DESKTOP,Hyprland"
-          "XDG_SESSION_DESKTOP, Hyprland"
-          "LIBVA_DRIVER_NAME, nvidia"
-          "GBM_BACKEND, nvidia-drm"
-          "__GLX_VENDOR_LIBRARY_NAME, nvidia"
-          "NIXOS_OZONE_WL, 1"
-          "WLR_NO_HARDWARE_CURSORS, 1"
-        ];
+        env = cfg.environment-variables;
 
         ### LOOK AND FEEL
         general = {
