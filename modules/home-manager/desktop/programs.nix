@@ -41,6 +41,7 @@ in
       xfce.thunar
       #jetbrains.rider
       opencode
+      papers # Gnome PDF Viewer
     ];
 
     # Flatpak packages

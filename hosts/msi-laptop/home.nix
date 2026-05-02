@@ -46,9 +46,29 @@
       "9, monitor:eDP-1"
       "10, monitor:eDP-1"
     ];
+    programs-autostart = [
+      "waybar"
+      "swaync"
+      "hyprpaper"
+      "hypridle"
+    ];
+    environment-variables = [
+      "XCURSOR_THEME, WhiteSur-cursors"
+      "XCURSOR_SIZE, 24"
+      "HYPRSHOT_DIR, /home/light3r/Screenshots"
+      "XDG_SESSION_TYPE, wayland"
+      "XDG_CURRENT_DESKTOP,Hyprland"
+      "XDG_SESSION_DESKTOP, Hyprland"
+      "LIBVA_DRIVER_NAME, nvidia"
+      "GBM_BACKEND, nvidia-drm"
+      "__GLX_VENDOR_LIBRARY_NAME, nvidia"
+      "NIXOS_OZONE_WL, 1"
+      "WLR_NO_HARDWARE_CURSORS, 1"
+    ];
   };
 
-  hyprpanel.enable = true;
+  waybar.enable = true;
+  hyprpanel.enable = false;
   hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;

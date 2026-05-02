@@ -7,10 +7,20 @@ in
 {
   options.hyprland = {
     enable = lib.mkEnableOption "Enable hyprland";
+    environment-variables = lib.mkOption {
+      type = with lib.types; listOf str;
+      default = [];
+      description = "List of environment variables for hyprland configuration";
+    };
     monitors = lib.mkOption {
       type = with lib.types; listOf str;
       default = [ ];
       description = "List of monitors for hyprland configuration";
+    };
+    programs-autostart = lib.mkOption {
+      type = with lib.types; listOf str;
+      default = [ ];
+      description = "List of programs that will start automatically after boot";
     };
     workspaces-rules = lib.mkOption {
       type = with lib.types; listOf str;
@@ -45,6 +55,7 @@ in
     
     wayland.windowManager.hyprland = {
       enable = true;
+      package = null;
       plugins = cfg.plugins;
       settings = {
 
@@ -64,20 +75,10 @@ in
         "$menu" = "rofi -show drun";
 
         ### AUTOSTART 
-        exec-once = [ 
-          #"waybar"
-          "hyprpanel"
-          "hyprpaper"
-          "swaync"
-          "hypridle"
-        ];
+        exec-once = cfg.programs-autostart;
 
         ### ENVIRONMENT VARIABLES
-        env = [ 
-          "XCURSOR_THEME, WhiteSur-cursors"
-          "XCURSOR_SIZE, 24"
-          "HYPRSHOT_DIR, /home/light3r/Screenshots"
-        ];
+        env = cfg.environment-variables;
 
         ### LOOK AND FEEL
         general = {

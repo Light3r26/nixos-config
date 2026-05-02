@@ -36,9 +36,9 @@ in
       nodejs_latest
       concurrently
       # Needed for Rider
-      dotnet-sdk
-      dotnet-ef
-      msbuild
+      #dotnet-sdk
+      #dotnet-ef
+      #msbuild
       # ----------------
       icu # Unicode and globalization support library
     ];
