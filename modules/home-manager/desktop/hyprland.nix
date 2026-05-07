@@ -177,29 +177,29 @@ in
         "$mainMod" = "SUPER";
 
         bind = [ 
+          "$mainMod, space, exec, $menu"
           "$mainMod, D, exec, $terminal"
           "$mainMod, B, exec, $browser"
           "$mainMod, C, killactive,"
           "$mainMod, M, exit,"
           "$mainMod, F, exec, $fileManager"
           "$mainMod, V, togglefloating,"
-          "$mainMod, space, exec, $menu"
           "$mainMod, P, pseudo, # dwindle"
-          "$mainMod, N, togglesplit, # dwindle"
-          "$SUPER_SHIFT, F, fullscreen, "
-          ", PRINT, exec, hyprshot -m window # Window screenshot"
-          "shift, PRINT, exec, hyprshot -m region # Region screenshot"
-          "$SUPER_SHIFT, l, exec, hyprlock # Lock screen with Hyprlock"
+          "$mainMod, N, togglesplit," # dwindle
+          "$SUPER_SHIFT, L, exec, hyprlock" # Lock screen with Hyprlock
+          "$SUPER_SHIFT, F, fullscreen,"
+          ", PRINT, exec, hyprshot -m window" # Window screenshot
+          "shift, PRINT, exec, hyprshot -m region" # Region screenshot
           "$mainMod, h, movefocus, l"
           "$mainMod, l, movefocus, r"
           "$mainMod, k, movefocus, u"
           "$mainMod, j, movefocus, d"
+          # Workspace-related keybinds
           "$mainMod, 1, workspace, 1"
           "$mainMod, 2, workspace, 2"
           "$mainMod, 3, workspace, 3"
           "$mainMod, 4, workspace, 4"
           "$mainMod, 5, workspace, 5"
-
           "$mainMod, 6, workspace, 6"
           "$mainMod, 7, workspace, 7"
           "$mainMod, 8, workspace, 8"
