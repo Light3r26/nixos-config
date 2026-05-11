@@ -25,7 +25,7 @@
     };
     disko = {
       url = "github:nix-community/disko/latest";
-      inputs.nipkgs.follows = "nixpkgs-unstable";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
@@ -69,6 +69,10 @@
         in 
         {
             inherit inputs;
+            pkgs = import nixpkgs-stable {
+              inherit system;
+              config.allowUnfree = true;
+            };
             pkgs-unstable = import nixpkgs-unstable {
               inherit system;
               config.allowUnfree = true;
