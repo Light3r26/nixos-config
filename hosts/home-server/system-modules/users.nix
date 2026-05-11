@@ -6,5 +6,6 @@
     description = "NixOS Server";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = [];
+    initialPassword = "prova";
   };
 }

@@ -23,6 +23,10 @@
       url = "github:0xc000022070/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
+    disko = {
+      url = "github:nix-community/disko/latest";
+      inputs.nipkgs.follows = "nixpkgs-unstable";
+    };
   };
 
   outputs = {
@@ -33,6 +37,7 @@
     nvf,
     nix-flatpak,
     agenix,
+    disko,
     ... 
   }@inputs: {
     nixosConfigurations = {
@@ -72,6 +77,7 @@
         modules = [
           ./hosts/home-server/configuration.nix
           agenix.nixosModules.default
+          disko.nixosModules.disko
         ];
       };
     };
