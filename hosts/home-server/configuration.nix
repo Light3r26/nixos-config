@@ -11,6 +11,8 @@
 
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
+
+  boot.loader.systemd-boot.enable = true;
   
   # Set your time zone.
   time.timeZone = "Europe/Rome";
