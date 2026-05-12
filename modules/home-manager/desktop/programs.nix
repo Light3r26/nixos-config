@@ -42,6 +42,7 @@ in
       #jetbrains.rider
       opencode
       papers # Gnome PDF Viewer
+      geekbench
     ];
 
     # Flatpak packages
