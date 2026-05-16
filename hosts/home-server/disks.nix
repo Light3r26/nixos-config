@@ -108,6 +108,7 @@
               encryption = "aes-256-gcm";
               keyformat = "passphrase";
               keylocation = config.age.secrets."zfs-key.age".path;
+              #keylocation = config.age.secrets."zfs-key.age".path;
             };
           };
         };
