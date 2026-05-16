@@ -99,6 +99,13 @@
           dataset = {
             type = "zfs_fs";
             mountpoint = "/storage/dataset";
+            mountOptions = [
+              "defaults"
+              "noauto"
+              "nofail"
+              "x-systemd.automount"
+              "x-systemd.mount-timeout=10" 
+            ];
             options = {
               encryption = "aes-256-gcm";
               keyformat = "passphrase";
