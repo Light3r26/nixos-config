@@ -1,8 +1,8 @@
 let
   msi-laptop = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMjkU2SWJD8VdRSdtuSDY61MX673gbLu6rljuzWUhEHC";
-  #nixbook-pro = 
+  nixbook-pro = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHvcTV9j2DcLNQreiBZ7yOLLcbMmBlHfxu+/jdBqI7+t";
   #remote = "";
-  systems = [ msi-laptop ];
+  systems = [ msi-laptop nixbook-pro ];
 
 in
 {
