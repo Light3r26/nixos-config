@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ./disks.nix
     ./system-modules
-    ../../modules/nixos/home-server
+    ./services
     ../../scripts
   ];
 
