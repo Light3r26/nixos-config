@@ -133,6 +133,5 @@
       enable = true;
       # Defaults to keeping 24 hourly, 7 daily, 4 weekly and 12 monthly snapshots
     };
-    autoReplication.enable = true;
   };
 }
