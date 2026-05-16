@@ -88,7 +88,13 @@
         type = "zpool";
         mode = "raidz";
         mountpoint = "/storage";
-
+        mountOptions = [
+            "defaults"
+            "noauto"
+            "nofail"
+            "x-systemd.automount"
+            "x-systemd.mount-timeout=10" 
+          ];
         datasets = {
           dataset = {
             type = "zfs_fs";
