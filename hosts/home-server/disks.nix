@@ -119,8 +119,10 @@
 
   age.secrets."zfs-key.age".file = "/Nixos/secrets/zfs-key.age";
 
+
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
+  boot.zfs.extraPools = [ "storage" ];
 
   services.zfs = {
     autoScrub = {
@@ -131,5 +133,6 @@
       enable = true;
       # Defaults to keeping 24 hourly, 7 daily, 4 weekly and 12 monthly snapshots
     };
+    autoReplication.enable = true;
   };
 }
