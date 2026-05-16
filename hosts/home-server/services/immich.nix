@@ -4,7 +4,7 @@
   services.immich = {
     enable = true;
     package = pkgs-unstable.immich;
-    host = "localhost";
+    host = "0.0.0.0";
     port = 2283;
     mediaLocation = "/storage/photos";
     openFirewall = true;
