@@ -120,7 +120,6 @@
           low_temp = 70;      # Fan minimum speed temp
           high_temp = 90;     # Fan starts speeding up
           max_temp = 100;      # Fan max speed
-          min_fan_speed = 2000; # RPM
         };
       };
     };
