@@ -1,13 +1,12 @@
 let
-  local = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIEXrWi2ElewP54zP0nmLcVoml/65avJ8hHqGcZ1UJtp/";
-  remote = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILRwZUMyc1pxcntOJXC+qShO6nSbvBEYwRQJCnk+S993";
-  systems = [ local remote ];
+  msi-laptop = "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMjkU2SWJD8VdRSdtuSDY61MX673gbLu6rljuzWUhEHC";
+  #nixbook-pro = 
+  #remote = "";
+  systems = [ msi-laptop ];
 
 in
 {
   "zfs-key.age".publicKeys = systems;
-  "freshrss-key.age".publicKeys = systems;
-  "cloudflare-cert.age".publicKeys = systems;
-  "tunnel-credentials.age".publicKeys = systems;
-  "searx-key.age".publicKeys = systems;
+  #"freshrss-key.age".publicKeys = systems;
+  #"searx-key.age".publicKeys = systems;
 }
