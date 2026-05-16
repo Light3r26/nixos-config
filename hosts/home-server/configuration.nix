@@ -5,7 +5,7 @@
     ./hardware-configuration.nix
     ./disks.nix
     ./system-modules
-    #../../modules/nixos/home-server
+    ../../modules/nixos/home-server
     ../../scripts
   ];
 
@@ -55,11 +55,7 @@
   #navidrome.enable = true;
   #opencloud.enable = true;
 
-  users.users.root.openssh.authorizedKeys.keys = [
-    "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMjkU2SWJD8VdRSdtuSDY61MX673gbLu6rljuzWUhEHC light3r@msi-laptop"
-  ];
-
-  #age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
+  age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;

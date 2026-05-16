@@ -96,8 +96,7 @@
             options = {
               encryption = "aes-256-gcm";
               keyformat = "passphrase";
-              keylocation = "file:///tmp/zfs-key";
-              #keylocation = config.age.secrets."zfs-key.age".path;
+              keylocation = config.age.secrets."zfs-key.age".path;
             };
           };
         };
@@ -105,7 +104,7 @@
     };
   };
 
-  #age.secrets."zfs-key.age".file = "/Nixos/secrets/zfs-key.age";
+  age.secrets."zfs-key.age".file = "/Nixos/secrets/zfs-key.age";
 
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
