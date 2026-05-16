@@ -94,6 +94,7 @@
             "nofail"
             "x-systemd.automount"
             "x-systemd.mount-timeout=10" 
+              "_netdev"
           ];
         datasets = {
           dataset = {
@@ -105,6 +106,7 @@
               "nofail"
               "x-systemd.automount"
               "x-systemd.mount-timeout=10" 
+              "_netdev"
             ];
             options = {
               encryption = "aes-256-gcm";
