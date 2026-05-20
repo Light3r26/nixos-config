@@ -1,8 +1,8 @@
 {
   imports = [
     #./freshrss.nix
-    ./immich.nix
-    #./navidrome.nix
+    #./immich.nix
+    ./navidrome.nix
     #./nfs.nix
     #./nginx.nix
     #./opencloud.nix
