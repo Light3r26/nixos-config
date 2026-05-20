@@ -1,6 +1,7 @@
 {
   imports = [
     #./freshrss.nix
+    #./headscale.nix
     #./immich.nix
     ./navidrome.nix
     #./nfs.nix
@@ -8,6 +9,6 @@
     #./opencloud.nix
     #./remote-builder.nix
     #./searx.nix
-    #./zfs.nix
+    ./traefik.nix
   ];
 }
