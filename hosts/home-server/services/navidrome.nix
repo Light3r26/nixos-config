@@ -18,8 +18,9 @@ in
       settings = {
       	Port = 6981;
         MusicFolder = "/storage/music";
-        Address = "127.0.0.1";
-        #BaseUrl = "/";
+        #Address = "127.0.0.1";
+        Address = "0.0.0.0";
+        BaseUrl = "/";
       };
       openFirewall = true;
     }; 	 
