@@ -6,7 +6,7 @@
   networking.hostId = "007f0200";
 
   networking.firewall.enable = true;
-  networking.firewall.allowedTCPPorts = [ 6981 ];
+  #networking.firewall.allowedTCPPorts = [ ];
   #networking.firewall.allowedTCPPorts = [ 80 443 2049 ];
   #networking.firewall.allowedUDPPorts = [ 2049 ];
 
