@@ -21,7 +21,7 @@ in
           "text/*" = ["neovim.desktop"]; 
           "text/plain" = ["neovim.desktop"];
           # PDFs
-          "application/pdf" = ["zen-browser.desktop"];
+          "application/pdf" = ["papers.desktop"];
           # Links
           "x-scheme-handler/https" = ["zen-browser.desktop"]; 
           "x-scheme-handler/http" = ["zen-browser.desktop"];
