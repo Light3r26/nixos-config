@@ -179,7 +179,7 @@ in
         bind = [ 
           # Miscellaneous
           "$mainMod, space, exec, $menu"
-          "$mainMod, T, exec, $terminal"
+          "$mainMod, D, exec, $terminal"
           "$mainMod, E, exec, $fileManager"
           "$mainMod, B, exec, $browser"
           "$mainMod, C, killactive,"
