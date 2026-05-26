@@ -1,16 +1,17 @@
 { lib, config, pkgs, ... }:
 
 let
-  cfg = config.virtualization;
+  cfg = config.virtualisation;
 
 in 
 {
   options = {
-    virtualization.enable = lib.mkEnableOption "Enable virtualisation";
+    virtualisation.enable = lib.mkEnableOption "Enable virtualisation";
   };
 
   config = lib.mkIf cfg.enable {
-    virtualization.libvirtd = {
+
+    virtualisation.libvirtd = {
       enable = true;
       qemu.vhostUserPackages = [ pkgs.virtiofsd ];
     };
@@ -25,6 +26,7 @@ in
     environment.sessionVariables = {
       GDK_BACKEND = "x11 virt-manager";
     };
+
 
     virtualisation.virtualbox = {
       host = {

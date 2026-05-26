@@ -7,6 +7,6 @@
     ./sddm.nix
     ./servers.nix
     ./thunar.nix
-    ./virtualization.nix
+    ./virtualisation.nix
   ];
 }
