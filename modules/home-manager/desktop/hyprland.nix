@@ -142,14 +142,8 @@ in
 
         };
 
-        dwindle = {
-          pseudotile = true;
-          preserve_split = true;
-        };
-
-        master = {
-          new_status = "master";
-        };
+        dwindle.preserve_split = true;
+        master.new_status = "master";
 
         misc = {
           force_default_wallpaper = 0;
@@ -186,7 +180,6 @@ in
           "$mainMod, F, fullscreen,"
           "$mainMod, V, togglefloating,"
           "$mainMod, P, pseudo, # dwindle"
-          "$mainMod, N, togglesplit," # dwindle
           "$SUPER_SHIFT, L, exec, hyprlock" # Lock screen with Hyprlock
           # Screenshots
           ", PRINT, exec, hyprshot -m window" # Window screenshot
