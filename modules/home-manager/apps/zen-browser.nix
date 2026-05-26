@@ -22,7 +22,7 @@ in
 
         search = {
           force = true;
-          default = "searx";
+          default = "startpage";
           engines = {
             "searx" = {
               urls = [{
@@ -35,15 +35,15 @@ in
               definedAliases = [ "@sx" ];
             };
 
-            "qwant" = {
+            "startpage" = {
               urls = [{
-                template = "https://www.qwant.com/?q={searchTerms}";
+                template = "https://www.startpage.com/sp/search?q={searchTerms}";
                 params = [
                   { name = "query"; value = "{searchTerms}"; }
                 ];
               }];
-              icon = "https://www.qwant.com/favicon.ico";
-              definedAliases = [ "@qw" ];
+              icon = "https://www.startpage.com/favicon.ico";
+              definedAliases = [ "@sp" ];
             };
 
             "Nix Packages" = {
