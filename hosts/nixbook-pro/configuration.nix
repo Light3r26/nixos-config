@@ -74,9 +74,7 @@
     NIXOS_OZONE_WL = "1";
   };
 
-  xdg.portal.config.common.default = "*";
-
-   # Allow unfree packages
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   environment.systemPackages = with pkgs; [

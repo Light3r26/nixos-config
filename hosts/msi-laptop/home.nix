@@ -83,6 +83,8 @@
     cli-tools.enable = true;
   };
 
+  xdg.portal.config.common.default = "*";
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

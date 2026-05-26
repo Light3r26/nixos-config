@@ -81,9 +81,7 @@
     __GLX_VENDOR_LIBRARY_NAME = "nvidia";
   };
 
-  xdg.portal.config.common.default = "*";
-
-   # Allow unfree packages
+  # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
   services = { 
