@@ -129,7 +129,6 @@
     };
 
     thermald.enable = true;
-    auto-cpufreq.enable = true;
     xserver.videoDrivers = [ "intel" ];
   };
 
