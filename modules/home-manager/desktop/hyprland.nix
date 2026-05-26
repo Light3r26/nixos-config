@@ -55,7 +55,7 @@ in
     
     wayland.windowManager.hyprland = {
       enable = true;
-      configType = "lua";
+        configType = "hyprlang";
       package = null;
       plugins = cfg.plugins;
       settings = {
