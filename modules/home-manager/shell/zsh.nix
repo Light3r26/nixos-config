@@ -22,6 +22,8 @@ in
       };
       shellAliases = {
         # NixOS & Sistema
+        flake-update = "nix flake update";
+        flake-check = "nix flake check";
         list-generations = "nixos-rebuild list-generations";
         size = "du -ah --max-depth=1 | sort -h";
         ip-show = "curl ifconfig.me";
