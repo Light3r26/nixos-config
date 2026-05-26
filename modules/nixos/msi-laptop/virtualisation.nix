@@ -21,7 +21,9 @@ in
       pkgs.dnsmasq
     ];
 
-    users.users.light3r.extraGroups = [ pkgs.libvirtd ];
+    networking.firewall.trustedInterfaces = [ "virbr0" ];
+
+    users.users.light3r.extraGroups = [ "libvirtd" ];
 
     environment.sessionVariables = {
       GDK_BACKEND = "x11 virt-manager";
