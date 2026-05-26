@@ -112,6 +112,7 @@
     openssh.enable = true;
     usbmuxd.enable = true;
     upower.enable = true;
+    tuned.enable = true;
   };
 
   # Macbook-specific fixes
@@ -130,8 +131,6 @@
     thermald.enable = true;
     auto-cpufreq.enable = true;
     xserver.videoDrivers = [ "intel" ];
-    upower.enable = true;
-    tuned.enable = true;
   };
 
   powerManagement.enable = true;
