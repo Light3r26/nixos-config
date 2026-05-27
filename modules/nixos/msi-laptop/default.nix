@@ -6,7 +6,6 @@
     ./nvidia.nix
     ./sddm.nix
     ./servers.nix
-    ./thunar.nix
     ./virtualisation.nix
   ];
 }

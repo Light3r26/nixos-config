@@ -37,7 +37,6 @@ in
       pika-backup 
       #freecad
       prismlauncher # FOSS Minecraft Launcher
-      xfce.thunar
       #jetbrains.rider
       opencode
       papers # Gnome PDF Viewer

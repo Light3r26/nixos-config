@@ -72,7 +72,7 @@ in
         ### MY PROGRAMS
         "$terminal" = "kitty";
         "$browser" = "zen-twilight";
-        "$fileManager" = "thunar";
+        "$fileManager" = "nemo";
         "$menu" = "rofi -show drun";
 
         ### AUTOSTART 
