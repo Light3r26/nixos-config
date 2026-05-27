@@ -9,10 +9,14 @@ pkgs.writeShellScriptBin "flake-rebuild" ''
   git diff
 
   # Git commit
-  git add .
-  echo -ne "\033[4;32mInserisci messaggio del commit:\033[0m " # ANSI Text
-  read -r commit_message
-  git commit -m "$commit_message"
+  if [ $3 -e "--no-commit"]; then
+    echo -ne "\033[4;32mAssicurati di eseguire il commit alla fine del rebuild:\033[0m "
+  else
+    git add .
+    echo -ne "\033[4;32mInserisci messaggio del commit:\033[0m " # ANSI Text
+    read -r commit_message
+    git commit -m "$commit_message"
+  fi
 
   # System rebuild
   sudo nixos-rebuild "$1" --flake .#"$2"
