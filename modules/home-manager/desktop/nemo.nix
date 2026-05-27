@@ -25,9 +25,9 @@ in {
       "org/nemo/desktop" = {
         show-desktop-icons = false;
       };
-      #"org/nemo/preferences" = {
-      #  bulk-rename-tool = "bulky";
-      #};
+      "org/nemo/preferences" = {
+        bulk-rename-tool = "bulky";
+      };
     };
   };
 }
