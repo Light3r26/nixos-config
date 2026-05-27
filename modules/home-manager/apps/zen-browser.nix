@@ -19,7 +19,8 @@ in
 
       /* ---- PROFILES ---- */
       profiles = {
-        default = {
+        Light3r = {
+          name = "Light3r";
           containersForce = true;
           containers = {
             Personal = {
@@ -52,10 +53,54 @@ in
               icon = "📚";
             };
           };
-        };
 
-        Light3r = {
-          name = "Light3r";
+          bookmarks = {
+            force = true;
+            settings = [
+              {
+                name = "wikipedia";
+                tags = [ "wiki" ];
+                keyword = "wiki";
+                url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
+              }
+              {
+                name = "kernel.org";
+                url = "https://www.kernel.org";
+              }
+              "separator"
+              {
+                name = "Nix sites";
+                toolbar = true;
+                bookmarks = [
+                  {
+                    name = "homepage";
+                    url = "https://nixos.org/";
+                  }
+                  {
+                    name = "wiki";
+                    tags = [ "wiki" "nix" ];
+                    url = "https://wiki.nixos.org/";
+                  }
+                ];
+              }
+            ];
+          };
+
+          /* ---- EXTENSIONS ---- */
+          # Check about:support for extension/add-on ID strings.
+          # Valid strings for installation_mode are "allowed", "blocked",
+          # "force_installed" and "normal_installed".
+          extensions = {
+            force = true;
+            packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
+              darkreader
+              adnauseam
+              sponsorblock
+              youtube-shorts-block
+              bitwarden
+              vimium
+            ];
+          };
 
           search = {
             force = true;
@@ -97,72 +142,23 @@ in
             };
           };
         };
+      };
 
-        bookmarks = {
-          force = true;
-          settings = [
-            {
-              name = "wikipedia";
-              tags = [ "wiki" ];
-              keyword = "wiki";
-              url = "https://en.wikipedia.org/wiki/Special:Search?search=%s&go=Go";
-            }
-            {
-              name = "kernel.org";
-              url = "https://www.kernel.org";
-            }
-            "separator"
-            {
-              name = "Nix sites";
-              toolbar = true;
-              bookmarks = [
-                {
-                  name = "homepage";
-                  url = "https://nixos.org/";
-                }
-                {
-                  name = "wiki";
-                  tags = [ "wiki" "nix" ];
-                  url = "https://wiki.nixos.org/";
-                }
-              ];
-            }
-          ];
-        };
-
-        /* ---- EXTENSIONS ---- */
-        # Check about:support for extension/add-on ID strings.
-        # Valid strings for installation_mode are "allowed", "blocked",
-        # "force_installed" and "normal_installed".
-        extensions = {
-          force = true;
-          packages = with inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system}; [
-            darkreader
-            adnauseam
-            sponsorblock
-            youtube-shorts-block
-            bitwarden
-            vimium
-          ];
-        };
-
-        policies = {
-          AutofillAddressEnabled = true;
-          AutofillCreditCardEnabled = false;
-          DisableAppUpdate = true;
-          DisableFeedbackCommands = true;
-          DisableFirefoxStudies = true;
-          DisablePocket = true;
-          DisableTelemetry = true;
-          DontCheckDefaultBrowser = true;
-          NoDefaultBookmarks = true;
-          OfferToSaveLogins = false;
-          EnableTrackingProtection = {
-            Value = true;
-            Locked = true;
-            Cryptomining = true;
-            Fingerprinting = true;
-          };
+      policies = {
+        AutofillAddressEnabled = true;
+        AutofillCreditCardEnabled = false;
+        DisableAppUpdate = true;
+        DisableFeedbackCommands = true;
+        DisableFirefoxStudies = true;
+        DisablePocket = true;
+        DisableTelemetry = true;
+        DontCheckDefaultBrowser = true;
+        OfferToSaveLogins = false;
+        EnableTrackingProtection = {
+          Value = true;
+          Locked = true;
+          Cryptomining = true;
+          Fingerprinting = true;
         };
       };
     };
