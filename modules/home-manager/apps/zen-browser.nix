@@ -162,9 +162,8 @@ in
             Fingerprinting = true;
           };
         };
-
-        # Zen-specific settings
       };
     };
+  };
   };
 }
