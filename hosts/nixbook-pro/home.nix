@@ -70,6 +70,7 @@
   mpv.enable = true;
   wlogout.enable = true;
   mime-apps.enable = true;
+  nemo.enable = true;
   common = {
     home-programs.enable = true;
     cli-tools.enable = true;
