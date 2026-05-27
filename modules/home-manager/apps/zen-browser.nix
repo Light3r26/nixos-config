@@ -39,19 +39,21 @@ in
             };
           };
 
-        spacesForce = true;
-        spaces = {
-          "Personale" = {
-            id = "l4b62ty7-386n-4015-hk9v-s2w0a257c93p";
-            position = 1000;
-            icon = "🏠";
-          };
-          "Scuola" = {
-            id = "tln97shz-2tg0-163l-84v5-a10m330y817c";
-            position = 2000;
-            icon = "📚";
+          spacesForce = true;
+          spaces = {
+            "Personale" = {
+              id = "l4b62ty7-386n-4015-hk9v-s2w0a257c93p";
+              position = 1000;
+              icon = "🏠";
+            };
+            "Scuola" = {
+              id = "tln97shz-2tg0-163l-84v5-a10m330y817c";
+              position = 2000;
+              icon = "📚";
+            };
           };
         };
+
         Light3r = {
           name = "Light3r";
 
@@ -164,6 +166,5 @@ in
         };
       };
     };
-  };
   };
 }
