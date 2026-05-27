@@ -9,7 +9,7 @@ pkgs.writeShellScriptBin "flake-rebuild" ''
   git diff
 
   # Git commit
-  if [ $3 -e "--no-commit" ]; then
+  if [ $3 -eq "--no-commit" ]; then
     echo -ne "\033[4;32mAssicurati di eseguire il commit alla fine del rebuild:\033[0m "
   else
     git add .
