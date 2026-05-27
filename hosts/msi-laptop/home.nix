@@ -50,7 +50,7 @@
       "waybar"
       "swaync"
       "hyprpaper"
-      "hypridle"
+      #"hypridle"
     ];
     environment-variables = [
       "XCURSOR_THEME, WhiteSur-cursors"
@@ -71,7 +71,7 @@
   hyprpanel.enable = false;
   hyprpaper.enable = true;
   hyprlock.enable = true;
-  hypridle.enable = true;
+  #hypridle.enable = true;
   styling.enable = true;
   rofi.enable = true;
   zen-browser.enable = true;

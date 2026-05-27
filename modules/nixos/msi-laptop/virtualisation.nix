@@ -26,7 +26,7 @@ in
     users.users.light3r.extraGroups = [ "libvirtd" ];
 
     environment.sessionVariables = {
-      GDK_BACKEND = "x11 virt-manager";
+      #GDK_BACKEND = "x11 virt-manager";
     };
 
 

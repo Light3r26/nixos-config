@@ -43,6 +43,7 @@ in
       opencode
       papers # Gnome PDF Viewer
       #geekbench
+      simplex-chat-desktop
     ];
 
     # Flatpak packages
