@@ -23,7 +23,7 @@ in {
         exec = "kitty";
       };
       "org/nemo/desktop" = {
-        trash-icon-visible = true;
+        show-desktop-icons = false;
       };
     };
   };
