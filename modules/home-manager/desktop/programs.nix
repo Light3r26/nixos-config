@@ -42,6 +42,7 @@ in
       papers # Gnome PDF Viewer
       #geekbench
       simplex-chat-desktop
+      bulky # Bulk renamer
     ];
 
     # Flatpak packages
