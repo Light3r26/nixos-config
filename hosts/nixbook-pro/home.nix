@@ -35,8 +35,7 @@
       "3, horizontal, workspace"
     ];
     programs-autostart = [
-      "hyprpanel"
-      "hyprpaper"
+      "noctalia-shell"
       "hypridle"
     ];
     environment-variables = [
@@ -61,6 +60,7 @@
     bar.transparency = false;
     bar.background = "#323844";
   };
+  waybar.enable = true;
   hyprpaper.enable = true;
   hyprlock.enable = true;
   hypridle.enable = true;
