@@ -43,6 +43,9 @@ in
       #geekbench
       simplex-chat-desktop
       bulky # Bulk renamer
+      #eloquent # Proofreading software
+      gnome-disk-utility
+      kdePackages.filelight
     ];
 
     # Flatpak packages
