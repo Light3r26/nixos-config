@@ -11,4 +11,8 @@
     database.createDB = true;
     redis.enable = true;
   };
+
+  systemd.tmpfiles.rules = [
+    "d /storage/photos 0750 immich immich -"
+  ];
 }
