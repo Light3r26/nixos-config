@@ -55,8 +55,7 @@
           nix-flatpak.nixosModules.nix-flatpak
         ];
       };
-    }; 
-    nixosConfigurations = {
+
       nixbook-pro = nixpkgs-unstable.lib.nixosSystem {
         specialArgs = {inherit inputs;};
         modules = [
@@ -66,8 +65,7 @@
           nix-flatpak.nixosModules.nix-flatpak
         ];
       };
-    }; 
-    nixosConfigurations = {
+
       home-server = nixpkgs-stable.lib.nixosSystem {
         specialArgs = let
           system = "x86_64-linux";
