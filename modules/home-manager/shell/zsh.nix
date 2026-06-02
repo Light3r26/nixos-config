@@ -16,10 +16,6 @@ in
       enableCompletion = true;
       autosuggestion.enable = true;
       autocd = true;
-      prezto = {
-        enable = true;
-        editor.keymap = "vi";
-      };
       shellAliases = {
         # NixOS & Sistema
         flake-update = "nix flake update";
