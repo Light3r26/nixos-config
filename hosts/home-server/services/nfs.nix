@@ -12,5 +12,8 @@
     '';
   };
 
+  networking.firewall.allowedTCPPorts = [ 2049 ];
+  networking.firewall.allowedUDPPorts = [ 2049 ];
+
   boot.supportedFilesystems = [ "nfs" ];
 }
