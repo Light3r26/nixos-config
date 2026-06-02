@@ -11,7 +11,7 @@ in
 
   config = lib.mkIf cfg.enable {
     fileSystems."/home/light3r/Home-Server" = {
-     device = "192.168.1.22:/home-pool";
+     device = "192.168.1.57:/storage";
      fsType = "nfs";
      options = [ 
        "_netdev"
