@@ -38,7 +38,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    environment.systemPackages = let themes = pkgs.callPackage ../../../pkgs/sddm-themes.nix {}; in [ 
+    environment.systemPackages = let themes = pkgs.callPackage ../../pkgs/sddm-themes.nix {}; in [ 
       themes.sddm-eucalyptus-drop 
     ];
     #environment.systemPackages = [ base-eucalyptus-drop ];
