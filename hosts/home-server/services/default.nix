@@ -2,7 +2,7 @@
   imports = [
     #./freshrss.nix
     #./headscale.nix
-    #./immich.nix
+    ./immich.nix
     ./navidrome.nix
     #./nfs.nix
     #./nginx.nix
