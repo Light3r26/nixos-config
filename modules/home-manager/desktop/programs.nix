@@ -52,6 +52,7 @@ in
     services.flatpak.packages = [
       { appId = "org.vinegarhq.Sober"; origin = "flathub";  }
       { appId = "app.fluxer.Fluxer"; origin = "flathub";  }
+      { appId = "app.comaps.comaps"; origin = "flathub";  }
     ];
   };
 }
