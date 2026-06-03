@@ -50,6 +50,7 @@
     git
     gh
     inputs.agenix.packages."x86_64-linux".default
+    toilet
   ];
 
   navidrome.enable = true;
