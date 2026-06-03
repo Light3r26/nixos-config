@@ -36,7 +36,6 @@
     ];
     programs-autostart = [
       "noctalia-shell"
-      "hypridle"
     ];
     environment-variables = [
       "XCURSOR_THEME, WhiteSur-cursors"
