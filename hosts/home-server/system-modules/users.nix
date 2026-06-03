@@ -8,4 +8,7 @@
     packages = [];
     initialPassword = "prova";
   };
+
+  # Sets trusted users
+  nix.settings.trusted-users = [ "root" "nixos"];
 }
