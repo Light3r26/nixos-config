@@ -7,6 +7,26 @@ in
 {
   options.hyprland = {
     enable = lib.mkEnableOption "Enable hyprland";
+    terminal = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Default terminal";
+    };
+    browser = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Default browser";
+    };
+    fileManager = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Default file manager";
+    };
+    menu = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Default menu/launcher";
+    };
     environment-variables = lib.mkOption {
       type = with lib.types; listOf str;
       default = [];
@@ -61,8 +81,7 @@ in
       settings = {
 
         ### MONITORS
-        #monitor = <name>, <resolution@refresh_rate>, <position>,<scale>
-        monitor = cfg.monitors;
+        #monitor = <name>, <resolution@refresh_rate>, <position>,<scahyprlan       monitor = cfg.monitors;
         #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
 
         workspace = cfg.workspaces-rules;
@@ -70,10 +89,10 @@ in
         gesture = cfg.gestures;
 
         ### MY PROGRAMS
-        "$terminal" = "kitty";
-        "$browser" = "zen-twilight";
-        "$fileManager" = "nemo";
-        "$menu" = "rofi -show drun";
+        "$terminal" = cfg.terminal;
+        "$browser" = cfg.browser;
+        "$fileManager" = cfg.fileManager;
+        "$menu" = cfg.menu;
 
         ### AUTOSTART 
         exec-once = cfg.programs-autostart;

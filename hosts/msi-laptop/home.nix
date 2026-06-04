@@ -30,6 +30,10 @@
 
   hyprland = {
     enable = true;
+    terminal = "kitty";
+    browser = "zen-browser";
+    fileManager = "nemo";
+    menu = "rofi -show drun";    
     monitors = [
       "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor
       "HDMI-A-1, 1920x1080@144.00Hz, 0x0, 1" # ASUS monitor

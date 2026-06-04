@@ -10,7 +10,6 @@
     homeDirectory = "/home/light3r";
     stateVersion = "25.11"; # Do not change
   };
-
   home.packages = with pkgs; [
     dconf
   ];
@@ -30,6 +29,10 @@
 
   hyprland = {
     enable = true;
+    terminal = "kitty";
+    browser = "zen-browser";
+    fileManager = "nemo";
+    menu = "noctalia-shell ipc call launcher toggle";    
     monitors = [ "eDP-1, preferred, auto, 1.60" ];
     gestures = [
       "3, horizontal, workspace"
@@ -54,20 +57,15 @@
       #hyprspace
     #];
   };
-  hyprpanel = {
-    enable = true;
-    bar.transparency = false;
-    bar.background = "#323844";
-  };
-  waybar.enable = true;
-  hyprpaper.enable = true;
-  hyprlock.enable = true;
-  hypridle.enable = true;
+  #hyprpanel = {
+  # enable = true;
+  # bar.transparency = false;
+  # bar.background = "#323844";
+  #};
+  noctalia.enable = true;
   styling.enable = true;
-  rofi.enable = true;
   zen-browser.enable = true;
   mpv.enable = true;
-  wlogout.enable = true;
   mime-apps.enable = true;
   nemo.enable = true;
   common = {
