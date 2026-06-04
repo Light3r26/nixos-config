@@ -32,8 +32,9 @@
     terminal = "kitty";
     browser = "zen-browser";
     fileManager = "nemo";
+    lockingProgram = "noctalia-shell ipc call lockScreen lock";
     menu = "noctalia-shell ipc call launcher toggle";    
-    monitors = [ "eDP-1, preferred, auto, 1.50" ];
+    monitors = [ "eDP-1, preferred, auto, 1.40" ];
     gestures = [
       "3, horizontal, workspace"
     ];

@@ -33,6 +33,7 @@
     terminal = "kitty";
     browser = "zen-browser";
     fileManager = "nemo";
+    lockingProgram = "hyprlock";
     menu = "rofi -show drun";    
     monitors = [
       "eDP-1, 1920x1080@60.01Hz, 1920x0, 1" # PC Monitor

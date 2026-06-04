@@ -27,6 +27,11 @@ in
       default = "";
       description = "Default menu/launcher";
     };
+    lockingProgram = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Default locking program";
+    };
     environment-variables = lib.mkOption {
       type = with lib.types; listOf str;
       default = [];
@@ -93,6 +98,7 @@ in
         "$browser" = cfg.browser;
         "$fileManager" = cfg.fileManager;
         "$menu" = cfg.menu;
+        "$lockingProgram" = cfg.lockingProgram;
 
         ### AUTOSTART 
         exec-once = cfg.programs-autostart;
@@ -200,7 +206,7 @@ in
           "$mainMod, F, fullscreen,"
           "$mainMod, V, togglefloating,"
           "$mainMod, P, pseudo, # dwindle"
-          "$SUPER_SHIFT, L, exec, hyprlock" # Lock screen with Hyprlock
+          "$SUPER_SHIFT, L, exec, $lockingProgram" # Lock screen with Hyprlock
           # Screenshots
           ", PRINT, exec, hyprshot -m window" # Window screenshot
           "shift, PRINT, exec, hyprshot -m region" # Region screenshot
