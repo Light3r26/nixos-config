@@ -34,7 +34,7 @@
     fileManager = "nemo";
     lockingProgram = "noctalia-shell ipc call lockScreen lock";
     menu = "noctalia-shell ipc call launcher toggle";    
-    monitors = [ "eDP-1, preferred, auto, 1.40" ];
+    monitors = [ "eDP-1, preferred, auto, 1.60" ];
     gestures = [
       "3, horizontal, workspace"
     ];
