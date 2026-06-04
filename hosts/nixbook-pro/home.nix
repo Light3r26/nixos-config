@@ -33,7 +33,7 @@
     browser = "zen-browser";
     fileManager = "nemo";
     menu = "noctalia-shell ipc call launcher toggle";    
-    monitors = [ "eDP-1, preferred, auto, 1.60" ];
+    monitors = [ "eDP-1, preferred, auto, 1.50" ];
     gestures = [
       "3, horizontal, workspace"
     ];
