@@ -86,8 +86,8 @@ in
       settings = {
 
         ### MONITORS
-        #monitor = <name>, <resolution@refresh_rate>, <position>,<scahyprlan       monitor = cfg.monitors;
-        #"HDMI-A-1, 2560x1440@59.95Hz, 0x2160, 1.6" # Philips TV
+        #monitor = <name>, <resolution@refresh_rate>, <position>,<scahyprlan       
+        monitor = cfg.monitors;
 
         workspace = cfg.workspaces-rules;
 
