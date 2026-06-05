@@ -46,6 +46,7 @@ in
       #eloquent # Proofreading software
       gnome-disk-utility
       kdePackages.filelight
+      photini # Photo metadata editor
     ];
 
     # Flatpak packages
