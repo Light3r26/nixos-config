@@ -47,6 +47,7 @@ in
       gnome-disk-utility
       kdePackages.filelight
       photini # Photo metadata editor
+      exiftool
     ];
 
     # Flatpak packages
