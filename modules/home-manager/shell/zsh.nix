@@ -23,8 +23,8 @@ in
         list-generations = "nixos-rebuild list-generations";
         size = "du -ah --max-depth=1 | sort -h";
         ip-show = "curl ifconfig.me";
-        p-mount = "mount -o uid=1000,gid=100"; # Mount FAT filesystem with rw rights for the user 1000 and group 100
-        cd-mount = "mount -t iso9660";
+        p-mount = "sudo mount -o uid=1000,gid=100"; # Mount FAT filesystem with rw rights for the user 1000 and group 100
+        cd-mount = "sudo mount -t iso9660";
         ls = "lsd";
         open = "xdg-open";
         fopen = "nemo";
