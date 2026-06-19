@@ -1,5 +1,6 @@
 {
   imports = [
+    ./baikal.nix
     #./freshrss.nix
     #./headscale.nix
     ./immich.nix
