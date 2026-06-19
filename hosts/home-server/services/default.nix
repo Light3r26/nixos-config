@@ -1,8 +1,9 @@
 {
   imports = [
-    ./baikal.nix
+    #./baikal.nix temporarily broken
     #./freshrss.nix
     #./headscale.nix
+    ./home-assistant.nix
     ./immich.nix
     ./navidrome.nix
     ./nfs.nix
