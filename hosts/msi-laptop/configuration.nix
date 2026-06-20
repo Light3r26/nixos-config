@@ -118,6 +118,8 @@
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 
+  boot.kernelPackages = pkgs.linuxPackages_latest;
+
   # Enabled services
   services.openssh.enable = true;
 

@@ -138,9 +138,11 @@
 
   powerManagement.enable = true;
 
-  boot.kernelParams = [
-    "apple_night_mode=1"
-  ];
+  boot = {
+    kernelPackages = pkgs.linuxPackages_latest;
+    kernelParams = [
+      "apple_night_mode=1"
+    ];
 
   hardware.graphics = {
     enable = true;
