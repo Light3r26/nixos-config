@@ -143,6 +143,7 @@
     kernelParams = [
       "apple_night_mode=1"
     ];
+  };
 
   hardware.graphics = {
     enable = true;
