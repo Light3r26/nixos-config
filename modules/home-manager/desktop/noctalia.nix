@@ -12,7 +12,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.noctalia-shell = {
+    programs.noctalia = {
       enable = true;
     };
   };
