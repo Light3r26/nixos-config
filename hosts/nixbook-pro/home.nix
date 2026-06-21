@@ -39,7 +39,7 @@
       "3, horizontal, workspace"
     ];
     programs-autostart = [
-      "noctalia-shell"
+      "noctalia"
     ];
     environment-variables = [
       "XCURSOR_THEME, WhiteSur-cursors"
