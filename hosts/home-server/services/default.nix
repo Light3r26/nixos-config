@@ -1,6 +1,7 @@
 {
   imports = [
     #./baikal.nix temporarily broken
+    ./caddy.nix
     #./freshrss.nix
     #./headscale.nix
     ./home-assistant.nix
