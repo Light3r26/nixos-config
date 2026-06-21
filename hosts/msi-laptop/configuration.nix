@@ -118,6 +118,10 @@
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 
+  nixpkgs.config.permittedInsecurePackages = [
+    "electron-39.8.10"
+  ];
+
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Enabled services
