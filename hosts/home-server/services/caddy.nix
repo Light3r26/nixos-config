@@ -5,7 +5,7 @@
   
   services.caddy = {
     enable = true;
-    virtualHosts."aottr.local".extraConfig = ''
+    virtualHosts."jacoposoria.it".extraConfig = ''
       respond "OK"
     '';
   };
