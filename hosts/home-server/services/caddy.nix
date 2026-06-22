@@ -1,11 +1,11 @@
 { pkgs, config, ... }:
 
 {
-  networking.firewall.allowedTCPPorts = [ 80 443 ];
+  #networking.firewall.allowedTCPPorts = [ 80 443 ];
   
   services.caddy = {
     enable = true;
-    virtualHosts."jacoposoria.it".extraConfig = ''
+    virtualHosts."localhost".extraConfig = ''
       respond "OK"
     '';
   };
