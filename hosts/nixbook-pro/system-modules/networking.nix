@@ -13,6 +13,7 @@
 
     hosts = {
       "192.168.1.57" = ["home-server"];
+      "192.168.1.100" = [ "mountain-server" ];
     };
 
     # Configure network proxy if necessary
