@@ -103,9 +103,9 @@
   # Custom modules
   nvidia.enable = true;
   gaming.enable = true;
-  servers.enable = true;
+  servers.enable = false;
   sddm.enable = true;
-  virtualisation.enable = true;
+  virtualisation.enable = false;
   bootloader = {
     enable = true;
     multiBootSupport = true;

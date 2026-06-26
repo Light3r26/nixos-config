@@ -11,23 +11,23 @@ in
 
   config = lib.mkIf cfg.enable {
 
-    virtualisation.libvirtd = {
-      enable = true;
-      qemu.vhostUserPackages = [ pkgs.virtiofsd ];
-    };
-    programs.virt-manager.enable = true;
+    #virtualisation.libvirtd = {
+    #  enable = true;
+    #  qemu.vhostUserPackages = [ pkgs.virtiofsd ];
+    #};
+    #programs.virt-manager.enable = true;
 
-    environment.systemPackages = [
-      pkgs.dnsmasq
+    #environment.systemPackages = [
+    #  pkgs.dnsmasq
     ];
 
-    networking.firewall.trustedInterfaces = [ "virbr0" ];
+    #networking.firewall.trustedInterfaces = [ "virbr0" ];
 
-    users.users.light3r.extraGroups = [ "libvirtd" ];
+    #users.users.light3r.extraGroups = [ "libvirtd" ];
 
-    environment.sessionVariables = {
-      #GDK_BACKEND = "x11 virt-manager";
-    };
+    #environment.sessionVariables = {
+      ##GDK_BACKEND = "x11 virt-manager";
+    #};
 
 
     virtualisation.virtualbox = {
