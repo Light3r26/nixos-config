@@ -69,6 +69,7 @@
   mpv.enable = true;
   mime-apps.enable = true;
   nemo.enable = true;
+  git.enable = true;
   common = {
     home-programs.enable = true;
     cli-tools.enable = true;
