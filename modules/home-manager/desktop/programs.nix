@@ -19,7 +19,6 @@ in
       qimgv # Image viewer
       pavucontrol
       libreoffice
-      bitwarden-desktop
       blueman
       kdePackages.kdenlive # Editing software
       obs-studio
