@@ -47,6 +47,7 @@ in
       kdePackages.filelight
       photini # Photo metadata editor
       exiftool
+      gramps
     ];
 
     # Flatpak packages
