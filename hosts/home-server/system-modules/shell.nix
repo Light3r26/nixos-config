@@ -3,6 +3,7 @@
 {
   environment.sessionVariables = {
     EDITOR = "nvim";
+    TERM = "xterm";
   };
   
   programs.bash.shellAliases = {
