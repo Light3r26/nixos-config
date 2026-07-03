@@ -23,7 +23,7 @@ in
       kdePackages.kdenlive # Editing software
       obs-studio
       easyeffects # Audio effects for PipeWire applications
-      czkawka-full # App to remove duplicates and unnecessary files
+      #czkawka-full # App to remove duplicates and unnecessary files
       losslesscut-bin # Lossless video/audio editing
       textpieces # Text processing utility
       identity # Image and videos comparison tool
