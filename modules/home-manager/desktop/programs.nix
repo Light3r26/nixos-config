@@ -56,7 +56,7 @@ in
       { appId = "org.vinegarhq.Sober"; origin = "flathub";  }
       { appId = "app.fluxer.Fluxer"; origin = "flathub";  }
       { appId = "app.comaps.comaps"; origin = "flathub";  }
-      #{ appId = "net.lutris.Lutris"; origin = "flathub";  }
+      { appId = "net.lutris.Lutris"; origin = "flathub";  }
     ];
   };
 }
