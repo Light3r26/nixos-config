@@ -49,6 +49,7 @@ in
       exiftool
       gramps
       lutris
+      bottles
     ];
 
     # Flatpak packages
