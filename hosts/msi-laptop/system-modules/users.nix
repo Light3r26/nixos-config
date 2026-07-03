@@ -5,7 +5,7 @@
   users.users.light3r = {
     isNormalUser = true;
     description = "Jacopo";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [ "networkmanager" "wheel" "plugdev" ];
     shell = pkgs.zsh;
     packages = with pkgs; [];
   };
