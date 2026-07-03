@@ -74,11 +74,6 @@
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-gtk
   ];
-  environment.systemPackages = with pkgs; [
-    adwaita-icon-theme
-    gnome-themes-extra
-    hicolor-icon-theme
-  ];
 
   # Assicurati anche che i pixbuf loaders siano nella cache
   environment.sessionVariables = {
@@ -115,6 +110,10 @@
      nix-prefetch
      nix-prefetch-github
      exfatprogs
+     #lutris-flatpak-related
+     adwaita-icon-theme
+     gnome-themes-extra
+     hicolor-icon-theme
   ];
 
   # Custom modules
