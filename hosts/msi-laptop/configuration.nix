@@ -118,11 +118,6 @@
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 
-  # Needed for Sena Device Manager on Bottles
-  services.udev.extraRules = ''
-    KERNEL=="hidraw*", ATTRS{idVendor}=="092b", ATTRS{idProduct}=="3370", MODE="0666", GROUP="plugdev"
-  '';
-
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   # Enabled services
