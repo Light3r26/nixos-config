@@ -13,7 +13,7 @@ in
   config = lib.mkIf cfg.enable {
     home.packages = with pkgs; [
       obsidian
-      logseq
+      #logseq
       discord
       gimp3 # Image processing software
       qimgv # Image viewer
