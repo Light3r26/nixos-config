@@ -121,6 +121,11 @@
   nixpkgs.config.permittedInsecurePackages = [
     "electron-39.8.10"
   ];
+  
+  # Needed for Sena Device Manager on Bottles
+  services.udev.extraRules = ''
+    KERNEL=="hidraw*", ATTRS{idVendor}=="092b", ATTRS{idProduct}=="3370", TAG+="uaccess"
+  '';
 
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
