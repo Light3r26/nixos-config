@@ -48,6 +48,7 @@ in
       photini # Photo metadata editor
       exiftool
       gramps
+      lutris
     ];
 
     # Flatpak packages
