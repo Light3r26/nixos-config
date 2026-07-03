@@ -20,7 +20,7 @@ in
     environment.systemPackages = with pkgs; [
       r2modman
       vulkan-tools
-      vulkan-runner
+      vulkan-loader
     ];
   };
 }
