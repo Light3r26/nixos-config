@@ -69,6 +69,12 @@
     ];
   };
 
+  # Needed for Lutris flatpak to work
+  xdg.portal.enable = true;
+  xdg.portal.extraPortals = with pkgs; [
+    xdg-desktop-portal-gtk
+  ];
+
   environment.sessionVariables = {
     XDG_SESSION_TYPE = "wayland";
     XDG_CURRENT_DESKTOP = "Hyprland";
