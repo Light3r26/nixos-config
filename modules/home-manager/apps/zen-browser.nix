@@ -16,10 +16,8 @@ in
       enable = true;
       setAsDefaultBrowser = true;
       languagePacks = [ "it" "en-GB" ];
-
       /* ---- PROFILES ---- */
-      profiles = {
-        Light3r = {
+        profiles = { Light3r = {
           name = "Light3r";
           containersForce = true;
           containers = {
@@ -51,6 +49,11 @@ in
               id = "tln97shz-2tg0-163l-84v5-a10m330y817c";
               position = 2000;
               icon = "📚";
+            };
+            "Cybersecurity" = {
+              id = "rbu20nlc-7wh4-651q-34o8-y91x024pjb6t";
+              position = 3000;
+              icon = "💻";
             };
           };
 
