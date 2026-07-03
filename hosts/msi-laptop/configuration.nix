@@ -74,6 +74,17 @@
   xdg.portal.extraPortals = with pkgs; [
     xdg-desktop-portal-gtk
   ];
+  environment.systemPackages = with pkgs; [
+    adwaita-icon-theme
+    gnome-themes-extra
+    hicolor-icon-theme
+  ];
+
+  # Assicurati anche che i pixbuf loaders siano nella cache
+  environment.sessionVariables = {
+    GDK_PIXBUF_MODULE_FILE = "$(${pkgs.librsvg}/bin/gdk-pixbuf-query-loaders)";
+  };
+  #----------------------------------------
 
   environment.sessionVariables = {
     XDG_SESSION_TYPE = "wayland";
