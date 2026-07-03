@@ -30,10 +30,6 @@
     ];
   };
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "electron-39.8.10"
-  ];
-
   # Home Manager
   home-manager = {
     extraSpecialArgs = { inherit inputs; }; # Passes inputs to HM modules
