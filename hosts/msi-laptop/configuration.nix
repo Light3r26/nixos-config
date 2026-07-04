@@ -131,6 +131,9 @@
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
 
+  # Needed for Lutris epic games store and probably more
+  programs.nix-ld.enable = true;
+
   # Needed to get zsh completion for system packages
   environment.pathsToLink = [ "/share/zsh" ];
 
