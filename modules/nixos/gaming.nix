@@ -22,6 +22,7 @@ in
       r2modman
       vulkan-tools
       vulkan-loader
+      steam-run
     ];
 
     programs.nix-ld.libraries = with pkgs; [
