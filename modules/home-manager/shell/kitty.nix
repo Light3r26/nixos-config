@@ -31,6 +31,8 @@ in
         copy_on_select = true;
         extraConfig = ''
           selection_foreground #434C5E
+          map ctrl+c copy_or_interrupt
+          map ctrl+v paste_from_clipboard
         '';
       };
     };
