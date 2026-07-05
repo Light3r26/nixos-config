@@ -18,6 +18,7 @@ in
     };
 
     environment.systemPackages = with pkgs; [
+      heroic
       lutris
       r2modman
       vulkan-tools
