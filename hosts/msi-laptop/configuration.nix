@@ -63,7 +63,7 @@
   # Video Acceleration and OpenGL
   hardware.graphics = {
     enable = true;
-    enable32bit = true;
+    enable32Bit = true;
     extraPackages = with pkgs; [
       intel-media-driver
       libvdpau-va-gl
