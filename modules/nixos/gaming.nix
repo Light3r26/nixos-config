@@ -22,25 +22,25 @@ in
       vulkan-tools
       vulkan-loader
     ];
-  };
 
-  programs.nix-ld.libraries = with pkgs; [
-    stdenv.cc.cc
-    zlib
-    openssl
-    curl
-    expat
-    vulkan-loader
-    libGL
-    xorg.libX11
-    xorg.libXext
-    xorg.libXrandr
-    xorg.libXi
-    xorg.libXcursor
-    xorg.libXrender
-    xorg.libXfixes
-    xorg.libxcb
-    alsa-lib
-    dbus
-  ];
+    programs.nix-ld.libraries = with pkgs; [
+      stdenv.cc.cc
+      zlib
+      openssl
+      curl
+      expat
+      vulkan-loader
+      libGL
+      xorg.libX11
+      xorg.libXext
+      xorg.libXrandr
+      xorg.libXi
+      xorg.libXcursor
+      xorg.libXrender
+      xorg.libXfixes
+      xorg.libxcb
+      alsa-lib
+      dbus
+    ];
+  };
 }
