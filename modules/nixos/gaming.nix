@@ -32,14 +32,14 @@ in
       expat
       vulkan-loader
       libGL
-      xorg.libX11
-      xorg.libXext
-      xorg.libXrandr
-      xorg.libXi
-      xorg.libXcursor
-      xorg.libXrender
-      xorg.libXfixes
-      xorg.libxcb
+      libx11
+      libxext
+      libxrandr
+      libxi
+      libxcursor
+      libxrender
+      libxfixes
+      libxcb
       alsa-lib
       dbus
     ];
