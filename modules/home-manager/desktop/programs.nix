@@ -48,7 +48,6 @@ in
       photini # Photo metadata editor
       exiftool
       gramps
-      bottles
     ];
 
     # Flatpak packages
@@ -56,7 +55,7 @@ in
       { appId = "org.vinegarhq.Sober"; origin = "flathub";  }
       { appId = "app.fluxer.Fluxer"; origin = "flathub";  }
       { appId = "app.comaps.comaps"; origin = "flathub";  }
-      { appId = "net.lutris.Lutris"; origin = "flathub";  }
+      { appId = "com.usebottles.bottles"; origin = "flathub";  }
     ];
   };
 }

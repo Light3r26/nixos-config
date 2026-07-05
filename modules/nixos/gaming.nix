@@ -18,6 +18,7 @@ in
     };
 
     environment.systemPackages = with pkgs; [
+      lutris
       r2modman
       vulkan-tools
       vulkan-loader
