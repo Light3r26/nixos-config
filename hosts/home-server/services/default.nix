@@ -13,6 +13,6 @@
     #./remote-builder.nix
     #./searx.nix
     ./tandoor.nix
-    ./traefik.nix
+    #./traefik.nix
   ];
 }
