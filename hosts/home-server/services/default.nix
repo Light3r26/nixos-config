@@ -12,6 +12,7 @@
     #./opencloud.nix
     #./remote-builder.nix
     #./searx.nix
+    ./tandoor.nix
     ./traefik.nix
   ];
 }
