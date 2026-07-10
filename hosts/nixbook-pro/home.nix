@@ -58,11 +58,11 @@
       #hyprspace
     #];
   };
-  hyprpanel = {
-   enable = true;
-   bar.transparency = false;
-   bar.background = "#323844";
-  };
+  #hyprpanel = {
+  # enable = true;
+  # bar.transparency = false;
+  # bar.background = "#323844";
+  #};
   waybar.enable = true;
   noctalia.enable = true;
   styling.enable = true;
