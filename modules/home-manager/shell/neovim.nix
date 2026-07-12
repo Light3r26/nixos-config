@@ -57,7 +57,7 @@ in
           # Languages
           nix.enable = true;
           python.enable = true;
-          clang.enable = true;
+          #clang.enable = true;
           markdown = {
             enable = true;
             extensions.markview-nvim.enable = true;
