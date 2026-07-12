@@ -1,6 +1,7 @@
 {
   imports = [
     ./bootloader.nix
+    ./cybersecurity.nix
     ./gaming.nix
     ./localsend.nix
     ./nvidia.nix
