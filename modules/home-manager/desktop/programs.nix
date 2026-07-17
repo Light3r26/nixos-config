@@ -49,6 +49,7 @@ in
       exiftool
       gramps
       networkmanagerapplet
+      proton-vpn
     ];
 
     # Flatpak packages
