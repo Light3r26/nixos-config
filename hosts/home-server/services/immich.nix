@@ -6,7 +6,7 @@ let
 in
 {
   options = {
-    immich.enable = true;
+    immich.enable = lib.mkEnableOption "Enable Immich";
   };
 
   config = lib.mkIf cfg.enable {
