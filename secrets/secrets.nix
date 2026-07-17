@@ -7,6 +7,7 @@ let
 in
 {
   "zfs-key.age".publicKeys = systems;
+  "nextcloud-key.age".publicKeys = systems;
   #"freshrss-key.age".publicKeys = systems;
   #"searx-key.age".publicKeys = systems;
 }
