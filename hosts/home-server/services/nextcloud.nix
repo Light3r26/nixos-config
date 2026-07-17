@@ -14,5 +14,5 @@ in
       enable = true;
       hostName = "0.0.0.0";
     };
-  }
+  };
 }
