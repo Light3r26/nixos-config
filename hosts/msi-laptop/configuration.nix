@@ -123,6 +123,7 @@
   servers.enable = false;
   sddm.enable = true;
   virtualisation.enable = false;
+  cybersecurity.enable = true;
   bootloader = {
     enable = true;
     multiBootSupport = true;

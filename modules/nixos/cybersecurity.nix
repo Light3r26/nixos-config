@@ -1,33 +1,43 @@
-{ pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
+let
+  cfg = config.cybersecurity;
+
+in 
 {
-  # Binary
-  programs.ghidra = {
-    enable = true;
-    gdb = true;
+  options.cybersecurity = {
+    enable = lib.mkEnableOption "Enable cybersecurity module";
   };
 
-  environment.systemPackages = with pkgs; [
-    #binwalk
-    #stegsolve
-    #john
-    #wireshark
-    #tshark
-    #python313Packages.pyshark
-    #burpsuite
-    #postman
-    #ht
-    ltrace
-    strace
-    gdb # Gonna try to do pwndbg wrapper if it doesn't exist
-    pwntools
-    #python314Packages.ropper
-    patchelf
-    elfutils
-    # something about ruby-dev
-    one_gadget
-    #rubyPackages.seccomp-tools
-    #python314Packages.pycryptodome # maybe better with venv
-    # many time pad
-  ];
+  config = lib.mkIf cfg.enable {
+    # Binary
+    programs.ghidra = {
+      enable = true;
+      gdb = true;
+    };
+
+    environment.systemPackages = with pkgs; [
+      #binwalk
+      #stegsolve
+      #john
+      #wireshark
+      #tshark
+      #python313Packages.pyshark
+      #burpsuite
+      #postman
+      #ht
+      ltrace
+      strace
+      gdb # Gonna try to do pwndbg wrapper if it doesn't exist
+      pwntools
+      #python314Packages.ropper
+      patchelf
+      elfutils
+      # something about ruby-dev
+      one_gadget
+      #rubyPackages.seccomp-tools
+      #python314Packages.pycryptodome # maybe better with venv
+      # many time pad
+    ];
+  };
 }
