@@ -14,9 +14,9 @@ in
       enable = true;
       hostName = "0.0.0.0";
       config.dbtype = "sqlite";
-      #config.adminpassFile = config.age.secrets."nextcloud-key.age".path;
+      config.adminpassFile = config.age.secrets."nextcloud-key.age".path;
     };
 
-    #age.secrets."nextcloud-key.age".file = "/Nixos/secrets/nextcloud-key.age";
+    age.secrets."nextcloud-key.age".file = "/Nixos/secrets/nextcloud-key.age";
   };
 }
