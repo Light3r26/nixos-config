@@ -41,6 +41,19 @@
   # Configure console keymap
   console.keyMap = "it";
 
+  virtualisation.podman = {
+    enable = true;
+    dockerCompat = true;
+    autoPrune = {
+      enable = true;
+      dates = "weekly";
+      flags = [
+	"--filter=until=24h"
+	"--filter=label!=important"
+      ]
+  };
+  #virtualiz7f
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
@@ -51,6 +64,7 @@
     gh
     inputs.agenix.packages."x86_64-linux".default
     toilet
+    podman-compose
   ];
 
   nextcloud.enable = true;
