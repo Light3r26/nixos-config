@@ -50,7 +50,7 @@
       flags = [
 	"--filter=until=24h"
 	"--filter=label!=important"
-      ]
+      ];
   };
   #virtualiz7f
 
