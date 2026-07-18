@@ -64,6 +64,7 @@ in
 
       preHook = ''
 	mkdir -p /mnt/backup-drive/staging/immich-db
+	chown immich:immich /mnt/backup-drive/staging/immich-db
   	${pkgs.util-linux}/bin/runuser -u immich -- \
     	${config.services.postgresql.package}/bin/pg_dump -d immich -F c -f /mnt/backup-drive/staging/immich-db/immich.dump
       '';
