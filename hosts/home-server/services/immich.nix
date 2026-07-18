@@ -23,7 +23,6 @@ in
 
     systemd.tmpfiles.rules = [
       "d /storage/photos 0750 immich immich -"
-      "d /var/backup/immich-db 0700 immich immich -" # DB dump staging dir
     ];
 
     fileSystems."/mnt/backup-drive" = {
@@ -37,7 +36,7 @@ in
     services.borgbackup.jobs."immich" = {
       paths = [
         "/storage/photos"
-        "/var/backup/immich-db"
+	"/mnt/backup-drive/staging/immich-db"
       ];
 
       #exclude = [
@@ -46,7 +45,7 @@ in
       #]; # regenerable caches — drop this list if you want full 1:1 restores
 
       repo = "/mnt/backup-drive/borg/immich";
-      doInit = true; #Keep disabled if drive may not always be connected
+      doInit = false; #Keep disabled if drive may not always be connected
 
       encryption = {
         mode = "repokey-blake2";
@@ -64,8 +63,9 @@ in
       };
 
       preHook = ''
+	mkdir -p /mnt/backup-drive/staging/immich-db
   	${pkgs.util-linux}/bin/runuser -u immich -- \
-    	${config.services.postgresql.package}/bin/pg_dump -d immich -F c -f /var/backup/immich-db/immich.dump
+	${config.services.postgresql.package}/bin/pg_dump -d immich -F c -f /mnt/backup-drive/staging/immich-db/immich.dump
       '';
     };
 
