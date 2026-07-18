@@ -9,7 +9,6 @@
     ./nextcloud.nix
     ./nfs.nix
     #./nginx.nix
-    #./opencloud.nix
     #./remote-builder.nix
     #./searx.nix
     ./tandoor.nix
