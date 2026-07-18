@@ -1,4 +1,4 @@
-{ lib, config, pkgs-unstable, ... }:
+{ lib, config, pkgs, pkgs-unstable, ... }:
 
 let
   cfg = config.immich;
@@ -22,7 +22,7 @@ in
     };
 
     systemd.tmpfiles.rules = [
-      #"d /storage/photos 0750 immich immich -"
+      "d /storage/photos 0750 immich immich -"
       "d /var/backup/immich-db 0700 immich immich -" # DB dump staging dir
     ];
 
@@ -32,41 +32,48 @@ in
       options = [ "nofail" "noauto" "x-systemd.automount" "x-systemd.device-timeout=10" ];
     };
 
-    #age.secrets."borg-immich-key.age".file = "Nixos/secrets/borg-immich-key.age";
+    age.secrets."borg-immich-key.age".file = "/Nixos/secrets/borg-immich-key.age";
 
-    #services.borgbackup.jobs."immich" = {
-    # paths = [
-    #   "/storage/photos"
-    #   "/var/backup/immich-db"
-    # ];
+    services.borgbackup.jobs."immich" = {
+      paths = [
+        "/storage/photos"
+        "/var/backup/immich-db"
+      ];
 
       #exclude = [
         #"/storage/photos/thumbs"
         #"/storage/photos/encoded-video"
       #]; # regenerable caches — drop this list if you want full 1:1 restores
 
-    # repo = "/mnt/backup-drive/borg/immich";
-    # doInit = false; #Keep disabled if drive may not always be connected
+      repo = "/mnt/backup-drive/borg/immich";
+      doInit = true; #Keep disabled if drive may not always be connected
 
-    # encryption = {
-    #   mode = "repokey-blake2";
-    #   passCommand = "cat ${config.age.secrets.borg-immich-pass.path}";
-    # };
+      encryption = {
+        mode = "repokey-blake2";
+        passCommand = "cat ${config.age.secrets."borg-immich-key.age".path}";
+      };
 
-    # compression = "auto,zstd";
-    # startAt = "daily";
+      compression = "auto,zstd";
+      startAt = "daily";
 
-    # prune.keep = {
-    #   within = "1d";
-    #   daily = 7;
-    #   weekly = 4;
-    #   monthly = 6;
-    # };
+      prune.keep = {
+        within = "1d";
+        daily = 7;
+        weekly = 4;
+        monthly = 6;
+      };
 
-    # preHook = ''
-    #   ${pkgs.util-linux}/bin/runuser -u immich -- \
-    #	${pkgs.postgresql}/bin/pg_dump -d immich -F c -f /var/backup/immich-db/immich.dump
-    # '';
-    #};
+      preHook = ''
+  	${pkgs.util-linux}/bin/runuser -u immich -- \
+    	${config.services.postgresql.package}/bin/pg_dump -d immich -F c -f /var/backup/immich-db/immich.dump
+      '';
+    };
+
+    systemd.services."borgbackup-job-immich" = {
+      unitConfig = {
+        RequiresMountsFor = [ "/mnt/backup-drive" ];
+	#OnFailure = [ "notify-backup-failure@%n.service" ];
+      };
+    };
   };
 }
