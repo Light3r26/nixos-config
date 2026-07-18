@@ -65,7 +65,7 @@ in
       preHook = ''
 	mkdir -p /mnt/backup-drive/staging/immich-db
   	${pkgs.util-linux}/bin/runuser -u immich -- \
-	${config.services.postgresql.package}/bin/pg_dump -d immich -F c -f /mnt/backup-drive/staging/immich-db/immich.dump
+    	${config.services.postgresql.package}/bin/pg_dump -d immich -F c -f /mnt/backup-drive/staging/immich-db/immich.dump
       '';
     };
 
@@ -73,6 +73,9 @@ in
       unitConfig = {
         RequiresMountsFor = [ "/mnt/backup-drive" ];
 	#OnFailure = [ "notify-backup-failure@%n.service" ];
+      };
+      serviceConfig = {
+	ReadWritePaths = [ "/mnt/backup-drive" ];
       };
     };
   };
