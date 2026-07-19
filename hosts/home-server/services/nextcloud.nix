@@ -15,7 +15,6 @@ in
       hostName = "192.168.1.57";
       config = {
         dbtype = "sqlite";
-	adminuser = "home-server";
         adminpassFile = config.age.secrets."nextcloud-key.age".path;
       };
     };
