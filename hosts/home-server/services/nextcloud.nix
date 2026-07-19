@@ -12,9 +12,12 @@ in
   config = lib.mkIf cfg.enable {
     services.nextcloud = {
       enable = true;
-      hostName = "0.0.0.0";
-      config.dbtype = "sqlite";
-      config.adminpassFile = config.age.secrets."nextcloud-key.age".path;
+      hostName = "192.168.1.57";
+      config = {
+        dbtype = "sqlite";
+	adminuser = "home-server";
+        adminpassFile = config.age.secrets."nextcloud-key.age".path;
+      };
     };
 
     networking.firewall.allowedTCPPorts = [ 80 443 ];
