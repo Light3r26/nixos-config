@@ -17,6 +17,8 @@ in
       config.adminpassFile = config.age.secrets."nextcloud-key.age".path;
     };
 
+    networking.firewall.allowedTCPPorts = [ 80 443 ];
+
     age.secrets."nextcloud-key.age".file = "/Nixos/secrets/nextcloud-key.age";
   };
 }
