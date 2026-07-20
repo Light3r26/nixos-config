@@ -44,6 +44,7 @@ in
       libxcb
       alsa-lib
       dbus
+      gtk3
     ];
   };
 }
