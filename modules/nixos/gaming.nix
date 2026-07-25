@@ -27,6 +27,7 @@ in
       vulkan-tools
       vulkan-loader
       steam-run
+      ds4u # Dualsense management program
     ];
 
     programs.nix-ld.libraries = with pkgs; [
