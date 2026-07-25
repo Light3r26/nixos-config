@@ -10,16 +10,19 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    programs.steam = {
-      enable = true;
-      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-      localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+    programs = {
+      steam = {
+        enable = true;
+        remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
+        dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
+        localNetworkGameTransfers.openFirewall = true; # Open ports in the firewall for Steam Local Network Game Transfers
+      };
+      gamemode.enable = true;
+      gamescope.enable = true;
     };
 
     environment.systemPackages = with pkgs; [
       heroic
-      lutris
       r2modman
       vulkan-tools
       vulkan-loader
@@ -47,6 +50,6 @@ in
       gtk3
     ];
 
-    boot.kernelModules = [ "hid-playstation" ];
+    boot.kernelModules = [ "hidp" "hid-playstation" ];
   };
 }
