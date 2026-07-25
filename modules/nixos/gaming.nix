@@ -46,5 +46,7 @@ in
       dbus
       gtk3
     ];
+
+    boot.kernelModules = [ "hid-playstation" ];
   };
 }
