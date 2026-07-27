@@ -29,8 +29,9 @@ in
         enable_audio_bell = false;
         confirm_os_windows_close = false;
         copy_on_select = true;
+        # 434C5E
         extraConfig = ''
-          selection_foreground #434C5E
+          selection_foreground #ffffff
           map ctrl+c copy_or_interrupt
           map ctrl+v paste_from_clipboard
         '';
