@@ -15,8 +15,8 @@ in
       enable = true;
       gtk4.theme = null;
       theme = {
-        package = pkgs.nordic;
-        name = "Nordic";
+        #package = pkgs.nordic;
+        #name = "Nordic";
       };
       iconTheme = {
         package = pkgs.kora-icon-theme;
