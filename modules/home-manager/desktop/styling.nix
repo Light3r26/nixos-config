@@ -13,11 +13,11 @@ in
     # Enable GTK
     gtk = {
       enable = true;
-      gtk4.theme = null;
-      theme = {
+      #gtk4.theme = null;
+      #theme = {
         #package = pkgs.nordic;
         #name = "Nordic";
-      };
+      #};
       iconTheme = {
         package = pkgs.kora-icon-theme;
         name = "kora-pgrey";
