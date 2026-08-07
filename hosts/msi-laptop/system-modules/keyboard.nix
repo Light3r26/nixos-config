@@ -3,10 +3,10 @@
 {
   # Configure keymap in X11
   services.xserver.xkb = {
-    layout = "it";
-    variant = "";
+    layout = "us,it";
+    variant = "intl";
   };
 
   # Configure console keymap
-  console.keyMap = "it";
+  console.keyMap = "us";
 }

@@ -50,6 +50,7 @@ in
       gramps
       networkmanagerapplet
       proton-vpn
+      ungoogled-chromium
     ];
 
     # Flatpak packages
