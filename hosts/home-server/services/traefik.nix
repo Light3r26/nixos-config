@@ -49,5 +49,5 @@
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
-  age.secrets."ionos-traefik-key.age".file = "/Nixos/secrets/ionos-traefik-key.age"
+  age.secrets."ionos-traefik-key.age".file = "/Nixos/secrets/ionos-traefik-key.age";
 }
