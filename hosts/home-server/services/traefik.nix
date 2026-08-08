@@ -6,7 +6,8 @@
     environmentFiles = [ config.age.secrets."ionos-traefik-key.age".path ];
     staticConfigOptions = {
       log = {
-        level = "WARN";
+        #level = "WARN";
+        level = "DEBUG";
       };
       api = {};
       entrypoints = {
