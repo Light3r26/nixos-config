@@ -18,7 +18,7 @@
 	  };
 	};
         websecure = {
-	  address = ":443"
+	  address = ":443";
 	};
       };
       certificatesResolvers = {
