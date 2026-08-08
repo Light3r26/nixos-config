@@ -68,7 +68,7 @@
     podman-compose
   ];
 
-  nextcloud.enable = true;
+  #nextcloud.enable = true;
   navidrome.enable = true;
   immich.enable = true;
   nfs.enable = true;
