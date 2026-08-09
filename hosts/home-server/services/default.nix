@@ -7,7 +7,7 @@
     ./ionos-ddns.nix 
     ./navidrome.nix
     #./nextcloud.nix
-    ./nfs.nix
+    #./nfs.nix
     #./remote-builder.nix
     #./searx.nix
     ./tandoor.nix

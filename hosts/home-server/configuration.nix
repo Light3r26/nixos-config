@@ -53,7 +53,6 @@
       ];
     };
   };
-  #virtualiz7f
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -71,7 +70,6 @@
   #nextcloud.enable = true;
   navidrome.enable = true;
   immich.enable = true;
-  nfs.enable = true;
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 

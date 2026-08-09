@@ -87,24 +87,14 @@
       storage = {
         type = "zpool";
         mode = "raidz";
-        mountpoint = "/storage";
-        mountOptions = [
-            "defaults"
-            "noauto"
-            "nofail"
-            "x-systemd.automount"
-          ];
+        rootFsOptions = {
+          mountpoint = "none";
+        };
         datasets = {
           dataset = {
             type = "zfs_fs";
-            mountpoint = "/storage/dataset";
-            mountOptions = [
-              "defaults"
-              "noauto"
-              "nofail"
-              "x-systemd.automount"
-            ];
             options = {
+              mountpoint = "none";
               encryption = "aes-256-gcm";
               keyformat = "passphrase";
               keylocation = config.age.secrets."zfs-key.age".path;
@@ -131,5 +121,19 @@
       enable = true;
       # Defaults to keeping 24 hourly, 7 daily, 4 weekly and 12 monthly snapshots
     };
+  };
+
+  systemd.services."zfs-mount-storage" = {
+    description = "Load ZFS encryption key and mount storage dataset";
+    after = [ "nixos-activation.service" ];
+    wantedBy = [ "multi-user.target" ];
+    serviceConfig = {
+      Type = "oneshot";
+      RemainAfterExit = true;
+    };
+    script = ''
+      ${config.boot.zfs.package}/sbin/zfs load-key -L ${config.age.secrets."zfs-key.age".path} storage/dataset || true
+      ${config.boot.zfs.package}/sbin/zfs mount storage/dataset || true
+    '';
   };
 }

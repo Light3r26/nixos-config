@@ -25,6 +25,9 @@ in
       "d /storage/photos 0750 immich immich -"
     ];
 
+    systemd.services.immich-server.after = [ "zfs-mount-storage.service" ];
+    systemd.services.immich-server.wants = [ "zfs-mount-storage.service" ];
+
     fileSystems."/mnt/backup-drive" = {
       device = "/dev/disk/by-uuid/5cb23849-92f4-4b68-864a-85cb238e74f4";
       fsType = "ext4";

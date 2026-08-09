@@ -12,6 +12,8 @@ in
   config = lib.mkIf cfg.enable {
     systemd.services.navidrome.serviceConfig.ProtectHome = lib.mkForce "read-only";
     systemd.services.navidrome.serviceConfig.ReadWritePaths = [ "/storage/music" ];
+    systemd.services.navidrome.after = [ "zfs-mount-storage.service" ];
+    systemd.services.navidrome.wants = [ "zfs-mount-storage.service" ];
 
     services.navidrome = {
       enable = true;
