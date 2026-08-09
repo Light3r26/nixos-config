@@ -8,6 +8,8 @@
         base_domain = "local";
       };
       logtail.enabled = true;
+
+      override_local_dns = false;
     };
   };
 
