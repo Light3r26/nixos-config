@@ -39,10 +39,14 @@
     };
     dynamicConfigOptions = {
       http = {
+	middlewares = {
+	  internal-only.ipAllowList.sourceRange = [ "192.168.1.0/24" ];
+	};
         routers = {
 	  api = {
 	    rule = "Host(`traefik.jacoposoria.it`)";
 	    service = "api@internal";
+	    middlewares = [ "internal-only" ];
 	    entrypoints = [ "websecure" ];
 	    tls.certResolver = "ionos";
 	  };
