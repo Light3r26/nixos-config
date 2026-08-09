@@ -11,6 +11,7 @@ in
   "borg-immich-key.age".publicKeys = systems;
   "ionos-traefik-key.age".publicKeys = systems;
   "ionos-ddns-url.age".publicKeys = systems;
+  "home-server-tailscale-key.age".publicKeys = systems;
   #"freshrss-key.age".publicKeys = systems;
   #"searx-key.age".publicKeys = systems;
 }

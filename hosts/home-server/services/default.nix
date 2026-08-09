@@ -10,6 +10,7 @@
     #./nfs.nix
     #./remote-builder.nix
     #./searx.nix
+    ./tailscale.nix
     ./tandoor.nix
     ./traefik.nix
   ];
