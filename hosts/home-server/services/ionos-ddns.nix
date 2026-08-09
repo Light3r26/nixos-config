@@ -4,7 +4,7 @@
     description = "Update IONOS DDNS record";
     serviceConfig = {
       Type = "oneshot";
-      ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.curl}/bin/curl -fsS \"$(cat ${config.age.secrets."ionos-dyndns-url.age".path})\"'";
+      ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.curl}/bin/curl -fsS \"$(cat ${config.age.secrets."ionos-ddns-url.age".path})\"'";
     };
   };
 
@@ -17,5 +17,5 @@
     };
   };
 
-  age.secrets."ionos-dyndns-url.age".file = "/Nixos/secrets/ionos-ddns-url.age";
+  age.secrets."ionos-ddns-url.age".file = "/Nixos/secrets/ionos-ddns-url.age";
 }
