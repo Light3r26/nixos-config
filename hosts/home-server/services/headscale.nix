@@ -9,7 +9,7 @@ in
     settings = {
       server_url = "https://headscale.${domain}";
       dns.base_domain = domain;
+      logtail.enabled = true;
     };
-    logtail.enabled = true;
   };
 }
