@@ -8,8 +8,19 @@ in
     port = 3492;
     settings = {
       server_url = "https://headscale.${domain}";
-      dns.base_domain = domain;
       logtail.enabled = true;
+
+      dns = {
+        base_domain = domain;
+        nameservers = {
+	  global = [
+            "1.1.1.1"
+	    "1.0.0.1"
+	    "2606:4700:4700::1111"
+	    "2606:4700:4700::1001"
+	  ];
+	};
+      };
     };
   };
 }
