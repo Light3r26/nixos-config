@@ -12,7 +12,7 @@
     };
 
     hosts = {
-      "192.168.1.57" = ["home-server"];
+      "192.168.1.57" = ["home-server" "traefik.jacoposoria.it"];
       "192.168.1.101" = [ "mountain-server" ];
     };
 
