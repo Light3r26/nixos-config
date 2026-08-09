@@ -10,5 +10,6 @@ in
       server_url = "https://headscale.${domain}";
       dns.base_domain = domain;
     };
+    logtail.enabled = true;
   };
 }

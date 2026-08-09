@@ -1,7 +1,7 @@
 {
   imports = [
     #./freshrss.nix
-    #./headscale.nix
+    ./headscale.nix
     ./home-assistant.nix
     ./immich.nix
     ./navidrome.nix
