@@ -38,17 +38,17 @@
       };
     };
     dynamicConfigOptions = {
-	    http = {
-	      routers = {
-		api = {
-		  rule = "Host(`traefik.jacoposoria.it`)";
-		  service = "api@internal";
-		  entrypoints = [ "websecure" ];
-		  tls.certResolver = "ionos";
-		};
-	      };
-	    };
-	};
+      http = {
+        routers = {
+	  api = {
+	    rule = "Host(`traefik.jacoposoria.it`)";
+	    service = "api@internal";
+	    entrypoints = [ "websecure" ];
+	    tls.certResolver = "ionos";
+	  };
+        };
+      };
+    };
   };
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
