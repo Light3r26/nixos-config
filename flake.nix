@@ -10,7 +10,7 @@
     };
 
     # Stable packages for home-server configuration
-    nixpkgs-stable.url = "github:nixos/nixpkgs/25.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/26.05";
 
     # Other miscellaneous input
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme
@@ -66,20 +66,16 @@
         ];
       };
 
-      home-server = nixpkgs-stable.lib.nixosSystem {
-        specialArgs = let
-          system = "x86_64-linux";
-        in 
-        {
-            inherit inputs;
-            pkgs = import nixpkgs-stable {
-              inherit system;
-              config.allowUnfree = true;
-            };
-            pkgs-unstable = import nixpkgs-unstable {
-              inherit system;
-              config.allowUnfree = true;
-            };
+      home-server = let
+        system = "x86_64-linux";
+      in
+      nixpkgs-stable.lib.nixosSystem {
+        specialArgs = {
+          inherit inputs;
+          pkgs-unstable = import nixpkgs-unstable {
+            inherit system;
+            config.allowUnfree = true;
+          };
         };
         modules = [
           ./hosts/home-server/configuration.nix
