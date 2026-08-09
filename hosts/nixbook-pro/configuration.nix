@@ -109,6 +109,7 @@
 
   # Enabled services
   services = { 
+    tailscale.enable = true;
     openssh.enable = true;
     usbmuxd.enable = true;
     upower.enable = true;
