@@ -6,10 +6,11 @@
       server_url = "https://headscale.jacoposoria.it";
       dns = {
         base_domain = "local";
+
+      	override_local_dns = false;
       };
       logtail.enabled = true;
 
-      override_local_dns = false;
     };
   };
 
