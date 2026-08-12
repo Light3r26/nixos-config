@@ -83,6 +83,15 @@
           disko.nixosModules.disko
         ];
       };
+
+      mountain-server = nixpkgs-stable.lib.nixosSystem {
+        specialArgs = {inherit inputs;};
+        modules = [
+          ./hosts/mountain-server/configuration.nix
+          agenix.nixosModules.default
+          disko.nixosModules.disko
+        ];
+      };
     };
   };
 }

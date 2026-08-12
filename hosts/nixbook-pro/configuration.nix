@@ -146,6 +146,9 @@
     enable = true;
     enable32Bit = true;
   };
+  
+  # TEMPORARY
+  services.teamviewer.enable = true;
 
   system.stateVersion = "25.11"; # Do not change
 }
