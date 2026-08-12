@@ -1,7 +1,7 @@
 { config, ... }:
 
 {
-  services.tailscale = {
+  config.services.tailscale = {
     enable = true;
     authKeyFile = config.age.secrets."home-server-tailscale-key.age".path;
     extraUpFlags = [
