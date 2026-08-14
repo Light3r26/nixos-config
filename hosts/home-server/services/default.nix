@@ -2,7 +2,7 @@
   imports = [
     #./freshrss.nix
     ./headscale.nix
-    ./home-assistant.nix
+    #./home-assistant.nix
     ./immich.nix
     ./ionos-ddns.nix 
     ./navidrome.nix
