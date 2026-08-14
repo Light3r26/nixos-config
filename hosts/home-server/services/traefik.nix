@@ -54,7 +54,7 @@ in
 	  api = {
 	    rule = "Host(`traefik.jacoposoria.it`)";
 	    service = "api@internal";
-	    middlewares = [ auth ];
+	    middlewares = [ "auth" ];
 	    entrypoints = [ "websecure" ];
 	    tls.certResolver = "ionos";
 	  };
