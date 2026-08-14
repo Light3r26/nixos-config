@@ -12,6 +12,7 @@ in
   "ionos-traefik-key.age".publicKeys = systems;
   "ionos-ddns-url.age".publicKeys = systems;
   "home-server-tailscale-key.age".publicKeys = systems;
+  "traefik-dashboard-password.age".publicKeys = systems;
   #"freshrss-key.age".publicKeys = systems;
   #"searx-key.age".publicKeys = systems;
 }

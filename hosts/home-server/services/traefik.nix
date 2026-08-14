@@ -40,16 +40,19 @@
     dynamicConfigOptions = {
       http = {
 	middlewares = {
-	  internal-only.ipAllowList.sourceRange = [ 
-      "192.168.1.0/24"
-      "100.64.0.0/24" # Change with /10 if ever needed
-    ];
+	  auth = let password = cat ${config.age.secrets."traefik-dash-password.age".path}
+	  in
+	  {
+	    basicAuth = {
+	      users = [ "light3r:${password}" ];
+	    };
+	  };
 	};
         routers = {
 	  api = {
 	    rule = "Host(`traefik.jacoposoria.it`)";
 	    service = "api@internal";
-	    middlewares = [ "internal-only" ];
+	    middlewares = [ auth ];
 	    entrypoints = [ "websecure" ];
 	    tls.certResolver = "ionos";
 	  };
@@ -60,4 +63,5 @@
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
   age.secrets."ionos-traefik-key.age".file = "/Nixos/secrets/ionos-traefik-key.age";
+  age.secrets."traefik-dash-password.age".file = "/Nixos/secrets/traefik-dashboard-password.age";
 }
