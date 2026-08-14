@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  dashboard-password = "$(cat ${config.age.secrets."traefik-dashboard-password.age".path})"
+  dashboard-password = "$(cat ${config.age.secrets."traefik-dashboard-password.age".path})";
 
 in
 {
