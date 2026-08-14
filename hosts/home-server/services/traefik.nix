@@ -1,5 +1,9 @@
 { config, ... }:
 
+let
+  dashboard-password = cat ${config.age.secrets."traefik-dash-password.age".path};
+
+in
 {
   services.traefik = {
     enable = true;
@@ -40,11 +44,9 @@
     dynamicConfigOptions = {
       http = {
 	middlewares = {
-	  auth = let password = cat ${config.age.secrets."traefik-dash-password.age".path};
-	  in
-	  {
+	  auth = {
 	    basicAuth = {
-	      users = [ "light3r:${password}" ];
+	      users = [ "light3r:${dashboard-password}" ];
 	    };
 	  };
 	};
