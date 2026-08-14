@@ -40,7 +40,10 @@
     dynamicConfigOptions = {
       http = {
 	middlewares = {
-	  internal-only.ipAllowList.sourceRange = [ "192.168.1.0/24" ];
+	  internal-only.ipAllowList.sourceRange = [ 
+      "192.168.1.0/24"
+      "100.64.0.0/24" # Change with /10 if ever needed
+    ];
 	};
         routers = {
 	  api = {
