@@ -1,7 +1,7 @@
 { config, ... }:
 
 let
-  dashboard-password = cat ${config.age.secrets."traefik-dash-password.age".path};
+  dashboard-password = "$(cat ${config.age.secrets."traefik-dashboard-password.age".path})"
 
 in
 {
@@ -65,5 +65,5 @@ in
 
   networking.firewall.allowedTCPPorts = [ 80 443 ];
   age.secrets."ionos-traefik-key.age".file = "/Nixos/secrets/ionos-traefik-key.age";
-  age.secrets."traefik-dash-password.age".file = "/Nixos/secrets/traefik-dashboard-password.age";
+  age.secrets."traefik-dashboard-password.age".file = "/Nixos/secrets/traefik-dashboard-password.age";
 }
