@@ -40,7 +40,7 @@
     dynamicConfigOptions = {
       http = {
 	middlewares = {
-	  auth = let password = cat ${config.age.secrets."traefik-dash-password.age".path}
+	  auth = let password = cat ${config.age.secrets."traefik-dash-password.age".path};
 	  in
 	  {
 	    basicAuth = {
