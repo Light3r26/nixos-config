@@ -89,7 +89,6 @@
         modules = [
           ./hosts/mountain-server/configuration.nix
           agenix.nixosModules.default
-          disko.nixosModules.disko
         ];
       };
     };

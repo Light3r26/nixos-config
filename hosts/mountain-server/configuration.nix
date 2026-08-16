@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ config, pkgs, inputs, ... }:
 
 {
   imports = [
@@ -52,7 +52,17 @@
     toilet
   ];
 
-  #age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
+  services.tailscale = {
+    enable = true;
+    authKeyFile = age.secrets."mountain-server-tailscale-key.age".path;
+    extraUpFlags = [
+      "--login-server=https://headscale.jacoposoria.it"
+      "--accept-routes"
+    ];
+  };
+  age.secrets."mountain-server-tailscale-key.age".file = "/Nixos/secrets/mountain-server-tailscale-key.age";
+ 
+  age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
   services.openssh.enable = true;
 
@@ -61,5 +71,5 @@
     "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHvcTV9j2DcLNQreiBZ7yOLLcbMmBlHfxu+/jdBqI7+t light3r@nixbook-pro"
   ];
 
-  system.stateVersion = "26.05"; # Do not change
+  system.stateVersion = "26.05";
 }
