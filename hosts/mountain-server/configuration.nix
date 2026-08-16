@@ -3,7 +3,6 @@
 {
   imports = [
     ./hardware-configuration.nix
-    ./disk-config.nix
     ./system-modules
     ../../scripts
   ];
@@ -11,8 +10,9 @@
   # Enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes"];
 
-  boot.loader.systemd-boot.enable = true;
-  
+  boot.loader.grub.enable = true;
+  boot.loader.grub.device = "/dev/sda";
+
   # Set your time zone.
   time.timeZone = "Europe/Rome";
 
