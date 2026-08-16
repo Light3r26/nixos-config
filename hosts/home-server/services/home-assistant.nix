@@ -13,6 +13,9 @@
         "--network=host"
         # Pass devices into the container, so Home Assistant can discover and make use of them (like zigbee hubs or other things)
         #"--device=/dev/ttyACM0:/dev/ttyACM0"
+	# Required for Bluetooth management and DHCP-based device discovery
+        "--cap-add=NET_ADMIN"
+        "--cap-add=NET_RAW"
       ];
     };
   };
