@@ -51,16 +51,6 @@
     inputs.agenix.packages."x86_64-linux".default
     toilet
   ];
-
-  services.tailscale = {
-    enable = true;
-    authKeyFile = age.secrets."mountain-server-tailscale-key.age".path;
-    extraUpFlags = [
-      "--login-server=https://headscale.jacoposoria.it"
-      "--accept-routes"
-    ];
-  };
-  age.secrets."mountain-server-tailscale-key.age".file = "/Nixos/secrets/mountain-server-tailscale-key.age";
  
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
