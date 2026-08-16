@@ -46,7 +46,8 @@ in
 	middlewares = {
 	  auth = {
 	    basicAuth = {
-	      users = [ "light3r:${dashboard-password}" ];
+	      #users = [ "light3r:${dashboard-password}" ];
+	      users = [ "light3r:$123" ];
 	    };
 	  };
 	};
