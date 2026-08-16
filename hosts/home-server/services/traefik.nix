@@ -43,22 +43,22 @@ in
     };
     dynamicConfigOptions = {
       http = {
-	middlewares = {
-	  auth = {
-	    basicAuth = {
-	      #users = [ "light3r:${dashboard-password}" ];
-	      users = [ "light3r:$123" ];
-	    };
-	  };
-	};
+        middlewares = {
+          auth = {
+            basicAuth = {
+              #users = [ "light3r:${dashboard-password}" ];
+              users = [ "light3r:$123" ];
+            };
+          };
+        };
         routers = {
-	  api = {
-	    rule = "Host(`traefik.jacoposoria.it`)";
-	    service = "api@internal";
-	    middlewares = [ "auth" ];
-	    entrypoints = [ "websecure" ];
-	    tls.certResolver = "ionos";
-	  };
+          api = {
+            rule = "Host(`traefik.jacoposoria.it`)";
+            service = "api@internal";
+            middlewares = [ "auth" ];
+            entrypoints = [ "websecure" ];
+            tls.certResolver = "ionos";
+          };
         };
       };
     };
