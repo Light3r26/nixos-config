@@ -53,6 +53,7 @@
           home-manager.nixosModules.default
           nvf.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
+          agenix.nixosModules.default
         ];
       };
 
@@ -63,6 +64,7 @@
           home-manager.nixosModules.default
           nvf.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
+          agenix.nixosModules.default
         ];
       };
 
