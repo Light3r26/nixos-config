@@ -89,6 +89,7 @@
      nix-prefetch
      nix-prefetch-github
      exfatprogs
+    inputs.agenix.packages."x86_64-linux".default
   ];
 
   # Custom modules

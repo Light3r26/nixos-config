@@ -115,6 +115,7 @@
      adwaita-icon-theme
      gnome-themes-extra
      hicolor-icon-theme
+     inputs.agenix.packages."x86_64-linux".default
   ];
 
   # Custom modules
