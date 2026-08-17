@@ -144,5 +144,7 @@
   # Enabled services
   services.openssh.enable = true;
 
+  age.identityPaths = [ "/home/light3r/.ssh/id_ed25519" ];
+
   system.stateVersion = "24.11"; # Do not change
 }

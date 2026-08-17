@@ -150,5 +150,7 @@
   # TEMPORARY
   services.teamviewer.enable = true;
 
+  age.identityPaths = [ "/home/light3r/.ssh/id_ed25519" ];
+
   system.stateVersion = "25.11"; # Do not change
 }
