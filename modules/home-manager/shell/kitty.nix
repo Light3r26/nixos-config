@@ -12,14 +12,14 @@ in
   config = lib.mkIf cfg.enable {
     programs.kitty = {
       enable = true;
-      font = {
-        package = pkgs.nerd-fonts.caskaydia-cove;
-        name = "CaskaydiaCove Nerd Font Mono";
-        size = 14;
-      };    
+      #font = {
+      #  package = pkgs.nerd-fonts.caskaydia-cove;
+      #  name = "CaskaydiaCove Nerd Font Mono";
+      #  size = 14;
+      #};    
 
       shellIntegration.enableZshIntegration = true;
-      themeFile = "SpaceGray";
+      #themeFile = "SpaceGray";
 
       settings = {
         bold_font = "auto";
@@ -32,8 +32,6 @@ in
         # 434C5E
         extraConfig = ''
           selection_foreground #ffffff
-          map ctrl+c copy_or_interrupt
-          map ctrl+v paste_from_clipboard
         '';
       };
     };
