@@ -32,6 +32,10 @@
       inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
     wrappers.url = "github:lassulus/wrappers";
+    stylix = {
+      url = "github:nix-community/stylix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -43,6 +47,7 @@
     nix-flatpak,
     agenix,
     disko,
+    stylix,
     ... 
   }@inputs: {
     nixosConfigurations = {
@@ -54,6 +59,7 @@
           nvf.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
           agenix.nixosModules.default
+          stylix.nixosModules.stylix
         ];
       };
 
@@ -65,6 +71,7 @@
           nvf.nixosModules.default
           nix-flatpak.nixosModules.nix-flatpak
           agenix.nixosModules.default
+          stylix.nixosModules.stylix
         ];
       };
 
