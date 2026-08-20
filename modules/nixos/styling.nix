@@ -4,7 +4,7 @@
   stylix = {
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
-    image = /Nixos/.assets/wallpapers/dark-bright-mountains.jpg;
+    image = ../../.assets/wallpapers/dark-bright-mountains.jpg;
     cursor = {
       package = pkgs.whitesur-cursors;
       name = "WhiteSur-cursors";
