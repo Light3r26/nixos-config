@@ -17,11 +17,11 @@ in
         package = pkgs.kora-icon-theme;
         name = "kora-pgrey";
       };
-      cursorTheme = {
-        package = pkgs.whitesur-cursors;
-        name = "WhiteSur-cursors";
-        size = 24;
-      };
+      #cursorTheme = {
+        #package = pkgs.whitesur-cursors;
+        #name = "WhiteSur-cursors";
+        #size = 24;
+      #};
     };
   };
 }
