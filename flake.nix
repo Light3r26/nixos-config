@@ -34,7 +34,7 @@
     wrappers.url = "github:lassulus/wrappers";
     stylix = {
       url = "github:nix-community/stylix";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
     };
   };
 
