@@ -17,7 +17,7 @@ in {
   config = lib.mkIf cfg.enable {
     programs.rofi = {
       enable = true;
-      #font = selected-font;
+      font = selected-font;
       modes = [ "drun" ];
 
       extraConfig = {
@@ -29,8 +29,8 @@ in {
 
       theme = {
         "*" = {
-          #background-color = nord0;
-          #text-color = nord6;
+          background-color = nord0;
+          text-color = nord6;
         };
 
         window = {
@@ -40,23 +40,23 @@ in {
         };
 
         prompt = {
-          #background-color = nord1;
+          background-color = nord1;
           enabled = true;
           padding = mkLiteral "0.5% 32px 0% 0%"; 
-          #font = selected-font;
+          font = selected-font;
         };
 
         entry = {
           placeholder = "Search";
-          #background-color = nord1;
-          #placeholder-color = nord6;
+          background-color = nord1;
+          placeholder-color = nord6;
           expand = true;
           padding = mkLiteral "0.15% 0% 0% 0%";
         };
 
         inputbar = {
           children = map mkLiteral [ "prompt" "entry" ];
-          #background-color = nord1;
+          background-color = nord1;
           expand = false;
           border-radius = mkLiteral "6px";
           margin = mkLiteral "0%";
@@ -83,15 +83,15 @@ in {
         };
 
         element-icon = {
-          #background-color = mkLiteral "inherit";
-          #text-color = mkLiteral "inherit";
+          background-color = mkLiteral "inherit";
+          text-color = mkLiteral "inherit";
           size = mkLiteral "48px";
           horizontal-align = mkLiteral "0.5";
         };
 
         element-text = {
-          #background-color = mkLiteral "inherit";
-          #text-color = mkLiteral "inherit";
+          background-color = mkLiteral "inherit";
+          text-color = mkLiteral "inherit";
           expand = true;
           horizontal-align = mkLiteral "0.5";
           vertical-align = mkLiteral "0.5";
@@ -99,7 +99,7 @@ in {
         };
 
         "element selected" = {
-          #background-color = nord1;
+          background-color = nord1;
           border-radius = mkLiteral "6px";
         };
       };

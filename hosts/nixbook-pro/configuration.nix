@@ -93,6 +93,7 @@
   ];
 
   # Custom modules
+  styling.enable = true;
   gaming.enable = true;
   servers.enable = false;
   sddm.enable = true;

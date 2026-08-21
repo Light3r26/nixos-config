@@ -1,7 +1,17 @@
 { config, pkgs, ... }:
 
+{ lib, config, pkgs, ... }:
+
+let
+  cfg = config.styling;
+
+in
 {
-  config = {
+  options = {
+    styling.enable = lib.mkEnableOption "Enable system styling";
+  };
+
+  config = lib.mkIf cfg.enable {
     stylix = {
       enable = true;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
@@ -41,6 +51,15 @@
         starship.enable = false;
         zen-browser.enable = false;
         waybar.enable = false;
+        rofi.enable = false;
+      };
+
+      gtk = {
+        enable = true;
+        iconTheme = {
+          package = pkgs.kora-icon-theme;
+          name = "kora-pgrey";
+        };
       };
     };
   };

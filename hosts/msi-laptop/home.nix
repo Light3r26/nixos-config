@@ -77,7 +77,6 @@
   hyprpaper.enable = true;
   hyprlock.enable = true;
   #hypridle.enable = true;
-  styling.enable = true;
   rofi.enable = true;
   zen-browser.enable = true;
   mpv.enable = true;

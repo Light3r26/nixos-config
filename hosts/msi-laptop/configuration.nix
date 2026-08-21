@@ -119,6 +119,7 @@
   ];
 
   # Custom modules
+  styling.enable = true;
   nvidia.enable = true;
   gaming.enable = true;
   servers.enable = false;

@@ -58,6 +58,7 @@
       #hyprspace
     #];
   };
+
   #hyprpanel = {
   # enable = true;
   # bar.transparency = false;
@@ -65,7 +66,6 @@
   #};
   waybar.enable = true;
   noctalia.enable = true;
-  styling.enable = true;
   zen-browser.enable = true;
   mpv.enable = true;
   mime-apps.enable = true;
