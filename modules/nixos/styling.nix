@@ -40,6 +40,7 @@
       stylix.targets = {
         starship.enable = false;
         zen-browser.enable = false;
+        waybar.enable = false;
       };
     };
   };
