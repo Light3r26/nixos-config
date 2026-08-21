@@ -20,7 +20,6 @@
     ./desktop/noctalia.nix
     ./desktop/programs.nix
     ./desktop/rofi.nix
-    ./desktop/styling.nix
     ./desktop/waybar.nix
     ./desktop/wlogout.nix
     # Apps
