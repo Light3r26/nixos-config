@@ -20,6 +20,6 @@ in
       ];
     };
 
-    config.age.secrets."home-server-tailscale-key.age".file = "/Nixos/secrets/home-server-tailscale-key.age";
+    age.secrets."home-server-tailscale-key.age".file = "/Nixos/secrets/home-server-tailscale-key.age";
   };
 }
