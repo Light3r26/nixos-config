@@ -67,10 +67,17 @@
     podman-compose
   ];
 
+  # Hosted services
   #nextcloud.enable = true;
   navidrome.enable = true;
   immich.enable = true;
   frigate.enable = true;
+  headscale.enable = true;
+  home-assistant.enable = true;
+  ionos-ddns.enable = true;
+  mosquitto.enable = true;
+  tandoor.enable = true;
+  traefik.enable = true;
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
