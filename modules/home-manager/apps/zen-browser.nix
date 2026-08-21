@@ -12,7 +12,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    stylix.targets.zen-browser.profileNames = [ "Light3r" ];
+    #stylix.targets.zen-browser.profileNames = [ "Light3r" ];
 
     programs.zen-browser = {
       enable = true;

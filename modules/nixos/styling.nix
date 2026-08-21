@@ -32,7 +32,6 @@
     opacity.terminal = 0.7;
     targets = {
       grub.enable = false;
-      zen-browser.enable = false;
     };
   };
 }
