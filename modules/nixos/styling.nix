@@ -1,5 +1,3 @@
-{ config, pkgs, ... }:
-
 { lib, config, pkgs, ... }:
 
 let
@@ -41,9 +39,7 @@ in
       };
 
       opacity.terminal = 0.7;
-      targets = {
-        grub.enable = false;
-      };
+      targets.grub.enable = false;
     };
 
     home-manager.users.light3r = {
