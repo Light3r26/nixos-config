@@ -32,7 +32,7 @@
     opacity.terminal = 0.7;
     targets = {
       grub.enable = false;
-      starship.enable = false;
+      zen-browser.enable = false;
     };
   };
 }
