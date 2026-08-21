@@ -51,6 +51,7 @@ in
       networkmanagerapplet
       proton-vpn
       ungoogled-chromium
+      josm
     ];
 
     # Flatpak packages

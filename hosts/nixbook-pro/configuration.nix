@@ -147,9 +147,6 @@
     enable = true;
     enable32Bit = true;
   };
-  
-  # TEMPORARY
-  services.teamviewer.enable = true;
 
   age.identityPaths = [ "/home/light3r/.ssh/id_ed25519" ];
 
