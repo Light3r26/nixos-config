@@ -5,10 +5,13 @@
     enable = true;
     base16Scheme = "${pkgs.base16-schemes}/share/themes/nord.yaml";
     image = ../../.assets/wallpapers/dark-bright-mountains.jpg;
+
     cursor = {
       package = pkgs.whitesur-cursors;
       name = "WhiteSur-cursors";
+      size = 24;
     };
+
     fonts = {
       monospace = {
         package = pkgs.nerd-fonts.caskaydia-cove;
@@ -26,6 +29,10 @@
       };
     };
 
-    #stylix.targets.nvf.enable = false;
+    opacity.terminal = 0.7;
+    targets = {
+      grub.enable = false;
+      starship.enable = false;
+    };
   };
 }

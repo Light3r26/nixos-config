@@ -20,10 +20,10 @@ in
         hideSearchHighlight = true;
         searchCase = "ignore";
 
-        theme = {
-          enable = true;
-          name = "nord";
-        };
+        #theme = {
+        #  enable = true;
+        #  name = "nord";
+        ##};
 
         options = {
           autoindent = true;

@@ -12,14 +12,14 @@ in
   config = lib.mkIf cfg.enable {
     services.hyprpaper = {
       enable = true;
-      settings = { 
-        wallpaper = {
-            monitor = "";
-            path = "${../../../.assets/wallpapers/dark-bright-mountains.jpg}";
-            fit_mode = "cover";
-        };
-        splash = false;
-      };
+      #settings = { 
+        #wallpaper = {
+          #monitor = "";
+          #path = "${../../../.assets/wallpapers/dark-bright-mountains.jpg}";
+          #fit_mode = "cover";
+        #};
+        #splash = false;
+        #};
     };
   };
 }

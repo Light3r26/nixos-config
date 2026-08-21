@@ -25,26 +25,26 @@ in
         palette = "nord";
         
         palettes.nord = {
-          # Dark to light gray
-          nord0 = "#2E3440";
-          nord1 = "#3B4252";
-          nord2 = "#434C5E";
-          nord3 = "#4C566A";
-          # Light gray to white
-          nord4 = "#D8DEE9";
-          nord5 = "#E5E9F0";
-          nord6 = "#ECEFF4";
-          # Light blue to blue
-          nord7 = "#8FBCBB";
-          nord8 = "#88C0D0";
-          nord9 = "#81A1C1";
-          nord10 = "#5E81AC";
-          # Mixed colors (red, orange, yellow, green purple) 
-          nord11 = "#BF616A";
-          nord12 = "#D08770";
-          nord13 = "#EBCB8B";
-          nord14 = "#A2BE8A";
-          nord15 = "#B48EAD";
+        # Dark to light gray
+        nord0 = "#2E3440";
+        nord1 = "#3B4252";
+        nord2 = "#434C5E";
+        nord3 = "#4C566A";
+        # Light gray to white
+        nord4 = "#D8DEE9";
+        nord5 = "#E5E9F0";
+        nord6 = "#ECEFF4";
+        # Light blue to blue
+        nord7 = "#8FBCBB";
+        nord8 = "#88C0D0";
+        nord9 = "#81A1C1";
+        nord10 = "#5E81AC";
+        # Mixed colors (red, orange, yellow, green purple) 
+        nord11 = "#BF616A";
+        nord12 = "#D08770";
+        nord13 = "#EBCB8B";
+        nord14 = "#A2BE8A";
+        nord15 = "#B48EAD";
         };
           
         os = {

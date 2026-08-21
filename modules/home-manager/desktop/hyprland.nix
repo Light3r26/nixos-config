@@ -111,8 +111,8 @@ in
           gaps_in = 5;
           gaps_out = 20;
           border_size = 2;
-          "col.active_border" = "rgb(9ca2ae)";
-          "col.inactive_border" = "rgb(0e1420)";
+          #"col.active_border" = "rgb(9ca2ae)";
+          #"col.inactive_border" = "rgb(0e1420)";
           resize_on_border = false;
           allow_tearing = false;
           layout = "dwindle";
@@ -126,7 +126,7 @@ in
             enabled = true;
             range = 4;
             render_power = 3;
-            color = "rgba(1a1a1aee)";
+            #color = "rgba(1a1a1aee)";
           };
           blur = {
             enabled = true;

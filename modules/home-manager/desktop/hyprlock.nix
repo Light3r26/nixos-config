@@ -36,9 +36,9 @@ in
           {
             monitor = "";
             text = ''cmd[update:1000] echo "<span>$(date +"%H:%M")</span>"'';
-            color = "rgba(216, 222, 233, 0.80)";
-            font_size = 60;
-            font_family = "SF Pro Display Bold";
+            #color = "rgba(216, 222, 233, 0.80)";
+            #font_size = 60;
+            #font_family = "SF Pro Display Bold";
             position = "35, 80";
             valign = "center";
             halign = "center";
@@ -47,9 +47,9 @@ in
           {
             monitor = "";
             text = ''cmd[update:1000] echo -e "$(date +"%A, %B %d")"'';
-            color = "rgba(216, 222, 233, .80)";
-            font_size = 19;
-            font_family = "SF Pro Display Bold";
+            #color = "rgba(216, 222, 233, .80)";
+            #font_size = 19;
+            #font_family = "SF Pro Display Bold";
             position = "35, 30";
             halign = "center";
             valign = "center";
@@ -58,13 +58,13 @@ in
           {
             monitor = "";
             text = "    $USER";
-            color = "rgba(216, 222, 233, 0.80)";
+            #color = "rgba(216, 222, 233, 0.80)";
             outline_thickness = 0;
             dots_size = 0.2 ;
             dots_spacing = 0.2 ;
             dots_center = true;
-            font_size = 16;
-            font_family = "SF Pro Display Bold";
+            #font_size = 16;
+            #font_family = "SF Pro Display Bold";
             position = "38, -60";
             halign = "center";
             valign = "center";
@@ -75,10 +75,10 @@ in
         shape = {
           monitor = "";
           size = "320, 55";
-          color = "rgba(255, 255, 255, 0.1)";
+          #color = "rgba(255, 255, 255, 0.1)";
           rounding = -1;
           border_size = 0;
-          border_color = "rgba(255, 255, 255, 1)";
+          #border_color = "rgba(255, 255, 255, 1)";
           rotate = 0;
           xray = false;
           position = "34, -60";
@@ -94,12 +94,12 @@ in
           dots_size = 0.2 ;
           dots_spacing = 0.2 ;
           dots_center = true;
-          outer_color = "rgba(255, 255, 255, 0)";
-          inner_color = "rgba(255, 255, 255, 0.1)";
-          font_color = "rgb(200, 200, 200)";
+          #outer_color = "rgba(255, 255, 255, 0)";
+          #inner_color = "rgba(255, 255, 255, 0.1)";
+          #font_color = "rgb(200, 200, 200)";
           fade_on_empty = false;
-          font_family = "SF Pro Display Bold";
-          placeholder_text = ''<i><span foreground="##ffffff99"> Inserisci Password </span></i>'';
+          #font_family = "SF Pro Display Bold";
+          #placeholder_text = ''<i><span foreground="##ffffff99"> Inserisci Password </span></i>'';
           hide_input = false;
           position = "34, -130";
           halign = "center";

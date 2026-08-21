@@ -12,50 +12,53 @@ in
   };
 
   config = lib.mkIf cfg.enable {
+    stylix.targets.zen-browser.profileNames = [ "Light3r" ];
+
     programs.zen-browser = {
       enable = true;
       setAsDefaultBrowser = true;
       languagePacks = [ "it" "en-GB" ];
       /* ---- PROFILES ---- */
-        profiles = { Light3r = {
-          name = "Light3r";
-          containersForce = true;
-          containers = {
-            Personal = {
-              color = "green";
-              icon = "fingerprint";
-              id = 1;
+        profiles = { 
+          Light3r = {
+            name = "Light3r";
+            containersForce = true;
+            containers = {
+              Personal = {
+                color = "green";
+                icon = "fingerprint";
+                id = 1;
+              };
+              Work = {
+                color = "blue";
+                icon = "briefcase";
+                id = 2;
+              };
+              Shopping = {
+                color = "yellow";
+                icon = "dollar";
+                id = 3;
+              };
             };
-            Work = {
-              color = "blue";
-              icon = "briefcase";
-              id = 2;
-            };
-            Shopping = {
-              color = "yellow";
-              icon = "dollar";
-              id = 3;
-            };
-          };
 
-          spacesForce = true;
-          spaces = {
-            "Personale" = {
-              id = "l4b62ty7-386n-4015-hk9v-s2w0a257c93p";
-              position = 1000;
-              icon = "🏠";
+            spacesForce = true;
+            spaces = {
+              "Personale" = {
+                id = "l4b62ty7-386n-4015-hk9v-s2w0a257c93p";
+                position = 1000;
+                icon = "🏠";
+              };
+              "Scuola" = {
+                id = "tln97shz-2tg0-163l-84v5-a10m330y817c";
+                position = 2000;
+                icon = "📚";
+              };
+              "Cybersecurity" = {
+                id = "rbu20nlc-7wh4-651q-34o8-y91x024pjb6t";
+                position = 3000;
+                icon = "💻";
+              };
             };
-            "Scuola" = {
-              id = "tln97shz-2tg0-163l-84v5-a10m330y817c";
-              position = 2000;
-              icon = "📚";
-            };
-            "Cybersecurity" = {
-              id = "rbu20nlc-7wh4-651q-34o8-y91x024pjb6t";
-              position = 3000;
-              icon = "💻";
-            };
-          };
 
           bookmarks = {
             force = true;
