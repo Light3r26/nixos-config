@@ -30,6 +30,8 @@
 
   hyprland = {
     enable = true;
+    keyboard-layout = "us";
+    keyboard-layout-variant = "intl";
     terminal = "kitty";
     browser = "zen-browser";
     fileManager = "nemo";

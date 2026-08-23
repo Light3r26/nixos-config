@@ -7,6 +7,16 @@ in
 {
   options.hyprland = {
     enable = lib.mkEnableOption "Enable hyprland";
+    keyboard-layout = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Keyboard layout";
+    };
+    keyboard-layout-variant = lib.mkOption {
+      type = with lib.types; str;
+      default = "";
+      description = "Keyboard layout variant";
+    };
     terminal = lib.mkOption {
       type = with lib.types; str;
       default = "";
@@ -178,8 +188,8 @@ in
     
         ### INPUT
         input = {
-          kb_layout = "it";
-          kb_options = "";
+          kb_layout = cfg.keyboard-layout;
+          kb_options = cfg.keyboard-layout-variant;
           follow_mouse = 1;
           sensitivity = 0;
           touchpad = {

@@ -29,6 +29,7 @@
 
   hyprland = {
     enable = true;
+    keyboard-layout = "it";
     terminal = "kitty";
     browser = "zen-browser";
     fileManager = "nemo";
