@@ -31,7 +31,7 @@
   hyprland = {
     enable = true;
     keyboard-layout = "us";
-    keyboard-layout-variant = "intl";
+    keyboard-layout-variant = "altgr-intl";
     terminal = "kitty";
     browser = "zen-browser";
     fileManager = "nemo";
