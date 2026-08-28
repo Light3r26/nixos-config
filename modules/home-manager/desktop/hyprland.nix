@@ -189,7 +189,7 @@ in
         ### INPUT
         input = {
           kb_layout = cfg.keyboard-layout;
-          kb_options = cfg.keyboard-layout-variant;
+          kb_variant = cfg.keyboard-layout-variant;
           follow_mouse = 1;
           sensitivity = 0;
           touchpad = {
