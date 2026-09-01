@@ -135,6 +135,7 @@
   # NixOS options
   programs.hyprland.enable = true;
   programs.zsh.enable = true;
+  services.ollama.enable = true;
 
   # Needed for Lutris epic games store and probably more
   programs.nix-ld.enable = true;
