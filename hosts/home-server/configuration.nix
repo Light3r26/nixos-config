@@ -55,6 +55,7 @@
 
   # Hosted services
   #nextcloud.enable = true;
+  tailnet.enable = true;
   navidrome.enable = true;
   immich.enable = true;
   frigate.enable = true;
