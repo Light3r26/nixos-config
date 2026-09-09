@@ -16,14 +16,25 @@ in
       settings.server = {
         bind_address = "127.0.0.1";
         port = 5313;
-        #secret_key = builtins.getEnv "SEARX-KEY";
         secret_key = searx-key;
       };
     };
 
     age.secrets."searx-key.age".file = "/Nixos/secrets/searx-key.age";
-    #programs.bash.sessionVariables = {
-      #SEARX-KEY = "$(cat ${config.age.secrets."searx-key.age".path})";
-    #};
+
+    services.traefik.dynamicconfigoptions.http = {
+      services.searx.loadbalancer.servers = [
+        {
+          url = "http://localhost:5313";
+        }
+      ];
+      
+      routers.searx = {
+        rule = "host(`search.jacoposoria.it`)";
+        tls.certresolver = "ionos";
+        service = "searx";
+        entrypoints = [ "websecure" ];
+      };
+    };
   };
 }

@@ -66,6 +66,7 @@
   traefik.enable = true;
   podman.enable = true;
   gramps.enable = true;
+  searx.enable = true;
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
