@@ -30,7 +30,7 @@ in
   };
 
   config = lib.mkIf cfg.enable {
-    virtualization.oci-containers = {
+    virtualisation.oci-containers = {
       backend = "podman";
       containers = {
         gramps = baseGramps // {
