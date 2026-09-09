@@ -34,7 +34,7 @@ in
       routers.headscale = {
         rule = "host(`headscale.jacoposoria.it`)";
         tls.certresolver = "ionos";
-	service = "headscale"
+	service = "headscale";
         entrypoints = [ "websecure" ];
       };
     };
