@@ -100,6 +100,7 @@
   services = { 
     usbmuxd.enable = true;
     upower.enable = true;
+    tailscale.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
