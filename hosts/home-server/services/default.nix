@@ -2,6 +2,7 @@
   imports = [
     #./freshrss.nix
     ./frigate.nix
+    ./gramps.nix
     ./headscale.nix
     ./home-assistant.nix
     ./immich.nix
