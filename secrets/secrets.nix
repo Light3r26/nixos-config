@@ -12,6 +12,7 @@ in
   "nextcloud-key.age".publicKeys = home;
   "borg-immich-key.age".publicKeys = home;
   "ionos-traefik-key.age".publicKeys = home;
+  "ionos-ddns-key.age".publicKeys = home;
   "ionos-ddns-url.age".publicKeys = home;
   "traefik-dashboard-password.age".publicKeys = home;
   "home-server-tailscale-key.age".publicKeys = home;

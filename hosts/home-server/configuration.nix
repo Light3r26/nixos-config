@@ -60,13 +60,23 @@
   frigate.enable = true;
   headscale.enable = true;
   home-assistant.enable = true;
-  ionos-ddns.enable = true;
   mosquitto.enable = true;
   tandoor.enable = true;
   traefik.enable = true;
   podman.enable = true;
   gramps.enable = true;
   searx.enable = true;
+  ionos-ddns = {
+    enable = true;
+    domains = [ 
+      "jacoposoria.it"
+      "headscale.jacoposoria.it"
+      "traefik.jacoposoria.it"
+      "cloud.jacoposoria.it"
+      "search.jacoposoria.it"
+      "gramps.jacoposoria.it"
+    ];
+  };
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 

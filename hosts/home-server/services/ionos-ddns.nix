@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, inputs, ... }:
 
 let
   cfg = config.ionos-ddns;
@@ -6,27 +6,33 @@ let
 in
 {
   options = {
-    ionos-ddns.enable = lib.mkEnableOption "Enable Ionos Dynamic DNS updater";
+    ionos-ddns = {
+      enable = lib.mkEnableOption "Enable IONOS Dynamic DNS updater via ddclient";
+      domains = lib.mkOption {
+        type = lib.types.listOf lib.types.str;
+        default = [ ];
+        description = "Hostnames to keep in sync (must exist in the IONOS zone).";
+      };
+      interval = lib.mkOption {
+        type = lib.types.str;
+        default = "15min";
+        description = "How often to check and update the DNS records.";
+      };
+    };
   };
 
   config = lib.mkIf cfg.enable {
-    systemd.services.ionos-ddns = {
-      description = "Update IONOS DDNS record";
-      serviceConfig = {
-        Type = "oneshot";
-        ExecStart = "${pkgs.bash}/bin/bash -c '${pkgs.curl}/bin/curl -fsS \"$(cat ${config.age.secrets."ionos-ddns-url.age".path})\"'";
-      };
+    services.ddclient = {
+      enable = true;
+      interval = cfg.interval;
+      protocol = "ionos";
+      passwordFile = config.age.secrets."ionos-ddns-key.age".path;
+      domains = cfg.domains;
+      package = pkgs.ddclient.overrideAttrs (old: {
+        src = inputs.ddclient;
+      });
     };
 
-    systemd.timers.ionos-ddns = {
-      description = "Periodically update IONOS DDNS record";
-      wantedBy = [ "timers.target" ];
-      timerConfig = {
-        OnBootSec = "2min";
-        OnUnitActiveSec = "15min";
-      };
-    };
-
-    age.secrets."ionos-ddns-url.age".file = "/Nixos/secrets/ionos-ddns-url.age";
+    age.secrets."ionos-ddns-key.age".file = "/Nixos/secrets/ionos-ddns-key.age";
   };
 }
