@@ -20,6 +20,6 @@ in
   "mqtt-frigate-password.age".publicKeys = home;
   "mqtt-ha-password.age".publicKeys = home;
   "frigate-env.age".publicKeys = home;
+  "searx-key.age".publicKeys = home;
   #"freshrss-key.age".publicKeys = local-systems;
-  #"searx-key.age".publicKeys = local-systems;
 }
