@@ -1,7 +1,7 @@
 { lib, config, ... }:
 
 let
-  cfg = configuration.gramps;
+  cfg = config.gramps;
   baseGramps = {
     image = "ghcr.io/gramps-project/grampsweb:latest";
     environment = {
