@@ -25,18 +25,15 @@ in
     };
 
     services.traefik.dynamicConfigOptions.http = {
-      services.headscale.loadBalancer.servers = [
+      services.headscale.loadbalancer.servers = [
         {
           url = "http://localhost:3492";
         }
       ];
       
       routers.headscale = {
-        rule = "Host(`headscale.jacoposoria.it`)";
-        tls = {
-    certResolver = "ionos";
-        };
-        service = "headscale";
+        rule = "host(`headscale.jacoposoria.it`)";
+        tls.certresolver = "ionos";
         entrypoints = [ "websecure" ];
       };
     };

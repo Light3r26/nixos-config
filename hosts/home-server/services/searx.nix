@@ -22,7 +22,7 @@ in
 
     age.secrets."searx-key.age".file = "/Nixos/secrets/searx-key.age";
 
-    services.traefik.dynamicconfigoptions.http = {
+    services.traefik.dynamicConfigOptions.http = {
       services.searx.loadbalancer.servers = [
         {
           url = "http://localhost:5313";
