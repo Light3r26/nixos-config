@@ -11,6 +11,7 @@
     ./navidrome.nix
     #./nextcloud.nix
     #./nfs.nix
+    ./podman.nix
     #./searx.nix
     ./tailscale.nix
     ./tandoor.nix
