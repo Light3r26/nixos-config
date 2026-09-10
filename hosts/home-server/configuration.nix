@@ -76,7 +76,7 @@
       "traefik.jacoposoria.it"
       "cloud.jacoposoria.it"
       "search.jacoposoria.it"
-      "gramps.jacoposoria.it"
+      "genealogy.jacoposoria.it"
     ];
   };
 

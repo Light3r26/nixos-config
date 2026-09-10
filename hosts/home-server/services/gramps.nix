@@ -47,5 +47,22 @@ in
         };
       };
     };
+
+    services.traefik.dynamicConfigOptions.http = {
+      services.gramps.loadbalancer.servers = [
+        {
+          url = "http://localhost:4896";
+        }
+      ];
+      
+      routers.headscale = {
+        rule = "host(`genealogy.jacoposoria.it`)";
+        tls.certresolver = "ionos";
+	service = "gramps";
+        entrypoints = [ "websecure" ];
+      };
+    };
+  };
+
   };
 }

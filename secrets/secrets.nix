@@ -8,18 +8,26 @@ let
 
 in
 {
+  # Miscellaneous
   "zfs-key.age".publicKeys = home;
   "nextcloud-key.age".publicKeys = home;
   "borg-immich-key.age".publicKeys = home;
-  "ionos-traefik-key.age".publicKeys = home;
-  "ionos-ddns-key.age".publicKeys = home;
-  "ionos-ddns-url.age".publicKeys = home;
-  "traefik-dashboard-password.age".publicKeys = home;
-  "home-server-tailscale-key.age".publicKeys = home;
-  "mountain-server-tailscale-key.age".publicKeys = mountain;
-  "mqtt-frigate-password.age".publicKeys = home;
-  "mqtt-ha-password.age".publicKeys = home;
   "frigate-env.age".publicKeys = home;
   "searx-key.age".publicKeys = home;
   #"freshrss-key.age".publicKeys = local-systems;
+  # Tailscale
+  "home-server-tailscale-key.age".publicKeys = home;
+  "mountain-server-tailscale-key.age".publicKeys = mountain;
+  # Ionos
+  "ionos-traefik-key.age".publicKeys = home;
+  "ionos-ddns-key.age".publicKeys = home;
+  # MQTT
+  "mqtt-frigate-password.age".publicKeys = home;
+  "mqtt-ha-password.age".publicKeys = home;
+  # Authelia
+  "authelia-jwt.age".publicKeys = home;
+  "authelia-storage-encryption-key.age".publicKeys = home;
+  "authelia-hmac-key.age".publicKeys = home;
+  "authelia-rsa-key.age".publicKeys = home; 
+  "authelia-immich-secret-hash.age".publicKeys = home;
 }
