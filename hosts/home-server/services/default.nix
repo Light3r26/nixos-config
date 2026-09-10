@@ -1,5 +1,6 @@
 {
   imports = [
+    ./authelia.nix
     #./freshrss.nix
     ./frigate.nix
     ./gramps.nix

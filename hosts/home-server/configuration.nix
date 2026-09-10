@@ -67,6 +67,7 @@
   podman.enable = true;
   gramps.enable = true;
   searx.enable = true;
+  authelia.enable = true;
   ionos-ddns = {
     enable = true;
     domains = [ 
