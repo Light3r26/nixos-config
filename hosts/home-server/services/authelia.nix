@@ -5,7 +5,7 @@ let
 
 in
 {
-  options = {
+  options.authelia = {
     enable = lib.mkEnableOption "Enable Authelia";
   };
 
