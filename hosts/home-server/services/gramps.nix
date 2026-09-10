@@ -55,7 +55,7 @@ in
         }
       ];
       
-      routers.headscale = {
+      routers.gramps = {
         rule = "host(`genealogy.jacoposoria.it`)";
         tls.certresolver = "ionos";
 	service = "gramps";
