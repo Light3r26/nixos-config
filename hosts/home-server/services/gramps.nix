@@ -36,6 +36,12 @@ in
         gramps = baseGramps // {
           ports = [ "4896:4896" ];
           dependsOn = [ "gramps-redis" ];
+
+	  extraOptions = [ 
+            # Use the host network namespace for all sockets
+            "--network=host"
+          ];
+
         };
         gramps-celery = baseGramps // {
           dependsOn = [ "gramps" "gramps-redis" ];
