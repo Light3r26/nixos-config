@@ -2,7 +2,7 @@
   
 let
   cfg = config.kitchenowl;
-  jwt-key = "$(cat ${config.age.secrets."searx-key.age".path})";
+  jwt-key = "$(cat ${config.age.secrets."kitchenowl-jwt-key".path})";
 
 in
 {
