@@ -22,41 +22,35 @@ in
         api = {};
         entrypoints = {
           web = {
-      address = ":80";
-      http.redirections.entryPoint = {
-       to = "websecure";
-       scheme = "https";
-      };
-    };
+            address = ":80";
+            http.redirections.entryPoint = {
+             to = "websecure";
+             scheme = "https";
+            };
+          };
           websecure = {
-      address = ":443";
-    };
+            address = ":443";
+          };
         };
         certificatesResolvers = {
           ionos = {
-      acme = {
-        email = "letsencrypt.stumbling188@silomails.com";
-        storage = "/var/lib/traefik/acme.json";
-        caServer = "https://acme-v02.api.letsencrypt.org/directory";
-        dnsChallenge = {
-          provider = "ionos";
-          resolvers = [ "1.1.1.1:53" "8.8.8.8:53" ];
-          propagation.delayBeforeChecks = 60;
-        };
-      };
-    };
+            acme = {
+              email = "letsencrypt.stumbling188@silomails.com";
+              storage = "/var/lib/traefik/acme.json";
+              caServer = "https://acme-v02.api.letsencrypt.org/directory";
+              dnsChallenge = {
+                provider = "ionos";
+                resolvers = [ "1.1.1.1:53" "8.8.8.8:53" ];
+                propagation.delayBeforeChecks = 60;
+              };
+            };
+          };
         };
       };
       dynamicConfigOptions = {
         http = {
-          middlewares = {
-            auth = {
-              basicAuth = {
-                #users = [ "light3r:${dashboard-password}" ];
-                users = [ "light3r:$123" ];
-              };
-            };
-          };
+          #middlewares = {
+          #};
           routers = {
             api = {
               rule = "Host(`traefik.jacoposoria.it`)";
