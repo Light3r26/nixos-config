@@ -1,0 +1,33 @@
+{ lib, config, ... }:
+  
+let
+  cfg = config.kitchenowl;
+
+in
+{
+  options.kitchenowl = {
+    enable = lib.mkEnableOption "Enable KitchenOwl";
+  };
+
+  config = lib.mkIf cfg.enable {
+    virtualisation.oci-containers = {
+      backend = "podman";
+      containers = {
+        front = {
+          image = "tombursch/kitchenowl-web:latest";
+          ports = [ "5316:5316" ];
+          dependsOn = [ "back" ];
+        };
+        back = {
+          image = "tombursch/kitchenowl-backend:latest";
+          environment = {
+            JWT_SECRET_KEY = "PLEASE_CHANGE_ME";
+          };
+          volumes = [
+            "kitchenowl_data:/data"
+          ];
+        };
+      };
+    };
+  };
+}

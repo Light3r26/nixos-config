@@ -14,6 +14,7 @@ in
   "borg-immich-key.age".publicKeys = home;
   "frigate-env.age".publicKeys = home;
   "searx-key.age".publicKeys = home;
+  "kitchenowl-jwt-key.age".publicKeys = home;
   #"freshrss-key.age".publicKeys = local-systems;
   # Tailscale
   "home-server-tailscale-key.age".publicKeys = home;

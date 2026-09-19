@@ -8,6 +8,7 @@
     ./home-assistant.nix
     ./immich.nix
     ./ionos-ddns.nix 
+    ./kitchenowl.nix
     ./mosquitto.nix
     ./navidrome.nix
     #./nextcloud.nix
