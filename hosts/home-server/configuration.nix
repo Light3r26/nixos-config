@@ -68,6 +68,7 @@
   gramps.enable = true;
   #searx.enable = true;
   authelia.enable = true;
+  kitchenowl.enable = true;
   ionos-ddns = {
     enable = true;
     domains = [ 
