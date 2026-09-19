@@ -29,8 +29,7 @@ in
           ];
         };
       };
-
-      age.secrets."kitchenowl-jwt-key.age".file = "/Nixos/secrets/kitchenowl-jwt-key.age";
     };
+    age.secrets."kitchenowl-jwt-key.age".file = "/Nixos/secrets/kitchenowl-jwt-key.age";
   };
 }
