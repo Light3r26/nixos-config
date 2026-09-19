@@ -2,6 +2,7 @@
   
 let
   cfg = config.kitchenowl;
+  jwt-key = "$(cat ${config.age.secrets."searx-key.age".path})";
 
 in
 {
@@ -21,13 +22,15 @@ in
         back = {
           image = "tombursch/kitchenowl-backend:latest";
           environment = {
-            JWT_SECRET_KEY = "PLEASE_CHANGE_ME";
+            JWT_SECRET_KEY = jwt-key;
           };
           volumes = [
             "kitchenowl_data:/data"
           ];
         };
       };
+
+      age.secrets."kitchenowl-jwt-key.age".file = "/Nixos/secrets/kitchenowl-jwt-key.age";
     };
   };
 }
