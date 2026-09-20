@@ -2,7 +2,6 @@
 
 let
   cfg = config.traefik;
-  dashboard-password = "$(cat ${config.age.secrets."traefik-dashboard-password.age".path})";
 
 in
 {
@@ -13,12 +12,9 @@ in
   config = lib.mkIf cfg.enable {
     services.traefik = {
       enable = true;
-      environmentFiles = [ config.age.secrets."ionos-traefik-key.age".path ];
+      environmentFiles = [ config.age.secrets."hostinger-traefik-key.age".path ];
       staticConfigOptions = {
-        log = {
-          #level = "WARN";
-          level = "DEBUG";
-        };
+        log.level = "WARN";
         api = {};
         entrypoints = {
           web = {
@@ -33,13 +29,13 @@ in
           };
         };
         certificatesResolvers = {
-          ionos = {
+          hostinger = {
             acme = {
-              email = "letsencrypt.stumbling188@silomails.com";
+              email = "letsencrypt.headband594@silomails.com";
               storage = "/var/lib/traefik/acme.json";
               caServer = "https://acme-v02.api.letsencrypt.org/directory";
               dnsChallenge = {
-                provider = "ionos";
+                provider = "";
                 resolvers = [ "1.1.1.1:53" "8.8.8.8:53" ];
                 propagation.delayBeforeChecks = 60;
               };
@@ -53,11 +49,11 @@ in
           #};
           routers = {
             api = {
-              rule = "Host(`traefik.jacoposoria.it`)";
+              rule = "Host(`traefik.light3r.dev`)";
               service = "api@internal";
               middlewares = [ "auth" ];
               entrypoints = [ "websecure" ];
-              tls.certResolver = "ionos";
+              tls.certResolver = "hostinger";
             };
           };
         };
@@ -65,7 +61,5 @@ in
     };
 
     networking.firewall.allowedTCPPorts = [ 80 443 ];
-    age.secrets."ionos-traefik-key.age".file = "/Nixos/secrets/ionos-traefik-key.age";
-    age.secrets."traefik-dashboard-password.age".file = "/Nixos/secrets/traefik-dashboard-password.age";
   };
 }

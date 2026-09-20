@@ -19,7 +19,7 @@ in
   "home-server-tailscale-key.age".publicKeys = home;
   "mountain-server-tailscale-key.age".publicKeys = mountain;
   "hostinger-ddns-key.age".publicKeys = home;
-  #"hostinger-traefik-key.age".publicKeys = home; maybe?
+  "hostinger-traefik-key.age".publicKeys = home;
   #"mqtt-frigate-password.age".publicKeys = home;
   #"mqtt-ha-password.age".publicKeys = home;
 }

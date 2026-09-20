@@ -28,8 +28,8 @@ in
       ];
       
       routers.searx = {
-        rule = "host(`search.jacoposoria.it`)";
-        tls.certresolver = "ionos";
+        rule = "host(`search.light3r.dev`)";
+        tls.certresolver = "hostinger";
         service = "searx";
         entrypoints = [ "websecure" ];
       };

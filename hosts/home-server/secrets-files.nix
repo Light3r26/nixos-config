@@ -19,6 +19,7 @@ in
     #};
     "home-server-tailscale-key.age".file = "${secretsPath}/home-server-tailscale-key.age";
     "hostinger-ddns-key.age".file = "${secretsPath}/hostinger-ddns-key.age";
+    "hostinger-traefik-key.age".file = "${secretsPath}/hostinger-traefik-key.age";
     #"mqtt-frigate-password.age".file = "${secretsPath}/mqtt-frigate-password.age";
     #"mqtt-ha-password.age".file = "${secretsPath}/mqtt-ha-password.age";
   };

@@ -14,10 +14,9 @@ in
       enable = true;
       port = 3492;
       settings = {
-        server_url = "https://headscale.jacoposoria.it";
+        server_url = "https://headscale.light3r.dev";
         dns = {
           base_domain = "local";
-
           override_local_dns = false;
         };
         logtail.enabled = true;
@@ -32,9 +31,9 @@ in
       ];
       
       routers.headscale = {
-        rule = "host(`headscale.jacoposoria.it`)";
-        tls.certresolver = "ionos";
-	service = "headscale";
+        rule = "host(`headscale.light3r.dev`)";
+        tls.certresolver = "hostinger";
+	      service = "headscale";
         entrypoints = [ "websecure" ];
       };
     };

@@ -62,8 +62,8 @@ in
       ];
       
       routers.gramps = {
-        rule = "host(`genealogy.jacoposoria.it`)";
-        tls.certresolver = "ionos";
+        rule = "host(`genealogy.light3r.dev`)";
+        tls.certresolver = "hostinger";
 	service = "gramps";
         entrypoints = [ "websecure" ];
       };
