@@ -1,5 +1,6 @@
 {
   imports = [
+    ./forgejo.nix
     #./freshrss.nix
     ./frigate.nix
     ./gramps.nix
