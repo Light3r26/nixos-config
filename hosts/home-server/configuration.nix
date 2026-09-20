@@ -68,7 +68,6 @@
   podman.enable = true;
   gramps.enable = true;
   #searx.enable = true;
-  authelia.enable = true;
   kitchenowl.enable = true;
   hostinger-ddns.enable = true;
 
