@@ -111,23 +111,6 @@
         "type": "github"
       }
     },
-    "ddclient": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1782107229,
-        "narHash": "sha256-YhewLWZmvsQ8kaRkZTESEWqFcqrzJjBEYM9q6g8qz10=",
-        "ref": "main",
-        "rev": "f4dcf6fc8e4bf47d1041d75dd6fcd328132e6141",
-        "revCount": 1645,
-        "type": "git",
-        "url": "https://github.com/ddclient/ddclient"
-      },
-      "original": {
-        "ref": "main",
-        "type": "git",
-        "url": "https://github.com/ddclient/ddclient"
-      }
-    },
     "disko": {
       "inputs": {
         "nixpkgs": [
@@ -534,7 +517,6 @@
     "root": {
       "inputs": {
         "agenix": "agenix",
-        "ddclient": "ddclient",
         "disko": "disko",
         "firefox-addons": "firefox-addons",
         "home-manager": "home-manager_2",

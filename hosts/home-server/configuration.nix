@@ -4,6 +4,7 @@
   imports = [
     ./hardware-configuration.nix
     ./disks.nix
+    ./secrets-files.nix
     ./system-modules
     ./services
     ../../scripts
