@@ -69,7 +69,7 @@
   gramps.enable = true;
   #searx.enable = true;
   kitchenowl.enable = true;
-  hostinger-ddns.enable = true;
+  #hostinger-ddns.enable = true;
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 
