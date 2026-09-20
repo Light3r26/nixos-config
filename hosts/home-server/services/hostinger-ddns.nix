@@ -21,7 +21,7 @@ in
     services.ddns-updater = {
       enable = true;
       environment = {
-        PERIOD = cfg.interval;
+        PERIOD = "5m";
         CONFIG = builtins.toJSON hostingerConfig;
       };
     };
