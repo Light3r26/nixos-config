@@ -69,17 +69,7 @@
   #searx.enable = true;
   authelia.enable = true;
   kitchenowl.enable = true;
-  ionos-ddns = {
-    enable = true;
-    domains = [ 
-      "jacoposoria.it"
-      "headscale.jacoposoria.it"
-      "traefik.jacoposoria.it"
-      "cloud.jacoposoria.it"
-      "search.jacoposoria.it"
-      "genealogy.jacoposoria.it"
-    ];
-  };
+  hostinger-ddns.enable = true;
 
   age.identityPaths = [ "/home/nixos/.ssh/id_ed25519" ];
 

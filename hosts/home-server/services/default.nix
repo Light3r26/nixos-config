@@ -6,6 +6,7 @@
     ./gramps.nix
     ./headscale.nix
     ./home-assistant.nix
+    ./hostinger-ddns.nix
     ./immich.nix
     ./ionos-ddns.nix 
     ./kitchenowl.nix

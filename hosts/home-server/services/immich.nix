@@ -34,8 +34,6 @@ in
       options = [ "nofail" "noauto" "x-systemd.automount" "x-systemd.device-timeout=10" ];
     };
 
-    age.secrets."borg-immich-key.age".file = "/Nixos/secrets/borg-immich-key.age";
-
     services.borgbackup.jobs."immich" = {
       paths = [
         "/storage/photos"

@@ -11,10 +11,6 @@
 
     # Needed for home-server configuration
     nixpkgs-stable.url = "github:nixos/nixpkgs/26.05";
-    ddclient = {
-      url = "git+https://github.com/ddclient/ddclient?ref=main";
-      flake = false;
-    };
 
     # Other miscellaneous input
     nixos-grub-themes.url = "github:jeslie0/nixos-grub-themes"; # Bootloader theme

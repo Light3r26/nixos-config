@@ -19,7 +19,5 @@ in
         "--accept-routes"
       ];
     };
-
-    age.secrets."home-server-tailscale-key.age".file = "/Nixos/secrets/home-server-tailscale-key.age";
   };
 }

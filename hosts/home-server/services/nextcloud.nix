@@ -20,7 +20,5 @@ in
     };
 
     #networking.firewall.allowedTCPPorts = [ 80 443 ];
-
-    age.secrets."nextcloud-key.age".file = "/Nixos/secrets/nextcloud-key.age";
   };
 }

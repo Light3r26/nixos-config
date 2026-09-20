@@ -93,6 +93,5 @@ in
       "d /storage/frigate/media 0750 root root -"
     ];
     systemd.services."podman-frigate".after = [ "zfs-mount-storage.service" ];
-    age.secrets."frigate-env.age".file = "/Nixos/secrets/frigate-env.age";
   };
 }

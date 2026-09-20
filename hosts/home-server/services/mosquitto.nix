@@ -29,8 +29,5 @@ in
     };
 
     networking.firewall.allowedTCPPorts = [ 1883 ];
-
-    age.secrets."mqtt-frigate-password.age".file = "/Nixos/secrets/mqtt-frigate-password.age";
-    age.secrets."mqtt-ha-password.age".file = "/Nixos/secrets/mqtt-ha-password.age";
   };
 }

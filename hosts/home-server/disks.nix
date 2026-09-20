@@ -105,9 +105,6 @@
     };
   };
 
-  age.secrets."zfs-key.age".file = "/Nixos/secrets/zfs-key.age";
-
-
   boot.supportedFilesystems = [ "zfs" ];
   boot.zfs.forceImportRoot = false;
   boot.zfs.extraPools = [ "storage" ];

@@ -8,7 +8,7 @@ let
 
 in
 {
-  # Miscellaneous
+  # Home and Mountain Server
   "zfs-key.age".publicKeys = home;
   "nextcloud-key.age".publicKeys = home;
   "borg-immich-key.age".publicKeys = home;
@@ -16,19 +16,10 @@ in
   "searx-key.age".publicKeys = home;
   "kitchenowl-jwt-key.age".publicKeys = home;
   #"freshrss-key.age".publicKeys = local-systems;
-  # Tailscale
   "home-server-tailscale-key.age".publicKeys = home;
   "mountain-server-tailscale-key.age".publicKeys = mountain;
-  # Ionos
-  "ionos-traefik-key.age".publicKeys = home;
-  "ionos-ddns-key.age".publicKeys = home;
-  # MQTT
-  "mqtt-frigate-password.age".publicKeys = home;
-  "mqtt-ha-password.age".publicKeys = home;
-  # Authelia
-  "authelia-jwt.age".publicKeys = home;
-  "authelia-storage-encryption-key.age".publicKeys = home;
-  "authelia-hmac-key.age".publicKeys = home;
-  "authelia-rsa-key.age".publicKeys = home; 
-  "authelia-immich-secret-hash.age".publicKeys = home;
+  "hostinger-ddns-key.age".publicKeys = home;
+  #"hostinger-traefik-key.age".publicKeys = home; maybe?
+  #"mqtt-frigate-password.age".publicKeys = home;
+  #"mqtt-ha-password.age".publicKeys = home;
 }

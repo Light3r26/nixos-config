@@ -20,8 +20,6 @@ in
       };
     };
 
-    age.secrets."searx-key.age".file = "/Nixos/secrets/searx-key.age";
-
     services.traefik.dynamicConfigOptions.http = {
       services.searx.loadbalancer.servers = [
         {
