@@ -51,7 +51,7 @@ in
             api = {
               rule = "Host(`traefik.light3r.dev`)";
               service = "api@internal";
-              middlewares = [ "auth" ];
+              #middlewares = [ "auth" ];
               entrypoints = [ "websecure" ];
               tls.certResolver = "hostinger";
             };
