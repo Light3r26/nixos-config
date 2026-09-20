@@ -55,6 +55,7 @@
   ];
 
   # Hosted services
+  traefik.enable = true;
   #nextcloud.enable = true;
   tailnet.enable = true;
   navidrome.enable = true;
@@ -64,7 +65,6 @@
   home-assistant.enable = true;
   #mosquitto.enable = true;
   tandoor.enable = true;
-  traefik.enable = true;
   podman.enable = true;
   gramps.enable = true;
   #searx.enable = true;
